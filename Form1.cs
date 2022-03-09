@@ -21,17 +21,24 @@ namespace BodeOfWar
 
         private void lvlVersao_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        //Listar Partidas
+        //Listar Partidas - Falta a escolha do parâmetro
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
             string x = BodeOfWarServer.Jogo.ListarPartidas("T");
             txtPartidas.Text = x;
         }
 
-        //Listar jogadores
+        //Void listar partidas - Falta a escolha do parâmetro
+        private void ListarPartidas()
+        {
+            string x = BodeOfWarServer.Jogo.ListarPartidas("T");
+            txtPartidas.Text = x;
+        }
+
+        //Listar jogadores - Fazer DropDown com as opções existentes
         private void button2_Click(object sender, EventArgs e)
         {
             string idPartida = txtIdPartida.Text;
@@ -48,6 +55,21 @@ namespace BodeOfWar
             {
                 e.Handled = true;
             }
+        }
+
+        //Criar partida
+        private void btnCriarPartida_Click(object sender, EventArgs e)
+        {
+            string nome = txtNomeCriarPartida.Text;
+            string senha = txtSenhaCriarPartida.Text;
+            if (senha.Length > 10)
+            {
+                MessageBox.Show("A senha só pode ter até 10 caracteres e você inseriu mais.");
+                return;
+            }
+            else BodeOfWarServer.Jogo.CriarPartida(nome, senha);
+            MessageBox.Show("Partida criada com sucesso!");
+            ListarPartidas();
         }
     }
 }

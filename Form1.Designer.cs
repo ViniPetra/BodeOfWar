@@ -36,11 +36,17 @@
             this.txtIdPartida = new System.Windows.Forms.TextBox();
             this.txtListarJogadores = new System.Windows.Forms.TextBox();
             this.lblJogadores = new System.Windows.Forms.Label();
+            this.btnCriarPartida = new System.Windows.Forms.Button();
+            this.txtNomeCriarPartida = new System.Windows.Forms.TextBox();
+            this.txtSenhaCriarPartida = new System.Windows.Forms.TextBox();
+            this.lblSenhaCriarPartida = new System.Windows.Forms.Label();
+            this.lblNomeCriarPartida = new System.Windows.Forms.Label();
+            this.lblCriarPartida = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnListarPartidas
             // 
-            this.btnListarPartidas.Location = new System.Drawing.Point(53, 122);
+            this.btnListarPartidas.Location = new System.Drawing.Point(12, 134);
             this.btnListarPartidas.Name = "btnListarPartidas";
             this.btnListarPartidas.Size = new System.Drawing.Size(96, 23);
             this.btnListarPartidas.TabIndex = 0;
@@ -112,11 +118,68 @@
             this.lblJogadores.TabIndex = 7;
             this.lblJogadores.Text = "Jogadores";
             // 
+            // btnCriarPartida
+            // 
+            this.btnCriarPartida.Location = new System.Drawing.Point(8, 366);
+            this.btnCriarPartida.Name = "btnCriarPartida";
+            this.btnCriarPartida.Size = new System.Drawing.Size(75, 23);
+            this.btnCriarPartida.TabIndex = 8;
+            this.btnCriarPartida.Text = "Criar partida";
+            this.btnCriarPartida.UseVisualStyleBackColor = true;
+            this.btnCriarPartida.Click += new System.EventHandler(this.btnCriarPartida_Click);
+            // 
+            // txtNomeCriarPartida
+            // 
+            this.txtNomeCriarPartida.Location = new System.Drawing.Point(8, 298);
+            this.txtNomeCriarPartida.Name = "txtNomeCriarPartida";
+            this.txtNomeCriarPartida.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeCriarPartida.TabIndex = 9;
+            // 
+            // txtSenhaCriarPartida
+            // 
+            this.txtSenhaCriarPartida.Location = new System.Drawing.Point(8, 340);
+            this.txtSenhaCriarPartida.Name = "txtSenhaCriarPartida";
+            this.txtSenhaCriarPartida.Size = new System.Drawing.Size(100, 20);
+            this.txtSenhaCriarPartida.TabIndex = 10;
+            // 
+            // lblSenhaCriarPartida
+            // 
+            this.lblSenhaCriarPartida.AutoSize = true;
+            this.lblSenhaCriarPartida.Location = new System.Drawing.Point(8, 321);
+            this.lblSenhaCriarPartida.Name = "lblSenhaCriarPartida";
+            this.lblSenhaCriarPartida.Size = new System.Drawing.Size(38, 13);
+            this.lblSenhaCriarPartida.TabIndex = 11;
+            this.lblSenhaCriarPartida.Text = "Senha";
+            // 
+            // lblNomeCriarPartida
+            // 
+            this.lblNomeCriarPartida.AutoSize = true;
+            this.lblNomeCriarPartida.Location = new System.Drawing.Point(8, 279);
+            this.lblNomeCriarPartida.Name = "lblNomeCriarPartida";
+            this.lblNomeCriarPartida.Size = new System.Drawing.Size(85, 13);
+            this.lblNomeCriarPartida.TabIndex = 12;
+            this.lblNomeCriarPartida.Text = "Nome da partida";
+            // 
+            // lblCriarPartida
+            // 
+            this.lblCriarPartida.AutoSize = true;
+            this.lblCriarPartida.Location = new System.Drawing.Point(8, 263);
+            this.lblCriarPartida.Name = "lblCriarPartida";
+            this.lblCriarPartida.Size = new System.Drawing.Size(63, 13);
+            this.lblCriarPartida.TabIndex = 13;
+            this.lblCriarPartida.Text = "Criar partida";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 450);
+            this.Controls.Add(this.lblCriarPartida);
+            this.Controls.Add(this.lblNomeCriarPartida);
+            this.Controls.Add(this.lblSenhaCriarPartida);
+            this.Controls.Add(this.txtSenhaCriarPartida);
+            this.Controls.Add(this.txtNomeCriarPartida);
+            this.Controls.Add(this.btnCriarPartida);
             this.Controls.Add(this.lblJogadores);
             this.Controls.Add(this.txtListarJogadores);
             this.Controls.Add(this.txtIdPartida);
@@ -142,6 +205,12 @@
         private System.Windows.Forms.TextBox txtIdPartida;
         private System.Windows.Forms.TextBox txtListarJogadores;
         private System.Windows.Forms.Label lblJogadores;
+        private System.Windows.Forms.Button btnCriarPartida;
+        private System.Windows.Forms.TextBox txtNomeCriarPartida;
+        private System.Windows.Forms.TextBox txtSenhaCriarPartida;
+        private System.Windows.Forms.Label lblSenhaCriarPartida;
+        private System.Windows.Forms.Label lblNomeCriarPartida;
+        private System.Windows.Forms.Label lblCriarPartida;
     }
 }
 
