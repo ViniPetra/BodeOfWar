@@ -31,7 +31,7 @@ namespace BodeOfWar
             txtPartidas.Text = x;
         }
 
-        //Void listar partidas - Falta a escolha do parâmetro
+        //Void listar partidas - Falta a escolha do parâmetr o
         private void ListarPartidas()
         {
             string x = BodeOfWarServer.Jogo.ListarPartidas("T");
