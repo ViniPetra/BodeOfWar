@@ -230,6 +230,7 @@
             this.lstPartidas.Name = "lstPartidas";
             this.lstPartidas.Size = new System.Drawing.Size(194, 485);
             this.lstPartidas.TabIndex = 19;
+            this.lstPartidas.SelectedIndexChanged += new System.EventHandler(this.lstPartidas_SelectedIndexChanged);
             // 
             // Form1
             // 

@@ -114,5 +114,14 @@ namespace BodeOfWar
             else MessageBox.Show("Entrada com sucesso!");
             ListarJogadores(idPartida);
         }
+
+        //Clicar na lista - Mostrar jogadores
+        private void lstPartidas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string PartidaSelecionada = lstPartidas.SelectedItem.ToString();
+            string[] Partidas = PartidaSelecionada.Split(',');
+            int idPartida = Int32.Parse(Partidas[0]);
+            ListarJogadores(idPartida);
+        }
     }
 }
