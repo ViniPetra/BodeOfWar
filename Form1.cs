@@ -94,7 +94,9 @@ namespace BodeOfWar
         //Arrumar tamanho de nome e senha para <= 10 erro se idPartida = 0
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
-            int idPartida = 7;
+            string PartidaSelecionada = lstPartidas.SelectedItem.ToString();
+            string[] Partidas = PartidaSelecionada.Split(',');
+            int idPartida = Int32.Parse(Partidas[0]);
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
 
