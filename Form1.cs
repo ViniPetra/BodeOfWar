@@ -19,11 +19,6 @@ namespace BodeOfWar
             lblVersao.Text = Versao;
         }
 
-        private void lvlVersao_Click(object sender, EventArgs e)
-        {
-            //Remover evento
-        }
-
         //Listar Partidas - Falta a escolha do parâmetro
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
@@ -81,12 +76,6 @@ namespace BodeOfWar
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
             ListarPartidas();
-        }
-
-        //Apagar
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         //Entrar na partida
