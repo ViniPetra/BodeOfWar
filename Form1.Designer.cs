@@ -47,6 +47,7 @@
             this.lblSenhaPartida = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.lstPartidas = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -61,7 +62,7 @@
             // 
             // btnListarJogadores
             // 
-            this.btnListarJogadores.Location = new System.Drawing.Point(12, 187);
+            this.btnListarJogadores.Location = new System.Drawing.Point(11, 189);
             this.btnListarJogadores.Name = "btnListarJogadores";
             this.btnListarJogadores.Size = new System.Drawing.Size(96, 23);
             this.btnListarJogadores.TabIndex = 1;
@@ -222,12 +223,21 @@
             this.lblNome.TabIndex = 18;
             this.lblNome.Text = "Nome";
             // 
+            // lstPartidas
+            // 
+            this.lstPartidas.FormattingEnabled = true;
+            this.lstPartidas.Location = new System.Drawing.Point(701, 54);
+            this.lstPartidas.Name = "lstPartidas";
+            this.lstPartidas.Size = new System.Drawing.Size(194, 485);
+            this.lstPartidas.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(968, 743);
+            this.Controls.Add(this.lstPartidas);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblSenhaPartida);
@@ -275,6 +285,7 @@
         private System.Windows.Forms.Label lblSenhaPartida;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.ListBox lstPartidas;
     }
 }
 

@@ -22,8 +22,20 @@ namespace BodeOfWar
         //Listar Partidas - Falta a escolha do parâmetro
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
-            string x = BodeOfWarServer.Jogo.ListarPartidas("T");
-            txtPartidas.Text = x;
+            lstPartidas.Items.Clear(); //Limpa lista
+            
+            string retPartidas = BodeOfWarServer.Jogo.ListarPartidas("T");
+            txtPartidas.Text = retPartidas; //Será apagado
+
+            retPartidas = retPartidas.Replace("\r", "");
+            retPartidas = retPartidas.Substring(0, retPartidas.Length - 1);
+
+            string[] Partidas = retPartidas.Split('\n');
+
+            for(int i = 0; i < Partidas.Length; i++)
+            {
+                lstPartidas.Items.Add(Partidas[i]);
+            }
         }
 
         //Void listar partidas - Falta a escolha do parâmetr o
@@ -82,7 +94,7 @@ namespace BodeOfWar
         //Arrumar tamanho de nome e senha para <= 10 erro se idPartida = 0
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
-            int idPartida = 25;
+            int idPartida = 7;
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
 
