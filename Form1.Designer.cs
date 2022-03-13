@@ -33,7 +33,6 @@
             this.lblVersao = new System.Windows.Forms.Label();
             this.txtPartidas = new System.Windows.Forms.TextBox();
             this.lblPartidas = new System.Windows.Forms.Label();
-            this.txtIdPartida = new System.Windows.Forms.TextBox();
             this.txtListarJogadores = new System.Windows.Forms.TextBox();
             this.lblJogadores = new System.Windows.Forms.Label();
             this.btnCriarPartida = new System.Windows.Forms.Button();
@@ -48,6 +47,8 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lstPartidas = new System.Windows.Forms.ListBox();
+            this.cbbPartidas = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -98,15 +99,6 @@
             this.lblPartidas.Size = new System.Drawing.Size(45, 13);
             this.lblPartidas.TabIndex = 4;
             this.lblPartidas.Text = "Partidas";
-            // 
-            // txtIdPartida
-            // 
-            this.txtIdPartida.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtIdPartida.Location = new System.Drawing.Point(114, 189);
-            this.txtIdPartida.Name = "txtIdPartida";
-            this.txtIdPartida.Size = new System.Drawing.Size(22, 20);
-            this.txtIdPartida.TabIndex = 5;
-            this.txtIdPartida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPartida_KeyPress);
             // 
             // txtListarJogadores
             // 
@@ -232,12 +224,37 @@
             this.lstPartidas.TabIndex = 19;
             this.lstPartidas.SelectedIndexChanged += new System.EventHandler(this.lstPartidas_SelectedIndexChanged);
             // 
+            // cbbPartidas
+            // 
+            this.cbbPartidas.FormattingEnabled = true;
+            this.cbbPartidas.Items.AddRange(new object[] {
+            "Todas",
+            "Abertas",
+            "Jogando",
+            "Encerradas"});
+            this.cbbPartidas.Location = new System.Drawing.Point(115, 135);
+            this.cbbPartidas.Name = "cbbPartidas";
+            this.cbbPartidas.Size = new System.Drawing.Size(52, 21);
+            this.cbbPartidas.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(9, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 26);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Ver possibilidade de \r\napagar esse botão\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(968, 743);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbbPartidas);
             this.Controls.Add(this.lstPartidas);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome);
@@ -252,7 +269,6 @@
             this.Controls.Add(this.btnCriarPartida);
             this.Controls.Add(this.lblJogadores);
             this.Controls.Add(this.txtListarJogadores);
-            this.Controls.Add(this.txtIdPartida);
             this.Controls.Add(this.lblPartidas);
             this.Controls.Add(this.txtPartidas);
             this.Controls.Add(this.lblVersao);
@@ -272,7 +288,6 @@
         private System.Windows.Forms.Label lblVersao;
         private System.Windows.Forms.TextBox txtPartidas;
         private System.Windows.Forms.Label lblPartidas;
-        private System.Windows.Forms.TextBox txtIdPartida;
         private System.Windows.Forms.TextBox txtListarJogadores;
         private System.Windows.Forms.Label lblJogadores;
         private System.Windows.Forms.Button btnCriarPartida;
@@ -287,6 +302,8 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.ListBox lstPartidas;
+        private System.Windows.Forms.ComboBox cbbPartidas;
+        private System.Windows.Forms.Label label1;
     }
 }
 
