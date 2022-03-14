@@ -109,6 +109,7 @@ namespace BodeOfWar
             }
         }
 
+        /*
         //Listar jogadores - botão desativado
         private void button2_Click(object sender, EventArgs e)
         {
@@ -117,7 +118,8 @@ namespace BodeOfWar
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartidaInt);
             txtListarJogadores.Text = Jogadores;
         }
-        
+        */
+
         //Void listar jogadores após entrar na partida
         private void ListarJogadores(int id)
         {
@@ -126,6 +128,7 @@ namespace BodeOfWar
             txtListarJogadores.Text = Jogadores;
         }
 
+        /*
         //IdPartida apenas números
         private void txtIdPartida_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -134,6 +137,7 @@ namespace BodeOfWar
                 e.Handled = true;
             }
         }
+        */
 
         //Criar partida
         private void btnCriarPartida_Click(object sender, EventArgs e)

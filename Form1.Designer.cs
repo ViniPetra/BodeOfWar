@@ -70,7 +70,6 @@
             this.btnListarJogadores.TabIndex = 1;
             this.btnListarJogadores.Text = "Listar jogadores";
             this.btnListarJogadores.UseVisualStyleBackColor = true;
-            this.btnListarJogadores.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblVersao
             // 
