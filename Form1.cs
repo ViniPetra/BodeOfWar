@@ -125,6 +125,10 @@ namespace BodeOfWar
         {
             int idPartida = id;
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            if (Jogadores == "")
+            {
+                Jogadores = "Partida vazia";
+            }
             txtListarJogadores.Text = Jogadores;
         }
 

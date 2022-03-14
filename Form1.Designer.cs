@@ -84,7 +84,7 @@
             // txtPartidas
             // 
             this.txtPartidas.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPartidas.Location = new System.Drawing.Point(182, 54);
+            this.txtPartidas.Location = new System.Drawing.Point(635, 54);
             this.txtPartidas.Multiline = true;
             this.txtPartidas.Name = "txtPartidas";
             this.txtPartidas.ReadOnly = true;
@@ -94,7 +94,7 @@
             // lblPartidas
             // 
             this.lblPartidas.AutoSize = true;
-            this.lblPartidas.Location = new System.Drawing.Point(295, 27);
+            this.lblPartidas.Location = new System.Drawing.Point(278, 27);
             this.lblPartidas.Name = "lblPartidas";
             this.lblPartidas.Size = new System.Drawing.Size(45, 13);
             this.lblPartidas.TabIndex = 4;
@@ -219,7 +219,7 @@
             // 
             this.lstPartidas.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lstPartidas.FormattingEnabled = true;
-            this.lstPartidas.Location = new System.Drawing.Point(701, 54);
+            this.lstPartidas.Location = new System.Drawing.Point(204, 54);
             this.lstPartidas.Name = "lstPartidas";
             this.lstPartidas.Size = new System.Drawing.Size(194, 485);
             this.lstPartidas.TabIndex = 19;
