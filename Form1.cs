@@ -22,6 +22,7 @@ namespace BodeOfWar
         //Listar Partidas - Falta a escolha do parâmetro
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
+            
             lstPartidas.Items.Clear(); //Limpa lista
             string opc = cbbPartidas.Text;
             if (opc == "Todas")
@@ -52,8 +53,6 @@ namespace BodeOfWar
                 return;
             }
             
-            txtPartidas.Text = retPartidas; //Será apagado
-
             retPartidas = retPartidas.Replace("\r", "");
             retPartidas = retPartidas.Substring(0, retPartidas.Length - 1);
 
@@ -65,32 +64,66 @@ namespace BodeOfWar
             }
         }
 
-        //Void listar partidas - Falta a escolha do parâmetr o
-        private void ListarPartidas(string opc)
+        //Void listar partidas
+        private void ListarPartidas()
         {
-            string x = BodeOfWarServer.Jogo.ListarPartidas(opc);
-            txtPartidas.Text = x;
+            lstPartidas.Items.Clear(); //Limpa lista
+            string opc = cbbPartidas.Text;
+            if (opc == "Todas")
+            {
+                opc = "T";
+            }
+            if (opc == "Abertas")
+            {
+                opc = "A";
+            }
+            if (opc == "Jogando")
+            {
+                opc = "J";
+            }
+            if (opc == "Encerradas")
+            {
+                opc = "E";
+            }
+            if (cbbPartidas.Text == "")
+            {
+                MessageBox.Show("Selecione um tipo de partida");
+                return;
+            }
+            string retPartidas = BodeOfWarServer.Jogo.ListarPartidas(opc);
+
+            if (retPartidas == "")
+            {
+                MessageBox.Show("Nenhuma partida desse tipo encontrada");
+                return;
+            }
+
+            retPartidas = retPartidas.Replace("\r", "");
+            retPartidas = retPartidas.Substring(0, retPartidas.Length - 1);
+
+            string[] Partidas = retPartidas.Split('\n');
+
+            for (int i = 0; i < Partidas.Length; i++)
+            {
+                lstPartidas.Items.Add(Partidas[i]);
+            }
         }
 
-        //Listar jogadores - Fazer DropDown com as opções existentes e mensagem de vazio
+        //Listar jogadores - botão desativado
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
             string idPartida = txtIdPartida.Text;
             int idPartidaInt = Int32.Parse(idPartida);
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartidaInt);
             txtListarJogadores.Text = Jogadores;
-            */
         }
         
-
         //Void listar jogadores após entrar na partida
         private void ListarJogadores(int id)
         {
             int idPartida = id;
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
             txtListarJogadores.Text = Jogadores;
-
         }
 
         //IdPartida apenas números
@@ -107,36 +140,28 @@ namespace BodeOfWar
         {
             string nome = txtNomeCriarPartida.Text;
             string senha = txtSenhaCriarPartida.Text;
-            if (senha.Length > 10)
+            if (senha == "")
             {
-                MessageBox.Show("A senha só pode ter até 10 caracteres e você inseriu mais.");
+                MessageBox.Show("A senha não pode ser vazia");
                 return;
             }
-            if (BodeOfWarServer.Jogo.CriarPartida(nome, senha).Contains("ERRO")){
-                MessageBox.Show("Erro na criação da partida");
+            string ret = BodeOfWarServer.Jogo.CriarPartida(nome, senha);
+            if (ret.Contains("ERRO")){
+                MessageBox.Show(ret);
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
-            ListarPartidas("T");
+            ListarPartidas();
         }
 
         //Entrar na partida
-        //Arrumar tamanho de nome e senha para <= 10 erro se idPartida = 0
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
             string PartidaSelecionada = lstPartidas.SelectedItem.ToString();
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
+            MessageBox.Show(idPartida.ToString());
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
-
-            /*
-            if (nome.Length <= 0 || senha.Length <0)
-            {
-                MessageBox.Show("Nome ou senha vazios");
-                return;
-            }
-            */
-
             string chamada = BodeOfWarServer.Jogo.EntrarPartida(idPartida, nome, senha);
 
             if (chamada.Contains("ERRO"))
@@ -145,6 +170,7 @@ namespace BodeOfWar
                 return;
             }
             else MessageBox.Show("Entrada com sucesso!");
+            MessageBox.Show(chamada);
             ListarJogadores(idPartida);
         }
 

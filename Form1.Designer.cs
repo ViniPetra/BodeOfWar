@@ -49,6 +49,7 @@
             this.lstPartidas = new System.Windows.Forms.ListBox();
             this.cbbPartidas = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtIdPartida = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -217,6 +218,7 @@
             // 
             // lstPartidas
             // 
+            this.lstPartidas.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lstPartidas.FormattingEnabled = true;
             this.lstPartidas.Location = new System.Drawing.Point(701, 54);
             this.lstPartidas.Name = "lstPartidas";
@@ -241,11 +243,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(9, 215);
+            this.label1.Location = new System.Drawing.Point(22, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 26);
             this.label1.TabIndex = 21;
             this.label1.Text = "Ver possibilidade de \r\napagar esse botão\r\n";
+            // 
+            // txtIdPartida
+            // 
+            this.txtIdPartida.Location = new System.Drawing.Point(115, 191);
+            this.txtIdPartida.Name = "txtIdPartida";
+            this.txtIdPartida.Size = new System.Drawing.Size(22, 20);
+            this.txtIdPartida.TabIndex = 22;
             // 
             // Form1
             // 
@@ -253,6 +262,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(968, 743);
+            this.Controls.Add(this.txtIdPartida);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbPartidas);
             this.Controls.Add(this.lstPartidas);
@@ -304,6 +314,7 @@
         private System.Windows.Forms.ListBox lstPartidas;
         private System.Windows.Forms.ComboBox cbbPartidas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIdPartida;
     }
 }
 
