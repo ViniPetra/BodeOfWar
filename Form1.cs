@@ -170,7 +170,7 @@ namespace BodeOfWar
                 return;
             }
             else MessageBox.Show("Entrada com sucesso!");
-            MessageBox.Show(chamada);
+            MessageBox.Show(chamada);//(ID JOGADOR,SENHA)
             ListarJogadores(idPartida);
         }
 
