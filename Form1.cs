@@ -193,26 +193,33 @@ namespace BodeOfWar
             //string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);//
             //string[] Vez = vez.Split(',');//
 
-            string vez = VerificarVez1(idPartida);
+            string vez = VerificarVez(idPartida);
 
             txtVez.Text = vez;
         }
 
-        private string VerificarVez1(int idPartida)
+        //VerificarVez
+        private string VerificarVez(int idPartida)
         {
             string nome = "";
             string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
             string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+            
+            if (vez.Contains("ERRO"))
+            {
+                MessageBox.Show(vez);
+                return vez;
+            }
+
+            if (jogadores.Contains("ERRO"))
+            {
+                MessageBox.Show(jogadores);
+                return jogadores;
+            }
 
             jogadores = jogadores.Replace("\r", "");
             jogadores = jogadores.Replace("\n", ",");
             string[] Jogadores = jogadores.Split(',');
-
-            for (int i = 0; i < Jogadores.Length; i++)
-            {
-                MessageBox.Show(Jogadores [i]);
-            }
-
 
             string[] Vez = vez.Split(',');
 
@@ -225,9 +232,6 @@ namespace BodeOfWar
                     nome = Jogadores[i+1];
                 }
             }
-
-            MessageBox.Show(nome);
-
             return nome;
         }
     }
