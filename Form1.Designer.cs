@@ -31,7 +31,7 @@
             this.btnListarPartidas = new System.Windows.Forms.Button();
             this.btnListarJogadores = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
-            this.txtPartidas = new System.Windows.Forms.TextBox();
+            this.txtPartidasSenhas = new System.Windows.Forms.TextBox();
             this.lblPartidas = new System.Windows.Forms.Label();
             this.txtListarJogadores = new System.Windows.Forms.TextBox();
             this.lblJogadores = new System.Windows.Forms.Label();
@@ -52,6 +52,9 @@
             this.txtIdPartida = new System.Windows.Forms.TextBox();
             this.lblVez = new System.Windows.Forms.Label();
             this.txtVez = new System.Windows.Forms.TextBox();
+            this.txtIniciarPartida = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lstSenhas = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -83,15 +86,15 @@
             this.lblVersao.Tag = "lblVersao";
             this.lblVersao.Text = "Versão";
             // 
-            // txtPartidas
+            // txtPartidasSenhas
             // 
-            this.txtPartidas.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPartidas.Location = new System.Drawing.Point(635, 54);
-            this.txtPartidas.Multiline = true;
-            this.txtPartidas.Name = "txtPartidas";
-            this.txtPartidas.ReadOnly = true;
-            this.txtPartidas.Size = new System.Drawing.Size(256, 514);
-            this.txtPartidas.TabIndex = 3;
+            this.txtPartidasSenhas.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPartidasSenhas.Location = new System.Drawing.Point(778, 509);
+            this.txtPartidasSenhas.Multiline = true;
+            this.txtPartidasSenhas.Name = "txtPartidasSenhas";
+            this.txtPartidasSenhas.ReadOnly = true;
+            this.txtPartidasSenhas.Size = new System.Drawing.Size(148, 222);
+            this.txtPartidasSenhas.TabIndex = 3;
             // 
             // lblPartidas
             // 
@@ -274,12 +277,43 @@
             this.txtVez.Size = new System.Drawing.Size(186, 20);
             this.txtVez.TabIndex = 24;
             // 
+            // txtIniciarPartida
+            // 
+            this.txtIniciarPartida.Location = new System.Drawing.Point(701, 217);
+            this.txtIniciarPartida.Name = "txtIniciarPartida";
+            this.txtIniciarPartida.Size = new System.Drawing.Size(91, 23);
+            this.txtIniciarPartida.TabIndex = 25;
+            this.txtIniciarPartida.Text = "Iniciar partida";
+            this.txtIniciarPartida.UseVisualStyleBackColor = true;
+            this.txtIniciarPartida.Click += new System.EventHandler(this.txtIniciarPartida_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(722, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Senhas";
+            // 
+            // lstSenhas
+            // 
+            this.lstSenhas.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lstSenhas.FormattingEnabled = true;
+            this.lstSenhas.Location = new System.Drawing.Point(712, 54);
+            this.lstSenhas.Name = "lstSenhas";
+            this.lstSenhas.Size = new System.Drawing.Size(66, 147);
+            this.lstSenhas.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(968, 743);
+            this.Controls.Add(this.lstSenhas);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtIniciarPartida);
             this.Controls.Add(this.txtVez);
             this.Controls.Add(this.lblVez);
             this.Controls.Add(this.txtIdPartida);
@@ -300,7 +334,7 @@
             this.Controls.Add(this.lblJogadores);
             this.Controls.Add(this.txtListarJogadores);
             this.Controls.Add(this.lblPartidas);
-            this.Controls.Add(this.txtPartidas);
+            this.Controls.Add(this.txtPartidasSenhas);
             this.Controls.Add(this.lblVersao);
             this.Controls.Add(this.btnListarJogadores);
             this.Controls.Add(this.btnListarPartidas);
@@ -316,7 +350,7 @@
         private System.Windows.Forms.Button btnListarPartidas;
         private System.Windows.Forms.Button btnListarJogadores;
         private System.Windows.Forms.Label lblVersao;
-        private System.Windows.Forms.TextBox txtPartidas;
+        private System.Windows.Forms.TextBox txtPartidasSenhas;
         private System.Windows.Forms.Label lblPartidas;
         private System.Windows.Forms.TextBox txtListarJogadores;
         private System.Windows.Forms.Label lblJogadores;
@@ -337,6 +371,9 @@
         private System.Windows.Forms.TextBox txtIdPartida;
         private System.Windows.Forms.Label lblVez;
         private System.Windows.Forms.TextBox txtVez;
+        private System.Windows.Forms.Button txtIniciarPartida;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox lstSenhas;
     }
 }
 

@@ -23,7 +23,7 @@ namespace BodeOfWar
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
             
-            lstPartidas.Items.Clear(); //Limpa lista
+            lstPartidas.Items.Clear();
             string opc = cbbPartidas.Text;
             if (opc == "Todas")
             {
@@ -67,7 +67,7 @@ namespace BodeOfWar
         //Void listar partidas
         private void ListarPartidas()
         {
-            lstPartidas.Items.Clear(); //Limpa lista
+            lstPartidas.Items.Clear();
             string opc = cbbPartidas.Text;
             if (opc == "Todas")
             {
@@ -146,7 +146,6 @@ namespace BodeOfWar
                 MessageBox.Show(ret);
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
-            ListarPartidas();
         }
 
         //Entrar na partida
@@ -155,7 +154,7 @@ namespace BodeOfWar
             string PartidaSelecionada = lstPartidas.SelectedItem.ToString();
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
-            MessageBox.Show(idPartida.ToString());
+            //MessageBox.Show(idPartida.ToString());
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
             string chamada = BodeOfWarServer.Jogo.EntrarPartida(idPartida, nome, senha);
@@ -167,6 +166,14 @@ namespace BodeOfWar
             }
             else MessageBox.Show("Entrada com sucesso!");
             MessageBox.Show(chamada);//(ID JOGADOR,SENHA)
+            //colocar apend toda vez que entra
+            
+            txtPartidasSenhas.Text = chamada + "\n";
+            string[] senhas = chamada.Split('\n');//.Split(',');
+            for (int i = 0; i < senhas.Length; i++)
+            {
+                lstSenhas.Items.Add(senhas[i]);
+            }
             ListarJogadores(idPartida);
         }
 
@@ -188,7 +195,11 @@ namespace BodeOfWar
             string nome = "";
             string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
             string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
-            
+            if (vez.Contains("ERRO:Partida não está em jogo"))
+            {
+                nome = "Partida não iniciada";
+                return nome;
+            }
             if (vez.Contains("ERRO"))
             {
                 MessageBox.Show(vez);
@@ -217,6 +228,24 @@ namespace BodeOfWar
                 }
             }
             return nome;
+        }
+
+        private void txtIniciarPartida_Click(object sender, EventArgs e)
+        {
+            string index = lstSenhas.SelectedItem.ToString();
+            if (index.Contains("ERRO"))
+            {
+                MessageBox.Show(index);
+            }
+            string[] info = index.Split(',');
+            int id = Int32.Parse(info[0]);
+            string senha = info[1];
+            string retIniciar = BodeOfWarServer.Jogo.IniciarPartida(id, senha);
+            if (retIniciar.Contains("ERRO"))
+            {
+                MessageBox.Show(retIniciar);
+            }
+            else MessageBox.Show("Partida iniciada com sucesso");
         }
     }
 }
