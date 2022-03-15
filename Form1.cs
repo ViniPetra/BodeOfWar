@@ -121,9 +121,9 @@ namespace BodeOfWar
         */
 
         //Void listar jogadores após entrar na partida
-        private void ListarJogadores(int id)
+
+        private void ListarJogadores(int idPartida)
         {
-            int idPartida = id;
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
             if (Jogadores == "")
             {
@@ -189,6 +189,46 @@ namespace BodeOfWar
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
             ListarJogadores(idPartida);
+            
+            //string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);//
+            //string[] Vez = vez.Split(',');//
+
+            string vez = VerificarVez1(idPartida);
+
+            txtVez.Text = vez;
+        }
+
+        private string VerificarVez1(int idPartida)
+        {
+            string nome = "";
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+
+            jogadores = jogadores.Replace("\r", "");
+            jogadores = jogadores.Replace("\n", ",");
+            string[] Jogadores = jogadores.Split(',');
+
+            for (int i = 0; i < Jogadores.Length; i++)
+            {
+                MessageBox.Show(Jogadores [i]);
+            }
+
+
+            string[] Vez = vez.Split(',');
+
+            string x = Vez[1];
+
+            for (int i = 0; i < Jogadores.Length; i++)
+            {
+                if (Jogadores[i] == x)
+                {
+                    nome = Jogadores[i+1];
+                }
+            }
+
+            MessageBox.Show(nome);
+
+            return nome;
         }
     }
 }

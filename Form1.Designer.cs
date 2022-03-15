@@ -50,6 +50,8 @@
             this.cbbPartidas = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdPartida = new System.Windows.Forms.TextBox();
+            this.lblVez = new System.Windows.Forms.Label();
+            this.txtVez = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -106,7 +108,7 @@
             this.txtListarJogadores.Location = new System.Drawing.Point(478, 54);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
-            this.txtListarJogadores.Size = new System.Drawing.Size(100, 335);
+            this.txtListarJogadores.Size = new System.Drawing.Size(100, 157);
             this.txtListarJogadores.TabIndex = 6;
             // 
             // lblJogadores
@@ -255,12 +257,31 @@
             this.txtIdPartida.Size = new System.Drawing.Size(22, 20);
             this.txtIdPartida.TabIndex = 22;
             // 
+            // lblVez
+            // 
+            this.lblVez.AutoSize = true;
+            this.lblVez.Location = new System.Drawing.Point(502, 237);
+            this.lblVez.Name = "lblVez";
+            this.lblVez.Size = new System.Drawing.Size(43, 13);
+            this.lblVez.TabIndex = 23;
+            this.lblVez.Text = "Vez de:";
+            // 
+            // txtVez
+            // 
+            this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtVez.Location = new System.Drawing.Point(427, 263);
+            this.txtVez.Name = "txtVez";
+            this.txtVez.Size = new System.Drawing.Size(186, 20);
+            this.txtVez.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(968, 743);
+            this.Controls.Add(this.txtVez);
+            this.Controls.Add(this.lblVez);
             this.Controls.Add(this.txtIdPartida);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbPartidas);
@@ -314,6 +335,8 @@
         private System.Windows.Forms.ComboBox cbbPartidas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIdPartida;
+        private System.Windows.Forms.Label lblVez;
+        private System.Windows.Forms.TextBox txtVez;
     }
 }
 
