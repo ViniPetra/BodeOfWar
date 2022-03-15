@@ -121,7 +121,6 @@ namespace BodeOfWar
         */
 
         //Void listar jogadores após entrar na partida
-
         private void ListarJogadores(int idPartida)
         {
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
@@ -131,17 +130,6 @@ namespace BodeOfWar
             }
             txtListarJogadores.Text = Jogadores;
         }
-
-        /*
-        //IdPartida apenas números
-        private void txtIdPartida_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        */
 
         //Criar partida
         private void btnCriarPartida_Click(object sender, EventArgs e)
@@ -189,10 +177,6 @@ namespace BodeOfWar
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
             ListarJogadores(idPartida);
-            
-            //string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);//
-            //string[] Vez = vez.Split(',');//
-
             string vez = VerificarVez(idPartida);
 
             txtVez.Text = vez;
