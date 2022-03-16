@@ -72,20 +72,16 @@ namespace BodeOfWar
             if (opc == "Todas")
             {
                 opc = "T";
-            }
-            if (opc == "Abertas")
+            } else if (opc == "Abertas")
             {
                 opc = "A";
-            }
-            if (opc == "Jogando")
+            } else if (opc == "Jogando")
             {
                 opc = "J";
-            }
-            if (opc == "Encerradas")
+            } else if (opc == "Encerradas")
             {
                 opc = "E";
-            }
-            if (cbbPartidas.Text == "")
+            } else if (cbbPartidas.Text == "")
             {
                 MessageBox.Show("Selecione um tipo de partida");
                 return;
@@ -232,18 +228,36 @@ namespace BodeOfWar
 
         private void txtIniciarPartida_Click(object sender, EventArgs e)
         {
-            string index = lstSenhas.SelectedItem.ToString();
+            //Inicializando variaveis
+            string index = "";
+            string retIniciar = "";
+            int id = 0;
+            string senha = "";
+
+            //verificando se foi selecionado alguma senha para inicio de partida
+            if (lstSenhas.SelectedItem != null)
+            {
+                index = lstSenhas.SelectedItem.ToString();
+                string[] info = index.Split(',');
+                id = Int32.Parse(info[0]);
+                senha = info[1];
+                
+            } 
+
+            //Iniciando partida
+            retIniciar = BodeOfWarServer.Jogo.IniciarPartida(id, senha);
+
+            //Caso alguma das variavies tenham erros, mensagens serão mostradas
             if (index.Contains("ERRO"))
             {
-                MessageBox.Show(index);
+                MessageBox.Show(index,
+                    "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
-            string[] info = index.Split(',');
-            int id = Int32.Parse(info[0]);
-            string senha = info[1];
-            string retIniciar = BodeOfWarServer.Jogo.IniciarPartida(id, senha);
+            
             if (retIniciar.Contains("ERRO"))
             {
-                MessageBox.Show(retIniciar);
+                MessageBox.Show(retIniciar,
+                    "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
             else MessageBox.Show("Partida iniciada com sucesso");
         }
