@@ -52,6 +52,9 @@
             this.txtIniciarPartida = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lstSenhas = new System.Windows.Forms.ListBox();
+            this.txtNarracao = new System.Windows.Forms.TextBox();
+            this.lblNarracao = new System.Windows.Forms.Label();
+            this.btnAtualizarNarracao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -67,7 +70,7 @@
             // lblVersao
             // 
             this.lblVersao.AutoSize = true;
-            this.lblVersao.Location = new System.Drawing.Point(632, 428);
+            this.lblVersao.Location = new System.Drawing.Point(698, 414);
             this.lblVersao.Name = "lblVersao";
             this.lblVersao.Size = new System.Drawing.Size(40, 13);
             this.lblVersao.TabIndex = 2;
@@ -266,12 +269,43 @@
             this.lstSenhas.Size = new System.Drawing.Size(66, 147);
             this.lstSenhas.TabIndex = 28;
             // 
+            // txtNarracao
+            // 
+            this.txtNarracao.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtNarracao.Location = new System.Drawing.Point(427, 314);
+            this.txtNarracao.Multiline = true;
+            this.txtNarracao.Name = "txtNarracao";
+            this.txtNarracao.Size = new System.Drawing.Size(186, 75);
+            this.txtNarracao.TabIndex = 29;
+            // 
+            // lblNarracao
+            // 
+            this.lblNarracao.AutoSize = true;
+            this.lblNarracao.Location = new System.Drawing.Point(494, 298);
+            this.lblNarracao.Name = "lblNarracao";
+            this.lblNarracao.Size = new System.Drawing.Size(51, 13);
+            this.lblNarracao.TabIndex = 30;
+            this.lblNarracao.Text = "Narração";
+            // 
+            // btnAtualizarNarracao
+            // 
+            this.btnAtualizarNarracao.Location = new System.Drawing.Point(483, 404);
+            this.btnAtualizarNarracao.Name = "btnAtualizarNarracao";
+            this.btnAtualizarNarracao.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizarNarracao.TabIndex = 31;
+            this.btnAtualizarNarracao.Text = "Atualizar";
+            this.btnAtualizarNarracao.UseVisualStyleBackColor = true;
+            this.btnAtualizarNarracao.Click += new System.EventHandler(this.btnAtualizarNarracao_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(850, 743);
+            this.Controls.Add(this.btnAtualizarNarracao);
+            this.Controls.Add(this.lblNarracao);
+            this.Controls.Add(this.txtNarracao);
             this.Controls.Add(this.lstSenhas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIniciarPartida);
@@ -332,6 +366,9 @@
         private System.Windows.Forms.Button txtIniciarPartida;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstSenhas;
+        private System.Windows.Forms.TextBox txtNarracao;
+        private System.Windows.Forms.Label lblNarracao;
+        private System.Windows.Forms.Button btnAtualizarNarracao;
     }
 }
 

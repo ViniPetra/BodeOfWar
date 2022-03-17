@@ -168,6 +168,8 @@ namespace BodeOfWar
             int idPartida = Int32.Parse(Partidas[0]);
             ListarJogadores(idPartida);
             string vez = VerificarVez(idPartida);
+            string narracao = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+            txtNarracao.Text = narracao;
 
             txtVez.Text = vez;
         }
@@ -247,6 +249,26 @@ namespace BodeOfWar
                     "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
             else MessageBox.Show("Partida iniciada com sucesso");
+        }
+
+        private void btnAtualizarNarracao_Click(object sender, EventArgs e)
+        {
+            string PartidaSelecionada;
+            if (lstPartidas.SelectedItem == null)
+            {
+                MessageBox.Show("Nenhuma partida selecionada", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            else
+            {
+                PartidaSelecionada = lstPartidas.SelectedItem.ToString();
+            }
+            string[] Partidas = PartidaSelecionada.Split(',');
+            int idPartida = Int32.Parse(Partidas[0]);
+            string vez = VerificarVez(idPartida);
+            string narracao = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+            txtNarracao.Text = narracao;
+            txtVez.Text = vez;
         }
     }
 }
