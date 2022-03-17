@@ -42,20 +42,19 @@ namespace BodeOfWar
             }
             if (cbbPartidas.Text == "")
             {
-                MessageBox.Show("Selecione um tipo de partida");
+                MessageBox.Show("Selecione um tipo de partida", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }
             string retPartidas = BodeOfWarServer.Jogo.ListarPartidas(opc);
 
             if (retPartidas == "")
             {
-                MessageBox.Show("Nenhuma partida desse tipo encontrada");
+                MessageBox.Show("Nenhuma partida desse tipo encontrada", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }
-            
+
             retPartidas = retPartidas.Replace("\r", "");
             retPartidas = retPartidas.Substring(0, retPartidas.Length - 1);
-
             string[] Partidas = retPartidas.Split('\n');
 
             for(int i = 0; i < Partidas.Length; i++)
@@ -105,17 +104,6 @@ namespace BodeOfWar
             }
         }
 
-        /*
-        //Listar jogadores - botão desativado
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string idPartida = txtIdPartida.Text;
-            int idPartidaInt = Int32.Parse(idPartida);
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartidaInt);
-            txtListarJogadores.Text = Jogadores;
-        }
-        */
-
         //Void listar jogadores após entrar na partida
         private void ListarJogadores(int idPartida)
         {
@@ -132,14 +120,9 @@ namespace BodeOfWar
         {
             string nome = txtNomeCriarPartida.Text;
             string senha = txtSenhaCriarPartida.Text;
-            if (senha == "")
-            {
-                MessageBox.Show("A senha não pode ser vazia");
-                return;
-            }
             string ret = BodeOfWarServer.Jogo.CriarPartida(nome, senha);
             if (ret.Contains("ERRO")){
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
         }
@@ -147,25 +130,29 @@ namespace BodeOfWar
         //Entrar na partida
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
-            string PartidaSelecionada = lstPartidas.SelectedItem.ToString();
+            string PartidaSelecionada;
+            if (lstPartidas.SelectedItem == null)
+            {
+                MessageBox.Show("Nenhuma partida selecionada", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            else 
+            {
+                PartidaSelecionada = lstPartidas.SelectedItem.ToString(); 
+            }
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
-            //MessageBox.Show(idPartida.ToString());
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
             string chamada = BodeOfWarServer.Jogo.EntrarPartida(idPartida, nome, senha);
-
             if (chamada.Contains("ERRO"))
             {
-                MessageBox.Show(chamada);
+                MessageBox.Show(chamada, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }
             else MessageBox.Show("Entrada com sucesso!");
-            MessageBox.Show(chamada);//(ID JOGADOR,SENHA)
-            //colocar apend toda vez que entra
             
-            txtPartidasSenhas.Text = chamada + "\n";
-            string[] senhas = chamada.Split('\n');//.Split(',');
+            string[] senhas = chamada.Split('\n');
             for (int i = 0; i < senhas.Length; i++)
             {
                 lstSenhas.Items.Add(senhas[i]);
@@ -198,13 +185,13 @@ namespace BodeOfWar
             }
             if (vez.Contains("ERRO"))
             {
-                MessageBox.Show(vez);
+                MessageBox.Show(vez, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return vez;
             }
 
             if (jogadores.Contains("ERRO"))
             {
-                MessageBox.Show(jogadores);
+                MessageBox.Show(jogadores, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return jogadores;
             }
 
