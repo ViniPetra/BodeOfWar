@@ -273,7 +273,7 @@ namespace BodeOfWar
             txtVez.Text = vez;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             /*
             string index;
@@ -295,56 +295,56 @@ namespace BodeOfWar
 
             //Monta a matiz de todas as cartas
             string retCartas = BodeOfWarServer.Jogo.ListarCartas();
+
+            MessageBox.Show(retCartas);
+
             retCartas = retCartas.Replace("\r", "");
             retCartas = retCartas.Substring(0, retCartas.Length - 1);
             retCartas = retCartas.Replace("\n", ",");
             string[] Cartas1 = retCartas.Split(',');
-            string[,] Cartas2 = new string[50, 3];
+            int[] IntCartas1 = new int[Cartas1.Length];
+            int[,] Cartas2 = new int[50, 3];
             Cartas[] TodasCartas = new Cartas[50];
-            int ii = 0;
-            int jj = 0;
-            int kk = 0;
+            int i = 0;
 
-            for (int i = 0; i < 149; i = i + 3)
+            for (i = 0; i < Cartas1.Length; i++)
             {
-                Cartas2[(i / 3), 0] = Cartas1[i];
+                IntCartas1[i] = Int32.Parse(Cartas1[i]);
             }
 
-            for (int i = 1; i < 149; i = i + 3)
+
+            for (i = 0; i <= 149; i = i + 3)
             {
-                Cartas2[(i / 3), 1] = Cartas1[i];
+                Cartas2[(i / 3), 0] = IntCartas1[i];
             }
 
-            for (int i = 2; i < 149; i = i + 3)
+            for (i = 1; i <= 149; i = i + 3)
             {
-                Cartas2[(i / 3), 2] = Cartas1[i];
+                Cartas2[(i / 3), 1] = IntCartas1[i];
+            }
+
+            for (i = 2; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 2] = IntCartas1[i];
             }
 
             //Criação dos objetos
-            while (ii <= 49)
+            i = 0;
+            while (i <= 49)
             {
-                while (jj <= 2)
+                for (int j = 0; j < 3; j++)
                 {
-                    while (kk <= 2)
-                    {
-                        TodasCartas[ii] = new Cartas(Int32.Parse(Cartas2[jj, kk]), Int32.Parse(Cartas2[jj, kk]), Int32.Parse(Cartas2[jj, kk]));
-                    }
-                }
-                MessageBox.Show(TodasCartas[ii].id.ToString());
-            }
+                    TodasCartas[i] = new Cartas(Cartas2[i, j], Cartas2[i, j], Cartas2[i, j]);
 
-            /*for (int i = 0; i < 49; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-                    for (int k = 0; k < 2; k++)
+                    if (j == 2)
                     {
-                        TodasCartas[i] = new Cartas(Int32.Parse(Cartas2[j, k]), Int32.Parse(Cartas2[j, k]), Int32.Parse(Cartas2[j, k]));
-                        MessageBox.Show(TodasCartas[i].id.ToString());
+                        i++;
                     }
                 }
             }
-            */
+            MessageBox.Show(TodasCartas[40].id.ToString());
+            MessageBox.Show(TodasCartas[40].bode.ToString());
+            MessageBox.Show(TodasCartas[40].numero.ToString());
         }
     }
 }
