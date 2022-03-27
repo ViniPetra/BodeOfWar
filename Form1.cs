@@ -12,11 +12,19 @@ namespace BodeOfWar
 {
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
             string Versao = BodeOfWarServer.Jogo.Versao;
             lblVersao.Text = Versao;
+
+            for (int i = 0; i < length; i++)
+            {
+                Cartas cartas = new Cartas;
+            }
+            
         }
 
         //Listar Partidas - Falta a escolha do parâmetro
@@ -269,6 +277,25 @@ namespace BodeOfWar
             string narracao = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
             txtNarracao.Text = narracao;
             txtVez.Text = vez;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string index;
+            int id;
+            string senha;
+            string mao;
+            string cartas = BodeOfWarServer.Jogo.ListarCartas();
+
+            if (lstSenhas.SelectedItem != null)
+            {
+                index = lstSenhas.SelectedItem.ToString();
+                string[] info = index.Split(',');
+                id = Int32.Parse(info[0]);
+                senha = info[1];
+                mao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+                MessageBox.Show(mao);
+            }
         }
     }
 }
