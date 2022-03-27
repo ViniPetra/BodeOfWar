@@ -286,7 +286,6 @@ namespace BodeOfWar
                 string[] info = index.Split(',');
                 id = Int32.Parse(info[0]);
                 senha = info[1];
-                
             } 
 
             //Iniciando partida
@@ -327,14 +326,11 @@ namespace BodeOfWar
             txtVez.Text = vez;
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void btnMostrarMao_Click(object sender, EventArgs e)
         {
-            /*
             string index;
-            int id;
-            string senha;
-            string mao;
-            string cartas = BodeOfWarServer.Jogo.ListarCartas();
+            string senha = "";
+            int id = 0;
 
             if (lstSenhas.SelectedItem != null)
             {
@@ -342,10 +338,9 @@ namespace BodeOfWar
                 string[] info = index.Split(',');
                 id = Int32.Parse(info[0]);
                 senha = info[1];
-                mao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
-                MessageBox.Show(mao);
             }
-            */
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+            MessageBox.Show(StringMao);
         }
     }
 }
