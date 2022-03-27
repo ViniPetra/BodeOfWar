@@ -12,11 +12,67 @@ namespace BodeOfWar
 {
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
             string Versao = BodeOfWarServer.Jogo.Versao;
             lblVersao.Text = Versao;
+
+            //Array do retorno
+            string retCartas = BodeOfWarServer.Jogo.ListarCartas();
+            retCartas = retCartas.Replace("\r", "");
+            retCartas = retCartas.Substring(0, retCartas.Length - 1);
+            retCartas = retCartas.Replace("\n", ",");
+            string[] Cartas1 = retCartas.Split(',');
+
+            int[] IntCartas1 = new int[Cartas1.Length];
+            int[,] Cartas2 = new int[50, 3];
+            Cartas[] TodasCartas = new Cartas[50];
+            int i;
+
+            //Converter a array em int
+            for (i = 0; i < Cartas1.Length; i++)
+            {
+                IntCartas1[i] = Int32.Parse(Cartas1[i]);
+            }
+
+            //Criar a matriz
+            for (i = 0; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 0] = IntCartas1[i];
+            }
+
+            for (i = 1; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 1] = IntCartas1[i];
+            }
+
+            for (i = 2; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 2] = IntCartas1[i];
+            }
+
+            //Criação dos objetos
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i] = new Cartas();
+            }
+
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].id = Cartas2[i, 0];
+            }
+
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].bode = Cartas2[i, 1];
+            }
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].numero = Cartas2[i, 2];
+            }
         }
 
         //Listar Partidas - Falta a escolha do parâmetro
@@ -230,7 +286,6 @@ namespace BodeOfWar
                 string[] info = index.Split(',');
                 id = Int32.Parse(info[0]);
                 senha = info[1];
-                
             } 
 
             //Iniciando partida
@@ -269,6 +324,23 @@ namespace BodeOfWar
             string narracao = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
             txtNarracao.Text = narracao;
             txtVez.Text = vez;
+        }
+
+        private void btnMostrarMao_Click(object sender, EventArgs e)
+        {
+            string index;
+            string senha = "";
+            int id = 0;
+
+            if (lstSenhas.SelectedItem != null)
+            {
+                index = lstSenhas.SelectedItem.ToString();
+                string[] info = index.Split(',');
+                id = Int32.Parse(info[0]);
+                senha = info[1];
+            }
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+            MessageBox.Show(StringMao);
         }
     }
 }

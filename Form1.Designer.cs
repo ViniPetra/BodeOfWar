@@ -55,6 +55,7 @@
             this.txtNarracao = new System.Windows.Forms.TextBox();
             this.lblNarracao = new System.Windows.Forms.Label();
             this.btnAtualizarNarracao = new System.Windows.Forms.Button();
+            this.btnMostrarMao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -297,12 +298,23 @@
             this.btnAtualizarNarracao.UseVisualStyleBackColor = true;
             this.btnAtualizarNarracao.Click += new System.EventHandler(this.btnAtualizarNarracao_Click);
             // 
+            // btnMostrarMao
+            // 
+            this.btnMostrarMao.Location = new System.Drawing.Point(677, 246);
+            this.btnMostrarMao.Name = "btnMostrarMao";
+            this.btnMostrarMao.Size = new System.Drawing.Size(91, 23);
+            this.btnMostrarMao.TabIndex = 32;
+            this.btnMostrarMao.Text = "Mostrar Mão";
+            this.btnMostrarMao.UseVisualStyleBackColor = true;
+            this.btnMostrarMao.Click += new System.EventHandler(this.btnMostrarMao_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(850, 743);
+            this.ClientSize = new System.Drawing.Size(790, 678);
+            this.Controls.Add(this.btnMostrarMao);
             this.Controls.Add(this.btnAtualizarNarracao);
             this.Controls.Add(this.lblNarracao);
             this.Controls.Add(this.txtNarracao);
@@ -369,6 +381,7 @@
         private System.Windows.Forms.TextBox txtNarracao;
         private System.Windows.Forms.Label lblNarracao;
         private System.Windows.Forms.Button btnAtualizarNarracao;
+        private System.Windows.Forms.Button btnMostrarMao;
     }
 }
 
