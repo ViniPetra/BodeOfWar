@@ -19,6 +19,60 @@ namespace BodeOfWar
             InitializeComponent();
             string Versao = BodeOfWarServer.Jogo.Versao;
             lblVersao.Text = Versao;
+
+            //Array do retorno
+            string retCartas = BodeOfWarServer.Jogo.ListarCartas();
+            retCartas = retCartas.Replace("\r", "");
+            retCartas = retCartas.Substring(0, retCartas.Length - 1);
+            retCartas = retCartas.Replace("\n", ",");
+            string[] Cartas1 = retCartas.Split(',');
+
+            int[] IntCartas1 = new int[Cartas1.Length];
+            int[,] Cartas2 = new int[50, 3];
+            Cartas[] TodasCartas = new Cartas[50];
+            int i;
+
+            //Converter a array em int
+            for (i = 0; i < Cartas1.Length; i++)
+            {
+                IntCartas1[i] = Int32.Parse(Cartas1[i]);
+            }
+
+            //Criar a matriz
+            for (i = 0; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 0] = IntCartas1[i];
+            }
+
+            for (i = 1; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 1] = IntCartas1[i];
+            }
+
+            for (i = 2; i <= 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 2] = IntCartas1[i];
+            }
+
+            //Criação dos objetos
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i] = new Cartas();
+            }
+
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].id = Cartas2[i, 0];
+            }
+
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].bode = Cartas2[i, 1];
+            }
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].numero = Cartas2[i, 2];
+            }
         }
 
         //Listar Partidas - Falta a escolha do parâmetro
@@ -292,61 +346,6 @@ namespace BodeOfWar
                 MessageBox.Show(mao);
             }
             */
-
-            //Monta a matiz de todas as cartas
-            string retCartas = BodeOfWarServer.Jogo.ListarCartas();
-
-            MessageBox.Show(retCartas);
-
-            retCartas = retCartas.Replace("\r", "");
-            retCartas = retCartas.Substring(0, retCartas.Length - 1);
-            retCartas = retCartas.Replace("\n", ",");
-            string[] Cartas1 = retCartas.Split(',');
-            int[] IntCartas1 = new int[Cartas1.Length];
-            int[,] Cartas2 = new int[50, 3];
-            Cartas[] TodasCartas = new Cartas[50];
-            int i = 0;
-
-            for (i = 0; i < Cartas1.Length; i++)
-            {
-                IntCartas1[i] = Int32.Parse(Cartas1[i]);
-            }
-
-
-            for (i = 0; i <= 149; i = i + 3)
-            {
-                Cartas2[(i / 3), 0] = IntCartas1[i];
-            }
-
-            for (i = 1; i <= 149; i = i + 3)
-            {
-                Cartas2[(i / 3), 1] = IntCartas1[i];
-            }
-
-            for (i = 2; i <= 149; i = i + 3)
-            {
-                Cartas2[(i / 3), 2] = IntCartas1[i];
-            }
-
-            //Criação dos objetos
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i] = new Cartas();
-            }
-
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i].id = Cartas2[i, 0];
-            }
-
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i].bode = Cartas2[i, 1];
-            }
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i].numero = Cartas2[i, 2];
-            }
         }
     }
 }
