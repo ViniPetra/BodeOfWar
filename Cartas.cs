@@ -15,8 +15,13 @@ namespace BodeOfWar
             this.numero = numero;
         }
 
-        public int id { get; private set; }
-        public int bode { get; private set; }
-        public int numero { get; private set; }
+        public Cartas()
+        {
+
+        }
+
+        public int id { get; set; }
+        public int bode { get; set; }
+        public int numero { get; set; }
     }
 }

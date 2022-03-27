@@ -329,22 +329,24 @@ namespace BodeOfWar
             }
 
             //Criação dos objetos
-            i = 0;
-            while (i <= 49)
+            for (i = 0; i <= 49; i++)
             {
-                for (int j = 0; j < 3; j++)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, j], Cartas2[i, j], Cartas2[i, j]);
-
-                    if (j == 2)
-                    {
-                        i++;
-                    }
-                }
+                TodasCartas[i] = new Cartas();
             }
-            MessageBox.Show(TodasCartas[40].id.ToString());
-            MessageBox.Show(TodasCartas[40].bode.ToString());
-            MessageBox.Show(TodasCartas[40].numero.ToString());
+
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].id = Cartas2[i, 0];
+            }
+
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].bode = Cartas2[i, 1];
+            }
+            for (i = 0; i <= 49; i++)
+            {
+                TodasCartas[i].numero = Cartas2[i, 2];
+            }
         }
     }
 }
