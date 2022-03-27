@@ -298,20 +298,31 @@ namespace BodeOfWar
             retCartas = retCartas.Substring(0, retCartas.Length - 1);
             retCartas = retCartas.Replace("\n", ",");
             string[] Cartas1 = retCartas.Split(',');
-            string[] Cartas2 = new string[3];
+            string[,] Cartas2 = new string[50, 3];
             Cartas[] TodasCartas = new Cartas[50];
 
-            for (int i = 0; i < Cartas1.Length; i++)
+            for (int i = 0; i < 149; i = i + 3)
             {
-                MessageBox.Show(Cartas1[i]);
-                /*
-                for (int j = 0; j < Cartas2.Length; j++)
-                {
-                    TodasCartas[j] = new Cartas(Int32.Parse(Cartas2[0]), Int32.Parse(Cartas2[1]), Int32.Parse(Cartas2[2]));
-                    MessageBox.Show(TodasCartas[j].id.ToString());
-                }
-                */
+                Cartas2[(i/3), 0] = Cartas1[i];
+            }
+            
+            for (int i = 1; i < 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 1] = Cartas1[i];
+            }
+            
+            for (int i = 2; i < 149; i = i + 3)
+            {
+                Cartas2[(i / 3), 2] = Cartas1[i];
             }
         }
     }
 }
+
+/*
+for (int j = 0; j < Cartas2.Length; j++)
+{
+    TodasCartas[j] = new Cartas(Int32.Parse(Cartas2[0]), Int32.Parse(Cartas2[1]), Int32.Parse(Cartas2[2]));
+    MessageBox.Show(TodasCartas[j].id.ToString());
+}
+*/
