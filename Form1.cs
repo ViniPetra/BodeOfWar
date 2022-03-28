@@ -325,7 +325,6 @@ namespace BodeOfWar
             txtNarracao.Text = narracao;
             txtVez.Text = vez;
         }
-
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
             string index;
@@ -340,7 +339,13 @@ namespace BodeOfWar
                 senha = info[1];
             }
             string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
-            MessageBox.Show(StringMao);
+            StringMao = StringMao.Replace("\r", "");
+            StringMao = StringMao.Substring(0, StringMao.Length - 1);
+            StringMao = StringMao.Replace("\n", ",");
+
+            Mão FormMao = new Mão(StringMao);
+            FormMao.ShowDialog();
+
         }
     }
 }
