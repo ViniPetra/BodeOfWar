@@ -23,8 +23,6 @@ namespace BodeOfWar
             {
                 Mao[i] = Int32.Parse(StringMao1[i]);
             }
-
-            button1.Text = mao.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

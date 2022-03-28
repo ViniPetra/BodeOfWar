@@ -345,7 +345,6 @@ namespace BodeOfWar
 
             Mão FormMao = new Mão(StringMao);
             FormMao.ShowDialog();
-
         }
     }
 }
