@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BodeOfWar
 {
-    class Cartas
+    public class Cartas
     {
         public Cartas(int id, int bode, int numero)
         {
