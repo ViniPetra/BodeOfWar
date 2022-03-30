@@ -26,7 +26,6 @@ namespace BodeOfWar
             string retCartas = BodeOfWarServer.Jogo.ListarCartas();
             retCartas = retCartas.Replace("\r", "");
             retCartas = retCartas.Substring(0, retCartas.Length - 1);
-            MessageBox.Show(retCartas);
             retCartas = retCartas.Replace("\n", ",");;
             string[] Cartas1 = retCartas.Split(',');
 
@@ -370,7 +369,6 @@ namespace BodeOfWar
                         count++;
                     }
             }
-
 
             Mão FormMao = new Mão(MinhaMao);
             FormMao.ShowDialog();
