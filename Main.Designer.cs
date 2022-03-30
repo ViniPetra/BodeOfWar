@@ -128,6 +128,7 @@
             this.txtSenhaCriarPartida.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtSenhaCriarPartida.Location = new System.Drawing.Point(8, 340);
             this.txtSenhaCriarPartida.Name = "txtSenhaCriarPartida";
+            this.txtSenhaCriarPartida.PasswordChar = '*';
             this.txtSenhaCriarPartida.Size = new System.Drawing.Size(100, 20);
             this.txtSenhaCriarPartida.TabIndex = 10;
             // 
@@ -173,6 +174,7 @@
             this.txtSenhaPartida.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtSenhaPartida.Location = new System.Drawing.Point(298, 587);
             this.txtSenhaPartida.Name = "txtSenhaPartida";
+            this.txtSenhaPartida.PasswordChar = '*';
             this.txtSenhaPartida.Size = new System.Drawing.Size(100, 20);
             this.txtSenhaPartida.TabIndex = 15;
             // 
