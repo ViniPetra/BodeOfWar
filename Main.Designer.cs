@@ -1,6 +1,6 @@
 ﻿namespace BodeOfWar
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnListarPartidas = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
             this.lblPartidas = new System.Windows.Forms.Label();
@@ -308,12 +308,12 @@
             this.btnMostrarMao.UseVisualStyleBackColor = true;
             this.btnMostrarMao.Click += new System.EventHandler(this.btnMostrarMao_Click);
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(790, 678);
+            this.ClientSize = new System.Drawing.Size(1171, 678);
             this.Controls.Add(this.btnMostrarMao);
             this.Controls.Add(this.btnAtualizarNarracao);
             this.Controls.Add(this.lblNarracao);
@@ -345,7 +345,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BodeOfWar ";
             this.ResumeLayout(false);

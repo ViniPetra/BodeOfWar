@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace BodeOfWar
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
+        public Cartas[] TodasCartas = new Cartas[50];
+        //Criando a variável que vai guardar as cartas após a filtragem
+        public Cartas[] MinhaMao = new Cartas[8];
 
-
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             string Versao = BodeOfWarServer.Jogo.Versao;
@@ -24,12 +26,12 @@ namespace BodeOfWar
             string retCartas = BodeOfWarServer.Jogo.ListarCartas();
             retCartas = retCartas.Replace("\r", "");
             retCartas = retCartas.Substring(0, retCartas.Length - 1);
-            retCartas = retCartas.Replace("\n", ",");
+            retCartas = retCartas.Replace("\n", ",");;
             string[] Cartas1 = retCartas.Split(',');
 
             int[] IntCartas1 = new int[Cartas1.Length];
             int[,] Cartas2 = new int[50, 3];
-            Cartas[] TodasCartas = new Cartas[50];
+
             int i;
 
             //Converter a array em int
@@ -57,28 +59,14 @@ namespace BodeOfWar
             //Criação dos objetos
             for (i = 0; i <= 49; i++)
             {
-                TodasCartas[i] = new Cartas();
-            }
-
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i].id = Cartas2[i, 0];
-            }
-
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i].bode = Cartas2[i, 1];
-            }
-            for (i = 0; i <= 49; i++)
-            {
-                TodasCartas[i].numero = Cartas2[i, 2];
+                //Utilizando o metodo construtor
+                TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2]);
             }
         }
 
         //Listar Partidas - Falta a escolha do parâmetro
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
-            
             lstPartidas.Items.Clear();
             string opc = cbbPartidas.Text;
             if (opc == "Todas")
@@ -181,6 +169,15 @@ namespace BodeOfWar
                 MessageBox.Show(ret, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
+            
+            //atualizar status do programa
+            if(cbbPartidas.Text != "")
+            {
+                ListarPartidas();
+            }
+            //esvaziando os inputs 
+            txtNomeCriarPartida.Text = "";
+            txtSenhaCriarPartida.Text = "";
         }
 
         //Entrar na partida
@@ -214,6 +211,9 @@ namespace BodeOfWar
                 lstSenhas.Items.Add(senhas[i]);
             }
             ListarJogadores(idPartida);
+            //Atualizando campos de texto
+            txtNome.Text = "";
+            txtSenhaPartida.Text = "";
         }
 
         //Clicar na lista - Mostrar jogadores
@@ -325,7 +325,6 @@ namespace BodeOfWar
             txtNarracao.Text = narracao;
             txtVez.Text = vez;
         }
-
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
             string index;
@@ -340,7 +339,51 @@ namespace BodeOfWar
                 senha = info[1];
             }
             string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
-            MessageBox.Show(StringMao);
+            StringMao = StringMao.Replace("\r", "");
+            StringMao = StringMao.Substring(0, StringMao.Length - 1);
+            StringMao = StringMao.Replace("\n", ",");
+
+            string[] StringMao1 = StringMao.Split(',');
+
+            int[] Mao = new int[StringMao1.Length];
+
+            for (int i = 0; i < StringMao1.Length; i++)
+            {
+                Mao[i] = Int32.Parse(StringMao1[i]);
+            }
+
+            if (lstSenhas.SelectedItem != null)
+            {
+                //Servira de indice para cartasMaoSeleionadas
+                int count = 0;
+          
+                    for (int j = 0; j < Mao.Length; j++)
+                    {
+                        for(int i = 0; i < TodasCartas.Length; i++)
+                        {
+                            if (TodasCartas[i].id == Mao[j])
+                            {
+                                MinhaMao[count] = TodasCartas[i];
+                            }
+                        }
+                        count++;
+                    }
+            }
+
+            Mão FormMao = new Mão(MinhaMao);
+            FormMao.ShowDialog();
+
+            /*
+            //Prova de funcionalidade
+            string texto = "";
+
+            for(int i = 0; i < cartasMaoSelecionadas.Length; i++)
+            {
+                texto = texto + "Id carta: " + Convert.ToString(cartasMaoSelecionadas[i].id) + " ||| Numero de Bodes: " + Convert.ToString(cartasMaoSelecionadas[i].numero) + "\n"; 
+            }
+
+            MessageBox.Show(texto);
+            */
         }
     }
 }

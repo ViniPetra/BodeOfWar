@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace BodeOfWar
 {
-    class Cartas
+    public class Cartas
     {
         public Cartas(int id, int bode, int numero)
         {
