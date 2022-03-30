@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace BodeOfWar
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         public Cartas[] TodasCartas = new Cartas[50];
         //Criando a variável que vai guardar as cartas após a filtragem
-        public Cartas[] cartasMaoSelecionadas = new Cartas[8];
-        public Form1()
+        public Cartas[] MinhaMao = new Cartas[8];
+
+        public Main()
         {
             InitializeComponent();
             string Versao = BodeOfWarServer.Jogo.Versao;
@@ -25,12 +26,13 @@ namespace BodeOfWar
             string retCartas = BodeOfWarServer.Jogo.ListarCartas();
             retCartas = retCartas.Replace("\r", "");
             retCartas = retCartas.Substring(0, retCartas.Length - 1);
-            retCartas = retCartas.Replace("\n", ",");
+            MessageBox.Show(retCartas);
+            retCartas = retCartas.Replace("\n", ",");;
             string[] Cartas1 = retCartas.Split(',');
 
             int[] IntCartas1 = new int[Cartas1.Length];
             int[,] Cartas2 = new int[50, 3];
-            
+
             int i;
 
             //Converter a array em int
@@ -168,8 +170,12 @@ namespace BodeOfWar
                 MessageBox.Show(ret, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
+            
             //atualizar status do programa
-            ListarPartidas();
+            if(cbbPartidas.Text != "")
+            {
+                ListarPartidas();
+            }
             //esvaziando os inputs 
             txtNomeCriarPartida.Text = "";
             txtSenhaCriarPartida.Text = "";
@@ -338,29 +344,39 @@ namespace BodeOfWar
             StringMao = StringMao.Substring(0, StringMao.Length - 1);
             StringMao = StringMao.Replace("\n", ",");
 
-            Mão FormMao = new Mão(StringMao);
-            //FormMao.ShowDialog();
+            string[] StringMao1 = StringMao.Split(',');
 
-            //criando a array com as IDs que vão ser usadas de filtragem para as cartas da mão
-            string[] newMao = StringMao.Split(',');
+            int[] Mao = new int[StringMao1.Length];
+
+            for (int i = 0; i < StringMao1.Length; i++)
+            {
+                Mao[i] = Int32.Parse(StringMao1[i]);
+            }
+
             if (lstSenhas.SelectedItem != null)
             {
                 //Servira de indice para cartasMaoSeleionadas
-                int cont = 0;
+                int count = 0;
           
-                    for (int j = 0; j < newMao.Length; j++)
+                    for (int j = 0; j < Mao.Length; j++)
                     {
-                        for(int i = 0; i < this.TodasCartas.Length; i++)
+                        for(int i = 0; i < TodasCartas.Length; i++)
                         {
-                            if (Convert.ToString(this.TodasCartas[i].id) == newMao[j])
+                            if (TodasCartas[i].id == Mao[j])
                             {
-                                this.cartasMaoSelecionadas[cont] = this.TodasCartas[i];
+                                MinhaMao[count] = TodasCartas[i];
                             }
                         }
-                        cont++;
+                        count++;
                     }
             }
 
+
+            Mão FormMao = new Mão(MinhaMao);
+            FormMao.ShowDialog();
+
+            /*
+            //Prova de funcionalidade
             string texto = "";
 
             for(int i = 0; i < cartasMaoSelecionadas.Length; i++)
@@ -369,6 +385,7 @@ namespace BodeOfWar
             }
 
             MessageBox.Show(texto);
+            */
         }
     }
 }
