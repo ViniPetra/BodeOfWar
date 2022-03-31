@@ -9,11 +9,11 @@ namespace BodeOfWar
 {
     public class Cartas
     {
-        public Cartas(int id, int bode, int numero)
+        public Cartas(int id, int bode, int imagem)
         {
             this.id = id;
             this.bode = bode;
-            this.numero = numero;
+            this.imagem = imagem;
         }
 
         public Cartas()
@@ -23,6 +23,6 @@ namespace BodeOfWar
 
         public int id { get; set; }
         public int bode { get; set; }
-        public int numero { get; set; }
+        public int imagem { get; set; }
     }
 }
