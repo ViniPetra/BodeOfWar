@@ -51,6 +51,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cartas.cs" />
+    <Compile Include="DetalhesPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalhesPartida.Designer.cs">
+      <DependentUpon>DetalhesPartida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DentroPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DentroPartida.Designer.cs">
+      <DependentUpon>DentroPartida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntrarPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntrarPartida.Designer.cs">
+      <DependentUpon>EntrarPartida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

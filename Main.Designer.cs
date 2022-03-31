@@ -71,7 +71,7 @@
             // lblVersao
             // 
             this.lblVersao.AutoSize = true;
-            this.lblVersao.Location = new System.Drawing.Point(698, 414);
+            this.lblVersao.Location = new System.Drawing.Point(701, 409);
             this.lblVersao.Name = "lblVersao";
             this.lblVersao.Size = new System.Drawing.Size(40, 13);
             this.lblVersao.TabIndex = 2;
