@@ -408,5 +408,32 @@ namespace BodeOfWar
             Mão FormMao = new Mão(MinhaMao);
             FormMao.ShowDialog();
         }
+
+        //Dinâmica UI
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            pnlListarCriar.BringToFront();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            pnlCriarPartida.BringToFront();
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            pnlListarPartidas.BringToFront();
+        }
+
+        //Temporário
+        private void btnTempListar_Click(object sender, EventArgs e)
+        {
+            pnlListarPartidas2.BringToFront();
+        }
     }
 }
