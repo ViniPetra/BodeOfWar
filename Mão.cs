@@ -12,14 +12,17 @@ namespace BodeOfWar
 {
     public partial class Mão : Form
     {
-
-        public Mão(Cartas[] MinhaMao, string[] senhaGlobal)
+        int idJogadorGlobal;
+        string senhaGlobal;
+        Cartas[] MinhaMaoGlobal;
+        public Mão(Cartas[] MinhaMao, string[] jogadorGlobal)
         {
             InitializeComponent();
-
+            
             //Acesso dos valores
-            lblIdJogador.Text = senhaGlobal[0];
-            lblSenha.Text = senhaGlobal[1];
+            idJogadorGlobal = Int32.Parse(jogadorGlobal[0]);
+            senhaGlobal = jogadorGlobal[1];
+            MinhaMaoGlobal = MinhaMao;
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};
@@ -52,51 +55,56 @@ namespace BodeOfWar
             }
         }
 
+        private void Jogar(int index)
+        {
+            BodeOfWarServer.Jogo.Jogar(idJogadorGlobal, senhaGlobal, MinhaMaoGlobal[index].id);
+        }
+
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
-            
+            Jogar(0);
             pnlCarta1.BringToFront();
         }
 
         private void pcbCarta2_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(1);
             pnlCarta2.BringToFront();
         }
 
         private void pcbCarta3_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(2);
             pnlCarta3.BringToFront();
         }
 
         private void pcbCarta4_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(3);
             pnlCarta4.BringToFront();
         }
 
         private void pcbCarta5_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(4);
             pnlCarta5.BringToFront();
         }
 
         private void pcbCarta6_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(5);
             pnlCarta6.BringToFront();
         }
 
         private void pcbCarta7_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(6);
             pnlCarta7.BringToFront();
         }
 
         private void pcbCarta8_DoubleClick(object sender, EventArgs e)
         {
-
+            Jogar(7);
             pnlCarta8.BringToFront();
         }
     }
