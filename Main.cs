@@ -343,7 +343,7 @@ namespace BodeOfWar
             }
 
             //Chamar a janela de cartas próprias
-            Mão FormMao = new Mão(MinhaMao, senhaGlobal);
+            Mão FormMao = new Mão(MinhaMao, senhaGlobal, idPartidaGlobal);
             FormMao.ShowDialog();
         }
 

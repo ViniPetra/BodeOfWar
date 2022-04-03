@@ -416,7 +416,7 @@
             // lblVez
             // 
             this.lblVez.AutoSize = true;
-            this.lblVez.Location = new System.Drawing.Point(316, 237);
+            this.lblVez.Location = new System.Drawing.Point(316, 131);
             this.lblVez.Name = "lblVez";
             this.lblVez.Size = new System.Drawing.Size(43, 13);
             this.lblVez.TabIndex = 39;
@@ -425,18 +425,18 @@
             // txtVez
             // 
             this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtVez.Location = new System.Drawing.Point(241, 263);
+            this.txtVez.Location = new System.Drawing.Point(281, 147);
             this.txtVez.Name = "txtVez";
-            this.txtVez.Size = new System.Drawing.Size(186, 20);
+            this.txtVez.Size = new System.Drawing.Size(111, 20);
             this.txtVez.TabIndex = 40;
             // 
             // txtNarracao
             // 
             this.txtNarracao.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNarracao.Location = new System.Drawing.Point(241, 314);
+            this.txtNarracao.Location = new System.Drawing.Point(183, 203);
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
-            this.txtNarracao.Size = new System.Drawing.Size(186, 75);
+            this.txtNarracao.Size = new System.Drawing.Size(303, 239);
             this.txtNarracao.TabIndex = 41;
             // 
             // lblJogadores
@@ -454,13 +454,13 @@
             this.txtListarJogadores.Location = new System.Drawing.Point(292, 54);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
-            this.txtListarJogadores.Size = new System.Drawing.Size(100, 157);
+            this.txtListarJogadores.Size = new System.Drawing.Size(100, 60);
             this.txtListarJogadores.TabIndex = 32;
             // 
             // lblNarracao
             // 
             this.lblNarracao.AutoSize = true;
-            this.lblNarracao.Location = new System.Drawing.Point(308, 298);
+            this.lblNarracao.Location = new System.Drawing.Point(307, 184);
             this.lblNarracao.Name = "lblNarracao";
             this.lblNarracao.Size = new System.Drawing.Size(51, 13);
             this.lblNarracao.TabIndex = 42;
@@ -468,7 +468,7 @@
             // 
             // btnAtualizarNarracao
             // 
-            this.btnAtualizarNarracao.Location = new System.Drawing.Point(297, 404);
+            this.btnAtualizarNarracao.Location = new System.Drawing.Point(303, 462);
             this.btnAtualizarNarracao.Name = "btnAtualizarNarracao";
             this.btnAtualizarNarracao.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizarNarracao.TabIndex = 43;
@@ -522,12 +522,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(715, 678);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlDetalhesPartida);
+            this.Controls.Add(this.pnlDentroPartida);
+            this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlListarPartidas2);
             this.Controls.Add(this.pnlListarCriar);
             this.Controls.Add(this.pnlListarPartidas);
-            this.Controls.Add(this.pnlDentroPartida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

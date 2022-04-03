@@ -63,6 +63,18 @@
             this.lblIdJogador = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblIndexCarta = new System.Windows.Forms.Label();
+            this.lblVez = new System.Windows.Forms.Label();
+            this.txtVez = new System.Windows.Forms.TextBox();
+            this.txtNarracao = new System.Windows.Forms.TextBox();
+            this.lblJogadores = new System.Windows.Forms.Label();
+            this.txtListarJogadores = new System.Windows.Forms.TextBox();
+            this.lblNarracao = new System.Windows.Forms.Label();
+            this.btnAtualizarNarracao = new System.Windows.Forms.Button();
+            this.btnVerIlhas = new System.Windows.Forms.Button();
+            this.pnlIlhas = new System.Windows.Forms.Panel();
+            this.btnIlha1 = new System.Windows.Forms.Button();
+            this.btnIlha2 = new System.Windows.Forms.Button();
+            this.pnlVerIlhas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).BeginInit();
@@ -71,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
+            this.pnlIlhas.SuspendLayout();
+            this.pnlVerIlhas.SuspendLayout();
             this.SuspendLayout();
             // 
             // pcbCarta1
@@ -420,12 +434,139 @@
             this.lblIndexCarta.TabIndex = 2;
             this.lblIndexCarta.Text = "label3";
             // 
+            // lblVez
+            // 
+            this.lblVez.AutoSize = true;
+            this.lblVez.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblVez.Location = new System.Drawing.Point(1078, 187);
+            this.lblVez.Name = "lblVez";
+            this.lblVez.Size = new System.Drawing.Size(43, 13);
+            this.lblVez.TabIndex = 46;
+            this.lblVez.Text = "Vez de:";
+            // 
+            // txtVez
+            // 
+            this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtVez.Location = new System.Drawing.Point(1043, 203);
+            this.txtVez.Name = "txtVez";
+            this.txtVez.Size = new System.Drawing.Size(111, 20);
+            this.txtVez.TabIndex = 47;
+            // 
+            // txtNarracao
+            // 
+            this.txtNarracao.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtNarracao.Location = new System.Drawing.Point(945, 259);
+            this.txtNarracao.Multiline = true;
+            this.txtNarracao.Name = "txtNarracao";
+            this.txtNarracao.Size = new System.Drawing.Size(303, 239);
+            this.txtNarracao.TabIndex = 48;
+            // 
+            // lblJogadores
+            // 
+            this.lblJogadores.AutoSize = true;
+            this.lblJogadores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblJogadores.Location = new System.Drawing.Point(1069, 83);
+            this.lblJogadores.Name = "lblJogadores";
+            this.lblJogadores.Size = new System.Drawing.Size(56, 13);
+            this.lblJogadores.TabIndex = 45;
+            this.lblJogadores.Text = "Jogadores";
+            // 
+            // txtListarJogadores
+            // 
+            this.txtListarJogadores.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtListarJogadores.Location = new System.Drawing.Point(1054, 114);
+            this.txtListarJogadores.Multiline = true;
+            this.txtListarJogadores.Name = "txtListarJogadores";
+            this.txtListarJogadores.Size = new System.Drawing.Size(100, 60);
+            this.txtListarJogadores.TabIndex = 44;
+            // 
+            // lblNarracao
+            // 
+            this.lblNarracao.AutoSize = true;
+            this.lblNarracao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNarracao.Location = new System.Drawing.Point(1069, 240);
+            this.lblNarracao.Name = "lblNarracao";
+            this.lblNarracao.Size = new System.Drawing.Size(51, 13);
+            this.lblNarracao.TabIndex = 49;
+            this.lblNarracao.Text = "Narração";
+            // 
+            // btnAtualizarNarracao
+            // 
+            this.btnAtualizarNarracao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAtualizarNarracao.Location = new System.Drawing.Point(1065, 518);
+            this.btnAtualizarNarracao.Name = "btnAtualizarNarracao";
+            this.btnAtualizarNarracao.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizarNarracao.TabIndex = 50;
+            this.btnAtualizarNarracao.Text = "Atualizar";
+            this.btnAtualizarNarracao.UseVisualStyleBackColor = true;
+            this.btnAtualizarNarracao.Click += new System.EventHandler(this.btnAtualizarNarracao_Click);
+            // 
+            // btnVerIlhas
+            // 
+            this.btnVerIlhas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerIlhas.Location = new System.Drawing.Point(117, 59);
+            this.btnVerIlhas.Name = "btnVerIlhas";
+            this.btnVerIlhas.Size = new System.Drawing.Size(75, 23);
+            this.btnVerIlhas.TabIndex = 51;
+            this.btnVerIlhas.Text = "Ver ilhas";
+            this.btnVerIlhas.UseVisualStyleBackColor = true;
+            this.btnVerIlhas.Click += new System.EventHandler(this.btnVerIlhas_Click);
+            // 
+            // pnlIlhas
+            // 
+            this.pnlIlhas.Controls.Add(this.btnIlha2);
+            this.pnlIlhas.Controls.Add(this.btnIlha1);
+            this.pnlIlhas.Location = new System.Drawing.Point(949, 554);
+            this.pnlIlhas.Name = "pnlIlhas";
+            this.pnlIlhas.Size = new System.Drawing.Size(299, 140);
+            this.pnlIlhas.TabIndex = 52;
+            // 
+            // btnIlha1
+            // 
+            this.btnIlha1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnIlha1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnIlha1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIlha1.Location = new System.Drawing.Point(4, 4);
+            this.btnIlha1.Name = "btnIlha1";
+            this.btnIlha1.Size = new System.Drawing.Size(148, 133);
+            this.btnIlha1.TabIndex = 0;
+            this.btnIlha1.Text = "button1";
+            this.btnIlha1.UseVisualStyleBackColor = false;
+            this.btnIlha1.Click += new System.EventHandler(this.btnIlha1_Click);
+            // 
+            // btnIlha2
+            // 
+            this.btnIlha2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnIlha2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIlha2.Location = new System.Drawing.Point(166, 4);
+            this.btnIlha2.Name = "btnIlha2";
+            this.btnIlha2.Size = new System.Drawing.Size(130, 133);
+            this.btnIlha2.TabIndex = 1;
+            this.btnIlha2.Text = "button2";
+            this.btnIlha2.UseVisualStyleBackColor = false;
+            this.btnIlha2.Click += new System.EventHandler(this.btnIlha2_Click);
+            // 
+            // pnlVerIlhas
+            // 
+            this.pnlVerIlhas.Controls.Add(this.btnVerIlhas);
+            this.pnlVerIlhas.Location = new System.Drawing.Point(948, 554);
+            this.pnlVerIlhas.Name = "pnlVerIlhas";
+            this.pnlVerIlhas.Size = new System.Drawing.Size(300, 140);
+            this.pnlVerIlhas.TabIndex = 2;
+            // 
             // Mão
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(954, 706);
+            this.ClientSize = new System.Drawing.Size(1257, 706);
+            this.Controls.Add(this.lblVez);
+            this.Controls.Add(this.txtVez);
+            this.Controls.Add(this.txtNarracao);
+            this.Controls.Add(this.lblJogadores);
+            this.Controls.Add(this.txtListarJogadores);
+            this.Controls.Add(this.lblNarracao);
+            this.Controls.Add(this.btnAtualizarNarracao);
             this.Controls.Add(this.lblNum8);
             this.Controls.Add(this.lblBode8);
             this.Controls.Add(this.lblNum7);
@@ -461,6 +602,8 @@
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblIdJogador);
             this.Controls.Add(this.lblIndexCarta);
+            this.Controls.Add(this.pnlVerIlhas);
+            this.Controls.Add(this.pnlIlhas);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "Mão";
@@ -473,6 +616,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).EndInit();
+            this.pnlIlhas.ResumeLayout(false);
+            this.pnlVerIlhas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,5 +659,17 @@
         private System.Windows.Forms.Label lblIdJogador;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblIndexCarta;
+        private System.Windows.Forms.Label lblVez;
+        private System.Windows.Forms.TextBox txtVez;
+        private System.Windows.Forms.TextBox txtNarracao;
+        private System.Windows.Forms.Label lblJogadores;
+        private System.Windows.Forms.TextBox txtListarJogadores;
+        private System.Windows.Forms.Label lblNarracao;
+        private System.Windows.Forms.Button btnAtualizarNarracao;
+        private System.Windows.Forms.Button btnVerIlhas;
+        private System.Windows.Forms.Panel pnlIlhas;
+        private System.Windows.Forms.Button btnIlha2;
+        private System.Windows.Forms.Button btnIlha1;
+        private System.Windows.Forms.Panel pnlVerIlhas;
     }
 }

@@ -15,14 +15,22 @@ namespace BodeOfWar
         int idJogadorGlobal;
         string senhaGlobal;
         Cartas[] MinhaMaoGlobal;
-        public Mão(Cartas[] MinhaMao, string[] jogadorGlobal)
+        int idPartidaGlobal1;
+
+        int ilha1Global;
+        int ilha2Global;
+
+        public Mão(Cartas[] MinhaMao, string[] jogadorGlobal, int idPartidaGlobal)
         {
             InitializeComponent();
+
+            AtualizarDetalhes(idPartidaGlobal);
             
             //Acesso dos valores
             idJogadorGlobal = Int32.Parse(jogadorGlobal[0]);
             senhaGlobal = jogadorGlobal[1];
             MinhaMaoGlobal = MinhaMao;
+            idPartidaGlobal1 = idPartidaGlobal;
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};
@@ -54,6 +62,71 @@ namespace BodeOfWar
                 count++;
             }
         }
+
+        //Função para atualizar a lista de jogadores a qualquer momento
+        private void ListarJogadores(int idPartida)
+        {
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            if (Jogadores == "")
+            {
+                Jogadores = "Partida vazia";
+            }
+            txtListarJogadores.Text = Jogadores;
+        }
+
+        //Função de atualizar os detalhes da partida
+        private void AtualizarDetalhes(int idPartida)
+        {
+            ListarJogadores(idPartida);
+            txtVez.Text = VerificarVez(idPartida);
+            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+        }
+
+        //Função para verificar a vez a qualquer momento
+        private string VerificarVez(int idPartida)
+        {
+
+            string nome = "";
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+
+            //Gerenciamento de erros
+            if (vez.Contains("ERRO:Partida não está em jogo"))
+            {
+                nome = "Partida não iniciada";
+                return nome;
+            }
+            if (vez.Contains("ERRO"))
+            {
+                MessageBox.Show(vez, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return vez;
+            }
+
+            if (jogadores.Contains("ERRO"))
+            {
+                MessageBox.Show(jogadores, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return jogadores;
+            }
+
+            //Mostra apenas o nome do jogador da vez
+            jogadores = jogadores.Replace("\r", "");
+            jogadores = jogadores.Replace("\n", ",");
+            string[] Jogadores = jogadores.Split(',');
+
+            string[] Vez = vez.Split(',');
+
+            string x = Vez[1];
+
+            for (int i = 0; i < Jogadores.Length; i++)
+            {
+                if (Jogadores[i] == x)
+                {
+                    nome = Jogadores[i + 1];
+                }
+            }
+            return nome;
+        }
+
 
         private void Jogar(int index)
         {
@@ -106,6 +179,44 @@ namespace BodeOfWar
         {
             Jogar(7);
             pnlCarta8.BringToFront();
+        }
+
+        private void btnAtualizarNarracao_Click(object sender, EventArgs e)
+        {
+            AtualizarDetalhes(idPartidaGlobal1);
+        }
+
+        //Ver as opções de ilha
+        private void btnVerIlhas_Click(object sender, EventArgs e)
+        {
+            string retIlha = BodeOfWarServer.Jogo.VerificarIlha(idJogadorGlobal, senhaGlobal);
+
+            if (retIlha.Contains("ERRO"))
+            {
+                MessageBox.Show("Ainda não é a hora de escolher a ilha");
+            }
+            else
+            {
+                string[] opcIlha = retIlha.Split(',');
+                ilha1Global = Int32.Parse(opcIlha[0]);
+                ilha2Global = Int32.Parse(opcIlha[1]);
+                btnIlha1.Text = opcIlha[0];
+                btnIlha2.Text = opcIlha[1];
+                pnlIlhas.BringToFront();
+            }
+        }
+
+        //Escolher a ilha
+        private void btnIlha1_Click(object sender, EventArgs e)
+        {
+            BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha1Global);
+            pnlVerIlhas.BringToFront();
+        }
+
+        private void btnIlha2_Click(object sender, EventArgs e)
+        {
+            BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha2Global);
+            pnlVerIlhas.BringToFront();
         }
     }
 }
