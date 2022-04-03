@@ -249,6 +249,7 @@ namespace BodeOfWar
             //Parse da string para extração do id
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
+            idPartidaGlobal = idPartida;
             AtualizarDetalhes(idPartida);
         }
 
@@ -365,6 +366,26 @@ namespace BodeOfWar
         private void btnListar_Click(object sender, EventArgs e)
         {
             pnlListarPartidas.BringToFront();
+        }
+
+        private void btnVoltarCriarListar_Click(object sender, EventArgs e)
+        {
+            pnlListarCriar.BringToFront();
+        }
+
+        private void btnVoltarListarPartidas_Click(object sender, EventArgs e)
+        {
+            pnlListarPartidas.BringToFront();
+        }
+
+        private void btnVoltarListarPartidas2_Click(object sender, EventArgs e)
+        {
+            pnlListarPartidas2.BringToFront();
+        }
+
+        private void btnVoltarListarCriar2_Click(object sender, EventArgs e)
+        {
+            pnlListarCriar.BringToFront();
         }
 
         //Temporário
