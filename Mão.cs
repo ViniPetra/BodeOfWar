@@ -12,15 +12,20 @@ namespace BodeOfWar
 {
     public partial class Mão : Form
     {
-        public Mão(Cartas[] MinhaMao)
+
+        public Mão(Cartas[] MinhaMao, string[] senhaGlobal)
         {
             InitializeComponent();
+
+            //Acesso dos valores
+            lblIdJogador.Text = senhaGlobal[0];
+            lblSenha.Text = senhaGlobal[1];
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};
             List<Label> bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8};
             List<Label> ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8};
-
+            Panel[] panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
 
             //Loop para adição da imagem baseada no número de bodes
             int count = 0;
@@ -45,6 +50,54 @@ namespace BodeOfWar
                 l.Text = MinhaMao[count].id.ToString();
                 count++;
             }
+        }
+
+        private void pcbCarta1_DoubleClick(object sender, EventArgs e)
+        {
+            
+            pnlCarta1.BringToFront();
+        }
+
+        private void pcbCarta2_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta2.BringToFront();
+        }
+
+        private void pcbCarta3_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta3.BringToFront();
+        }
+
+        private void pcbCarta4_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta4.BringToFront();
+        }
+
+        private void pcbCarta5_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta5.BringToFront();
+        }
+
+        private void pcbCarta6_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta6.BringToFront();
+        }
+
+        private void pcbCarta7_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta7.BringToFront();
+        }
+
+        private void pcbCarta8_DoubleClick(object sender, EventArgs e)
+        {
+
+            pnlCarta8.BringToFront();
         }
     }
 }

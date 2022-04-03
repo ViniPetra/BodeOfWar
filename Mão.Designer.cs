@@ -52,6 +52,17 @@
             this.lblBode7 = new System.Windows.Forms.Label();
             this.lblNum8 = new System.Windows.Forms.Label();
             this.lblBode8 = new System.Windows.Forms.Label();
+            this.pnlCarta1 = new System.Windows.Forms.Panel();
+            this.pnlCarta2 = new System.Windows.Forms.Panel();
+            this.pnlCarta3 = new System.Windows.Forms.Panel();
+            this.pnlCarta4 = new System.Windows.Forms.Panel();
+            this.pnlCarta5 = new System.Windows.Forms.Panel();
+            this.pnlCarta6 = new System.Windows.Forms.Panel();
+            this.pnlCarta7 = new System.Windows.Forms.Panel();
+            this.pnlCarta8 = new System.Windows.Forms.Panel();
+            this.lblIdJogador = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblIndexCarta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).BeginInit();
@@ -69,6 +80,7 @@
             this.pcbCarta1.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta1.TabIndex = 1;
             this.pcbCarta1.TabStop = false;
+            this.pcbCarta1.DoubleClick += new System.EventHandler(this.pcbCarta1_DoubleClick);
             // 
             // pcbCarta2
             // 
@@ -77,6 +89,7 @@
             this.pcbCarta2.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta2.TabIndex = 2;
             this.pcbCarta2.TabStop = false;
+            this.pcbCarta2.DoubleClick += new System.EventHandler(this.pcbCarta2_DoubleClick);
             // 
             // pcbCarta3
             // 
@@ -85,6 +98,7 @@
             this.pcbCarta3.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta3.TabIndex = 3;
             this.pcbCarta3.TabStop = false;
+            this.pcbCarta3.DoubleClick += new System.EventHandler(this.pcbCarta3_DoubleClick);
             // 
             // pcbCarta4
             // 
@@ -93,6 +107,7 @@
             this.pcbCarta4.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta4.TabIndex = 4;
             this.pcbCarta4.TabStop = false;
+            this.pcbCarta4.DoubleClick += new System.EventHandler(this.pcbCarta4_DoubleClick);
             // 
             // pcbCarta5
             // 
@@ -101,6 +116,7 @@
             this.pcbCarta5.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta5.TabIndex = 5;
             this.pcbCarta5.TabStop = false;
+            this.pcbCarta5.DoubleClick += new System.EventHandler(this.pcbCarta5_DoubleClick);
             // 
             // pcbCarta6
             // 
@@ -109,6 +125,7 @@
             this.pcbCarta6.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta6.TabIndex = 6;
             this.pcbCarta6.TabStop = false;
+            this.pcbCarta6.DoubleClick += new System.EventHandler(this.pcbCarta6_DoubleClick);
             // 
             // pcbCarta7
             // 
@@ -117,6 +134,7 @@
             this.pcbCarta7.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta7.TabIndex = 7;
             this.pcbCarta7.TabStop = false;
+            this.pcbCarta7.DoubleClick += new System.EventHandler(this.pcbCarta7_DoubleClick);
             // 
             // pcbCarta8
             // 
@@ -125,6 +143,7 @@
             this.pcbCarta8.Size = new System.Drawing.Size(227, 337);
             this.pcbCarta8.TabIndex = 8;
             this.pcbCarta8.TabStop = false;
+            this.pcbCarta8.DoubleClick += new System.EventHandler(this.pcbCarta8_DoubleClick);
             // 
             // lblBode1
             // 
@@ -318,6 +337,89 @@
             this.lblBode8.TabIndex = 23;
             this.lblBode8.Text = "label16";
             // 
+            // pnlCarta1
+            // 
+            this.pnlCarta1.Location = new System.Drawing.Point(13, 13);
+            this.pnlCarta1.Name = "pnlCarta1";
+            this.pnlCarta1.Size = new System.Drawing.Size(227, 336);
+            this.pnlCarta1.TabIndex = 25;
+            // 
+            // pnlCarta2
+            // 
+            this.pnlCarta2.Location = new System.Drawing.Point(246, 12);
+            this.pnlCarta2.Name = "pnlCarta2";
+            this.pnlCarta2.Size = new System.Drawing.Size(227, 336);
+            this.pnlCarta2.TabIndex = 26;
+            // 
+            // pnlCarta3
+            // 
+            this.pnlCarta3.Location = new System.Drawing.Point(479, 12);
+            this.pnlCarta3.Name = "pnlCarta3";
+            this.pnlCarta3.Size = new System.Drawing.Size(227, 337);
+            this.pnlCarta3.TabIndex = 27;
+            // 
+            // pnlCarta4
+            // 
+            this.pnlCarta4.Location = new System.Drawing.Point(712, 13);
+            this.pnlCarta4.Name = "pnlCarta4";
+            this.pnlCarta4.Size = new System.Drawing.Size(227, 337);
+            this.pnlCarta4.TabIndex = 28;
+            // 
+            // pnlCarta5
+            // 
+            this.pnlCarta5.Location = new System.Drawing.Point(13, 356);
+            this.pnlCarta5.Name = "pnlCarta5";
+            this.pnlCarta5.Size = new System.Drawing.Size(227, 336);
+            this.pnlCarta5.TabIndex = 29;
+            // 
+            // pnlCarta6
+            // 
+            this.pnlCarta6.Location = new System.Drawing.Point(246, 354);
+            this.pnlCarta6.Name = "pnlCarta6";
+            this.pnlCarta6.Size = new System.Drawing.Size(227, 336);
+            this.pnlCarta6.TabIndex = 30;
+            // 
+            // pnlCarta7
+            // 
+            this.pnlCarta7.Location = new System.Drawing.Point(479, 357);
+            this.pnlCarta7.Name = "pnlCarta7";
+            this.pnlCarta7.Size = new System.Drawing.Size(227, 336);
+            this.pnlCarta7.TabIndex = 26;
+            // 
+            // pnlCarta8
+            // 
+            this.pnlCarta8.Location = new System.Drawing.Point(712, 357);
+            this.pnlCarta8.Name = "pnlCarta8";
+            this.pnlCarta8.Size = new System.Drawing.Size(227, 336);
+            this.pnlCarta8.TabIndex = 26;
+            // 
+            // lblIdJogador
+            // 
+            this.lblIdJogador.AutoSize = true;
+            this.lblIdJogador.Location = new System.Drawing.Point(51, 140);
+            this.lblIdJogador.Name = "lblIdJogador";
+            this.lblIdJogador.Size = new System.Drawing.Size(35, 13);
+            this.lblIdJogador.TabIndex = 0;
+            this.lblIdJogador.Text = "label1";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Location = new System.Drawing.Point(25, 114);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(35, 13);
+            this.lblSenha.TabIndex = 1;
+            this.lblSenha.Text = "label2";
+            // 
+            // lblIndexCarta
+            // 
+            this.lblIndexCarta.AutoSize = true;
+            this.lblIndexCarta.Location = new System.Drawing.Point(38, 157);
+            this.lblIndexCarta.Name = "lblIndexCarta";
+            this.lblIndexCarta.Size = new System.Drawing.Size(35, 13);
+            this.lblIndexCarta.TabIndex = 2;
+            this.lblIndexCarta.Text = "label3";
+            // 
             // Mão
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +450,17 @@
             this.Controls.Add(this.pcbCarta3);
             this.Controls.Add(this.pcbCarta2);
             this.Controls.Add(this.pcbCarta1);
+            this.Controls.Add(this.pnlCarta1);
+            this.Controls.Add(this.pnlCarta2);
+            this.Controls.Add(this.pnlCarta3);
+            this.Controls.Add(this.pnlCarta4);
+            this.Controls.Add(this.pnlCarta5);
+            this.Controls.Add(this.pnlCarta6);
+            this.Controls.Add(this.pnlCarta7);
+            this.Controls.Add(this.pnlCarta8);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblIdJogador);
+            this.Controls.Add(this.lblIndexCarta);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "Mão";
@@ -390,5 +503,16 @@
         private System.Windows.Forms.Label lblBode7;
         private System.Windows.Forms.Label lblNum8;
         private System.Windows.Forms.Label lblBode8;
+        private System.Windows.Forms.Panel pnlCarta1;
+        private System.Windows.Forms.Panel pnlCarta2;
+        private System.Windows.Forms.Panel pnlCarta3;
+        private System.Windows.Forms.Panel pnlCarta4;
+        private System.Windows.Forms.Panel pnlCarta5;
+        private System.Windows.Forms.Panel pnlCarta6;
+        private System.Windows.Forms.Panel pnlCarta7;
+        private System.Windows.Forms.Panel pnlCarta8;
+        private System.Windows.Forms.Label lblIdJogador;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblIndexCarta;
     }
 }
