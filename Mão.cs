@@ -210,12 +210,14 @@ namespace BodeOfWar
         private void btnIlha1_Click(object sender, EventArgs e)
         {
             BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha1Global);
+            AtualizarDetalhes(idPartidaGlobal1);
             pnlVerIlhas.BringToFront();
         }
 
         private void btnIlha2_Click(object sender, EventArgs e)
         {
             BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha2Global);
+            AtualizarDetalhes(idPartidaGlobal1);
             pnlVerIlhas.BringToFront();
         }
     }
