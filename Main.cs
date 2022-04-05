@@ -131,18 +131,18 @@ namespace BodeOfWar
             string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
 
             //Gerenciamento de erros
-            if (vez.Contains("ERRO:Partida não está em jogo"))
+            if (vez.StartsWith("ERRO:Partida não está em jogo"))
             {
                 nome = "Partida não iniciada";
                 return nome;
             }
-            if (vez.Contains("ERRO"))
+            if (vez.StartsWith("ERRO"))
             {
                 MessageBox.Show(vez, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return vez;
             }
 
-            if (jogadores.Contains("ERRO"))
+            if (jogadores.StartsWith("ERRO"))
             {
                 MessageBox.Show(jogadores, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return jogadores;
@@ -173,7 +173,7 @@ namespace BodeOfWar
             string nome = txtNomeCriarPartida.Text;
             string senha = txtSenhaCriarPartida.Text;
             string ret = BodeOfWarServer.Jogo.CriarPartida(nome, senha);
-            if (ret.Contains("ERRO")){
+            if (ret.StartsWith("ERRO")){
                 MessageBox.Show(ret, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
             }else MessageBox.Show("Partida criada com sucesso!");
@@ -212,7 +212,7 @@ namespace BodeOfWar
             string senha = txtSenhaPartida.Text;
             string chamada = BodeOfWarServer.Jogo.EntrarPartida(idPartida, nome, senha);
 
-            if (chamada.Contains("ERRO"))
+            if (chamada.StartsWith("ERRO"))
             {
                 MessageBox.Show(chamada, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return;
@@ -286,13 +286,13 @@ namespace BodeOfWar
             retIniciar = BodeOfWarServer.Jogo.IniciarPartida(id, senha);
 
             //Gerenciamento de erros
-            if (index.Contains("ERRO"))
+            if (index.StartsWith("ERRO"))
             {
                 MessageBox.Show(index,
                     "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
             
-            if (retIniciar.Contains("ERRO"))
+            if (retIniciar.StartsWith("ERRO"))
             {
                 MessageBox.Show(retIniciar,
                     "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
