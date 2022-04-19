@@ -120,6 +120,12 @@ namespace BodeOfWar
             ListarJogadores(idPartida);
             txtVez.Text = VerificarVez(idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+
+            if(txtVez.Text != "Partida não iniciada")
+            {
+                btnIniciarPartida.Enabled = false;
+            }
+
         }
 
         //Função para verificar a vez a qualquer momento
@@ -298,6 +304,8 @@ namespace BodeOfWar
                     "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
             else MessageBox.Show("Partida iniciada com sucesso");
+
+            AtualizarDetalhes(idPartidaGlobal);
         }
 
         //Atualizar a caixa de narração

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblVersao = new System.Windows.Forms.Label();
-            this.txtIniciarPartida = new System.Windows.Forms.Button();
+            this.btnIniciarPartida = new System.Windows.Forms.Button();
             this.btnMostrarMao = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@
             this.btnCriar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.pnlCriarPartida = new System.Windows.Forms.Panel();
+            this.btnVoltarListarCriar2 = new System.Windows.Forms.Button();
             this.lblCriarPartida = new System.Windows.Forms.Label();
             this.lblNomeCriarPartida = new System.Windows.Forms.Label();
             this.lblSenhaCriarPartida = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.txtNomeCriarPartida = new System.Windows.Forms.TextBox();
             this.btnCriarPartida = new System.Windows.Forms.Button();
             this.pnlListarPartidas = new System.Windows.Forms.Panel();
+            this.btnVoltarCriarListar = new System.Windows.Forms.Button();
             this.btnEncerradas = new System.Windows.Forms.Button();
             this.btnJogando = new System.Windows.Forms.Button();
             this.btnAbertas = new System.Windows.Forms.Button();
@@ -56,6 +58,7 @@
             this.lstPartidas = new System.Windows.Forms.ListBox();
             this.lblPartidas = new System.Windows.Forms.Label();
             this.pnlDetalhesPartida = new System.Windows.Forms.Panel();
+            this.btnVoltarListarPartidas2 = new System.Windows.Forms.Button();
             this.txtSenhaPartida = new System.Windows.Forms.TextBox();
             this.btnEntrarPartida = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -69,9 +72,6 @@
             this.lblNarracao = new System.Windows.Forms.Label();
             this.btnAtualizarNarracao = new System.Windows.Forms.Button();
             this.pnlDentroPartida = new System.Windows.Forms.Panel();
-            this.btnVoltarCriarListar = new System.Windows.Forms.Button();
-            this.btnVoltarListarPartidas2 = new System.Windows.Forms.Button();
-            this.btnVoltarListarCriar2 = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlListarCriar.SuspendLayout();
             this.pnlCriarPartida.SuspendLayout();
@@ -92,15 +92,15 @@
             this.lblVersao.Text = "Versão";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtIniciarPartida
+            // btnIniciarPartida
             // 
-            this.txtIniciarPartida.Location = new System.Drawing.Point(89, 13);
-            this.txtIniciarPartida.Name = "txtIniciarPartida";
-            this.txtIniciarPartida.Size = new System.Drawing.Size(91, 23);
-            this.txtIniciarPartida.TabIndex = 25;
-            this.txtIniciarPartida.Text = "Iniciar partida";
-            this.txtIniciarPartida.UseVisualStyleBackColor = true;
-            this.txtIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
+            this.btnIniciarPartida.Location = new System.Drawing.Point(89, 13);
+            this.btnIniciarPartida.Name = "btnIniciarPartida";
+            this.btnIniciarPartida.Size = new System.Drawing.Size(91, 23);
+            this.btnIniciarPartida.TabIndex = 25;
+            this.btnIniciarPartida.Text = "Iniciar partida";
+            this.btnIniciarPartida.UseVisualStyleBackColor = true;
+            this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
             // 
             // btnMostrarMao
             // 
@@ -115,8 +115,8 @@
             // pnlMenu
             // 
             this.pnlMenu.Controls.Add(this.btnSair);
-            this.pnlMenu.Controls.Add(this.btnIniciar);
             this.pnlMenu.Controls.Add(this.lblTitulo);
+            this.pnlMenu.Controls.Add(this.btnIniciar);
             this.pnlMenu.Controls.Add(this.lblVersao);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
@@ -200,6 +200,16 @@
             this.pnlCriarPartida.Size = new System.Drawing.Size(715, 678);
             this.pnlCriarPartida.TabIndex = 34;
             // 
+            // btnVoltarListarCriar2
+            // 
+            this.btnVoltarListarCriar2.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarListarCriar2.Name = "btnVoltarListarCriar2";
+            this.btnVoltarListarCriar2.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarListarCriar2.TabIndex = 20;
+            this.btnVoltarListarCriar2.Text = "Voltar";
+            this.btnVoltarListarCriar2.UseVisualStyleBackColor = true;
+            this.btnVoltarListarCriar2.Click += new System.EventHandler(this.btnVoltarListarCriar2_Click);
+            // 
             // lblCriarPartida
             // 
             this.lblCriarPartida.AutoSize = true;
@@ -266,6 +276,16 @@
             this.pnlListarPartidas.Name = "pnlListarPartidas";
             this.pnlListarPartidas.Size = new System.Drawing.Size(715, 678);
             this.pnlListarPartidas.TabIndex = 2;
+            // 
+            // btnVoltarCriarListar
+            // 
+            this.btnVoltarCriarListar.Location = new System.Drawing.Point(13, 13);
+            this.btnVoltarCriarListar.Name = "btnVoltarCriarListar";
+            this.btnVoltarCriarListar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarCriarListar.TabIndex = 27;
+            this.btnVoltarCriarListar.Text = "Voltar";
+            this.btnVoltarCriarListar.UseVisualStyleBackColor = true;
+            this.btnVoltarCriarListar.Click += new System.EventHandler(this.btnVoltarCriarListar_Click);
             // 
             // btnEncerradas
             // 
@@ -367,6 +387,16 @@
             this.pnlDetalhesPartida.Name = "pnlDetalhesPartida";
             this.pnlDetalhesPartida.Size = new System.Drawing.Size(715, 678);
             this.pnlDetalhesPartida.TabIndex = 33;
+            // 
+            // btnVoltarListarPartidas2
+            // 
+            this.btnVoltarListarPartidas2.Location = new System.Drawing.Point(5, 4);
+            this.btnVoltarListarPartidas2.Name = "btnVoltarListarPartidas2";
+            this.btnVoltarListarPartidas2.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarListarPartidas2.TabIndex = 44;
+            this.btnVoltarListarPartidas2.Text = "Voltar";
+            this.btnVoltarListarPartidas2.UseVisualStyleBackColor = true;
+            this.btnVoltarListarPartidas2.Click += new System.EventHandler(this.btnVoltarListarPartidas2_Click);
             // 
             // txtSenhaPartida
             // 
@@ -479,41 +509,11 @@
             // pnlDentroPartida
             // 
             this.pnlDentroPartida.Controls.Add(this.btnMostrarMao);
-            this.pnlDentroPartida.Controls.Add(this.txtIniciarPartida);
+            this.pnlDentroPartida.Controls.Add(this.btnIniciarPartida);
             this.pnlDentroPartida.Location = new System.Drawing.Point(214, 491);
             this.pnlDentroPartida.Name = "pnlDentroPartida";
             this.pnlDentroPartida.Size = new System.Drawing.Size(272, 117);
             this.pnlDentroPartida.TabIndex = 44;
-            // 
-            // btnVoltarCriarListar
-            // 
-            this.btnVoltarCriarListar.Location = new System.Drawing.Point(13, 13);
-            this.btnVoltarCriarListar.Name = "btnVoltarCriarListar";
-            this.btnVoltarCriarListar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarCriarListar.TabIndex = 27;
-            this.btnVoltarCriarListar.Text = "Voltar";
-            this.btnVoltarCriarListar.UseVisualStyleBackColor = true;
-            this.btnVoltarCriarListar.Click += new System.EventHandler(this.btnVoltarCriarListar_Click);
-            // 
-            // btnVoltarListarPartidas2
-            // 
-            this.btnVoltarListarPartidas2.Location = new System.Drawing.Point(5, 4);
-            this.btnVoltarListarPartidas2.Name = "btnVoltarListarPartidas2";
-            this.btnVoltarListarPartidas2.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarListarPartidas2.TabIndex = 44;
-            this.btnVoltarListarPartidas2.Text = "Voltar";
-            this.btnVoltarListarPartidas2.UseVisualStyleBackColor = true;
-            this.btnVoltarListarPartidas2.Click += new System.EventHandler(this.btnVoltarListarPartidas2_Click);
-            // 
-            // btnVoltarListarCriar2
-            // 
-            this.btnVoltarListarCriar2.Location = new System.Drawing.Point(12, 13);
-            this.btnVoltarListarCriar2.Name = "btnVoltarListarCriar2";
-            this.btnVoltarListarCriar2.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarListarCriar2.TabIndex = 20;
-            this.btnVoltarListarCriar2.Text = "Voltar";
-            this.btnVoltarListarCriar2.UseVisualStyleBackColor = true;
-            this.btnVoltarListarCriar2.Click += new System.EventHandler(this.btnVoltarListarCriar2_Click);
             // 
             // Main
             // 
@@ -551,7 +551,7 @@
 
         #endregion
         private System.Windows.Forms.Label lblVersao;
-        private System.Windows.Forms.Button txtIniciarPartida;
+        private System.Windows.Forms.Button btnIniciarPartida;
         private System.Windows.Forms.Button btnMostrarMao;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnSair;
