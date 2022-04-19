@@ -128,57 +128,82 @@ namespace BodeOfWar
         }
 
 
-        private void Jogar(int index)
+        private bool Jogar(int index)
         {
-            BodeOfWarServer.Jogo.Jogar(idJogadorGlobal, senhaGlobal, MinhaMaoGlobal[index].id);
+            string ret = BodeOfWarServer.Jogo.Jogar(idJogadorGlobal, senhaGlobal, MinhaMaoGlobal[index].id);
+            if (ret.StartsWith("ERRO"))
+            {
+                MessageBox.Show(ret);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(0);
-            pnlCarta1.BringToFront();
+            if (Jogar(0))
+            {
+                pnlCarta1.BringToFront();
+            }
         }
 
         private void pcbCarta2_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(1);
-            pnlCarta2.BringToFront();
+            if (Jogar(1))
+            {
+                pnlCarta2.BringToFront();
+            }
         }
 
         private void pcbCarta3_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(2);
-            pnlCarta3.BringToFront();
+            if (Jogar(2))
+            {
+                pnlCarta3.BringToFront();
+            }
         }
 
         private void pcbCarta4_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(3);
-            pnlCarta4.BringToFront();
+            if (Jogar(3))
+            {
+                pnlCarta4.BringToFront();
+            }
         }
 
         private void pcbCarta5_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(4);
-            pnlCarta5.BringToFront();
+            if (Jogar(4))
+            {
+                pnlCarta5.BringToFront();
+            }
         }
 
         private void pcbCarta6_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(5);
-            pnlCarta6.BringToFront();
+            if (Jogar(5))
+            {
+                pnlCarta6.BringToFront();
+            }
         }
 
         private void pcbCarta7_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(6);
-            pnlCarta7.BringToFront();
+            if (Jogar(6))
+            {
+                pnlCarta7.BringToFront();
+            }
         }
 
         private void pcbCarta8_DoubleClick(object sender, EventArgs e)
         {
-            Jogar(7);
-            pnlCarta8.BringToFront();
+            if (Jogar(7))
+            {
+                pnlCarta8.BringToFront();
+            }
         }
 
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
