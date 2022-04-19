@@ -72,8 +72,8 @@
             this.btnAtualizarNarracao = new System.Windows.Forms.Button();
             this.btnVerIlhas = new System.Windows.Forms.Button();
             this.pnlIlhas = new System.Windows.Forms.Panel();
-            this.btnIlha1 = new System.Windows.Forms.Button();
             this.btnIlha2 = new System.Windows.Forms.Button();
+            this.btnIlha1 = new System.Windows.Forms.Button();
             this.pnlVerIlhas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).BeginInit();
@@ -165,11 +165,11 @@
             this.lblBode1.BackColor = System.Drawing.Color.Transparent;
             this.lblBode1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode1.Location = new System.Drawing.Point(24, 27);
+            this.lblBode1.Location = new System.Drawing.Point(24, 300);
             this.lblBode1.Name = "lblBode1";
-            this.lblBode1.Size = new System.Drawing.Size(76, 25);
+            this.lblBode1.Size = new System.Drawing.Size(104, 25);
             this.lblBode1.TabIndex = 9;
-            this.lblBode1.Text = "label1";
+            this.lblBode1.Text = "lblBode1";
             // 
             // lblNum1
             // 
@@ -177,11 +177,11 @@
             this.lblNum1.BackColor = System.Drawing.Color.Transparent;
             this.lblNum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum1.Location = new System.Drawing.Point(24, 62);
+            this.lblNum1.Location = new System.Drawing.Point(24, 28);
             this.lblNum1.Name = "lblNum1";
-            this.lblNum1.Size = new System.Drawing.Size(76, 25);
+            this.lblNum1.Size = new System.Drawing.Size(97, 25);
             this.lblNum1.TabIndex = 10;
-            this.lblNum1.Text = "label2";
+            this.lblNum1.Text = "lblNum1";
             // 
             // lblNum2
             // 
@@ -189,11 +189,11 @@
             this.lblNum2.BackColor = System.Drawing.Color.Transparent;
             this.lblNum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum2.Location = new System.Drawing.Point(260, 62);
+            this.lblNum2.Location = new System.Drawing.Point(260, 28);
             this.lblNum2.Name = "lblNum2";
-            this.lblNum2.Size = new System.Drawing.Size(76, 25);
+            this.lblNum2.Size = new System.Drawing.Size(97, 25);
             this.lblNum2.TabIndex = 12;
-            this.lblNum2.Text = "label3";
+            this.lblNum2.Text = "lblNum2";
             // 
             // lblBode2
             // 
@@ -201,11 +201,11 @@
             this.lblBode2.BackColor = System.Drawing.Color.Transparent;
             this.lblBode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode2.Location = new System.Drawing.Point(260, 27);
+            this.lblBode2.Location = new System.Drawing.Point(260, 300);
             this.lblBode2.Name = "lblBode2";
-            this.lblBode2.Size = new System.Drawing.Size(76, 25);
+            this.lblBode2.Size = new System.Drawing.Size(104, 25);
             this.lblBode2.TabIndex = 11;
-            this.lblBode2.Text = "label4";
+            this.lblBode2.Text = "lblBode2";
             // 
             // lblNum3
             // 
@@ -213,11 +213,11 @@
             this.lblNum3.BackColor = System.Drawing.Color.Transparent;
             this.lblNum3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum3.Location = new System.Drawing.Point(495, 62);
+            this.lblNum3.Location = new System.Drawing.Point(495, 28);
             this.lblNum3.Name = "lblNum3";
-            this.lblNum3.Size = new System.Drawing.Size(76, 25);
+            this.lblNum3.Size = new System.Drawing.Size(97, 25);
             this.lblNum3.TabIndex = 14;
-            this.lblNum3.Text = "label5";
+            this.lblNum3.Text = "lblNum3";
             // 
             // lblBode3
             // 
@@ -225,11 +225,11 @@
             this.lblBode3.BackColor = System.Drawing.Color.Transparent;
             this.lblBode3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode3.Location = new System.Drawing.Point(495, 27);
+            this.lblBode3.Location = new System.Drawing.Point(495, 300);
             this.lblBode3.Name = "lblBode3";
-            this.lblBode3.Size = new System.Drawing.Size(76, 25);
+            this.lblBode3.Size = new System.Drawing.Size(104, 25);
             this.lblBode3.TabIndex = 13;
-            this.lblBode3.Text = "label6";
+            this.lblBode3.Text = "lblBode3";
             // 
             // lblNum4
             // 
@@ -237,11 +237,11 @@
             this.lblNum4.BackColor = System.Drawing.Color.Transparent;
             this.lblNum4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum4.Location = new System.Drawing.Point(727, 62);
+            this.lblNum4.Location = new System.Drawing.Point(727, 28);
             this.lblNum4.Name = "lblNum4";
-            this.lblNum4.Size = new System.Drawing.Size(76, 25);
+            this.lblNum4.Size = new System.Drawing.Size(97, 25);
             this.lblNum4.TabIndex = 16;
-            this.lblNum4.Text = "label7";
+            this.lblNum4.Text = "lblNum4";
             // 
             // lblBode4
             // 
@@ -249,11 +249,11 @@
             this.lblBode4.BackColor = System.Drawing.Color.Transparent;
             this.lblBode4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode4.Location = new System.Drawing.Point(727, 27);
+            this.lblBode4.Location = new System.Drawing.Point(727, 300);
             this.lblBode4.Name = "lblBode4";
-            this.lblBode4.Size = new System.Drawing.Size(76, 25);
+            this.lblBode4.Size = new System.Drawing.Size(104, 25);
             this.lblBode4.TabIndex = 15;
-            this.lblBode4.Text = "label8";
+            this.lblBode4.Text = "lblBode4";
             // 
             // lblNum5
             // 
@@ -261,11 +261,11 @@
             this.lblNum5.BackColor = System.Drawing.Color.Transparent;
             this.lblNum5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum5.Location = new System.Drawing.Point(24, 406);
+            this.lblNum5.Location = new System.Drawing.Point(24, 374);
             this.lblNum5.Name = "lblNum5";
-            this.lblNum5.Size = new System.Drawing.Size(76, 25);
+            this.lblNum5.Size = new System.Drawing.Size(97, 25);
             this.lblNum5.TabIndex = 18;
-            this.lblNum5.Text = "label9";
+            this.lblNum5.Text = "lblNum5";
             // 
             // lblBode5
             // 
@@ -273,11 +273,11 @@
             this.lblBode5.BackColor = System.Drawing.Color.Transparent;
             this.lblBode5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode5.Location = new System.Drawing.Point(24, 371);
+            this.lblBode5.Location = new System.Drawing.Point(24, 655);
             this.lblBode5.Name = "lblBode5";
-            this.lblBode5.Size = new System.Drawing.Size(89, 25);
+            this.lblBode5.Size = new System.Drawing.Size(104, 25);
             this.lblBode5.TabIndex = 17;
-            this.lblBode5.Text = "label10";
+            this.lblBode5.Text = "lblBode5";
             // 
             // lblNum6
             // 
@@ -285,11 +285,11 @@
             this.lblNum6.BackColor = System.Drawing.Color.Transparent;
             this.lblNum6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum6.Location = new System.Drawing.Point(260, 406);
+            this.lblNum6.Location = new System.Drawing.Point(260, 374);
             this.lblNum6.Name = "lblNum6";
-            this.lblNum6.Size = new System.Drawing.Size(89, 25);
+            this.lblNum6.Size = new System.Drawing.Size(97, 25);
             this.lblNum6.TabIndex = 20;
-            this.lblNum6.Text = "label11";
+            this.lblNum6.Text = "lblNum6";
             // 
             // lblBode6
             // 
@@ -297,11 +297,11 @@
             this.lblBode6.BackColor = System.Drawing.Color.Transparent;
             this.lblBode6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode6.Location = new System.Drawing.Point(260, 371);
+            this.lblBode6.Location = new System.Drawing.Point(260, 655);
             this.lblBode6.Name = "lblBode6";
-            this.lblBode6.Size = new System.Drawing.Size(89, 25);
+            this.lblBode6.Size = new System.Drawing.Size(104, 25);
             this.lblBode6.TabIndex = 19;
-            this.lblBode6.Text = "label12";
+            this.lblBode6.Text = "lblBode6";
             // 
             // lblNum7
             // 
@@ -309,11 +309,11 @@
             this.lblNum7.BackColor = System.Drawing.Color.Transparent;
             this.lblNum7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum7.Location = new System.Drawing.Point(495, 406);
+            this.lblNum7.Location = new System.Drawing.Point(495, 374);
             this.lblNum7.Name = "lblNum7";
-            this.lblNum7.Size = new System.Drawing.Size(89, 25);
+            this.lblNum7.Size = new System.Drawing.Size(97, 25);
             this.lblNum7.TabIndex = 22;
-            this.lblNum7.Text = "label13";
+            this.lblNum7.Text = "lblNum7";
             // 
             // lblBode7
             // 
@@ -321,11 +321,11 @@
             this.lblBode7.BackColor = System.Drawing.Color.Transparent;
             this.lblBode7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode7.Location = new System.Drawing.Point(495, 371);
+            this.lblBode7.Location = new System.Drawing.Point(495, 655);
             this.lblBode7.Name = "lblBode7";
-            this.lblBode7.Size = new System.Drawing.Size(89, 25);
+            this.lblBode7.Size = new System.Drawing.Size(104, 25);
             this.lblBode7.TabIndex = 21;
-            this.lblBode7.Text = "label14";
+            this.lblBode7.Text = "lblBode7";
             // 
             // lblNum8
             // 
@@ -333,11 +333,11 @@
             this.lblNum8.BackColor = System.Drawing.Color.Transparent;
             this.lblNum8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNum8.Location = new System.Drawing.Point(727, 406);
+            this.lblNum8.Location = new System.Drawing.Point(727, 374);
             this.lblNum8.Name = "lblNum8";
-            this.lblNum8.Size = new System.Drawing.Size(89, 25);
+            this.lblNum8.Size = new System.Drawing.Size(97, 25);
             this.lblNum8.TabIndex = 24;
-            this.lblNum8.Text = "label15";
+            this.lblNum8.Text = "lblNum8";
             // 
             // lblBode8
             // 
@@ -345,11 +345,11 @@
             this.lblBode8.BackColor = System.Drawing.Color.Transparent;
             this.lblBode8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBode8.Location = new System.Drawing.Point(727, 371);
+            this.lblBode8.Location = new System.Drawing.Point(727, 656);
             this.lblBode8.Name = "lblBode8";
-            this.lblBode8.Size = new System.Drawing.Size(89, 25);
+            this.lblBode8.Size = new System.Drawing.Size(104, 25);
             this.lblBode8.TabIndex = 23;
-            this.lblBode8.Text = "label16";
+            this.lblBode8.Text = "lblBode8";
             // 
             // pnlCarta1
             // 
@@ -521,6 +521,18 @@
             this.pnlIlhas.Size = new System.Drawing.Size(299, 140);
             this.pnlIlhas.TabIndex = 52;
             // 
+            // btnIlha2
+            // 
+            this.btnIlha2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnIlha2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIlha2.Location = new System.Drawing.Point(166, 4);
+            this.btnIlha2.Name = "btnIlha2";
+            this.btnIlha2.Size = new System.Drawing.Size(130, 133);
+            this.btnIlha2.TabIndex = 1;
+            this.btnIlha2.Text = "button2";
+            this.btnIlha2.UseVisualStyleBackColor = false;
+            this.btnIlha2.Click += new System.EventHandler(this.btnIlha2_Click);
+            // 
             // btnIlha1
             // 
             this.btnIlha1.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -533,18 +545,6 @@
             this.btnIlha1.Text = "button1";
             this.btnIlha1.UseVisualStyleBackColor = false;
             this.btnIlha1.Click += new System.EventHandler(this.btnIlha1_Click);
-            // 
-            // btnIlha2
-            // 
-            this.btnIlha2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnIlha2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIlha2.Location = new System.Drawing.Point(166, 4);
-            this.btnIlha2.Name = "btnIlha2";
-            this.btnIlha2.Size = new System.Drawing.Size(130, 133);
-            this.btnIlha2.TabIndex = 1;
-            this.btnIlha2.Text = "button2";
-            this.btnIlha2.UseVisualStyleBackColor = false;
-            this.btnIlha2.Click += new System.EventHandler(this.btnIlha2_Click);
             // 
             // pnlVerIlhas
             // 
@@ -560,6 +560,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 706);
+            this.Controls.Add(this.lblBode4);
+            this.Controls.Add(this.lblBode3);
+            this.Controls.Add(this.lblBode2);
             this.Controls.Add(this.lblVez);
             this.Controls.Add(this.txtVez);
             this.Controls.Add(this.txtNarracao);
@@ -567,6 +570,7 @@
             this.Controls.Add(this.txtListarJogadores);
             this.Controls.Add(this.lblNarracao);
             this.Controls.Add(this.btnAtualizarNarracao);
+            this.Controls.Add(this.lblBode1);
             this.Controls.Add(this.lblNum8);
             this.Controls.Add(this.lblBode8);
             this.Controls.Add(this.lblNum7);
@@ -576,13 +580,9 @@
             this.Controls.Add(this.lblNum5);
             this.Controls.Add(this.lblBode5);
             this.Controls.Add(this.lblNum4);
-            this.Controls.Add(this.lblBode4);
             this.Controls.Add(this.lblNum3);
-            this.Controls.Add(this.lblBode3);
             this.Controls.Add(this.lblNum2);
-            this.Controls.Add(this.lblBode2);
             this.Controls.Add(this.lblNum1);
-            this.Controls.Add(this.lblBode1);
             this.Controls.Add(this.pcbCarta8);
             this.Controls.Add(this.pcbCarta7);
             this.Controls.Add(this.pcbCarta6);
