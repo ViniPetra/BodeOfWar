@@ -17,6 +17,8 @@ namespace BodeOfWar
         //Array das cartas designadas
         public Cartas[] MinhaMao = new Cartas[8];
 
+        public Jogador jogador = new Jogador();
+
         //Globalização da informação
         public int idPartidaGlobal;
         public string[] senhaGlobal = new string[2];
@@ -75,6 +77,11 @@ namespace BodeOfWar
             {
                 //Utilizando o metodo construtor
                 TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2]);
+            }
+
+            foreach(Cartas cartas in TodasCartas)
+            {
+                cartas.imagem = (Image)Properties.Resources.ResourceManager.GetObject("b" + cartas.imagemnum);
             }
         }
 
@@ -203,6 +210,7 @@ namespace BodeOfWar
             int idPartida = Int32.Parse(Partidas[((Partidas.Length) - 4)]);
 
             idPartidaGlobal = idPartida;
+            jogador.idPartida = idPartida;
 
             //Atualizar detalhes
             AtualizarDetalhes(idPartida);
@@ -232,6 +240,10 @@ namespace BodeOfWar
 
             //Globalizar a senha e id
             senhaGlobal = chamada.Split(',');
+
+            jogador.Id = Int32.Parse(senhaGlobal[0]);
+            jogador.Senha = senhaGlobal[1];
+            jogador.idPartida = idPartidaGlobal;
 
             AtualizarDetalhes(idPartida);
         }
@@ -298,8 +310,10 @@ namespace BodeOfWar
                 count++;
             }
 
+            jogador.Mao = MinhaMao;
+
             //Chamar a janela de cartas próprias
-            Mão FormMao = new Mão(MinhaMao, senhaGlobal, idPartidaGlobal);
+            Mão FormMao = new Mão(MinhaMao, senhaGlobal, idPartidaGlobal, jogador);
             FormMao.ShowDialog();
         }
 
@@ -328,7 +342,10 @@ namespace BodeOfWar
             //Parse da string para extração do id
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
+            
             idPartidaGlobal = idPartida;
+            jogador.idPartida = idPartida;
+
             AtualizarDetalhes(idPartida);
         }
 

@@ -20,11 +20,13 @@ namespace BodeOfWar
         int ilha1Global;
         int ilha2Global;
 
-        public Mão(Cartas[] MinhaMao, string[] jogadorGlobal, int idPartidaGlobal)
+        Jogador jogador = new Jogador();
+
+        public Mão(Cartas[] MinhaMao, string[] jogadorGlobal, int idPartidaGlobal, Jogador user)
         {
             InitializeComponent();
 
-            AtualizarDetalhes(idPartidaGlobal);
+            AtualizarDetalhes(jogador.idPartida);
             
             //Acesso dos valores
             idJogadorGlobal = Int32.Parse(jogadorGlobal[0]);
@@ -32,17 +34,28 @@ namespace BodeOfWar
             MinhaMaoGlobal = MinhaMao;
             idPartidaGlobal1 = idPartidaGlobal;
 
+            jogador = user;
+
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};
             List<Label> bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8};
             List<Label> ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8};
             Panel[] panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
 
-            //Loop para adição da imagem baseada no número de bodes
+            List<PictureBox> Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
+            List<PictureBox> Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
+            List<PictureBox> Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
+            List<PictureBox> Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
+            
             int count = 0;
             foreach (PictureBox p in imagens)
             {
+                /*
                 p.Image = (Image)Properties.Resources.ResourceManager.GetObject("b" + MinhaMao[count].imagem);
+                count++;
+                */
+                p.Image = jogador.Mao[count].imagem;
+                p.SizeMode = PictureBoxSizeMode.StretchImage;
                 count++;
             }
 
@@ -50,15 +63,15 @@ namespace BodeOfWar
             count = 0;
             foreach (Label label in bodes)
             {
-                    label.Text = MinhaMao[count].bode.ToString();
-                    count++;
+                label.Text = jogador.Mao[count].bode.ToString();
+                count++;
             }
 
             //Loop para troca do texto da label Numero para o atributo do objeto
             count = 0;
             foreach (Label l in ids)
             {
-                l.Text = MinhaMao[count].id.ToString();
+                l.Text = jogador.Mao[count].id.ToString();
                 count++;
             }
         }
@@ -80,6 +93,12 @@ namespace BodeOfWar
             ListarJogadores(idPartida);
             txtVez.Text = VerificarVez(idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+        }
+
+        private void VerificarMesaAtual(int idPartida)
+        {
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida);
+            MessageBox.Show(ret);
         }
 
         //Função para verificar a vez a qualquer momento
@@ -125,7 +144,6 @@ namespace BodeOfWar
             }
             return nome;
         }
-
 
         private bool Jogar(int index)
         {
@@ -251,6 +269,11 @@ namespace BodeOfWar
             BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha2Global);
             AtualizarDetalhes(idPartidaGlobal1);
             pnlVerIlhas.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VerificarMesaAtual(idPartidaGlobal1);
         }
     }
 }
