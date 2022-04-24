@@ -85,7 +85,6 @@ namespace BodeOfWar
         //Função para verificar a vez a qualquer momento
         private string VerificarVez(int idPartida)
         {
-
             string nome = "";
             string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
             string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
@@ -147,6 +146,7 @@ namespace BodeOfWar
             if (Jogar(0))
             {
                 pnlCarta1.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -155,6 +155,7 @@ namespace BodeOfWar
             if (Jogar(1))
             {
                 pnlCarta2.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -163,6 +164,7 @@ namespace BodeOfWar
             if (Jogar(2))
             {
                 pnlCarta3.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -171,6 +173,7 @@ namespace BodeOfWar
             if (Jogar(3))
             {
                 pnlCarta4.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -179,6 +182,7 @@ namespace BodeOfWar
             if (Jogar(4))
             {
                 pnlCarta5.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -187,6 +191,7 @@ namespace BodeOfWar
             if (Jogar(5))
             {
                 pnlCarta6.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -195,6 +200,7 @@ namespace BodeOfWar
             if (Jogar(6))
             {
                 pnlCarta7.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
@@ -203,6 +209,7 @@ namespace BodeOfWar
             if (Jogar(7))
             {
                 pnlCarta8.BringToFront();
+                AtualizarDetalhes(idPartidaGlobal1);
             }
         }
 
