@@ -110,7 +110,9 @@
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtMaxIlha = new System.Windows.Forms.TextBox();
+            this.txtVerificarMesa = new System.Windows.Forms.TextBox();
+            this.txtRodada = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -925,12 +927,30 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // txtMaxIlha
+            // txtVerificarMesa
             // 
-            this.txtMaxIlha.Location = new System.Drawing.Point(734, 59);
-            this.txtMaxIlha.Name = "txtMaxIlha";
-            this.txtMaxIlha.Size = new System.Drawing.Size(100, 20);
-            this.txtMaxIlha.TabIndex = 88;
+            this.txtVerificarMesa.Location = new System.Drawing.Point(730, 51);
+            this.txtVerificarMesa.Multiline = true;
+            this.txtVerificarMesa.Name = "txtVerificarMesa";
+            this.txtVerificarMesa.Size = new System.Drawing.Size(148, 238);
+            this.txtVerificarMesa.TabIndex = 87;
+            // 
+            // txtRodada
+            // 
+            this.txtRodada.Location = new System.Drawing.Point(730, 28);
+            this.txtRodada.Name = "txtRodada";
+            this.txtRodada.Size = new System.Drawing.Size(100, 20);
+            this.txtRodada.TabIndex = 88;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(837, 28);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 89;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Mão
             // 
@@ -938,7 +958,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
-            this.Controls.Add(this.txtMaxIlha);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtRodada);
+            this.Controls.Add(this.txtVerificarMesa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox32);
             this.Controls.Add(this.pictureBox24);
@@ -1149,6 +1171,8 @@
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox txtMaxIlha;
+        private System.Windows.Forms.TextBox txtVerificarMesa;
+        private System.Windows.Forms.TextBox txtRodada;
+        private System.Windows.Forms.Button button2;
     }
 }

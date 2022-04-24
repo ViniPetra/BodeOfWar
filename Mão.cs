@@ -15,6 +15,9 @@ namespace BodeOfWar
         int ilha1Global;
         int ilha2Global;
 
+        string debugtemp;
+        int rodada = 1;
+
         Jogador jogador = new Jogador();
 
         public Mão(Jogador user)
@@ -24,7 +27,6 @@ namespace BodeOfWar
             jogador = user;
 
             AtualizarDetalhes(jogador.idPartida);
-
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};
@@ -83,12 +85,6 @@ namespace BodeOfWar
             ListarJogadores(idPartida);
             txtVez.Text = VerificarVez(idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
-        }
-
-        private void VerificarMesaAtual(int idPartida)
-        {
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida);
-            MessageBox.Show(ret);
         }
 
         //Função para verificar a vez a qualquer momento
@@ -261,9 +257,50 @@ namespace BodeOfWar
             pnlVerIlhas.BringToFront();
         }
 
+
+        //Debug
+
+        private int QuantidadeJogadores(int idPartida)
+        {
+            string retJogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            string[] jogadores = retJogadores.Split('\n');
+            return jogadores.Length - 1;
+        }
+
+        private void VerificarMesaAtual(int idPartida)
+        {
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida);
+            txtVerificarMesa.Text = ret;
+        }
+
+        private void VerificarMesa(int idPartida)
+        {
+            int rodada1 = Int32.Parse(txtRodada.Text);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida, rodada1);
+            
+            txtVerificarMesa.Text = ret;
+
+            ret = ret.Replace("\r", "");
+            string[] mesa = ret.Split('\n');
+
+            int jogadores = QuantidadeJogadores(idPartida);
+
+            if(mesa.Length - 2 == jogadores)
+            {
+                rodada++;
+                MessageBox.Show(rodada.ToString());
+            }
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            VerificarMesaAtual(jogador.idPartida);
+            MessageBox.Show(debugtemp);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VerificarMesa(jogador.idPartida);
         }
     }
 }
