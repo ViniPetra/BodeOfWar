@@ -12,19 +12,11 @@ namespace BodeOfWar
 {
     public partial class Mão : Form
     {
-        /*
-        int idJogadorGlobal;
-        string senhaGlobal;
-        Cartas[] MinhaMaoGlobal;
-        int idPartidaGlobal1;
-        */
-
         int ilha1Global;
         int ilha2Global;
 
         Jogador jogador = new Jogador();
 
-        //public Mão(Cartas[] MinhaMao, string[] jogadorGlobal, int idPartidaGlobal, Jogador user)
         public Mão(Jogador user)
         {
             InitializeComponent();
@@ -32,12 +24,7 @@ namespace BodeOfWar
             jogador = user;
 
             AtualizarDetalhes(jogador.idPartida);
-            
-            //Acesso dos valores
-            //idJogadorGlobal = Int32.Parse(jogadorGlobal[0]);
-            //senhaGlobal = jogadorGlobal[1];
-            //MinhaMaoGlobal = MinhaMao;
-            //idPartidaGlobal1 = idPartidaGlobal;
+
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};

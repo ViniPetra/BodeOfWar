@@ -19,10 +19,6 @@ namespace BodeOfWar
 
         public Jogador jogador = new Jogador();
 
-        //Globalização da informação
-        public int idPartidaGlobal;
-        //public string[] senhaGlobal = new string[2];
-
         public Main()
         {
             InitializeComponent();
@@ -125,11 +121,7 @@ namespace BodeOfWar
 
         //Função de atualizar os detalhes da partida
         public void AtualizarDetalhes(int idPartida)
-        {
-            //ListarJogadores(idPartida);
-            //txtVez.Text = VerificarVez(idPartida);
-            //txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
-
+        { 
             ListarJogadores(jogador.idPartida);
             txtVez.Text = VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
@@ -144,8 +136,6 @@ namespace BodeOfWar
         private string VerificarVez(int idPartida)
         {
             string nome = "";
-            //string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
-            //string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
             string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
             string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
 
@@ -202,7 +192,6 @@ namespace BodeOfWar
             lstPartidas.Items.Clear();
 
             //Abrir detalhes da partida diretamente após criar
-            //Não é código repedido pois tem outro propísito
 
             string retPartidas = BodeOfWarServer.Jogo.ListarPartidas("T");
 
@@ -216,7 +205,6 @@ namespace BodeOfWar
             //Isolar a id da partida mais recente
             int idPartida = Int32.Parse(Partidas[((Partidas.Length) - 4)]);
 
-            //idPartidaGlobal = idPartida;
             jogador.idPartida = idPartida;
 
             //Atualizar detalhes
@@ -228,7 +216,6 @@ namespace BodeOfWar
 
         private void EntrarPartida()
         {
-            //int idPartida = idPartidaGlobal;
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
             string chamada = BodeOfWarServer.Jogo.EntrarPartida(jogador.idPartida, nome, senha);
@@ -245,13 +232,12 @@ namespace BodeOfWar
                 pnlDentroPartida.BringToFront();
             }
 
-            //Globalizar a senha e id
+            //Mandar senha e Id pro objeto
             string[] senhaPartida = new string[2];
             senhaPartida = chamada.Split(',');
 
             jogador.Id = Int32.Parse(senhaPartida[0]);
             jogador.Senha = senhaPartida[1];
-            //jogador.idPartida = idPartidaGlobal;
 
             AtualizarDetalhes(jogador.idPartida);
         }
@@ -260,8 +246,6 @@ namespace BodeOfWar
         {
             string index = "";
             string retIniciar = "";
-            //int id = Int32.Parse(senhaGlobal[0]);
-            //string senha = senhaGlobal[1];
             int id = jogador.Id;
             string senha = jogador.Senha;
 
@@ -287,8 +271,6 @@ namespace BodeOfWar
 
         private void MostrarMao()
         {
-            //int id = Int32.Parse(senhaGlobal[0]);
-            //string senha = senhaGlobal[1];
             int id = jogador.Id;
             string senha = jogador.Senha;
 
@@ -355,7 +337,6 @@ namespace BodeOfWar
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
             
-            //idPartidaGlobal = idPartida;
             jogador.idPartida = idPartida;
 
             AtualizarDetalhes(jogador.idPartida);
