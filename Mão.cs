@@ -12,29 +12,32 @@ namespace BodeOfWar
 {
     public partial class Mão : Form
     {
+        /*
         int idJogadorGlobal;
         string senhaGlobal;
         Cartas[] MinhaMaoGlobal;
         int idPartidaGlobal1;
+        */
 
         int ilha1Global;
         int ilha2Global;
 
         Jogador jogador = new Jogador();
 
-        public Mão(Cartas[] MinhaMao, string[] jogadorGlobal, int idPartidaGlobal, Jogador user)
+        //public Mão(Cartas[] MinhaMao, string[] jogadorGlobal, int idPartidaGlobal, Jogador user)
+        public Mão(Jogador user)
         {
             InitializeComponent();
+
+            jogador = user;
 
             AtualizarDetalhes(jogador.idPartida);
             
             //Acesso dos valores
-            idJogadorGlobal = Int32.Parse(jogadorGlobal[0]);
-            senhaGlobal = jogadorGlobal[1];
-            MinhaMaoGlobal = MinhaMao;
-            idPartidaGlobal1 = idPartidaGlobal;
-
-            jogador = user;
+            //idJogadorGlobal = Int32.Parse(jogadorGlobal[0]);
+            //senhaGlobal = jogadorGlobal[1];
+            //MinhaMaoGlobal = MinhaMao;
+            //idPartidaGlobal1 = idPartidaGlobal;
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8};
@@ -145,9 +148,9 @@ namespace BodeOfWar
             return nome;
         }
 
-        private bool Jogar(int index)
+        private bool Jogar(int index, Jogador jogador)
         {
-            string ret = BodeOfWarServer.Jogo.Jogar(idJogadorGlobal, senhaGlobal, MinhaMaoGlobal[index].id);
+            string ret = BodeOfWarServer.Jogo.Jogar(jogador.Id, jogador.Senha, jogador.Mao[index].id);
             if (ret.StartsWith("ERRO"))
             {
                 MessageBox.Show(ret);
@@ -161,85 +164,85 @@ namespace BodeOfWar
 
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(0))
+            if (Jogar(0, jogador))
             {
                 pnlCarta1.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta2_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(1))
+            if (Jogar(1, jogador))
             {
                 pnlCarta2.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta3_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(2))
+            if (Jogar(2, jogador))
             {
                 pnlCarta3.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta4_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(3))
+            if (Jogar(3, jogador))
             {
                 pnlCarta4.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta5_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(4))
+            if (Jogar(4, jogador))
             {
                 pnlCarta5.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta6_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(5))
+            if (Jogar(5, jogador))
             {
                 pnlCarta6.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta7_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(6))
+            if (Jogar(6, jogador))
             {
                 pnlCarta7.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void pcbCarta8_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(7))
+            if (Jogar(7, jogador))
             {
                 pnlCarta8.BringToFront();
-                AtualizarDetalhes(idPartidaGlobal1);
+                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
-            AtualizarDetalhes(idPartidaGlobal1);
+            AtualizarDetalhes(jogador.idPartida);
         }
 
         //Ver as opções de ilha
         private void btnVerIlhas_Click(object sender, EventArgs e)
         {
-            string retIlha = BodeOfWarServer.Jogo.VerificarIlha(idJogadorGlobal, senhaGlobal);
+            string retIlha = BodeOfWarServer.Jogo.VerificarIlha(jogador.Id, jogador.Senha);
 
             if (retIlha.Contains("ERRO"))
             {
@@ -259,21 +262,21 @@ namespace BodeOfWar
         //Escolher a ilha
         private void btnIlha1_Click(object sender, EventArgs e)
         {
-            BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha1Global);
-            AtualizarDetalhes(idPartidaGlobal1);
+            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
+            AtualizarDetalhes(jogador.idPartida);
             pnlVerIlhas.BringToFront();
         }
 
         private void btnIlha2_Click(object sender, EventArgs e)
         {
-            BodeOfWarServer.Jogo.DefinirIlha(idJogadorGlobal, senhaGlobal, ilha2Global);
-            AtualizarDetalhes(idPartidaGlobal1);
+            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
+            AtualizarDetalhes(jogador.idPartida);
             pnlVerIlhas.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VerificarMesaAtual(idPartidaGlobal1);
+            VerificarMesaAtual(jogador.idPartida);
         }
     }
 }

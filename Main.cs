@@ -21,7 +21,7 @@ namespace BodeOfWar
 
         //Globalização da informação
         public int idPartidaGlobal;
-        public string[] senhaGlobal = new string[2];
+        //public string[] senhaGlobal = new string[2];
 
         public Main()
         {
@@ -126,11 +126,15 @@ namespace BodeOfWar
         //Função de atualizar os detalhes da partida
         public void AtualizarDetalhes(int idPartida)
         {
-            ListarJogadores(idPartida);
-            txtVez.Text = VerificarVez(idPartida);
-            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+            //ListarJogadores(idPartida);
+            //txtVez.Text = VerificarVez(idPartida);
+            //txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
 
-            if(txtVez.Text != "Partida não iniciada")
+            ListarJogadores(jogador.idPartida);
+            txtVez.Text = VerificarVez(jogador.idPartida);
+            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
+
+            if (txtVez.Text != "Partida não iniciada")
             {
                 btnIniciarPartida.Enabled = false;
             }
@@ -140,8 +144,10 @@ namespace BodeOfWar
         private string VerificarVez(int idPartida)
         {
             string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+            //string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            //string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
 
             //Gerenciamento de erros
             if (vez.StartsWith("ERRO:Partida não está em jogo"))
@@ -185,6 +191,7 @@ namespace BodeOfWar
             string nome = txtNomeCriarPartida.Text;
             string senha = txtSenhaCriarPartida.Text;
             string ret = BodeOfWarServer.Jogo.CriarPartida(nome, senha);
+            
             if (ret.StartsWith("ERRO"))
             {
                 MessageBox.Show(ret, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
@@ -209,11 +216,11 @@ namespace BodeOfWar
             //Isolar a id da partida mais recente
             int idPartida = Int32.Parse(Partidas[((Partidas.Length) - 4)]);
 
-            idPartidaGlobal = idPartida;
+            //idPartidaGlobal = idPartida;
             jogador.idPartida = idPartida;
 
             //Atualizar detalhes
-            AtualizarDetalhes(idPartida);
+            AtualizarDetalhes(jogador.idPartida);
 
             //Chamar o painel de detalhes
             pnlDetalhesPartida.BringToFront();
@@ -221,10 +228,10 @@ namespace BodeOfWar
 
         private void EntrarPartida()
         {
-            int idPartida = idPartidaGlobal;
+            //int idPartida = idPartidaGlobal;
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
-            string chamada = BodeOfWarServer.Jogo.EntrarPartida(idPartida, nome, senha);
+            string chamada = BodeOfWarServer.Jogo.EntrarPartida(jogador.idPartida, nome, senha);
 
             if (chamada.StartsWith("ERRO"))
             {
@@ -239,21 +246,24 @@ namespace BodeOfWar
             }
 
             //Globalizar a senha e id
-            senhaGlobal = chamada.Split(',');
+            string[] senhaPartida = new string[2];
+            senhaPartida = chamada.Split(',');
 
-            jogador.Id = Int32.Parse(senhaGlobal[0]);
-            jogador.Senha = senhaGlobal[1];
-            jogador.idPartida = idPartidaGlobal;
+            jogador.Id = Int32.Parse(senhaPartida[0]);
+            jogador.Senha = senhaPartida[1];
+            //jogador.idPartida = idPartidaGlobal;
 
-            AtualizarDetalhes(idPartida);
+            AtualizarDetalhes(jogador.idPartida);
         }
 
         private void IniciarPartida()
         {
             string index = "";
             string retIniciar = "";
-            int id = Int32.Parse(senhaGlobal[0]);
-            string senha = senhaGlobal[1];
+            //int id = Int32.Parse(senhaGlobal[0]);
+            //string senha = senhaGlobal[1];
+            int id = jogador.Id;
+            string senha = jogador.Senha;
 
             //Iniciando partida
             retIniciar = BodeOfWarServer.Jogo.IniciarPartida(id, senha);
@@ -272,13 +282,15 @@ namespace BodeOfWar
             }
             else MessageBox.Show("Partida iniciada com sucesso");
 
-            AtualizarDetalhes(idPartidaGlobal);
+            AtualizarDetalhes(jogador.idPartida);
         }
 
         private void MostrarMao()
         {
-            int id = Int32.Parse(senhaGlobal[0]);
-            string senha = senhaGlobal[1];
+            //int id = Int32.Parse(senhaGlobal[0]);
+            //string senha = senhaGlobal[1];
+            int id = jogador.Id;
+            string senha = jogador.Senha;
 
             string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
 
@@ -313,7 +325,7 @@ namespace BodeOfWar
             jogador.Mao = MinhaMao;
 
             //Chamar a janela de cartas próprias
-            Mão FormMao = new Mão(MinhaMao, senhaGlobal, idPartidaGlobal, jogador);
+            Mão FormMao = new Mão(jogador);
             FormMao.ShowDialog();
         }
 
@@ -343,10 +355,10 @@ namespace BodeOfWar
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
             
-            idPartidaGlobal = idPartida;
+            //idPartidaGlobal = idPartida;
             jogador.idPartida = idPartida;
 
-            AtualizarDetalhes(idPartida);
+            AtualizarDetalhes(jogador.idPartida);
         }
 
 
@@ -386,7 +398,7 @@ namespace BodeOfWar
         //Atualizar a caixa de narração
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
-            AtualizarDetalhes(idPartidaGlobal);
+            AtualizarDetalhes(jogador.idPartida);
         }
 
         //Criar partida
