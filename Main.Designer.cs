@@ -34,8 +34,8 @@
             this.btnMostrarMao = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnIniciar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.pnlListarCriar = new System.Windows.Forms.Panel();
             this.btnCriar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
@@ -72,6 +72,7 @@
             this.lblNarracao = new System.Windows.Forms.Label();
             this.btnAtualizarNarracao = new System.Windows.Forms.Button();
             this.pnlDentroPartida = new System.Windows.Forms.Panel();
+            this.lblNomeJogador = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlListarCriar.SuspendLayout();
             this.pnlCriarPartida.SuspendLayout();
@@ -134,16 +135,6 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Location = new System.Drawing.Point(323, 258);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
-            this.btnIniciar.TabIndex = 4;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +145,16 @@
             this.lblTitulo.Tag = "";
             this.lblTitulo.Text = "Bode of War - Teletubbies";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(323, 258);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 4;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // pnlListarCriar
             // 
@@ -369,6 +370,7 @@
             // 
             // pnlDetalhesPartida
             // 
+            this.pnlDetalhesPartida.Controls.Add(this.lblNomeJogador);
             this.pnlDetalhesPartida.Controls.Add(this.btnVoltarListarPartidas2);
             this.pnlDetalhesPartida.Controls.Add(this.txtSenhaPartida);
             this.pnlDetalhesPartida.Controls.Add(this.btnEntrarPartida);
@@ -515,6 +517,14 @@
             this.pnlDentroPartida.Size = new System.Drawing.Size(272, 117);
             this.pnlDentroPartida.TabIndex = 44;
             // 
+            // lblNomeJogador
+            // 
+            this.lblNomeJogador.AutoSize = true;
+            this.lblNomeJogador.Location = new System.Drawing.Point(5, 34);
+            this.lblNomeJogador.Name = "lblNomeJogador";
+            this.lblNomeJogador.Size = new System.Drawing.Size(0, 13);
+            this.lblNomeJogador.TabIndex = 45;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,6 +603,7 @@
         private System.Windows.Forms.Button btnVoltarCriarListar;
         private System.Windows.Forms.Button btnVoltarListarPartidas2;
         private System.Windows.Forms.Button btnVoltarListarCriar2;
+        private System.Windows.Forms.Label lblNomeJogador;
     }
 }
 

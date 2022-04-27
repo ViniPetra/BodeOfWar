@@ -108,11 +108,12 @@
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVerMesa = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtVerificarMesa = new System.Windows.Forms.TextBox();
-            this.txtRodada = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lstMesa = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lsvMesa = new System.Windows.Forms.ListView();
+            this.lblJogador = new System.Windows.Forms.Label();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -912,45 +913,52 @@
             this.pictureBox32.TabIndex = 85;
             this.pictureBox32.TabStop = false;
             // 
-            // button1
+            // btnVerMesa
             // 
-            this.button1.Location = new System.Drawing.Point(744, 507);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnVerMesa.Location = new System.Drawing.Point(563, 613);
+            this.btnVerMesa.Name = "btnVerMesa";
+            this.btnVerMesa.Size = new System.Drawing.Size(75, 23);
+            this.btnVerMesa.TabIndex = 86;
+            this.btnVerMesa.Text = "button1";
+            this.btnVerMesa.UseVisualStyleBackColor = true;
+            this.btnVerMesa.Click += new System.EventHandler(this.btnVerMesa_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // txtVerificarMesa
+            // lstMesa
             // 
-            this.txtVerificarMesa.Location = new System.Drawing.Point(730, 51);
-            this.txtVerificarMesa.Multiline = true;
-            this.txtVerificarMesa.Name = "txtVerificarMesa";
-            this.txtVerificarMesa.Size = new System.Drawing.Size(148, 238);
-            this.txtVerificarMesa.TabIndex = 87;
+            this.lstMesa.FormattingEnabled = true;
+            this.lstMesa.Location = new System.Drawing.Point(732, 471);
+            this.lstMesa.Name = "lstMesa";
+            this.lstMesa.Size = new System.Drawing.Size(120, 95);
+            this.lstMesa.TabIndex = 91;
             // 
-            // txtRodada
+            // contextMenuStrip2
             // 
-            this.txtRodada.Location = new System.Drawing.Point(730, 28);
-            this.txtRodada.Name = "txtRodada";
-            this.txtRodada.Size = new System.Drawing.Size(100, 20);
-            this.txtRodada.TabIndex = 88;
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // button2
+            // lsvMesa
             // 
-            this.button2.Location = new System.Drawing.Point(837, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 89;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lsvMesa.HideSelection = false;
+            this.lsvMesa.Location = new System.Drawing.Point(721, 12);
+            this.lsvMesa.Name = "lsvMesa";
+            this.lsvMesa.Size = new System.Drawing.Size(121, 355);
+            this.lsvMesa.TabIndex = 95;
+            this.lsvMesa.UseCompatibleStateImageBehavior = false;
+            this.lsvMesa.View = System.Windows.Forms.View.List;
+            // 
+            // lblJogador
+            // 
+            this.lblJogador.AutoSize = true;
+            this.lblJogador.Location = new System.Drawing.Point(1017, 55);
+            this.lblJogador.Name = "lblJogador";
+            this.lblJogador.Size = new System.Drawing.Size(35, 13);
+            this.lblJogador.TabIndex = 96;
+            this.lblJogador.Text = "label1";
             // 
             // Mão
             // 
@@ -958,10 +966,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtRodada);
-            this.Controls.Add(this.txtVerificarMesa);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblJogador);
+            this.Controls.Add(this.lsvMesa);
+            this.Controls.Add(this.lstMesa);
+            this.Controls.Add(this.btnVerMesa);
             this.Controls.Add(this.pictureBox32);
             this.Controls.Add(this.pictureBox24);
             this.Controls.Add(this.pictureBox25);
@@ -1042,6 +1050,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "Mão";
             this.Text = "Mão";
+            this.Load += new System.EventHandler(this.Mão_Load);
             this.pnlIlhas.ResumeLayout(false);
             this.pnlVerIlhas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).EndInit();
@@ -1169,10 +1178,11 @@
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox31;
         private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerMesa;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox txtVerificarMesa;
-        private System.Windows.Forms.TextBox txtRodada;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox lstMesa;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ListView lsvMesa;
+        private System.Windows.Forms.Label lblJogador;
     }
 }

@@ -79,6 +79,8 @@ namespace BodeOfWar
             {
                 cartas.imagem = (Image)Properties.Resources.ResourceManager.GetObject("b" + cartas.imagemnum);
             }
+
+            jogador.TodasCartas = TodasCartas;
         }
 
         //Função para atualizar a lista a qualquer momento
@@ -238,6 +240,9 @@ namespace BodeOfWar
 
             jogador.Id = Int32.Parse(senhaPartida[0]);
             jogador.Senha = senhaPartida[1];
+            jogador.Nome = nome;
+
+            lblNomeJogador.Text = jogador.Nome;
 
             AtualizarDetalhes(jogador.idPartida);
         }
