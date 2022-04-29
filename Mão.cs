@@ -15,7 +15,7 @@ namespace BodeOfWar
         int ilha1Global;
         int ilha2Global;
 
-        int rodada = 0;
+        int rodada = 1;
 
         public List<string> Mesa = new List<string>();
 
@@ -83,6 +83,7 @@ namespace BodeOfWar
             {
                 Jogadores = "Partida vazia";
             }
+
             txtListarJogadores.Text = Jogadores;
 
             Jogadores = Jogadores.Replace("\r", "");
@@ -110,7 +111,7 @@ namespace BodeOfWar
             ListarJogadores(idPartida);
             txtVez.Text = VerificarVez(idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
-            VerificarMesaAtual(idPartida);
+            VerificarMesaAtual(idPartida, rodada);
 
             foreach (string a in Mesa)
             {
@@ -176,23 +177,25 @@ namespace BodeOfWar
             }
         }
 
-        private void VerificarMesaAtual(int idPartida)
+        private void VerificarMesaAtual(int idPartida, int rodada)
         {
             string[] aux;
 
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida, rodada);
+
+            MessageBox.Show(ret);
 
             ret = ret.Replace("\r", "");
             aux = ret.Split('\n');
 
             foreach (string a in aux)
             {
-                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == ""))
+                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
                 {
                     Mesa.Add(a);
                 }
             }
-
+            /*
             int count = 0;
             foreach(string b in Mesa)
             {
@@ -203,6 +206,7 @@ namespace BodeOfWar
 
                 count++;
             }
+            */
         }
 
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
@@ -346,10 +350,15 @@ namespace BodeOfWar
         private void Mão_Load(object sender, EventArgs e)
         {
             ListarJogadores(jogador.idPartida);
+            
+            /*
+             * Debug
+             * 
             foreach(string jogador in idJogadores)
             {
                 MessageBox.Show(jogador);
             }
+            */
 
             CartasPorJogador[0] = new List<string>();
             CartasPorJogador[1] = new List<string>();
@@ -422,6 +431,11 @@ namespace BodeOfWar
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VerificarMesaAtual1(jogador.idPartida);
         }
     }
 }

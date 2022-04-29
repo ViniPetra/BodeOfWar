@@ -114,6 +114,8 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lsvMesa = new System.Windows.Forms.ListView();
             this.lblJogador = new System.Windows.Forms.Label();
+            this.txtIdRodada = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -919,7 +921,7 @@
             this.btnVerMesa.Name = "btnVerMesa";
             this.btnVerMesa.Size = new System.Drawing.Size(75, 23);
             this.btnVerMesa.TabIndex = 86;
-            this.btnVerMesa.Text = "button1";
+            this.btnVerMesa.Text = "Ver mesa";
             this.btnVerMesa.UseVisualStyleBackColor = true;
             this.btnVerMesa.Click += new System.EventHandler(this.btnVerMesa_Click);
             // 
@@ -960,12 +962,31 @@
             this.lblJogador.TabIndex = 96;
             this.lblJogador.Text = "label1";
             // 
+            // txtIdRodada
+            // 
+            this.txtIdRodada.Location = new System.Drawing.Point(771, 613);
+            this.txtIdRodada.Name = "txtIdRodada";
+            this.txtIdRodada.Size = new System.Drawing.Size(100, 20);
+            this.txtIdRodada.TabIndex = 97;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(690, 613);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 98;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Mão
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtIdRodada);
             this.Controls.Add(this.lblJogador);
             this.Controls.Add(this.lsvMesa);
             this.Controls.Add(this.lstMesa);
@@ -1184,5 +1205,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ListView lsvMesa;
         private System.Windows.Forms.Label lblJogador;
+        private System.Windows.Forms.TextBox txtIdRodada;
+        private System.Windows.Forms.Button button1;
     }
 }
