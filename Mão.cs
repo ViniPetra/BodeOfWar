@@ -432,10 +432,5 @@ namespace BodeOfWar
                 }
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            VerificarMesaAtual1(jogador.idPartida);
-        }
     }
 }
