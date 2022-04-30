@@ -272,7 +272,7 @@ namespace BodeOfWar
             AtualizarDetalhes(jogador.idPartida);
         }
 
-        private void MostrarMao()
+        private void MostrarMaoManual()
         {
             int id = jogador.Id;
             string senha = jogador.Senha;
@@ -314,10 +314,58 @@ namespace BodeOfWar
             FormMao.ShowDialog();
         }
 
-        //Abrir uma nvoa janela para mostrar suas cartas
+        private void MostrarMaoAutomatica()
+        {
+            int id = jogador.Id;
+            string senha = jogador.Senha;
+
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+
+            //Parse no retorno e criação da array de ids das cartas da mão
+            //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
+            StringMao = StringMao.Replace("\r", "");
+            StringMao = StringMao.Substring(0, StringMao.Length - 1);
+            StringMao = StringMao.Replace("\n", ",");
+            string[] StringMao1 = StringMao.Split(',');
+
+            //Conversão da array de ids em int
+            int[] Mao = new int[StringMao1.Length];
+            for (int i = 0; i < StringMao1.Length; i++)
+            {
+                Mao[i] = Int32.Parse(StringMao1[i]);
+            }
+
+            //Criação da array de objetos apenas de cartas próprias
+            int count = 0;
+            for (int j = 0; j < Mao.Length; j++)
+            {
+                for (int i = 0; i < TodasCartas.Length; i++)
+                {
+                    if (TodasCartas[i].id == Mao[j])
+                    {
+                        MinhaMao[count] = TodasCartas[i];
+                    }
+                }
+                count++;
+            }
+
+            jogador.Mao = MinhaMao;
+
+            //Chamar a janela de cartas próprias
+            MaoAuto FormMaoAuto = new MaoAuto(jogador);
+            FormMaoAuto.ShowDialog();
+        }
+
+        //Abrir uma nvoa janela para mostrar suas cartas de forma manual
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
-            MostrarMao();
+            MostrarMaoManual();
+        }
+
+        //Abrir uma nvoa janela para mostrar suas cartas de forma automatizada
+        private void btnAutomatico_Click(object sender, EventArgs e)
+        {
+            MostrarMaoAutomatica();
         }
 
         //Duplo clique na partida
