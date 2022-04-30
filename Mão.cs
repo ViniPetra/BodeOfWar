@@ -25,9 +25,9 @@ namespace BodeOfWar
 
         public List<int>[] CartasPorJogador = new List<int>[4];
 
-        Jogador jogador = new Jogador();
-
         public string[,] MatrizMesa = new string[32, 2];
+
+        Jogador jogador = new Jogador();
 
         public Mão(Jogador user)
         {
@@ -101,8 +101,6 @@ namespace BodeOfWar
 
         private void PopularJogadores()
         {
-            lstJogadoresDebug.Items.Clear();
-
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
             Jogadores = Jogadores.Replace("\r", "");
             string[] Players = Jogadores.Split('\n');
@@ -119,28 +117,16 @@ namespace BodeOfWar
                 }
             }
 
-            foreach (string a in idJogadores)
-            {
-                lstJogadoresDebug.Items.Add(a.ToString());
-            }
-
             idJogadoresInt = idJogadores.Select(int.Parse).ToArray();
         }
 
         //Função de atualizar os detalhes da partida
         private void AtualizarDetalhes()
         {
-            lsvMesa.Items.Clear();
             ListarJogadores(jogador.idPartida);
             txtVez.Text = VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             VerificarMesaAtual(jogador.idPartida, rodada);
-
-            foreach (string a in Mesa)
-            {
-                lsvMesa.Items.Add(a);
-            }
-            
         }
 
         //Função para verificar a vez a qualquer momento
@@ -250,16 +236,6 @@ namespace BodeOfWar
 
                 count++;
             }
-
-            lstMatrizMesa1.Items.Clear();
-            lstMatrizMesa2.Items.Clear();
-
-            for (int c = 0; c < count; c++)
-            {
-                lstMatrizMesa1.Items.Add(MatrizMesa[c, 0]);
-                lstMatrizMesa2.Items.Add(MatrizMesa[c, 1]);
-            }
-
         }
 
         private void VerMesa()
@@ -474,33 +450,6 @@ namespace BodeOfWar
         private void btnVerMesa_Click(object sender, EventArgs e)
         {
             VerMesa();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            lstCartas1.Items.Clear();
-            lstCartas2.Items.Clear();
-            lstCartas3.Items.Clear();
-            lstCartas4.Items.Clear();
-
-            foreach (int a in CartasPorJogador[0])
-            {
-                lstCartas1.Items.Add(a.ToString());
-            }
-
-            foreach (int b in CartasPorJogador[1])
-            {
-                lstCartas2.Items.Add(b.ToString());
-            }
-
-            foreach (int c in CartasPorJogador[2])
-            {
-                lstCartas3.Items.Add(c.ToString());
-            }
-            foreach (int d in CartasPorJogador[3])
-            {
-                lstCartas4.Items.Add(d.ToString());
-            }
         }
     }
 }
