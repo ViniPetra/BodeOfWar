@@ -272,9 +272,12 @@ namespace BodeOfWar
 
                 foreach (int index in idJogadoresInt)
                 {
-                    if(index == id)
+                    if (index == id)
                     {
-                        CartasPorJogador[Array.IndexOf<int>(idJogadoresInt, id)].Add(carta); //Verificar se já não existe
+                        if (!(CartasPorJogador[Array.IndexOf<int>(idJogadoresInt, id)].Contains(carta)))
+                        {
+                            CartasPorJogador[Array.IndexOf<int>(idJogadoresInt, id)].Add(carta);
+                        }
                     }
                 }
             }
