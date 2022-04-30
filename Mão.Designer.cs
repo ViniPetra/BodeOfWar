@@ -110,10 +110,17 @@
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.btnVerMesa = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lstMesa = new System.Windows.Forms.ListBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lsvMesa = new System.Windows.Forms.ListView();
             this.lblJogador = new System.Windows.Forms.Label();
+            this.lstMatrizMesa1 = new System.Windows.Forms.ListView();
+            this.lstMatrizMesa2 = new System.Windows.Forms.ListView();
+            this.lstCartas1 = new System.Windows.Forms.ListView();
+            this.lstCartas2 = new System.Windows.Forms.ListView();
+            this.lstCartas3 = new System.Windows.Forms.ListView();
+            this.lstCartas4 = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lstJogadoresDebug = new System.Windows.Forms.ListView();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -928,14 +935,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lstMesa
-            // 
-            this.lstMesa.FormattingEnabled = true;
-            this.lstMesa.Location = new System.Drawing.Point(732, 471);
-            this.lstMesa.Name = "lstMesa";
-            this.lstMesa.Size = new System.Drawing.Size(120, 95);
-            this.lstMesa.TabIndex = 91;
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
@@ -946,7 +945,7 @@
             this.lsvMesa.HideSelection = false;
             this.lsvMesa.Location = new System.Drawing.Point(721, 12);
             this.lsvMesa.Name = "lsvMesa";
-            this.lsvMesa.Size = new System.Drawing.Size(121, 355);
+            this.lsvMesa.Size = new System.Drawing.Size(67, 177);
             this.lsvMesa.TabIndex = 95;
             this.lsvMesa.UseCompatibleStateImageBehavior = false;
             this.lsvMesa.View = System.Windows.Forms.View.List;
@@ -960,15 +959,95 @@
             this.lblJogador.TabIndex = 96;
             this.lblJogador.Text = "label1";
             // 
+            // lstMatrizMesa1
+            // 
+            this.lstMatrizMesa1.HideSelection = false;
+            this.lstMatrizMesa1.Location = new System.Drawing.Point(801, 13);
+            this.lstMatrizMesa1.Name = "lstMatrizMesa1";
+            this.lstMatrizMesa1.Size = new System.Drawing.Size(54, 218);
+            this.lstMatrizMesa1.TabIndex = 99;
+            this.lstMatrizMesa1.UseCompatibleStateImageBehavior = false;
+            // 
+            // lstMatrizMesa2
+            // 
+            this.lstMatrizMesa2.HideSelection = false;
+            this.lstMatrizMesa2.Location = new System.Drawing.Point(861, 13);
+            this.lstMatrizMesa2.Name = "lstMatrizMesa2";
+            this.lstMatrizMesa2.Size = new System.Drawing.Size(51, 218);
+            this.lstMatrizMesa2.TabIndex = 100;
+            this.lstMatrizMesa2.UseCompatibleStateImageBehavior = false;
+            // 
+            // lstCartas1
+            // 
+            this.lstCartas1.HideSelection = false;
+            this.lstCartas1.Location = new System.Drawing.Point(721, 310);
+            this.lstCartas1.Name = "lstCartas1";
+            this.lstCartas1.Size = new System.Drawing.Size(67, 153);
+            this.lstCartas1.TabIndex = 101;
+            this.lstCartas1.UseCompatibleStateImageBehavior = false;
+            // 
+            // lstCartas2
+            // 
+            this.lstCartas2.HideSelection = false;
+            this.lstCartas2.Location = new System.Drawing.Point(812, 311);
+            this.lstCartas2.Name = "lstCartas2";
+            this.lstCartas2.Size = new System.Drawing.Size(67, 153);
+            this.lstCartas2.TabIndex = 102;
+            this.lstCartas2.UseCompatibleStateImageBehavior = false;
+            // 
+            // lstCartas3
+            // 
+            this.lstCartas3.HideSelection = false;
+            this.lstCartas3.Location = new System.Drawing.Point(721, 483);
+            this.lstCartas3.Name = "lstCartas3";
+            this.lstCartas3.Size = new System.Drawing.Size(67, 153);
+            this.lstCartas3.TabIndex = 103;
+            this.lstCartas3.UseCompatibleStateImageBehavior = false;
+            // 
+            // lstCartas4
+            // 
+            this.lstCartas4.HideSelection = false;
+            this.lstCartas4.Location = new System.Drawing.Point(812, 483);
+            this.lstCartas4.Name = "lstCartas4";
+            this.lstCartas4.Size = new System.Drawing.Size(67, 153);
+            this.lstCartas4.TabIndex = 104;
+            this.lstCartas4.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(763, 666);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 105;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lstJogadoresDebug
+            // 
+            this.lstJogadoresDebug.HideSelection = false;
+            this.lstJogadoresDebug.Location = new System.Drawing.Point(873, 666);
+            this.lstJogadoresDebug.Name = "lstJogadoresDebug";
+            this.lstJogadoresDebug.Size = new System.Drawing.Size(50, 97);
+            this.lstJogadoresDebug.TabIndex = 106;
+            this.lstJogadoresDebug.UseCompatibleStateImageBehavior = false;
+            // 
             // Mão
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
+            this.Controls.Add(this.lstJogadoresDebug);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lstCartas4);
+            this.Controls.Add(this.lstCartas3);
+            this.Controls.Add(this.lstCartas2);
+            this.Controls.Add(this.lstCartas1);
+            this.Controls.Add(this.lstMatrizMesa2);
+            this.Controls.Add(this.lstMatrizMesa1);
             this.Controls.Add(this.lblJogador);
             this.Controls.Add(this.lsvMesa);
-            this.Controls.Add(this.lstMesa);
             this.Controls.Add(this.btnVerMesa);
             this.Controls.Add(this.pictureBox32);
             this.Controls.Add(this.pictureBox24);
@@ -1180,9 +1259,16 @@
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.Button btnVerMesa;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ListBox lstMesa;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ListView lsvMesa;
         private System.Windows.Forms.Label lblJogador;
+        private System.Windows.Forms.ListView lstMatrizMesa1;
+        private System.Windows.Forms.ListView lstMatrizMesa2;
+        private System.Windows.Forms.ListView lstCartas1;
+        private System.Windows.Forms.ListView lstCartas2;
+        private System.Windows.Forms.ListView lstCartas3;
+        private System.Windows.Forms.ListView lstCartas4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView lstJogadoresDebug;
     }
 }

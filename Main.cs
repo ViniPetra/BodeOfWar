@@ -260,14 +260,12 @@ namespace BodeOfWar
             //Gerenciamento de erros
             if (index.StartsWith("ERRO"))
             {
-                MessageBox.Show(index,
-                    "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show(index, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
 
             if (retIniciar.StartsWith("ERRO"))
             {
-                MessageBox.Show(retIniciar,
-                    "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show(retIniciar, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
             else MessageBox.Show("Partida iniciada com sucesso");
 
