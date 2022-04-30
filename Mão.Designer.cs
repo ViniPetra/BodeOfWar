@@ -661,7 +661,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(417, 494);
+            this.pictureBox4.Location = new System.Drawing.Point(243, 494);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 61);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -670,7 +670,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(359, 494);
+            this.pictureBox5.Location = new System.Drawing.Point(301, 494);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 61);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -679,7 +679,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(301, 494);
+            this.pictureBox6.Location = new System.Drawing.Point(359, 494);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(47, 61);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -688,7 +688,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(243, 494);
+            this.pictureBox7.Location = new System.Drawing.Point(419, 494);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(47, 61);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -697,7 +697,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(417, 561);
+            this.pictureBox8.Location = new System.Drawing.Point(475, 494);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(47, 61);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -706,7 +706,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(359, 561);
+            this.pictureBox9.Location = new System.Drawing.Point(74, 561);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(47, 61);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -715,7 +715,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(301, 561);
+            this.pictureBox10.Location = new System.Drawing.Point(132, 561);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(47, 61);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -724,7 +724,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Location = new System.Drawing.Point(243, 561);
+            this.pictureBox11.Location = new System.Drawing.Point(190, 561);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(47, 61);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -733,7 +733,7 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Location = new System.Drawing.Point(190, 561);
+            this.pictureBox12.Location = new System.Drawing.Point(243, 561);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(47, 61);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -742,7 +742,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Location = new System.Drawing.Point(132, 561);
+            this.pictureBox13.Location = new System.Drawing.Point(301, 561);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(47, 61);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -751,7 +751,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Location = new System.Drawing.Point(74, 561);
+            this.pictureBox14.Location = new System.Drawing.Point(359, 561);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(47, 61);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -760,7 +760,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(475, 494);
+            this.pictureBox15.Location = new System.Drawing.Point(419, 561);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(47, 61);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -769,7 +769,7 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.Location = new System.Drawing.Point(417, 628);
+            this.pictureBox16.Location = new System.Drawing.Point(475, 561);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(47, 61);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -778,7 +778,7 @@
             // 
             // pictureBox17
             // 
-            this.pictureBox17.Location = new System.Drawing.Point(359, 628);
+            this.pictureBox17.Location = new System.Drawing.Point(74, 628);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(47, 61);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -787,7 +787,7 @@
             // 
             // pictureBox18
             // 
-            this.pictureBox18.Location = new System.Drawing.Point(301, 628);
+            this.pictureBox18.Location = new System.Drawing.Point(132, 628);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(47, 61);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -796,7 +796,7 @@
             // 
             // pictureBox19
             // 
-            this.pictureBox19.Location = new System.Drawing.Point(243, 628);
+            this.pictureBox19.Location = new System.Drawing.Point(190, 628);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(47, 61);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -805,7 +805,7 @@
             // 
             // pictureBox20
             // 
-            this.pictureBox20.Location = new System.Drawing.Point(190, 628);
+            this.pictureBox20.Location = new System.Drawing.Point(243, 628);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(47, 61);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -814,7 +814,7 @@
             // 
             // pictureBox21
             // 
-            this.pictureBox21.Location = new System.Drawing.Point(132, 628);
+            this.pictureBox21.Location = new System.Drawing.Point(301, 628);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(47, 61);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -823,7 +823,7 @@
             // 
             // pictureBox22
             // 
-            this.pictureBox22.Location = new System.Drawing.Point(74, 628);
+            this.pictureBox22.Location = new System.Drawing.Point(359, 628);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(47, 61);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -832,7 +832,7 @@
             // 
             // pictureBox23
             // 
-            this.pictureBox23.Location = new System.Drawing.Point(475, 561);
+            this.pictureBox23.Location = new System.Drawing.Point(419, 628);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(47, 61);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -841,7 +841,7 @@
             // 
             // pictureBox24
             // 
-            this.pictureBox24.Location = new System.Drawing.Point(417, 695);
+            this.pictureBox24.Location = new System.Drawing.Point(475, 628);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(47, 61);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -850,7 +850,7 @@
             // 
             // pictureBox25
             // 
-            this.pictureBox25.Location = new System.Drawing.Point(359, 695);
+            this.pictureBox25.Location = new System.Drawing.Point(74, 695);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(47, 61);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -859,7 +859,7 @@
             // 
             // pictureBox26
             // 
-            this.pictureBox26.Location = new System.Drawing.Point(301, 695);
+            this.pictureBox26.Location = new System.Drawing.Point(132, 695);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(47, 61);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -868,7 +868,7 @@
             // 
             // pictureBox27
             // 
-            this.pictureBox27.Location = new System.Drawing.Point(243, 695);
+            this.pictureBox27.Location = new System.Drawing.Point(190, 695);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(47, 61);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -877,7 +877,7 @@
             // 
             // pictureBox28
             // 
-            this.pictureBox28.Location = new System.Drawing.Point(190, 695);
+            this.pictureBox28.Location = new System.Drawing.Point(243, 695);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(47, 61);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -886,7 +886,7 @@
             // 
             // pictureBox29
             // 
-            this.pictureBox29.Location = new System.Drawing.Point(132, 695);
+            this.pictureBox29.Location = new System.Drawing.Point(301, 695);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(47, 61);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -895,7 +895,7 @@
             // 
             // pictureBox30
             // 
-            this.pictureBox30.Location = new System.Drawing.Point(74, 695);
+            this.pictureBox30.Location = new System.Drawing.Point(359, 695);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(47, 61);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -904,7 +904,7 @@
             // 
             // pictureBox31
             // 
-            this.pictureBox31.Location = new System.Drawing.Point(475, 628);
+            this.pictureBox31.Location = new System.Drawing.Point(419, 695);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(47, 61);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1050,34 +1050,34 @@
             this.Controls.Add(this.lsvMesa);
             this.Controls.Add(this.btnVerMesa);
             this.Controls.Add(this.pictureBox32);
-            this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox27);
-            this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.pictureBox29);
-            this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox31);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.pictureBox22);
+            this.Controls.Add(this.pictureBox30);
+            this.Controls.Add(this.pictureBox29);
+            this.Controls.Add(this.pictureBox28);
+            this.Controls.Add(this.pictureBox27);
+            this.Controls.Add(this.pictureBox26);
+            this.Controls.Add(this.pictureBox25);
+            this.Controls.Add(this.pictureBox24);
             this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox22);
+            this.Controls.Add(this.pictureBox21);
+            this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

@@ -35,7 +35,7 @@ namespace BodeOfWar
 
             jogador = user;
 
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
@@ -128,18 +128,19 @@ namespace BodeOfWar
         }
 
         //Função de atualizar os detalhes da partida
-        private void AtualizarDetalhes(int idPartida)
+        private void AtualizarDetalhes()
         {
             lsvMesa.Items.Clear();
-            ListarJogadores(idPartida);
-            txtVez.Text = VerificarVez(idPartida);
-            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
-            VerificarMesaAtual(idPartida, rodada);
+            ListarJogadores(jogador.idPartida);
+            txtVez.Text = VerificarVez(jogador.idPartida);
+            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
+            VerificarMesaAtual(jogador.idPartida, rodada);
 
             foreach (string a in Mesa)
             {
                 lsvMesa.Items.Add(a);
             }
+            
         }
 
         //Função para verificar a vez a qualquer momento
@@ -197,6 +198,8 @@ namespace BodeOfWar
             else
             {
                 rodada++;
+                AtualizarDetalhes();
+                VerMesa();
                 return true;
             }
         }
@@ -261,7 +264,7 @@ namespace BodeOfWar
 
         private void VerMesa()
         {
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
 
             foreach (string a in Mesa)
             {
@@ -281,18 +284,71 @@ namespace BodeOfWar
                     }
                 }
             }
-
+            
             List<PictureBox> Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
             List<PictureBox> Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
             List<PictureBox> Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
             List<PictureBox> Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
-
 
             foreach (PictureBox p in Jogador1)
             {
                 foreach (int cartas in CartasPorJogador[0])
                 {
                     if (Jogador1.IndexOf(p) == CartasPorJogador[0].IndexOf(cartas))
+                    {
+                        foreach (Cartas carta in jogador.TodasCartas)
+                        {
+                            if (carta.id == cartas)
+                            {
+                                p.Image = carta.imagem;
+                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (PictureBox p in Jogador2)
+            {
+                foreach (int cartas in CartasPorJogador[1])
+                {
+                    if (Jogador1.IndexOf(p) == CartasPorJogador[1].IndexOf(cartas))
+                    {
+                        foreach (Cartas carta in jogador.TodasCartas)
+                        {
+                            if (carta.id == cartas)
+                            {
+                                p.Image = carta.imagem;
+                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (PictureBox p in Jogador3)
+            {
+                foreach (int cartas in CartasPorJogador[2])
+                {
+                    if (Jogador1.IndexOf(p) == CartasPorJogador[2].IndexOf(cartas))
+                    {
+                        foreach (Cartas carta in jogador.TodasCartas)
+                        {
+                            if (carta.id == cartas)
+                            {
+                                p.Image = carta.imagem;
+                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (PictureBox p in Jogador4)
+            {
+                foreach (int cartas in CartasPorJogador[3])
+                {
+                    if (Jogador1.IndexOf(p) == CartasPorJogador[3].IndexOf(cartas))
                     {
                         foreach (Cartas carta in jogador.TodasCartas)
                         {
@@ -312,7 +368,6 @@ namespace BodeOfWar
             if (Jogar(0, jogador))
             {
                 pnlCarta1.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -321,7 +376,6 @@ namespace BodeOfWar
             if (Jogar(1, jogador))
             {
                 pnlCarta2.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -330,7 +384,6 @@ namespace BodeOfWar
             if (Jogar(2, jogador))
             {
                 pnlCarta3.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -339,7 +392,6 @@ namespace BodeOfWar
             if (Jogar(3, jogador))
             {
                 pnlCarta4.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -348,7 +400,6 @@ namespace BodeOfWar
             if (Jogar(4, jogador))
             {
                 pnlCarta5.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -357,7 +408,6 @@ namespace BodeOfWar
             if (Jogar(5, jogador))
             {
                 pnlCarta6.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -366,7 +416,6 @@ namespace BodeOfWar
             if (Jogar(6, jogador))
             {
                 pnlCarta7.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
@@ -375,13 +424,12 @@ namespace BodeOfWar
             if (Jogar(7, jogador))
             {
                 pnlCarta8.BringToFront();
-                AtualizarDetalhes(jogador.idPartida);
             }
         }
 
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
         }
 
         //Ver as opções de ilha
@@ -394,14 +442,14 @@ namespace BodeOfWar
         private void btnIlha1_Click(object sender, EventArgs e)
         {
             BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
             pnlVerIlhas.BringToFront();
         }
 
         private void btnIlha2_Click(object sender, EventArgs e)
         {
             BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
             pnlVerIlhas.BringToFront();
         }
 
