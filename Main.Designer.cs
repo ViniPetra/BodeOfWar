@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblVersao = new System.Windows.Forms.Label();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
-            this.btnMostrarMao = new System.Windows.Forms.Button();
+            this.btnManual = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.lstPartidas = new System.Windows.Forms.ListBox();
             this.lblPartidas = new System.Windows.Forms.Label();
             this.pnlDetalhesPartida = new System.Windows.Forms.Panel();
+            this.lblNomeJogador = new System.Windows.Forms.Label();
             this.btnVoltarListarPartidas2 = new System.Windows.Forms.Button();
             this.txtSenhaPartida = new System.Windows.Forms.TextBox();
             this.btnEntrarPartida = new System.Windows.Forms.Button();
@@ -72,7 +73,7 @@
             this.lblNarracao = new System.Windows.Forms.Label();
             this.btnAtualizarNarracao = new System.Windows.Forms.Button();
             this.pnlDentroPartida = new System.Windows.Forms.Panel();
-            this.lblNomeJogador = new System.Windows.Forms.Label();
+            this.btnAutomatico = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlListarCriar.SuspendLayout();
             this.pnlCriarPartida.SuspendLayout();
@@ -103,15 +104,15 @@
             this.btnIniciarPartida.UseVisualStyleBackColor = true;
             this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
             // 
-            // btnMostrarMao
+            // btnManual
             // 
-            this.btnMostrarMao.Location = new System.Drawing.Point(89, 68);
-            this.btnMostrarMao.Name = "btnMostrarMao";
-            this.btnMostrarMao.Size = new System.Drawing.Size(91, 23);
-            this.btnMostrarMao.TabIndex = 32;
-            this.btnMostrarMao.Text = "Mostrar Mão";
-            this.btnMostrarMao.UseVisualStyleBackColor = true;
-            this.btnMostrarMao.Click += new System.EventHandler(this.btnMostrarMao_Click);
+            this.btnManual.Location = new System.Drawing.Point(27, 68);
+            this.btnManual.Name = "btnManual";
+            this.btnManual.Size = new System.Drawing.Size(91, 23);
+            this.btnManual.TabIndex = 32;
+            this.btnManual.Text = "Manual";
+            this.btnManual.UseVisualStyleBackColor = true;
+            this.btnManual.Click += new System.EventHandler(this.btnMostrarMao_Click);
             // 
             // pnlMenu
             // 
@@ -390,6 +391,14 @@
             this.pnlDetalhesPartida.Size = new System.Drawing.Size(715, 678);
             this.pnlDetalhesPartida.TabIndex = 33;
             // 
+            // lblNomeJogador
+            // 
+            this.lblNomeJogador.AutoSize = true;
+            this.lblNomeJogador.Location = new System.Drawing.Point(5, 34);
+            this.lblNomeJogador.Name = "lblNomeJogador";
+            this.lblNomeJogador.Size = new System.Drawing.Size(0, 13);
+            this.lblNomeJogador.TabIndex = 45;
+            // 
             // btnVoltarListarPartidas2
             // 
             this.btnVoltarListarPartidas2.Location = new System.Drawing.Point(5, 4);
@@ -510,20 +519,23 @@
             // 
             // pnlDentroPartida
             // 
-            this.pnlDentroPartida.Controls.Add(this.btnMostrarMao);
+            this.pnlDentroPartida.Controls.Add(this.btnAutomatico);
+            this.pnlDentroPartida.Controls.Add(this.btnManual);
             this.pnlDentroPartida.Controls.Add(this.btnIniciarPartida);
             this.pnlDentroPartida.Location = new System.Drawing.Point(214, 491);
             this.pnlDentroPartida.Name = "pnlDentroPartida";
             this.pnlDentroPartida.Size = new System.Drawing.Size(272, 117);
             this.pnlDentroPartida.TabIndex = 44;
             // 
-            // lblNomeJogador
+            // btnAutomatico
             // 
-            this.lblNomeJogador.AutoSize = true;
-            this.lblNomeJogador.Location = new System.Drawing.Point(5, 34);
-            this.lblNomeJogador.Name = "lblNomeJogador";
-            this.lblNomeJogador.Size = new System.Drawing.Size(0, 13);
-            this.lblNomeJogador.TabIndex = 45;
+            this.btnAutomatico.Location = new System.Drawing.Point(158, 68);
+            this.btnAutomatico.Name = "btnAutomatico";
+            this.btnAutomatico.Size = new System.Drawing.Size(75, 23);
+            this.btnAutomatico.TabIndex = 33;
+            this.btnAutomatico.Text = "Automático";
+            this.btnAutomatico.UseVisualStyleBackColor = true;
+            this.btnAutomatico.Click += new System.EventHandler(this.btnAutomatico_Click);
             // 
             // Main
             // 
@@ -531,9 +543,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(715, 678);
+            this.Controls.Add(this.pnlDentroPartida);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlDetalhesPartida);
-            this.Controls.Add(this.pnlDentroPartida);
             this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlListarPartidas2);
             this.Controls.Add(this.pnlListarCriar);
@@ -562,7 +574,7 @@
         #endregion
         private System.Windows.Forms.Label lblVersao;
         private System.Windows.Forms.Button btnIniciarPartida;
-        private System.Windows.Forms.Button btnMostrarMao;
+        private System.Windows.Forms.Button btnManual;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnIniciar;
@@ -604,6 +616,7 @@
         private System.Windows.Forms.Button btnVoltarListarPartidas2;
         private System.Windows.Forms.Button btnVoltarListarCriar2;
         private System.Windows.Forms.Label lblNomeJogador;
+        private System.Windows.Forms.Button btnAutomatico;
     }
 }
 

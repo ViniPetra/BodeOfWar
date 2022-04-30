@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mão - Auto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mão - Auto.Designer.cs">
+      <DependentUpon>Mão - Auto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cartas.cs" />
     <Compile Include="Jogador.cs" />
     <Compile Include="Main.cs">
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Mão - Auto.resx">
+      <DependentUpon>Mão - Auto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
