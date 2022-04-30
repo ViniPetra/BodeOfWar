@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cartas.cs" />
+    <Compile Include="Jogador.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +106,8 @@
     <Content Include="ImagensCartas\b7.PNG" />
     <Content Include="ImagensCartas\b8.PNG" />
     <Content Include="ImagensCartas\b9.PNG" />
+    <Content Include="OutrasImagens\User.jpg" />
+    <None Include="Resources\Jogador.bmp" />
     <None Include="Resources\b1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
