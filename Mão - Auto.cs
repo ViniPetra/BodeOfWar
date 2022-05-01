@@ -29,11 +29,29 @@ namespace BodeOfWar
 
         Jogador jogador = new Jogador();
 
+        Random random = new Random();
+
+        Timer timer = new Timer()
+        {
+            Interval = 10000
+        };
+
         public MaoAuto(Jogador user)
         {
             InitializeComponent();
-
             jogador = user;
+        }
+
+        private void Mão_Load(object sender, EventArgs e)
+        {
+            ListarJogadores(jogador.idPartida);
+
+            CartasPorJogador[0] = new List<int>();
+            CartasPorJogador[1] = new List<int>();
+            CartasPorJogador[2] = new List<int>();
+            CartasPorJogador[3] = new List<int>();
+
+            lblJogador.Text = jogador.Nome;
 
             AtualizarDetalhes();
 
@@ -71,20 +89,10 @@ namespace BodeOfWar
                 l.Text = jogador.Mao[count].id.ToString();
                 count++;
             }
-        }
-
-        private void Mão_Load(object sender, EventArgs e)
-        {
-            ListarJogadores(jogador.idPartida);
-
-            CartasPorJogador[0] = new List<int>();
-            CartasPorJogador[1] = new List<int>();
-            CartasPorJogador[2] = new List<int>();
-            CartasPorJogador[3] = new List<int>();
-
-            lblJogador.Text = jogador.Nome;
 
             PopularJogadores();
+
+            timer.Start();
         }
 
         //Função para atualizar a lista de jogadores a qualquer momento
@@ -124,17 +132,17 @@ namespace BodeOfWar
         private void AtualizarDetalhes()
         {
             ListarJogadores(jogador.idPartida);
-            txtVez.Text = VerificarVez(jogador.idPartida);
+            txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             VerificarMesaAtual(jogador.idPartida, rodada);
         }
 
         //Função para verificar a vez a qualquer momento
-        private string VerificarVez(int idPartida)
+        private string VerificarVez()
         {
             string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
 
             //Gerenciamento de erros
             if (vez.Contains("ERRO:Partida não está em jogo"))
@@ -173,7 +181,7 @@ namespace BodeOfWar
             return nome;
         }
 
-        private bool Jogar(int index, Jogador jogador)
+        private bool Jogar(int index)
         {
             string ret = BodeOfWarServer.Jogo.Jogar(jogador.Id, jogador.Senha, jogador.Mao[index].id);
             if (ret.StartsWith("ERRO"))
@@ -341,7 +349,7 @@ namespace BodeOfWar
 
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(0, jogador))
+            if (Jogar(0))
             {
                 pnlCarta1.BringToFront();
             }
@@ -349,7 +357,7 @@ namespace BodeOfWar
 
         private void pcbCarta2_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(1, jogador))
+            if (Jogar(1))
             {
                 pnlCarta2.BringToFront();
             }
@@ -357,7 +365,7 @@ namespace BodeOfWar
 
         private void pcbCarta3_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(2, jogador))
+            if (Jogar(2))
             {
                 pnlCarta3.BringToFront();
             }
@@ -365,7 +373,7 @@ namespace BodeOfWar
 
         private void pcbCarta4_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(3, jogador))
+            if (Jogar(3))
             {
                 pnlCarta4.BringToFront();
             }
@@ -373,7 +381,7 @@ namespace BodeOfWar
 
         private void pcbCarta5_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(4, jogador))
+            if (Jogar(4))
             {
                 pnlCarta5.BringToFront();
             }
@@ -381,7 +389,7 @@ namespace BodeOfWar
 
         private void pcbCarta6_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(5, jogador))
+            if (Jogar(5))
             {
                 pnlCarta6.BringToFront();
             }
@@ -389,7 +397,7 @@ namespace BodeOfWar
 
         private void pcbCarta7_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(6, jogador))
+            if (Jogar(6))
             {
                 pnlCarta7.BringToFront();
             }
@@ -397,7 +405,7 @@ namespace BodeOfWar
 
         private void pcbCarta8_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(7, jogador))
+            if (Jogar(7))
             {
                 pnlCarta8.BringToFront();
             }
@@ -429,27 +437,36 @@ namespace BodeOfWar
             pnlVerIlhas.BringToFront();
         }
 
-        //Debug
-
-        private Image Imagem(int id)
-        {
-            foreach (Cartas carta in jogador.TodasCartas)
-            {
-                if (carta.id == id)
-                {
-                    return carta.imagem;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            return null;
-        }
-
         private void btnVerMesa_Click(object sender, EventArgs e)
         {
             VerMesa();
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            //Automação
+
+            bool running = true;
+
+            while (running)
+            {
+                if (timer.Interval % 10000 == 0)
+                {
+                    timer.Stop();
+                    AtualizarDetalhes();
+                    if (VerificarVez() == jogador.Nome.ToString())
+                    {
+                        int rand = random.Next(jogador.Mao.Length);
+                        while (!(Jogar(rand)))
+                        {
+                            rand = random.Next(jogador.Mao.Length);
+                            Jogar(rand);
+                            running = false;
+                        }
+                        timer.Start();
+                    }
+                }
+            }
         }
     }
 }

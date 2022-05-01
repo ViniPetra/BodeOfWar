@@ -113,6 +113,7 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblVc = new System.Windows.Forms.Label();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -953,12 +954,24 @@
             this.lblVc.TabIndex = 97;
             this.lblVc.Text = "Você:";
             // 
-            // BodeOfWarMao1
+            // btnIniciar
+            // 
+            this.btnIniciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIniciar.Location = new System.Drawing.Point(777, 29);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 98;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // MaoAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
+            this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.lblVc);
             this.Controls.Add(this.lblJogador);
             this.Controls.Add(this.btnVerMesa);
@@ -1040,8 +1053,8 @@
             this.Controls.Add(this.pnlIlhas);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Name = "BodeOfWarMao1";
-            this.Text = "BodeOfWarMao1";
+            this.Name = "MaoAuto";
+            this.Text = "Mão - Auto";
             this.Load += new System.EventHandler(this.Mão_Load);
             this.pnlIlhas.ResumeLayout(false);
             this.pnlVerIlhas.ResumeLayout(false);
@@ -1175,5 +1188,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.Label lblJogador;
         private System.Windows.Forms.Label lblVc;
+        private System.Windows.Forms.Button btnIniciar;
     }
 }

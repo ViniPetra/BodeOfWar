@@ -106,6 +106,7 @@
             // 
             // btnManual
             // 
+            this.btnManual.Enabled = false;
             this.btnManual.Location = new System.Drawing.Point(27, 68);
             this.btnManual.Name = "btnManual";
             this.btnManual.Size = new System.Drawing.Size(91, 23);
@@ -529,9 +530,10 @@
             // 
             // btnAutomatico
             // 
-            this.btnAutomatico.Location = new System.Drawing.Point(158, 68);
+            this.btnAutomatico.Enabled = false;
+            this.btnAutomatico.Location = new System.Drawing.Point(149, 68);
             this.btnAutomatico.Name = "btnAutomatico";
-            this.btnAutomatico.Size = new System.Drawing.Size(75, 23);
+            this.btnAutomatico.Size = new System.Drawing.Size(91, 23);
             this.btnAutomatico.TabIndex = 33;
             this.btnAutomatico.Text = "Automático";
             this.btnAutomatico.UseVisualStyleBackColor = true;
@@ -543,10 +545,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(715, 678);
-            this.Controls.Add(this.pnlDentroPartida);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlDetalhesPartida);
             this.Controls.Add(this.pnlCriarPartida);
+            this.Controls.Add(this.pnlDentroPartida);
             this.Controls.Add(this.pnlListarPartidas2);
             this.Controls.Add(this.pnlListarCriar);
             this.Controls.Add(this.pnlListarPartidas);
