@@ -1,6 +1,6 @@
 ﻿namespace BodeOfWar
 {
-    partial class Mão
+    partial class MãoManual
     {
         /// <summary>
         /// Required designer variable.
@@ -113,6 +113,7 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblVc = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -953,12 +954,23 @@
             this.lblVc.TabIndex = 97;
             this.lblVc.Text = "Você:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(732, 157);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 98;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Mão
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblVc);
             this.Controls.Add(this.lblJogador);
             this.Controls.Add(this.btnVerMesa);
@@ -1175,5 +1187,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.Label lblJogador;
         private System.Windows.Forms.Label lblVc;
+        private System.Windows.Forms.Button button1;
     }
 }

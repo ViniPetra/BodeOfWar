@@ -437,16 +437,36 @@ namespace BodeOfWar
                 {
                     timer.Stop();
                     AtualizarDetalhes();
+
                     if (VerificarVez() == jogador.Nome.ToString())
                     {
-                        int rand = random.Next(jogador.Mao.Length);
-                        while (!(Jogar(rand)))
+                        string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+                        
+                        if (ret[3] == "I")
                         {
-                            rand = random.Next(jogador.Mao.Length);
-                            Jogar(rand);
-                            running = false;
+                            int random = new Random().Next(1,2);
+                            if (random == 1)
+                            {
+                                BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
+                                AtualizarDetalhes();
+                            }
+                            else
+                            {
+                                BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
+                                AtualizarDetalhes();
+                            }
                         }
-                        timer.Start();
+
+                        if (ret[3] == "B")
+                        {
+                            int rand = random.Next(0, jogador.Mao.Length);
+                            while (!(Jogar(rand)))
+                            {
+                                rand = random.Next(jogador.Mao.Length);
+                                Jogar(rand);
+                            }
+                            timer.Start();
+                        }
                     }
                 }
             }

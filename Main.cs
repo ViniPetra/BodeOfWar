@@ -313,7 +313,7 @@ namespace BodeOfWar
             jogador.Mao = MinhaMao;
 
             //Chamar a janela de cartas próprias
-            Mão FormMao = new Mão(jogador);
+            MãoManual FormMao = new MãoManual(jogador);
             FormMao.ShowDialog();
         }
 

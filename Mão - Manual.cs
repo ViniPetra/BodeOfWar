@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BodeOfWar
 {
-    public partial class Mão : Form
+    public partial class MãoManual : Form
     {
         int ilha1Global;
         int ilha2Global;
@@ -39,7 +39,7 @@ namespace BodeOfWar
         List<PictureBox> Jogador3 = new List<PictureBox>();
         List<PictureBox> Jogador4 = new List<PictureBox>();
 
-        public Mão(Jogador user)
+        public MãoManual(Jogador user)
         {
             InitializeComponent();
 
@@ -128,17 +128,17 @@ namespace BodeOfWar
         private void AtualizarDetalhes()
         {
             ListarJogadores(jogador.idPartida);
-            txtVez.Text = VerificarVez(jogador.idPartida);
+            txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             VerificarMesaAtual(jogador.idPartida, rodada);
         }
 
         //Função para verificar a vez a qualquer momento
-        private string VerificarVez(int idPartida)
+        private string VerificarVez()
         {
             string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
 
             //Gerenciamento de erros
             if (vez.Contains("ERRO:Partida não está em jogo"))
@@ -413,6 +413,11 @@ namespace BodeOfWar
         private void btnVerMesa_Click(object sender, EventArgs e)
         {
             VerMesa();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida));
         }
     }
 }
