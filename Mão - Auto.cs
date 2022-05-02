@@ -21,7 +21,7 @@ namespace BodeOfWar
 
         public List<string> idJogadores = new List<string>();
 
-        public int[] idJogadoresInt = new int[4]; //DEBUG
+        public int[] idJogadoresInt = new int[4];
 
         public List<int>[] CartasPorJogador = new List<int>[4];
 
@@ -29,25 +29,48 @@ namespace BodeOfWar
 
         Jogador jogador = new Jogador();
 
+        Random random = new Random();
+
+        Timer timer = new Timer()
+        {
+            Interval = 10000
+        };
+
+        List<PictureBox> imagens = new List<PictureBox>();
+        List<Label> bodes = new List<Label>();
+        List<Label> ids = new List<Label>();
+        Panel[] panels = new Panel[8];
+
+        List<PictureBox> Jogador1 = new List<PictureBox>();
+        List<PictureBox> Jogador2 = new List<PictureBox>();
+        List<PictureBox> Jogador3 = new List<PictureBox>();
+        List<PictureBox> Jogador4 = new List<PictureBox>();
+
+
         public MaoAuto(Jogador user)
         {
             InitializeComponent();
-
             jogador = user;
+        }
+
+        private void Mão_Load(object sender, EventArgs e)
+        {
+            ListarJogadores(jogador.idPartida);
+
+            CartasPorJogador[0] = new List<int>();
+            CartasPorJogador[1] = new List<int>();
+            CartasPorJogador[2] = new List<int>();
+            CartasPorJogador[3] = new List<int>();
+
+            lblJogador.Text = jogador.Nome;
 
             AtualizarDetalhes();
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
-            List<PictureBox> imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
-            List<Label> bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8 };
-            List<Label> ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8 };
-            Panel[] panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
-
-            List<PictureBox> Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
-            List<PictureBox> Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
-            List<PictureBox> Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
-            List<PictureBox> Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
-
+            imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
+            bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8 };
+            ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8 };
+            
             int count = 0;
             foreach (PictureBox p in imagens)
             {
@@ -71,18 +94,6 @@ namespace BodeOfWar
                 l.Text = jogador.Mao[count].id.ToString();
                 count++;
             }
-        }
-
-        private void Mão_Load(object sender, EventArgs e)
-        {
-            ListarJogadores(jogador.idPartida);
-
-            CartasPorJogador[0] = new List<int>();
-            CartasPorJogador[1] = new List<int>();
-            CartasPorJogador[2] = new List<int>();
-            CartasPorJogador[3] = new List<int>();
-
-            lblJogador.Text = jogador.Nome;
 
             PopularJogadores();
         }
@@ -124,17 +135,17 @@ namespace BodeOfWar
         private void AtualizarDetalhes()
         {
             ListarJogadores(jogador.idPartida);
-            txtVez.Text = VerificarVez(jogador.idPartida);
+            txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             VerificarMesaAtual(jogador.idPartida, rodada);
         }
 
         //Função para verificar a vez a qualquer momento
-        private string VerificarVez(int idPartida)
+        private string VerificarVez()
         {
             string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(idPartida);
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
 
             //Gerenciamento de erros
             if (vez.Contains("ERRO:Partida não está em jogo"))
@@ -173,8 +184,9 @@ namespace BodeOfWar
             return nome;
         }
 
-        private bool Jogar(int index, Jogador jogador)
+        private bool Jogar(int index)
         {
+            panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
             string ret = BodeOfWarServer.Jogo.Jogar(jogador.Id, jogador.Senha, jogador.Mao[index].id);
             if (ret.StartsWith("ERRO"))
             {
@@ -186,6 +198,7 @@ namespace BodeOfWar
                 rodada++;
                 AtualizarDetalhes();
                 VerMesa();
+                panels[index].BringToFront();
                 return true;
             }
         }
@@ -261,10 +274,10 @@ namespace BodeOfWar
                 }
             }
 
-            List<PictureBox> Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
-            List<PictureBox> Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
-            List<PictureBox> Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
-            List<PictureBox> Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
+            Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
+            Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
+            Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
+            Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
 
             foreach (PictureBox p in Jogador1)
             {
@@ -341,66 +354,42 @@ namespace BodeOfWar
 
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(0, jogador))
-            {
-                pnlCarta1.BringToFront();
-            }
+            Jogar(0);
         }
 
         private void pcbCarta2_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(1, jogador))
-            {
-                pnlCarta2.BringToFront();
-            }
+            Jogar(1);
         }
 
         private void pcbCarta3_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(2, jogador))
-            {
-                pnlCarta3.BringToFront();
-            }
+            Jogar(2);
         }
 
         private void pcbCarta4_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(3, jogador))
-            {
-                pnlCarta4.BringToFront();
-            }
+            Jogar(3);
         }
 
         private void pcbCarta5_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(4, jogador))
-            {
-                pnlCarta5.BringToFront();
-            }
+            Jogar(4);
         }
 
         private void pcbCarta6_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(5, jogador))
-            {
-                pnlCarta6.BringToFront();
-            }
+            Jogar(5);
         }
 
         private void pcbCarta7_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(6, jogador))
-            {
-                pnlCarta7.BringToFront();
-            }
+            Jogar(6);
         }
 
         private void pcbCarta8_DoubleClick(object sender, EventArgs e)
         {
-            if (Jogar(7, jogador))
-            {
-                pnlCarta8.BringToFront();
-            }
+            Jogar(7);
         }
 
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
@@ -429,27 +418,66 @@ namespace BodeOfWar
             pnlVerIlhas.BringToFront();
         }
 
-        //Debug
-
-        private Image Imagem(int id)
-        {
-            foreach (Cartas carta in jogador.TodasCartas)
-            {
-                if (carta.id == id)
-                {
-                    return carta.imagem;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            return null;
-        }
-
         private void btnVerMesa_Click(object sender, EventArgs e)
         {
             VerMesa();
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            //Automação
+            timer.Enabled = true;
+            timer.Start();
+
+            List<int> CartasJogadas = new List<int>();
+
+            bool running = true;
+
+            while (running)
+            {
+                if (timer.Interval % 10000 == 0)
+                {
+                    timer.Stop();
+                    AtualizarDetalhes();
+
+                    if (VerificarVez() == jogador.Nome)
+                    {
+                        string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+
+                        if (ret[3].Contains("I"))
+                        {
+                            VerIlhas();
+
+                            int random = new Random().Next(1,2);
+
+                            if (random == 1)
+                            {
+                                BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
+                                AtualizarDetalhes();
+                                timer.Start();
+                            }
+
+                            if (random == 2)
+                            {
+                                BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
+                                AtualizarDetalhes();
+                                timer.Start();
+                            }
+                        }
+
+                        if (ret[3].Contains("B"))
+                        {
+                            int rand = random.Next(0, jogador.Mao.Length);
+
+                            if (!(CartasJogadas.Contains(rand))){
+                                Jogar(rand);
+                                CartasJogadas.Add(rand);
+                            }
+                            timer.Start();
+                        }
+                    }
+                }
+            }
         }
     }
 }

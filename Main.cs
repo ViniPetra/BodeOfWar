@@ -269,6 +269,9 @@ namespace BodeOfWar
             }
             else MessageBox.Show("Partida iniciada com sucesso");
 
+            btnManual.Enabled = true;
+            btnAutomatico.Enabled = true;
+
             AtualizarDetalhes(jogador.idPartida);
         }
 
@@ -310,7 +313,7 @@ namespace BodeOfWar
             jogador.Mao = MinhaMao;
 
             //Chamar a janela de cartas próprias
-            Mão FormMao = new Mão(jogador);
+            MãoManual FormMao = new MãoManual(jogador);
             FormMao.ShowDialog();
         }
 
