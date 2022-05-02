@@ -21,7 +21,7 @@ namespace BodeOfWar
 
         public List<string> idJogadores = new List<string>();
 
-        public int[] idJogadoresInt = new int[4]; //DEBUG
+        public int[] idJogadoresInt = new int[4];
 
         public List<int>[] CartasPorJogador = new List<int>[4];
 
@@ -96,8 +96,6 @@ namespace BodeOfWar
             }
 
             PopularJogadores();
-
-            timer.Start();
         }
 
         //Função para atualizar a lista de jogadores a qualquer momento
@@ -428,6 +426,10 @@ namespace BodeOfWar
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             //Automação
+            timer.Enabled = true;
+            timer.Start();
+
+            List<int> CartasJogadas = new List<int>();
 
             bool running = true;
 
@@ -438,32 +440,38 @@ namespace BodeOfWar
                     timer.Stop();
                     AtualizarDetalhes();
 
-                    if (VerificarVez() == jogador.Nome.ToString())
+                    if (VerificarVez() == jogador.Nome)
                     {
                         string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
-                        
-                        if (ret[3] == "I")
+
+                        if (ret[3].Contains("I"))
                         {
+                            VerIlhas();
+
                             int random = new Random().Next(1,2);
+
                             if (random == 1)
                             {
                                 BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
                                 AtualizarDetalhes();
+                                timer.Start();
                             }
-                            else
+
+                            if (random == 2)
                             {
                                 BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
                                 AtualizarDetalhes();
+                                timer.Start();
                             }
                         }
 
-                        if (ret[3] == "B")
+                        if (ret[3].Contains("B"))
                         {
                             int rand = random.Next(0, jogador.Mao.Length);
-                            while (!(Jogar(rand)))
-                            {
-                                rand = random.Next(jogador.Mao.Length);
+
+                            if (!(CartasJogadas.Contains(rand))){
                                 Jogar(rand);
+                                CartasJogadas.Add(rand);
                             }
                             timer.Start();
                         }
