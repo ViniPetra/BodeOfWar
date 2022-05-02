@@ -31,21 +31,32 @@ namespace BodeOfWar
 
         Random random = new Random();
 
-        Timer timer = new Timer()
-        {
-            Interval = 10000
-        };
+        List<PictureBox> imagens;
+        List<Label> bodes;
+        List<Label> ids;
+        Panel[] panels;
 
-        List<PictureBox> imagens = new List<PictureBox>();
-        List<Label> bodes = new List<Label>();
-        List<Label> ids = new List<Label>();
-        Panel[] panels = new Panel[8];
 
-        List<PictureBox> Jogador1 = new List<PictureBox>();
-        List<PictureBox> Jogador2 = new List<PictureBox>();
-        List<PictureBox> Jogador3 = new List<PictureBox>();
-        List<PictureBox> Jogador4 = new List<PictureBox>();
+        List<PictureBox> Jogador1;
+        List<PictureBox> Jogador2;
+        List<PictureBox> Jogador3;
+        List<PictureBox> Jogador4;
 
+        List<List<PictureBox>> MesaJogadoresImagem;
+
+        List<Label> Jogador1Bodes;
+        List<Label> Jogador2Bodes;
+        List<Label> Jogador3Bodes;
+        List<Label> Jogador4Bodes;
+
+        List<List<Label>> MesaJogadoresBode;
+
+        List<Label> Jogador1Ids;
+        List<Label> Jogador2Ids;
+        List<Label> Jogador3Ids;
+        List<Label> Jogador4Ids;
+
+        List<List<Label>> MesaJogadoresIds;
 
         public MaoAuto(Jogador user)
         {
@@ -216,9 +227,6 @@ namespace BodeOfWar
                 string[] opcIlha = retIlha.Split(',');
                 ilha1Global = Int32.Parse(opcIlha[0]);
                 ilha2Global = Int32.Parse(opcIlha[1]);
-                btnIlha1.Text = opcIlha[0];
-                btnIlha2.Text = opcIlha[1];
-                pnlIlhas.BringToFront();
             }
         }
 
@@ -279,76 +287,88 @@ namespace BodeOfWar
             Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
             Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
 
-            foreach (PictureBox p in Jogador1)
+            MesaJogadoresImagem = new List<List<PictureBox>>{ Jogador1, Jogador2, Jogador3, Jogador4};
+
+            Jogador1Bodes = new List<Label>() { lblBodeJogador1, lblBodeJogador2, lblBodeJogador3, lblBodeJogador4, lblBodeJogador5, lblBodeJogador6, lblBodeJogador7, lblBodeJogador8 };
+            Jogador2Bodes = new List<Label>() { lblBodeJogador9, lblBodeJogador10, lblBodeJogador11, lblBodeJogador12, lblBodeJogador13, lblBodeJogador14, lblBodeJogador15, lblBodeJogador16 };
+            Jogador3Bodes = new List<Label>() { lblBodeJogador17, lblBodeJogador18, lblBodeJogador19, lblBodeJogador20, lblBodeJogador21, lblBodeJogador22, lblBodeJogador23, lblBodeJogador24 };
+            Jogador4Bodes = new List<Label>() { lblBodeJogador25, lblBodeJogador26, lblBodeJogador27, lblBodeJogador28, lblBodeJogador29, lblBodeJogador30, lblBodeJogador31, lblBodeJogador32 };
+
+            MesaJogadoresBode = new List<List<Label>>() { Jogador1Bodes, Jogador2Bodes, Jogador3Bodes, Jogador4Bodes };
+
+            Jogador1Ids = new List<Label>() { lblIdJogador1, lblIdJogador2, lblIdJogador3, lblIdJogador4, lblIdJogador5, lblIdJogador6, lblIdJogador7, lblIdJogador8 };
+            Jogador2Ids = new List<Label>() { lblIdJogador9, lblIdJogador10, lblIdJogador11, lblIdJogador12, lblIdJogador13, lblIdJogador14, lblIdJogador15, lblIdJogador16 };
+            Jogador3Ids = new List<Label>() { lblIdJogador17, lblIdJogador18, lblIdJogador19, lblIdJogador20, lblIdJogador21, lblIdJogador22, lblIdJogador23, lblIdJogador24 };
+            Jogador4Ids = new List<Label>() { lblIdJogador25, lblIdJogador26, lblIdJogador27, lblIdJogador28, lblIdJogador29, lblIdJogador30, lblIdJogador31, lblIdJogador32 };
+
+            MesaJogadoresIds = new List<List<Label>>() { Jogador1Ids, Jogador2Ids, Jogador3Ids, Jogador4Ids };
+
+            int count = 0;
+
+            foreach(List<PictureBox> l in MesaJogadoresImagem) 
             {
-                foreach (int cartas in CartasPorJogador[0])
+                foreach (PictureBox p in l)
                 {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[0].IndexOf(cartas))
+                    foreach (int cartas in CartasPorJogador[count])
                     {
-                        foreach (Cartas carta in jogador.TodasCartas)
+                        if (l.IndexOf(p) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            if (carta.id == cartas)
+                            foreach (Cartas carta in jogador.TodasCartas)
                             {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                if (carta.id == cartas)
+                                {
+                                    p.Image = carta.imagem;
+                                    p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                }
                             }
                         }
                     }
                 }
+                count++;
             }
 
-            foreach (PictureBox p in Jogador2)
+            count = 0;
+            foreach (List<Label> label in MesaJogadoresBode)
             {
-                foreach (int cartas in CartasPorJogador[1])
+                foreach (Label l in label)
                 {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[1].IndexOf(cartas))
+                    foreach (int cartas in CartasPorJogador[count])
                     {
-                        foreach (Cartas carta in jogador.TodasCartas)
+                        if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            if (carta.id == cartas)
+                            foreach (Cartas carta in jogador.TodasCartas)
                             {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                if (carta.id == cartas)
+                                {
+                                    l.Text = carta.bode.ToString();
+                                }
                             }
                         }
                     }
                 }
+                count++;
             }
 
-            foreach (PictureBox p in Jogador3)
+            count = 0;
+            foreach (List<Label> label in MesaJogadoresIds)
             {
-                foreach (int cartas in CartasPorJogador[2])
+                foreach (Label l in label)
                 {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[2].IndexOf(cartas))
+                    foreach (int cartas in CartasPorJogador[count])
                     {
-                        foreach (Cartas carta in jogador.TodasCartas)
+                        if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            if (carta.id == cartas)
+                            foreach (Cartas carta in jogador.TodasCartas)
                             {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                if (carta.id == cartas)
+                                {
+                                    l.Text = carta.id.ToString();
+                                }
                             }
                         }
                     }
                 }
-            }
-
-            foreach (PictureBox p in Jogador4)
-            {
-                foreach (int cartas in CartasPorJogador[3])
-                {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[3].IndexOf(cartas))
-                    {
-                        foreach (Cartas carta in jogador.TodasCartas)
-                        {
-                            if (carta.id == cartas)
-                            {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
-                            }
-                        }
-                    }
-                }
+                count++;
             }
         }
 
@@ -397,33 +417,12 @@ namespace BodeOfWar
             AtualizarDetalhes();
         }
 
-        //Ver as opções de ilha
-        private void btnVerIlhas_Click(object sender, EventArgs e)
-        {
-            VerIlhas();
-        }
-
-        //Escolher a ilha
-        private void btnIlha1_Click(object sender, EventArgs e)
-        {
-            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
-            AtualizarDetalhes();
-            pnlVerIlhas.BringToFront();
-        }
-
-        private void btnIlha2_Click(object sender, EventArgs e)
-        {
-            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
-            AtualizarDetalhes();
-            pnlVerIlhas.BringToFront();
-        }
-
-        private void btnVerMesa_Click(object sender, EventArgs e)
-        {
-            VerMesa();
-        }
-
         private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = true;
+        }
+
+        private void IniciarAuto()
         {
             //Automação
             timer.Enabled = true;
@@ -448,7 +447,7 @@ namespace BodeOfWar
                         {
                             VerIlhas();
 
-                            int random = new Random().Next(1,2);
+                            int random = new Random().Next(1, 2);
 
                             if (random == 1)
                             {
@@ -469,15 +468,21 @@ namespace BodeOfWar
                         {
                             int rand = random.Next(0, jogador.Mao.Length);
 
-                            if (!(CartasJogadas.Contains(rand))){
+                            if (!(CartasJogadas.Contains(rand)))
+                            {
                                 Jogar(rand);
                                 CartasJogadas.Add(rand);
+                                timer.Start();
                             }
-                            timer.Start();
                         }
                     }
                 }
             }
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            IniciarAuto();
         }
     }
 }

@@ -29,15 +29,32 @@ namespace BodeOfWar
 
         Jogador jogador = new Jogador();
 
-        List<PictureBox> imagens = new List<PictureBox>();
-        List<Label> bodes = new List<Label>();
-        List<Label> ids = new List<Label>();
-        Panel[] panels = new Panel[8];
+        List<PictureBox> imagens;
+        List<Label> bodes;
+        List<Label> ids;
+        Panel[] panels;
 
-        List<PictureBox> Jogador1 = new List<PictureBox>();
-        List<PictureBox> Jogador2 = new List<PictureBox>();
-        List<PictureBox> Jogador3 = new List<PictureBox>();
-        List<PictureBox> Jogador4 = new List<PictureBox>();
+
+        List<PictureBox> Jogador1;
+        List<PictureBox> Jogador2;
+        List<PictureBox> Jogador3;
+        List<PictureBox> Jogador4;
+
+        List<List<PictureBox>> MesaJogadoresImagem;
+
+        List<Label> Jogador1Bodes;
+        List<Label> Jogador2Bodes;
+        List<Label> Jogador3Bodes;
+        List<Label> Jogador4Bodes;
+
+        List<List<Label>> MesaJogadoresBode;
+
+        List<Label> Jogador1Ids;
+        List<Label> Jogador2Ids;
+        List<Label> Jogador3Ids;
+        List<Label> Jogador4Ids;
+
+        List<List<Label>> MesaJogadoresIds;
 
         public MãoManual(Jogador user)
         {
@@ -179,6 +196,7 @@ namespace BodeOfWar
 
         private bool Jogar(int index)
         {
+            panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
             string ret = BodeOfWarServer.Jogo.Jogar(jogador.Id, jogador.Senha, jogador.Mao[index].id);
             if (ret.StartsWith("ERRO"))
             {
@@ -265,84 +283,97 @@ namespace BodeOfWar
                     }
                 }
             }
-            
+
             Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
             Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
             Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
             Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
 
-            foreach (PictureBox p in Jogador1)
+            MesaJogadoresImagem = new List<List<PictureBox>> { Jogador1, Jogador2, Jogador3, Jogador4 };
+
+            Jogador1Bodes = new List<Label>() { lblBodeJogador1, lblBodeJogador2, lblBodeJogador3, lblBodeJogador4, lblBodeJogador5, lblBodeJogador6, lblBodeJogador7, lblBodeJogador8 };
+            Jogador2Bodes = new List<Label>() { lblBodeJogador9, lblBodeJogador10, lblBodeJogador11, lblBodeJogador12, lblBodeJogador13, lblBodeJogador14, lblBodeJogador15, lblBodeJogador16 };
+            Jogador3Bodes = new List<Label>() { lblBodeJogador17, lblBodeJogador18, lblBodeJogador19, lblBodeJogador20, lblBodeJogador21, lblBodeJogador22, lblBodeJogador23, lblBodeJogador24 };
+            Jogador4Bodes = new List<Label>() { lblBodeJogador25, lblBodeJogador26, lblBodeJogador27, lblBodeJogador28, lblBodeJogador29, lblBodeJogador30, lblBodeJogador31, lblBodeJogador32 };
+
+            MesaJogadoresBode = new List<List<Label>>() { Jogador1Bodes, Jogador2Bodes, Jogador3Bodes, Jogador4Bodes };
+
+            Jogador1Ids = new List<Label>() { lblIdJogador1, lblIdJogador2, lblIdJogador3, lblIdJogador4, lblIdJogador5, lblIdJogador6, lblIdJogador7, lblIdJogador8 };
+            Jogador2Ids = new List<Label>() { lblIdJogador9, lblIdJogador10, lblIdJogador11, lblIdJogador12, lblIdJogador13, lblIdJogador14, lblIdJogador15, lblIdJogador16 };
+            Jogador3Ids = new List<Label>() { lblIdJogador17, lblIdJogador18, lblIdJogador19, lblIdJogador20, lblIdJogador21, lblIdJogador22, lblIdJogador23, lblIdJogador24 };
+            Jogador4Ids = new List<Label>() { lblIdJogador25, lblIdJogador26, lblIdJogador27, lblIdJogador28, lblIdJogador29, lblIdJogador30, lblIdJogador31, lblIdJogador32 };
+
+            MesaJogadoresIds = new List<List<Label>>() { Jogador1Ids, Jogador2Ids, Jogador3Ids, Jogador4Ids };
+
+            int count = 0;
+
+            foreach (List<PictureBox> l in MesaJogadoresImagem)
             {
-                foreach (int cartas in CartasPorJogador[0])
+                foreach (PictureBox p in l)
                 {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[0].IndexOf(cartas))
+                    foreach (int cartas in CartasPorJogador[count])
                     {
-                        foreach (Cartas carta in jogador.TodasCartas)
+                        if (l.IndexOf(p) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            if (carta.id == cartas)
+                            foreach (Cartas carta in jogador.TodasCartas)
                             {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                if (carta.id == cartas)
+                                {
+                                    p.Image = carta.imagem;
+                                    p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                }
                             }
                         }
                     }
                 }
+                count++;
             }
 
-            foreach (PictureBox p in Jogador2)
+            count = 0;
+            foreach (List<Label> label in MesaJogadoresBode)
             {
-                foreach (int cartas in CartasPorJogador[1])
+                foreach (Label l in label)
                 {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[1].IndexOf(cartas))
+                    foreach (int cartas in CartasPorJogador[count])
                     {
-                        foreach (Cartas carta in jogador.TodasCartas)
+                        if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            if (carta.id == cartas)
+                            foreach (Cartas carta in jogador.TodasCartas)
                             {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                if (carta.id == cartas)
+                                {
+                                    l.Text = carta.bode.ToString();
+                                }
                             }
                         }
                     }
                 }
+                count++;
             }
 
-            foreach (PictureBox p in Jogador3)
+            count = 0;
+            foreach (List<Label> label in MesaJogadoresIds)
             {
-                foreach (int cartas in CartasPorJogador[2])
+                foreach (Label l in label)
                 {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[2].IndexOf(cartas))
+                    foreach (int cartas in CartasPorJogador[count])
                     {
-                        foreach (Cartas carta in jogador.TodasCartas)
+                        if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            if (carta.id == cartas)
+                            foreach (Cartas carta in jogador.TodasCartas)
                             {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                                if (carta.id == cartas)
+                                {
+                                    l.Text = carta.id.ToString();
+                                }
                             }
                         }
                     }
                 }
-            }
-
-            foreach (PictureBox p in Jogador4)
-            {
-                foreach (int cartas in CartasPorJogador[3])
-                {
-                    if (Jogador1.IndexOf(p) == CartasPorJogador[3].IndexOf(cartas))
-                    {
-                        foreach (Cartas carta in jogador.TodasCartas)
-                        {
-                            if (carta.id == cartas)
-                            {
-                                p.Image = carta.imagem;
-                                p.SizeMode = PictureBoxSizeMode.StretchImage;
-                            }
-                        }
-                    }
-                }
+                count++;
             }
         }
+
 
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
