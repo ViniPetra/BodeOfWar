@@ -114,6 +114,70 @@
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblVc = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
+            this.lblBodeJogador1 = new System.Windows.Forms.Label();
+            this.lblBodeJogador2 = new System.Windows.Forms.Label();
+            this.lblBodeJogador3 = new System.Windows.Forms.Label();
+            this.lblBodeJogador4 = new System.Windows.Forms.Label();
+            this.lblBodeJogador5 = new System.Windows.Forms.Label();
+            this.lblBodeJogador6 = new System.Windows.Forms.Label();
+            this.lblBodeJogador7 = new System.Windows.Forms.Label();
+            this.lblBodeJogador8 = new System.Windows.Forms.Label();
+            this.lblBodeJogador9 = new System.Windows.Forms.Label();
+            this.lblBodeJogador10 = new System.Windows.Forms.Label();
+            this.lblBodeJogador11 = new System.Windows.Forms.Label();
+            this.lblBodeJogador12 = new System.Windows.Forms.Label();
+            this.lblBodeJogador13 = new System.Windows.Forms.Label();
+            this.lblBodeJogador14 = new System.Windows.Forms.Label();
+            this.lblBodeJogador15 = new System.Windows.Forms.Label();
+            this.lblBodeJogador16 = new System.Windows.Forms.Label();
+            this.lblBodeJogador17 = new System.Windows.Forms.Label();
+            this.lblBodeJogador18 = new System.Windows.Forms.Label();
+            this.lblBodeJogador19 = new System.Windows.Forms.Label();
+            this.lblBodeJogador20 = new System.Windows.Forms.Label();
+            this.lblBodeJogador21 = new System.Windows.Forms.Label();
+            this.lblBodeJogador22 = new System.Windows.Forms.Label();
+            this.lblBodeJogador23 = new System.Windows.Forms.Label();
+            this.lblBodeJogador24 = new System.Windows.Forms.Label();
+            this.lblBodeJogador25 = new System.Windows.Forms.Label();
+            this.lblBodeJogador26 = new System.Windows.Forms.Label();
+            this.lblBodeJogador27 = new System.Windows.Forms.Label();
+            this.lblBodeJogador28 = new System.Windows.Forms.Label();
+            this.lblBodeJogador29 = new System.Windows.Forms.Label();
+            this.lblBodeJogador30 = new System.Windows.Forms.Label();
+            this.lblBodeJogador31 = new System.Windows.Forms.Label();
+            this.lblBodeJogador32 = new System.Windows.Forms.Label();
+            this.lblIdJogador1 = new System.Windows.Forms.Label();
+            this.lblIdJogador2 = new System.Windows.Forms.Label();
+            this.lblIdJogador3 = new System.Windows.Forms.Label();
+            this.lblIdJogador4 = new System.Windows.Forms.Label();
+            this.lblIdJogador5 = new System.Windows.Forms.Label();
+            this.lblIdJogador6 = new System.Windows.Forms.Label();
+            this.lblIdJogador7 = new System.Windows.Forms.Label();
+            this.lblIdJogador8 = new System.Windows.Forms.Label();
+            this.lblIdJogador9 = new System.Windows.Forms.Label();
+            this.lblIdJogador10 = new System.Windows.Forms.Label();
+            this.lblIdJogador11 = new System.Windows.Forms.Label();
+            this.lblIdJogador12 = new System.Windows.Forms.Label();
+            this.lblIdJogador13 = new System.Windows.Forms.Label();
+            this.lblIdJogador14 = new System.Windows.Forms.Label();
+            this.lblIdJogador15 = new System.Windows.Forms.Label();
+            this.lblIdJogador16 = new System.Windows.Forms.Label();
+            this.lblIdJogador17 = new System.Windows.Forms.Label();
+            this.lblIdJogador18 = new System.Windows.Forms.Label();
+            this.lblIdJogador19 = new System.Windows.Forms.Label();
+            this.lblIdJogador20 = new System.Windows.Forms.Label();
+            this.lblIdJogador21 = new System.Windows.Forms.Label();
+            this.lblIdJogador22 = new System.Windows.Forms.Label();
+            this.lblIdJogador23 = new System.Windows.Forms.Label();
+            this.lblIdJogador24 = new System.Windows.Forms.Label();
+            this.lblIdJogador25 = new System.Windows.Forms.Label();
+            this.lblIdJogador26 = new System.Windows.Forms.Label();
+            this.lblIdJogador27 = new System.Windows.Forms.Label();
+            this.lblIdJogador28 = new System.Windows.Forms.Label();
+            this.lblIdJogador29 = new System.Windows.Forms.Label();
+            this.lblIdJogador30 = new System.Windows.Forms.Label();
+            this.lblIdJogador31 = new System.Windows.Forms.Label();
+            this.lblIdJogador32 = new System.Windows.Forms.Label();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -965,12 +1029,716 @@
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
+            // lblBodeJogador1
+            // 
+            this.lblBodeJogador1.AutoSize = true;
+            this.lblBodeJogador1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador1.Location = new System.Drawing.Point(71, 542);
+            this.lblBodeJogador1.Name = "lblBodeJogador1";
+            this.lblBodeJogador1.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador1.TabIndex = 99;
+            this.lblBodeJogador1.Text = " ";
+            // 
+            // lblBodeJogador2
+            // 
+            this.lblBodeJogador2.AutoSize = true;
+            this.lblBodeJogador2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador2.Location = new System.Drawing.Point(129, 542);
+            this.lblBodeJogador2.Name = "lblBodeJogador2";
+            this.lblBodeJogador2.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador2.TabIndex = 100;
+            this.lblBodeJogador2.Text = " ";
+            // 
+            // lblBodeJogador3
+            // 
+            this.lblBodeJogador3.AutoSize = true;
+            this.lblBodeJogador3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador3.Location = new System.Drawing.Point(187, 542);
+            this.lblBodeJogador3.Name = "lblBodeJogador3";
+            this.lblBodeJogador3.Size = new System.Drawing.Size(13, 13);
+            this.lblBodeJogador3.TabIndex = 101;
+            this.lblBodeJogador3.Text = "  ";
+            // 
+            // lblBodeJogador4
+            // 
+            this.lblBodeJogador4.AutoSize = true;
+            this.lblBodeJogador4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador4.Location = new System.Drawing.Point(243, 542);
+            this.lblBodeJogador4.Name = "lblBodeJogador4";
+            this.lblBodeJogador4.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador4.TabIndex = 102;
+            this.lblBodeJogador4.Text = " ";
+            // 
+            // lblBodeJogador5
+            // 
+            this.lblBodeJogador5.AutoSize = true;
+            this.lblBodeJogador5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador5.Location = new System.Drawing.Point(298, 542);
+            this.lblBodeJogador5.Name = "lblBodeJogador5";
+            this.lblBodeJogador5.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador5.TabIndex = 103;
+            this.lblBodeJogador5.Text = " ";
+            // 
+            // lblBodeJogador6
+            // 
+            this.lblBodeJogador6.AutoSize = true;
+            this.lblBodeJogador6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador6.Location = new System.Drawing.Point(356, 542);
+            this.lblBodeJogador6.Name = "lblBodeJogador6";
+            this.lblBodeJogador6.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador6.TabIndex = 104;
+            this.lblBodeJogador6.Text = " ";
+            // 
+            // lblBodeJogador7
+            // 
+            this.lblBodeJogador7.AutoSize = true;
+            this.lblBodeJogador7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador7.Location = new System.Drawing.Point(416, 542);
+            this.lblBodeJogador7.Name = "lblBodeJogador7";
+            this.lblBodeJogador7.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador7.TabIndex = 105;
+            this.lblBodeJogador7.Text = " ";
+            // 
+            // lblBodeJogador8
+            // 
+            this.lblBodeJogador8.AutoSize = true;
+            this.lblBodeJogador8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador8.Location = new System.Drawing.Point(472, 542);
+            this.lblBodeJogador8.Name = "lblBodeJogador8";
+            this.lblBodeJogador8.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador8.TabIndex = 106;
+            this.lblBodeJogador8.Text = " ";
+            // 
+            // lblBodeJogador9
+            // 
+            this.lblBodeJogador9.AutoSize = true;
+            this.lblBodeJogador9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador9.Location = new System.Drawing.Point(71, 609);
+            this.lblBodeJogador9.Name = "lblBodeJogador9";
+            this.lblBodeJogador9.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador9.TabIndex = 114;
+            this.lblBodeJogador9.Text = " ";
+            // 
+            // lblBodeJogador10
+            // 
+            this.lblBodeJogador10.AutoSize = true;
+            this.lblBodeJogador10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador10.Location = new System.Drawing.Point(129, 609);
+            this.lblBodeJogador10.Name = "lblBodeJogador10";
+            this.lblBodeJogador10.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador10.TabIndex = 113;
+            this.lblBodeJogador10.Text = " ";
+            // 
+            // lblBodeJogador11
+            // 
+            this.lblBodeJogador11.AutoSize = true;
+            this.lblBodeJogador11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador11.Location = new System.Drawing.Point(187, 609);
+            this.lblBodeJogador11.Name = "lblBodeJogador11";
+            this.lblBodeJogador11.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador11.TabIndex = 112;
+            this.lblBodeJogador11.Text = " ";
+            // 
+            // lblBodeJogador12
+            // 
+            this.lblBodeJogador12.AutoSize = true;
+            this.lblBodeJogador12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador12.Location = new System.Drawing.Point(243, 609);
+            this.lblBodeJogador12.Name = "lblBodeJogador12";
+            this.lblBodeJogador12.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador12.TabIndex = 111;
+            this.lblBodeJogador12.Text = " ";
+            // 
+            // lblBodeJogador13
+            // 
+            this.lblBodeJogador13.AutoSize = true;
+            this.lblBodeJogador13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador13.Location = new System.Drawing.Point(298, 609);
+            this.lblBodeJogador13.Name = "lblBodeJogador13";
+            this.lblBodeJogador13.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador13.TabIndex = 110;
+            this.lblBodeJogador13.Text = " ";
+            // 
+            // lblBodeJogador14
+            // 
+            this.lblBodeJogador14.AutoSize = true;
+            this.lblBodeJogador14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador14.Location = new System.Drawing.Point(356, 609);
+            this.lblBodeJogador14.Name = "lblBodeJogador14";
+            this.lblBodeJogador14.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador14.TabIndex = 109;
+            this.lblBodeJogador14.Text = " ";
+            // 
+            // lblBodeJogador15
+            // 
+            this.lblBodeJogador15.AutoSize = true;
+            this.lblBodeJogador15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador15.Location = new System.Drawing.Point(416, 609);
+            this.lblBodeJogador15.Name = "lblBodeJogador15";
+            this.lblBodeJogador15.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador15.TabIndex = 108;
+            this.lblBodeJogador15.Text = " ";
+            // 
+            // lblBodeJogador16
+            // 
+            this.lblBodeJogador16.AutoSize = true;
+            this.lblBodeJogador16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador16.Location = new System.Drawing.Point(472, 609);
+            this.lblBodeJogador16.Name = "lblBodeJogador16";
+            this.lblBodeJogador16.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador16.TabIndex = 107;
+            this.lblBodeJogador16.Text = " ";
+            // 
+            // lblBodeJogador17
+            // 
+            this.lblBodeJogador17.AutoSize = true;
+            this.lblBodeJogador17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador17.Location = new System.Drawing.Point(71, 676);
+            this.lblBodeJogador17.Name = "lblBodeJogador17";
+            this.lblBodeJogador17.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador17.TabIndex = 122;
+            this.lblBodeJogador17.Text = " ";
+            // 
+            // lblBodeJogador18
+            // 
+            this.lblBodeJogador18.AutoSize = true;
+            this.lblBodeJogador18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador18.Location = new System.Drawing.Point(129, 676);
+            this.lblBodeJogador18.Name = "lblBodeJogador18";
+            this.lblBodeJogador18.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador18.TabIndex = 121;
+            this.lblBodeJogador18.Text = " ";
+            // 
+            // lblBodeJogador19
+            // 
+            this.lblBodeJogador19.AutoSize = true;
+            this.lblBodeJogador19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador19.Location = new System.Drawing.Point(187, 676);
+            this.lblBodeJogador19.Name = "lblBodeJogador19";
+            this.lblBodeJogador19.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador19.TabIndex = 120;
+            this.lblBodeJogador19.Text = " ";
+            // 
+            // lblBodeJogador20
+            // 
+            this.lblBodeJogador20.AutoSize = true;
+            this.lblBodeJogador20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador20.Location = new System.Drawing.Point(240, 678);
+            this.lblBodeJogador20.Name = "lblBodeJogador20";
+            this.lblBodeJogador20.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador20.TabIndex = 119;
+            this.lblBodeJogador20.Text = " ";
+            // 
+            // lblBodeJogador21
+            // 
+            this.lblBodeJogador21.AutoSize = true;
+            this.lblBodeJogador21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador21.Location = new System.Drawing.Point(298, 676);
+            this.lblBodeJogador21.Name = "lblBodeJogador21";
+            this.lblBodeJogador21.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador21.TabIndex = 118;
+            this.lblBodeJogador21.Text = " ";
+            // 
+            // lblBodeJogador22
+            // 
+            this.lblBodeJogador22.AutoSize = true;
+            this.lblBodeJogador22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador22.Location = new System.Drawing.Point(356, 676);
+            this.lblBodeJogador22.Name = "lblBodeJogador22";
+            this.lblBodeJogador22.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador22.TabIndex = 117;
+            this.lblBodeJogador22.Text = " ";
+            // 
+            // lblBodeJogador23
+            // 
+            this.lblBodeJogador23.AutoSize = true;
+            this.lblBodeJogador23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador23.Location = new System.Drawing.Point(416, 678);
+            this.lblBodeJogador23.Name = "lblBodeJogador23";
+            this.lblBodeJogador23.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador23.TabIndex = 116;
+            this.lblBodeJogador23.Text = " ";
+            // 
+            // lblBodeJogador24
+            // 
+            this.lblBodeJogador24.AutoSize = true;
+            this.lblBodeJogador24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador24.Location = new System.Drawing.Point(472, 678);
+            this.lblBodeJogador24.Name = "lblBodeJogador24";
+            this.lblBodeJogador24.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador24.TabIndex = 115;
+            this.lblBodeJogador24.Text = " ";
+            // 
+            // lblBodeJogador25
+            // 
+            this.lblBodeJogador25.AutoSize = true;
+            this.lblBodeJogador25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador25.Location = new System.Drawing.Point(71, 743);
+            this.lblBodeJogador25.Name = "lblBodeJogador25";
+            this.lblBodeJogador25.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador25.TabIndex = 130;
+            this.lblBodeJogador25.Text = " ";
+            // 
+            // lblBodeJogador26
+            // 
+            this.lblBodeJogador26.AutoSize = true;
+            this.lblBodeJogador26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador26.Location = new System.Drawing.Point(129, 743);
+            this.lblBodeJogador26.Name = "lblBodeJogador26";
+            this.lblBodeJogador26.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador26.TabIndex = 129;
+            this.lblBodeJogador26.Text = " ";
+            // 
+            // lblBodeJogador27
+            // 
+            this.lblBodeJogador27.AutoSize = true;
+            this.lblBodeJogador27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador27.Location = new System.Drawing.Point(187, 743);
+            this.lblBodeJogador27.Name = "lblBodeJogador27";
+            this.lblBodeJogador27.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador27.TabIndex = 128;
+            this.lblBodeJogador27.Text = " ";
+            // 
+            // lblBodeJogador28
+            // 
+            this.lblBodeJogador28.AutoSize = true;
+            this.lblBodeJogador28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador28.Location = new System.Drawing.Point(243, 743);
+            this.lblBodeJogador28.Name = "lblBodeJogador28";
+            this.lblBodeJogador28.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador28.TabIndex = 127;
+            this.lblBodeJogador28.Text = " ";
+            // 
+            // lblBodeJogador29
+            // 
+            this.lblBodeJogador29.AutoSize = true;
+            this.lblBodeJogador29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador29.Location = new System.Drawing.Point(298, 743);
+            this.lblBodeJogador29.Name = "lblBodeJogador29";
+            this.lblBodeJogador29.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador29.TabIndex = 126;
+            this.lblBodeJogador29.Text = " ";
+            // 
+            // lblBodeJogador30
+            // 
+            this.lblBodeJogador30.AutoSize = true;
+            this.lblBodeJogador30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador30.Location = new System.Drawing.Point(356, 743);
+            this.lblBodeJogador30.Name = "lblBodeJogador30";
+            this.lblBodeJogador30.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador30.TabIndex = 125;
+            this.lblBodeJogador30.Text = " ";
+            // 
+            // lblBodeJogador31
+            // 
+            this.lblBodeJogador31.AutoSize = true;
+            this.lblBodeJogador31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador31.Location = new System.Drawing.Point(416, 743);
+            this.lblBodeJogador31.Name = "lblBodeJogador31";
+            this.lblBodeJogador31.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador31.TabIndex = 124;
+            this.lblBodeJogador31.Text = " ";
+            // 
+            // lblBodeJogador32
+            // 
+            this.lblBodeJogador32.AutoSize = true;
+            this.lblBodeJogador32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBodeJogador32.Location = new System.Drawing.Point(472, 743);
+            this.lblBodeJogador32.Name = "lblBodeJogador32";
+            this.lblBodeJogador32.Size = new System.Drawing.Size(10, 13);
+            this.lblBodeJogador32.TabIndex = 123;
+            this.lblBodeJogador32.Text = " ";
+            // 
+            // lblIdJogador1
+            // 
+            this.lblIdJogador1.AutoSize = true;
+            this.lblIdJogador1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador1.Location = new System.Drawing.Point(74, 494);
+            this.lblIdJogador1.Name = "lblIdJogador1";
+            this.lblIdJogador1.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador1.TabIndex = 131;
+            this.lblIdJogador1.Text = " ";
+            // 
+            // lblIdJogador2
+            // 
+            this.lblIdJogador2.AutoSize = true;
+            this.lblIdJogador2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador2.Location = new System.Drawing.Point(132, 494);
+            this.lblIdJogador2.Name = "lblIdJogador2";
+            this.lblIdJogador2.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador2.TabIndex = 132;
+            this.lblIdJogador2.Text = " ";
+            // 
+            // lblIdJogador3
+            // 
+            this.lblIdJogador3.AutoSize = true;
+            this.lblIdJogador3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador3.Location = new System.Drawing.Point(190, 494);
+            this.lblIdJogador3.Name = "lblIdJogador3";
+            this.lblIdJogador3.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador3.TabIndex = 133;
+            this.lblIdJogador3.Text = " ";
+            // 
+            // lblIdJogador4
+            // 
+            this.lblIdJogador4.AutoSize = true;
+            this.lblIdJogador4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador4.Location = new System.Drawing.Point(243, 494);
+            this.lblIdJogador4.Name = "lblIdJogador4";
+            this.lblIdJogador4.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador4.TabIndex = 134;
+            this.lblIdJogador4.Text = " ";
+            // 
+            // lblIdJogador5
+            // 
+            this.lblIdJogador5.AutoSize = true;
+            this.lblIdJogador5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador5.Location = new System.Drawing.Point(301, 494);
+            this.lblIdJogador5.Name = "lblIdJogador5";
+            this.lblIdJogador5.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador5.TabIndex = 135;
+            this.lblIdJogador5.Text = " ";
+            // 
+            // lblIdJogador6
+            // 
+            this.lblIdJogador6.AutoSize = true;
+            this.lblIdJogador6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador6.Location = new System.Drawing.Point(359, 494);
+            this.lblIdJogador6.Name = "lblIdJogador6";
+            this.lblIdJogador6.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador6.TabIndex = 136;
+            this.lblIdJogador6.Text = " ";
+            // 
+            // lblIdJogador7
+            // 
+            this.lblIdJogador7.AutoSize = true;
+            this.lblIdJogador7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador7.Location = new System.Drawing.Point(419, 494);
+            this.lblIdJogador7.Name = "lblIdJogador7";
+            this.lblIdJogador7.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador7.TabIndex = 137;
+            this.lblIdJogador7.Text = " ";
+            // 
+            // lblIdJogador8
+            // 
+            this.lblIdJogador8.AutoSize = true;
+            this.lblIdJogador8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador8.Location = new System.Drawing.Point(473, 494);
+            this.lblIdJogador8.Name = "lblIdJogador8";
+            this.lblIdJogador8.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador8.TabIndex = 138;
+            this.lblIdJogador8.Text = " ";
+            // 
+            // lblIdJogador9
+            // 
+            this.lblIdJogador9.AutoSize = true;
+            this.lblIdJogador9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador9.Location = new System.Drawing.Point(74, 561);
+            this.lblIdJogador9.Name = "lblIdJogador9";
+            this.lblIdJogador9.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador9.TabIndex = 146;
+            this.lblIdJogador9.Text = " ";
+            // 
+            // lblIdJogador10
+            // 
+            this.lblIdJogador10.AutoSize = true;
+            this.lblIdJogador10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador10.Location = new System.Drawing.Point(132, 561);
+            this.lblIdJogador10.Name = "lblIdJogador10";
+            this.lblIdJogador10.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador10.TabIndex = 145;
+            this.lblIdJogador10.Text = " ";
+            // 
+            // lblIdJogador11
+            // 
+            this.lblIdJogador11.AutoSize = true;
+            this.lblIdJogador11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador11.Location = new System.Drawing.Point(190, 561);
+            this.lblIdJogador11.Name = "lblIdJogador11";
+            this.lblIdJogador11.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador11.TabIndex = 144;
+            this.lblIdJogador11.Text = " ";
+            // 
+            // lblIdJogador12
+            // 
+            this.lblIdJogador12.AutoSize = true;
+            this.lblIdJogador12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador12.Location = new System.Drawing.Point(243, 561);
+            this.lblIdJogador12.Name = "lblIdJogador12";
+            this.lblIdJogador12.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador12.TabIndex = 143;
+            this.lblIdJogador12.Text = " ";
+            // 
+            // lblIdJogador13
+            // 
+            this.lblIdJogador13.AutoSize = true;
+            this.lblIdJogador13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador13.Location = new System.Drawing.Point(301, 561);
+            this.lblIdJogador13.Name = "lblIdJogador13";
+            this.lblIdJogador13.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador13.TabIndex = 142;
+            this.lblIdJogador13.Text = " ";
+            // 
+            // lblIdJogador14
+            // 
+            this.lblIdJogador14.AutoSize = true;
+            this.lblIdJogador14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador14.Location = new System.Drawing.Point(356, 561);
+            this.lblIdJogador14.Name = "lblIdJogador14";
+            this.lblIdJogador14.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador14.TabIndex = 141;
+            this.lblIdJogador14.Text = " ";
+            // 
+            // lblIdJogador15
+            // 
+            this.lblIdJogador15.AutoSize = true;
+            this.lblIdJogador15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador15.Location = new System.Drawing.Point(416, 561);
+            this.lblIdJogador15.Name = "lblIdJogador15";
+            this.lblIdJogador15.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador15.TabIndex = 140;
+            this.lblIdJogador15.Text = " ";
+            // 
+            // lblIdJogador16
+            // 
+            this.lblIdJogador16.AutoSize = true;
+            this.lblIdJogador16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador16.Location = new System.Drawing.Point(472, 561);
+            this.lblIdJogador16.Name = "lblIdJogador16";
+            this.lblIdJogador16.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador16.TabIndex = 139;
+            this.lblIdJogador16.Text = " ";
+            // 
+            // lblIdJogador17
+            // 
+            this.lblIdJogador17.AutoSize = true;
+            this.lblIdJogador17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador17.Location = new System.Drawing.Point(74, 628);
+            this.lblIdJogador17.Name = "lblIdJogador17";
+            this.lblIdJogador17.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador17.TabIndex = 154;
+            this.lblIdJogador17.Text = " ";
+            // 
+            // lblIdJogador18
+            // 
+            this.lblIdJogador18.AutoSize = true;
+            this.lblIdJogador18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador18.Location = new System.Drawing.Point(132, 628);
+            this.lblIdJogador18.Name = "lblIdJogador18";
+            this.lblIdJogador18.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador18.TabIndex = 153;
+            this.lblIdJogador18.Text = " ";
+            // 
+            // lblIdJogador19
+            // 
+            this.lblIdJogador19.AutoSize = true;
+            this.lblIdJogador19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador19.Location = new System.Drawing.Point(187, 628);
+            this.lblIdJogador19.Name = "lblIdJogador19";
+            this.lblIdJogador19.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador19.TabIndex = 152;
+            this.lblIdJogador19.Text = " ";
+            // 
+            // lblIdJogador20
+            // 
+            this.lblIdJogador20.AutoSize = true;
+            this.lblIdJogador20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador20.Location = new System.Drawing.Point(243, 628);
+            this.lblIdJogador20.Name = "lblIdJogador20";
+            this.lblIdJogador20.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador20.TabIndex = 151;
+            this.lblIdJogador20.Text = " ";
+            // 
+            // lblIdJogador21
+            // 
+            this.lblIdJogador21.AutoSize = true;
+            this.lblIdJogador21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador21.Location = new System.Drawing.Point(301, 628);
+            this.lblIdJogador21.Name = "lblIdJogador21";
+            this.lblIdJogador21.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador21.TabIndex = 150;
+            this.lblIdJogador21.Text = " ";
+            // 
+            // lblIdJogador22
+            // 
+            this.lblIdJogador22.AutoSize = true;
+            this.lblIdJogador22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador22.Location = new System.Drawing.Point(356, 628);
+            this.lblIdJogador22.Name = "lblIdJogador22";
+            this.lblIdJogador22.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador22.TabIndex = 149;
+            this.lblIdJogador22.Text = " ";
+            // 
+            // lblIdJogador23
+            // 
+            this.lblIdJogador23.AutoSize = true;
+            this.lblIdJogador23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador23.Location = new System.Drawing.Point(419, 628);
+            this.lblIdJogador23.Name = "lblIdJogador23";
+            this.lblIdJogador23.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador23.TabIndex = 148;
+            this.lblIdJogador23.Text = " ";
+            // 
+            // lblIdJogador24
+            // 
+            this.lblIdJogador24.AutoSize = true;
+            this.lblIdJogador24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador24.Location = new System.Drawing.Point(472, 628);
+            this.lblIdJogador24.Name = "lblIdJogador24";
+            this.lblIdJogador24.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador24.TabIndex = 147;
+            this.lblIdJogador24.Text = " ";
+            // 
+            // lblIdJogador25
+            // 
+            this.lblIdJogador25.AutoSize = true;
+            this.lblIdJogador25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador25.Location = new System.Drawing.Point(74, 695);
+            this.lblIdJogador25.Name = "lblIdJogador25";
+            this.lblIdJogador25.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador25.TabIndex = 162;
+            this.lblIdJogador25.Text = " ";
+            // 
+            // lblIdJogador26
+            // 
+            this.lblIdJogador26.AutoSize = true;
+            this.lblIdJogador26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador26.Location = new System.Drawing.Point(132, 695);
+            this.lblIdJogador26.Name = "lblIdJogador26";
+            this.lblIdJogador26.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador26.TabIndex = 161;
+            this.lblIdJogador26.Text = " ";
+            // 
+            // lblIdJogador27
+            // 
+            this.lblIdJogador27.AutoSize = true;
+            this.lblIdJogador27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador27.Location = new System.Drawing.Point(187, 695);
+            this.lblIdJogador27.Name = "lblIdJogador27";
+            this.lblIdJogador27.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador27.TabIndex = 160;
+            this.lblIdJogador27.Text = " ";
+            // 
+            // lblIdJogador28
+            // 
+            this.lblIdJogador28.AutoSize = true;
+            this.lblIdJogador28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador28.Location = new System.Drawing.Point(243, 695);
+            this.lblIdJogador28.Name = "lblIdJogador28";
+            this.lblIdJogador28.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador28.TabIndex = 159;
+            this.lblIdJogador28.Text = " ";
+            // 
+            // lblIdJogador29
+            // 
+            this.lblIdJogador29.AutoSize = true;
+            this.lblIdJogador29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador29.Location = new System.Drawing.Point(301, 695);
+            this.lblIdJogador29.Name = "lblIdJogador29";
+            this.lblIdJogador29.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador29.TabIndex = 158;
+            this.lblIdJogador29.Text = " ";
+            // 
+            // lblIdJogador30
+            // 
+            this.lblIdJogador30.AutoSize = true;
+            this.lblIdJogador30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador30.Location = new System.Drawing.Point(356, 695);
+            this.lblIdJogador30.Name = "lblIdJogador30";
+            this.lblIdJogador30.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador30.TabIndex = 157;
+            this.lblIdJogador30.Text = " ";
+            // 
+            // lblIdJogador31
+            // 
+            this.lblIdJogador31.AutoSize = true;
+            this.lblIdJogador31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador31.Location = new System.Drawing.Point(419, 695);
+            this.lblIdJogador31.Name = "lblIdJogador31";
+            this.lblIdJogador31.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador31.TabIndex = 156;
+            this.lblIdJogador31.Text = " ";
+            // 
+            // lblIdJogador32
+            // 
+            this.lblIdJogador32.AutoSize = true;
+            this.lblIdJogador32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdJogador32.Location = new System.Drawing.Point(473, 695);
+            this.lblIdJogador32.Name = "lblIdJogador32";
+            this.lblIdJogador32.Size = new System.Drawing.Size(10, 13);
+            this.lblIdJogador32.TabIndex = 155;
+            this.lblIdJogador32.Text = " ";
+            // 
             // MaoAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1257, 768);
+            this.Controls.Add(this.lblIdJogador25);
+            this.Controls.Add(this.lblIdJogador26);
+            this.Controls.Add(this.lblIdJogador27);
+            this.Controls.Add(this.lblIdJogador28);
+            this.Controls.Add(this.lblIdJogador29);
+            this.Controls.Add(this.lblIdJogador30);
+            this.Controls.Add(this.lblIdJogador31);
+            this.Controls.Add(this.lblIdJogador32);
+            this.Controls.Add(this.lblIdJogador17);
+            this.Controls.Add(this.lblIdJogador18);
+            this.Controls.Add(this.lblIdJogador19);
+            this.Controls.Add(this.lblIdJogador20);
+            this.Controls.Add(this.lblIdJogador21);
+            this.Controls.Add(this.lblIdJogador22);
+            this.Controls.Add(this.lblIdJogador23);
+            this.Controls.Add(this.lblIdJogador24);
+            this.Controls.Add(this.lblIdJogador9);
+            this.Controls.Add(this.lblIdJogador10);
+            this.Controls.Add(this.lblIdJogador11);
+            this.Controls.Add(this.lblIdJogador12);
+            this.Controls.Add(this.lblIdJogador13);
+            this.Controls.Add(this.lblIdJogador14);
+            this.Controls.Add(this.lblIdJogador15);
+            this.Controls.Add(this.lblIdJogador16);
+            this.Controls.Add(this.lblIdJogador8);
+            this.Controls.Add(this.lblIdJogador7);
+            this.Controls.Add(this.lblIdJogador6);
+            this.Controls.Add(this.lblIdJogador5);
+            this.Controls.Add(this.lblIdJogador4);
+            this.Controls.Add(this.lblIdJogador3);
+            this.Controls.Add(this.lblIdJogador2);
+            this.Controls.Add(this.lblIdJogador1);
+            this.Controls.Add(this.lblBodeJogador25);
+            this.Controls.Add(this.lblBodeJogador26);
+            this.Controls.Add(this.lblBodeJogador27);
+            this.Controls.Add(this.lblBodeJogador28);
+            this.Controls.Add(this.lblBodeJogador29);
+            this.Controls.Add(this.lblBodeJogador30);
+            this.Controls.Add(this.lblBodeJogador31);
+            this.Controls.Add(this.lblBodeJogador32);
+            this.Controls.Add(this.lblBodeJogador17);
+            this.Controls.Add(this.lblBodeJogador18);
+            this.Controls.Add(this.lblBodeJogador19);
+            this.Controls.Add(this.lblBodeJogador20);
+            this.Controls.Add(this.lblBodeJogador21);
+            this.Controls.Add(this.lblBodeJogador22);
+            this.Controls.Add(this.lblBodeJogador23);
+            this.Controls.Add(this.lblBodeJogador24);
+            this.Controls.Add(this.lblBodeJogador9);
+            this.Controls.Add(this.lblBodeJogador10);
+            this.Controls.Add(this.lblBodeJogador11);
+            this.Controls.Add(this.lblBodeJogador12);
+            this.Controls.Add(this.lblBodeJogador13);
+            this.Controls.Add(this.lblBodeJogador14);
+            this.Controls.Add(this.lblBodeJogador15);
+            this.Controls.Add(this.lblBodeJogador16);
+            this.Controls.Add(this.lblBodeJogador8);
+            this.Controls.Add(this.lblBodeJogador7);
+            this.Controls.Add(this.lblBodeJogador6);
+            this.Controls.Add(this.lblBodeJogador5);
+            this.Controls.Add(this.lblBodeJogador4);
+            this.Controls.Add(this.lblBodeJogador3);
+            this.Controls.Add(this.lblBodeJogador2);
+            this.Controls.Add(this.lblBodeJogador1);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.lblVc);
             this.Controls.Add(this.lblJogador);
@@ -1054,7 +1822,6 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "MaoAuto";
-            this.Text = "Mão - Auto";
             this.Load += new System.EventHandler(this.Mão_Load);
             this.pnlIlhas.ResumeLayout(false);
             this.pnlVerIlhas.ResumeLayout(false);
@@ -1189,5 +1956,69 @@
         private System.Windows.Forms.Label lblJogador;
         private System.Windows.Forms.Label lblVc;
         private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.Label lblBodeJogador1;
+        private System.Windows.Forms.Label lblBodeJogador2;
+        private System.Windows.Forms.Label lblBodeJogador3;
+        private System.Windows.Forms.Label lblBodeJogador4;
+        private System.Windows.Forms.Label lblBodeJogador5;
+        private System.Windows.Forms.Label lblBodeJogador6;
+        private System.Windows.Forms.Label lblBodeJogador7;
+        private System.Windows.Forms.Label lblBodeJogador8;
+        private System.Windows.Forms.Label lblBodeJogador9;
+        private System.Windows.Forms.Label lblBodeJogador10;
+        private System.Windows.Forms.Label lblBodeJogador11;
+        private System.Windows.Forms.Label lblBodeJogador12;
+        private System.Windows.Forms.Label lblBodeJogador13;
+        private System.Windows.Forms.Label lblBodeJogador14;
+        private System.Windows.Forms.Label lblBodeJogador15;
+        private System.Windows.Forms.Label lblBodeJogador16;
+        private System.Windows.Forms.Label lblBodeJogador17;
+        private System.Windows.Forms.Label lblBodeJogador18;
+        private System.Windows.Forms.Label lblBodeJogador19;
+        private System.Windows.Forms.Label lblBodeJogador20;
+        private System.Windows.Forms.Label lblBodeJogador21;
+        private System.Windows.Forms.Label lblBodeJogador22;
+        private System.Windows.Forms.Label lblBodeJogador23;
+        private System.Windows.Forms.Label lblBodeJogador24;
+        private System.Windows.Forms.Label lblBodeJogador25;
+        private System.Windows.Forms.Label lblBodeJogador26;
+        private System.Windows.Forms.Label lblBodeJogador27;
+        private System.Windows.Forms.Label lblBodeJogador28;
+        private System.Windows.Forms.Label lblBodeJogador29;
+        private System.Windows.Forms.Label lblBodeJogador30;
+        private System.Windows.Forms.Label lblBodeJogador31;
+        private System.Windows.Forms.Label lblBodeJogador32;
+        private System.Windows.Forms.Label lblIdJogador1;
+        private System.Windows.Forms.Label lblIdJogador2;
+        private System.Windows.Forms.Label lblIdJogador3;
+        private System.Windows.Forms.Label lblIdJogador4;
+        private System.Windows.Forms.Label lblIdJogador5;
+        private System.Windows.Forms.Label lblIdJogador6;
+        private System.Windows.Forms.Label lblIdJogador7;
+        private System.Windows.Forms.Label lblIdJogador8;
+        private System.Windows.Forms.Label lblIdJogador9;
+        private System.Windows.Forms.Label lblIdJogador10;
+        private System.Windows.Forms.Label lblIdJogador11;
+        private System.Windows.Forms.Label lblIdJogador12;
+        private System.Windows.Forms.Label lblIdJogador13;
+        private System.Windows.Forms.Label lblIdJogador14;
+        private System.Windows.Forms.Label lblIdJogador15;
+        private System.Windows.Forms.Label lblIdJogador16;
+        private System.Windows.Forms.Label lblIdJogador17;
+        private System.Windows.Forms.Label lblIdJogador18;
+        private System.Windows.Forms.Label lblIdJogador19;
+        private System.Windows.Forms.Label lblIdJogador20;
+        private System.Windows.Forms.Label lblIdJogador21;
+        private System.Windows.Forms.Label lblIdJogador22;
+        private System.Windows.Forms.Label lblIdJogador23;
+        private System.Windows.Forms.Label lblIdJogador24;
+        private System.Windows.Forms.Label lblIdJogador25;
+        private System.Windows.Forms.Label lblIdJogador26;
+        private System.Windows.Forms.Label lblIdJogador27;
+        private System.Windows.Forms.Label lblIdJogador28;
+        private System.Windows.Forms.Label lblIdJogador29;
+        private System.Windows.Forms.Label lblIdJogador30;
+        private System.Windows.Forms.Label lblIdJogador31;
+        private System.Windows.Forms.Label lblIdJogador32;
     }
 }
