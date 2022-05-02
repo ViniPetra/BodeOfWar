@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblBode1 = new System.Windows.Forms.Label();
             this.lblNum1 = new System.Windows.Forms.Label();
             this.lblNum2 = new System.Windows.Forms.Label();
@@ -109,8 +108,6 @@
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.btnVerMesa = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblVc = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
@@ -987,16 +984,6 @@
             this.btnVerMesa.Text = "Ver mesa";
             this.btnVerMesa.UseVisualStyleBackColor = true;
             this.btnVerMesa.Click += new System.EventHandler(this.btnVerMesa_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // lblJogador
             // 
@@ -1951,8 +1938,6 @@
         private System.Windows.Forms.PictureBox pictureBox31;
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.Button btnVerMesa;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.Label lblJogador;
         private System.Windows.Forms.Label lblVc;
         private System.Windows.Forms.Button btnIniciar;
