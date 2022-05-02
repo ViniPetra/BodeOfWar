@@ -476,7 +476,7 @@ namespace BodeOfWar
                         {
                             VerIlhas();
 
-                            int random = new Random().Next(1,2);
+                            int random = new Random().Next(1, 2);
 
                             if (random == 1)
                             {
@@ -497,7 +497,8 @@ namespace BodeOfWar
                         {
                             int rand = random.Next(0, jogador.Mao.Length);
 
-                            if (!(CartasJogadas.Contains(rand))){
+                            if (!(CartasJogadas.Contains(rand)))
+                            {
                                 Jogar(rand);
                                 CartasJogadas.Add(rand);
                             }
