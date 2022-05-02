@@ -29,8 +29,6 @@ namespace BodeOfWar
 
         Jogador jogador = new Jogador();
 
-        Random random = new Random();
-
         List<PictureBox> imagens;
         List<Label> bodes;
         List<Label> ids;
@@ -419,14 +417,15 @@ namespace BodeOfWar
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            timer.Enabled = true;
+            //timer.Enabled = true;
+            timer.Start();
         }
 
         private void IniciarAuto()
         {
             //Automação
-            timer.Enabled = true;
-            timer.Start();
+            //timer.Enabled = true;
+            //timer.Start();
 
             List<int> CartasJogadas = new List<int>();
 
@@ -434,49 +433,47 @@ namespace BodeOfWar
 
             while (running)
             {
-                if (timer.Interval % 10000 == 0)
+                timer.Stop();
+                AtualizarDetalhes();
+
+                if (VerificarVez() == jogador.Nome)
                 {
-                    timer.Stop();
-                    AtualizarDetalhes();
+                    string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
 
-                    if (VerificarVez() == jogador.Nome)
+                    if (ret[3].Contains("I"))
                     {
-                        string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+                        VerIlhas();
 
-                        if (ret[3].Contains("I"))
+                        int random = new Random().Next(1, 2);
+
+                        if (random == 1)
                         {
-                            VerIlhas();
-
-                            int random = new Random().Next(1, 2);
-
-                            if (random == 1)
-                            {
-                                BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
-                                AtualizarDetalhes();
-                                timer.Start();
-                            }
-
-                            if (random == 2)
-                            {
-                                BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
-                                AtualizarDetalhes();
-                                timer.Start();
-                            }
+                            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
+                            AtualizarDetalhes();
+                            timer.Start();
                         }
 
-                        if (ret[3].Contains("B"))
+                        if (random == 2)
                         {
-                            int rand = random.Next(0, jogador.Mao.Length);
+                            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
+                            AtualizarDetalhes();
+                            timer.Start();
+                        }
+                    }
 
-                            if (!(CartasJogadas.Contains(rand)))
-                            {
-                                Jogar(rand);
-                                CartasJogadas.Add(rand);
-                                timer.Start();
-                            }
+                    if (ret[3].Contains("B"))
+                    {
+                        int rand = new Random().Next(0, jogador.Mao.Length);
+
+                        if (!(CartasJogadas.Contains(rand)))
+                        {
+                            Jogar(rand);
+                            CartasJogadas.Add(rand);
+                            timer.Start();
                         }
                     }
                 }
+                
             }
         }
 
