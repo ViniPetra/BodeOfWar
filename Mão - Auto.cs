@@ -31,11 +31,6 @@ namespace BodeOfWar
 
         Random random = new Random();
 
-        Timer timer = new Timer()
-        {
-            Interval = 10000
-        };
-
         List<PictureBox> imagens;
         List<Label> bodes;
         List<Label> ids;
@@ -232,9 +227,6 @@ namespace BodeOfWar
                 string[] opcIlha = retIlha.Split(',');
                 ilha1Global = Int32.Parse(opcIlha[0]);
                 ilha2Global = Int32.Parse(opcIlha[1]);
-                btnIlha1.Text = opcIlha[0];
-                btnIlha2.Text = opcIlha[1];
-                pnlIlhas.BringToFront();
             }
         }
 
@@ -425,33 +417,12 @@ namespace BodeOfWar
             AtualizarDetalhes();
         }
 
-        //Ver as opções de ilha
-        private void btnVerIlhas_Click(object sender, EventArgs e)
-        {
-            VerIlhas();
-        }
-
-        //Escolher a ilha
-        private void btnIlha1_Click(object sender, EventArgs e)
-        {
-            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
-            AtualizarDetalhes();
-            pnlVerIlhas.BringToFront();
-        }
-
-        private void btnIlha2_Click(object sender, EventArgs e)
-        {
-            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
-            AtualizarDetalhes();
-            pnlVerIlhas.BringToFront();
-        }
-
-        private void btnVerMesa_Click(object sender, EventArgs e)
-        {
-            VerMesa();
-        }
-
         private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = true;
+        }
+
+        private void IniciarAuto()
         {
             //Automação
             timer.Enabled = true;
@@ -501,12 +472,17 @@ namespace BodeOfWar
                             {
                                 Jogar(rand);
                                 CartasJogadas.Add(rand);
+                                timer.Start();
                             }
-                            timer.Start();
                         }
                     }
                 }
             }
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            IniciarAuto();
         }
     }
 }
