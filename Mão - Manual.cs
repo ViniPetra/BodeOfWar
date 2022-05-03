@@ -159,6 +159,7 @@ namespace BodeOfWar
             ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
+            PopularMesa(rodada);
         }
 
         /// <summary>
@@ -256,6 +257,28 @@ namespace BodeOfWar
                 btnIlha1.Text = opcIlha[0];
                 btnIlha2.Text = opcIlha[1];
                 pnlIlhas.BringToFront();
+            }
+        }
+
+        /// <summary>
+        /// Popula a lista Mesa com o retorno tratado e BodeOfWar.VerificarMesa
+        /// </summary>
+        /// <param name="rodada"></param>
+        private void PopularMesa(int rodada)
+        {
+            string[] aux;
+
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
+
+            ret = ret.Replace("\r", "");
+            aux = ret.Split('\n');
+
+            foreach (string a in aux)
+            {
+                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
+                {
+                    Mesa.Add(a);
+                }
             }
         }
 

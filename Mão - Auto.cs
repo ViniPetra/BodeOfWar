@@ -155,7 +155,7 @@ namespace BodeOfWar
             ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-            VerificarMesaAtual(rodada);
+            PopularMesa(rodada);
         }
 
         /// <summary>
@@ -253,10 +253,10 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 
+        /// Popula a lista Mesa com o retorno tratado e BodeOfWar.VerificarMesa
         /// </summary>
         /// <param name="rodada"></param>
-        private void VerificarMesaAtual(int rodada)
+        private void PopularMesa(int rodada)
         {
             string[] aux;
 
@@ -271,17 +271,6 @@ namespace BodeOfWar
                 {
                     Mesa.Add(a);
                 }
-            }
-
-            int count = 0;
-            foreach (string b in Mesa)
-            {
-                string[] aux2 = b.Split(',');
-
-                MatrizMesa[count, 0] = aux2[0];
-                MatrizMesa[count, 1] = aux2[1];
-
-                count++;
             }
         }
 
