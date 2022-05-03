@@ -279,6 +279,9 @@ namespace BodeOfWar
             //Mostra seu nome na tela
             lblNomeJogador.Text = jogador.Nome;
 
+            //Desativa o botão de voltar
+            btnVoltarListarPartidas2.Enabled = false;
+
             AtualizarDetalhes();
         }
 
