@@ -30,7 +30,6 @@ namespace BodeOfWar
         List<Label> ids;
         Panel[] panels;
 
-
         List<PictureBox> Jogador1;
         List<PictureBox> Jogador2;
         List<PictureBox> Jogador3;
@@ -52,15 +51,26 @@ namespace BodeOfWar
 
         List<List<Label>> MesaJogadoresIds;
 
+        /// <summary>
+        /// Define o jogador
+        /// </summary>
+        /// <param name="user"></param>
         public MaoAuto(Jogador user)
         {
             InitializeComponent();
             jogador = user;
         }
 
+        /// <summary>
+        /// 1. Inicializa as listas na array CartasPorJogador
+        /// 2. Define as listas imagens, bodes e ids
+        /// 3. Define as imagens das PictureBox da lista imagens baseado em cada jogador.Mao.imagem
+        /// 4. Define os text de cada Label da lista bodes baseado em cada jogador.Mao.bode
+        /// 5. Define os text de cada Label da lista ids baseado em cada jogador.Mao.id
+        /// </summary>
         private void Mão_Load(object sender, EventArgs e)
         {
-            ListarJogadores(jogador.idPartida);
+            AtualizarDetalhes();
 
             CartasPorJogador[0] = new List<int>();
             CartasPorJogador[1] = new List<int>();
@@ -68,8 +78,6 @@ namespace BodeOfWar
             CartasPorJogador[3] = new List<int>();
 
             lblJogador.Text = jogador.Nome;
-
-            AtualizarDetalhes();
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
@@ -103,10 +111,12 @@ namespace BodeOfWar
             PopularJogadores();
         }
 
-        //Função para atualizar a lista de jogadores a qualquer momento
-        private void ListarJogadores(int idPartida)
+        /// <summary>
+        /// Atualiza o txtListarJogadores com o retorno de BodeOfWarServer.ListarJogadores
+        /// </summary>
+        private void ListarJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
             if (Jogadores == "")
             {
                 Jogadores = "Partida vazia";
@@ -115,6 +125,9 @@ namespace BodeOfWar
             txtListarJogadores.Text = Jogadores;
         }
 
+        /// <summary>
+        /// Função auxiliar para popular a array idJogadoresInt
+        /// </summary>
         private void PopularJogadores()
         {
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
@@ -136,16 +149,21 @@ namespace BodeOfWar
             idJogadoresInt = idJogadores.Select(int.Parse).ToArray();
         }
 
-        //Função de atualizar os detalhes da partida
+        /// <summary>
+        /// Atualiza as informações em txtVez, txtNarracao, txtJogadores e a mesa
+        /// </summary>
         private void AtualizarDetalhes()
         {
-            ListarJogadores(jogador.idPartida);
+            ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-            VerificarMesaAtual(jogador.idPartida, rodada);
+            VerificarMesaAtual(rodada);
         }
 
-        //Função para verificar a vez a qualquer momento
+        /// <summary>
+        /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
+        /// </summary>
+        /// <returns>Nome do jogador que deve atuar</returns>
         private string VerificarVez()
         {
             string nome = "";
@@ -177,8 +195,11 @@ namespace BodeOfWar
 
             string[] Vez = vez.Split(',');
 
+            //Vez[0] = id
+            //Vez[1] = nome
             string x = Vez[1];
 
+            //Comparação dos retornos
             for (int i = 0; i < Jogadores.Length; i++)
             {
                 if (Jogadores[i] == x)
@@ -189,6 +210,13 @@ namespace BodeOfWar
             return nome;
         }
 
+        /// <summary>
+        /// 1. Joga uma carta baseada no índice da mesma na array em jogador.Mao
+        /// 2. Incrementa a rodada
+        /// 3. Traz o painel atrás da carta para frente
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns>true se foi possível jogar e false se não foi possível jogar</returns>
         private bool Jogar(int index)
         {
             panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
@@ -207,6 +235,9 @@ namespace BodeOfWar
             }
         }
 
+        /// <summary>
+        /// 1. Trabalha os valores retornados em BodeOfWarServer.VerificarIlha e guarda cada valor em ilha1Global e ilha2Global
+        /// </summary>
         private void VerIlhas()
         {
             string retIlha = BodeOfWarServer.Jogo.VerificarIlha(jogador.Id, jogador.Senha);
@@ -223,11 +254,15 @@ namespace BodeOfWar
             }
         }
 
-        private void VerificarMesaAtual(int idPartida, int rodada)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rodada"></param>
+        private void VerificarMesaAtual(int rodada)
         {
             string[] aux;
 
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida, rodada);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
 
             ret = ret.Replace("\r", "");
             aux = ret.Split('\n');
@@ -252,6 +287,9 @@ namespace BodeOfWar
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void VerMesa()
         {
             AtualizarDetalhes();
@@ -365,25 +403,29 @@ namespace BodeOfWar
             }
         }
 
-        private void IniciarAuto()
+        /// <summary>
+        /// Automação do jogo modo aleatório
+        /// </summary>
+        private void IniciarAutoRandom()
         {
-            //Automação
-
             List<int> CartasJogadas = new List<int>();
 
             timer.Stop();
             AtualizarDetalhes();
 
+            //Verifica se é a vez deste jogador
             if (VerificarVez() == jogador.Nome)
             {
                 string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
 
+                //Verifica se é hora de escolher ilha
                 if (ret[3].Contains("I"))
                 {
                     VerIlhas();
 
                     int random = new Random().Next(1, 2);
 
+                    //Escolher uma ilha aleatória
                     if (random == 1)
                     {
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
@@ -399,10 +441,12 @@ namespace BodeOfWar
                     }
                 }
 
+                //Verifica se é hora de jogar uma carta
                 if (ret[3].Contains("B"))
                 {
                     int rand = new Random().Next(0, jogador.Mao.Length);
 
+                    ///Joga uma carta aleatória se o número gerado não está na lista de cartas jogadas
                     if (!(CartasJogadas.Contains(rand)))
                     {
                         Jogar(rand);
@@ -465,7 +509,7 @@ namespace BodeOfWar
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            IniciarAuto();
+            IniciarAutoRandom();
         }
     }
 }

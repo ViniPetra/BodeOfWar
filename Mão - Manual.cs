@@ -74,7 +74,7 @@ namespace BodeOfWar
         /// </summary>
         private void Mão_Load(object sender, EventArgs e)
         {
-            ListarJogadores();
+            AtualizarDetalhes();
 
             CartasPorJogador[0] = new List<int>();
             CartasPorJogador[1] = new List<int>();
@@ -82,8 +82,6 @@ namespace BodeOfWar
             CartasPorJogador[3] = new List<int>();
 
             lblJogador.Text = jogador.Nome;
-
-            AtualizarDetalhes();
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
@@ -163,10 +161,9 @@ namespace BodeOfWar
             ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-            VerificarMesaAtual(jogador.idPartida, rodada);
+            VerificarMesaAtual(rodada);
         }
 
-        //Função para verificar a vez a qualquer momento
         /// <summary>
         /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
         /// </summary>
@@ -268,13 +265,12 @@ namespace BodeOfWar
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="idPartida"></param>
         /// <param name="rodada"></param>
-        private void VerificarMesaAtual(int idPartida, int rodada)
+        private void VerificarMesaAtual(int rodada)
         {
             string[] aux;
 
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida, rodada);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
 
             ret = ret.Replace("\r", "");
             aux = ret.Split('\n');
