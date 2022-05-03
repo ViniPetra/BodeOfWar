@@ -366,6 +366,54 @@ namespace BodeOfWar
             }
         }
 
+        private void IniciarAuto()
+        {
+            //Automação
+
+            List<int> CartasJogadas = new List<int>();
+
+            timer.Stop();
+            AtualizarDetalhes();
+
+            if (VerificarVez() == jogador.Nome)
+            {
+                string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+
+                if (ret[3].Contains("I"))
+                {
+                    VerIlhas();
+
+                    int random = new Random().Next(1, 2);
+
+                    if (random == 1)
+                    {
+                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
+                        AtualizarDetalhes();
+                        timer.Start();
+                    }
+
+                    if (random == 2)
+                    {
+                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
+                        AtualizarDetalhes();
+                        timer.Start();
+                    }
+                }
+
+                if (ret[3].Contains("B"))
+                {
+                    int rand = new Random().Next(0, jogador.Mao.Length);
+
+                    if (!(CartasJogadas.Contains(rand)))
+                    {
+                        Jogar(rand);
+                        CartasJogadas.Add(rand);
+                        timer.Start();
+                    }
+                }
+            }
+        }
+
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
             Jogar(0);
@@ -413,56 +461,7 @@ namespace BodeOfWar
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            //timer.Enabled = true;
             timer.Start();
-        }
-
-        private void IniciarAuto()
-        {
-            //Automação
-
-            List<int> CartasJogadas = new List<int>();
-
-            timer.Stop();
-            AtualizarDetalhes();
-
-            if (VerificarVez() == jogador.Nome)
-            {
-                string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
-
-                if (ret[3].Contains("I"))
-                {
-                    VerIlhas();
-
-                    int random = new Random().Next(1, 2);
-
-                    if (random == 1)
-                    {
-                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
-                        AtualizarDetalhes();
-                        timer.Start();
-                    }
-
-                    if (random == 2)
-                    {
-                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
-                        AtualizarDetalhes();
-                        timer.Start();
-                    }
-                }
-
-                if (ret[3].Contains("B"))
-                {
-                    int rand = new Random().Next(0, jogador.Mao.Length);
-
-                    if (!(CartasJogadas.Contains(rand)))
-                    {
-                        Jogar(rand);
-                        CartasJogadas.Add(rand);
-                        timer.Start();
-                    }
-                }
-            }  
         }
 
         private void timer_Tick(object sender, EventArgs e)
