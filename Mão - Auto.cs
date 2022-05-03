@@ -155,6 +155,7 @@ namespace BodeOfWar
             ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
+            VerificarMesaAtual(rodada);
         }
 
         /// <summary>
@@ -248,6 +249,39 @@ namespace BodeOfWar
                 string[] opcIlha = retIlha.Split(',');
                 ilha1Global = Int32.Parse(opcIlha[0]);
                 ilha2Global = Int32.Parse(opcIlha[1]);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rodada"></param>
+        private void VerificarMesaAtual(int rodada)
+        {
+            string[] aux;
+
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
+
+            ret = ret.Replace("\r", "");
+            aux = ret.Split('\n');
+
+            foreach (string a in aux)
+            {
+                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
+                {
+                    Mesa.Add(a);
+                }
+            }
+
+            int count = 0;
+            foreach (string b in Mesa)
+            {
+                string[] aux2 = b.Split(',');
+
+                MatrizMesa[count, 0] = aux2[0];
+                MatrizMesa[count, 1] = aux2[1];
+
+                count++;
             }
         }
 
