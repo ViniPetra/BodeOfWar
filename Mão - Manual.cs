@@ -282,13 +282,21 @@ namespace BodeOfWar
             }
         }
 
+        //ATENÇÃO -> O código abaixo é o trecho que mais deu trabalho e eu tenho maior orgulho - Vinicius Petratti
+
         /// <summary>
-        /// 1. 
+        /// 1. Popula as listas na array CartasPorJogador de forma MAGNÍFICA
+        /// 2. Define as listas de PictureBoxes de imagem das cartas jogadas por cada jogador e cria uma matriz com as mesmas (lista de lista)
+        /// 3. Define as listas de Labels de bodes das cartas jogadas por cada jogador e cria uma matriz com as mesmas (lista de lista)
+        /// 4. Define as listas de Labels de ids das cartas jogadas por cada jogador e cria uma matriz com as mesmas (lista de lista)
+        /// 
         /// </summary>
         private void VerMesa()
         {
             AtualizarDetalhes();
 
+            /// 1
+            //Compara cada item na Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em idJogadoresInt se a carta já não estiver adicionada
             foreach (string a in Mesa)
             {
                 string[] b = a.Split(',');
@@ -308,29 +316,43 @@ namespace BodeOfWar
                 }
             }
 
+            /// 2
+            //Listas das PictureBoxes de cartas jogadas por cada jogador
             Jogador1 = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
             Jogador2 = new List<PictureBox>() { pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
             Jogador3 = new List<PictureBox>() { pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox20, pictureBox22, pictureBox23, pictureBox24 };
             Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
 
+            //Define a matriz de PictureBoxes de imagens
             MesaJogadoresImagem = new List<List<PictureBox>> { Jogador1, Jogador2, Jogador3, Jogador4 };
 
+            /// 3
+            //Listas de Labels de bodes das cartas jogadas por cada jogador
             Jogador1Bodes = new List<Label>() { lblBodeJogador1, lblBodeJogador2, lblBodeJogador3, lblBodeJogador4, lblBodeJogador5, lblBodeJogador6, lblBodeJogador7, lblBodeJogador8 };
             Jogador2Bodes = new List<Label>() { lblBodeJogador9, lblBodeJogador10, lblBodeJogador11, lblBodeJogador12, lblBodeJogador13, lblBodeJogador14, lblBodeJogador15, lblBodeJogador16 };
             Jogador3Bodes = new List<Label>() { lblBodeJogador17, lblBodeJogador18, lblBodeJogador19, lblBodeJogador20, lblBodeJogador21, lblBodeJogador22, lblBodeJogador23, lblBodeJogador24 };
             Jogador4Bodes = new List<Label>() { lblBodeJogador25, lblBodeJogador26, lblBodeJogador27, lblBodeJogador28, lblBodeJogador29, lblBodeJogador30, lblBodeJogador31, lblBodeJogador32 };
 
+            //Matriz de labels de bodes
             MesaJogadoresBode = new List<List<Label>>() { Jogador1Bodes, Jogador2Bodes, Jogador3Bodes, Jogador4Bodes };
 
+            /// 4
+            //Listas de Labels de ids das cartas jogadas por cada jogador
             Jogador1Ids = new List<Label>() { lblIdJogador1, lblIdJogador2, lblIdJogador3, lblIdJogador4, lblIdJogador5, lblIdJogador6, lblIdJogador7, lblIdJogador8 };
             Jogador2Ids = new List<Label>() { lblIdJogador9, lblIdJogador10, lblIdJogador11, lblIdJogador12, lblIdJogador13, lblIdJogador14, lblIdJogador15, lblIdJogador16 };
             Jogador3Ids = new List<Label>() { lblIdJogador17, lblIdJogador18, lblIdJogador19, lblIdJogador20, lblIdJogador21, lblIdJogador22, lblIdJogador23, lblIdJogador24 };
             Jogador4Ids = new List<Label>() { lblIdJogador25, lblIdJogador26, lblIdJogador27, lblIdJogador28, lblIdJogador29, lblIdJogador30, lblIdJogador31, lblIdJogador32 };
 
+            //Matriz de labels de ids
             MesaJogadoresIds = new List<List<Label>>() { Jogador1Ids, Jogador2Ids, Jogador3Ids, Jogador4Ids };
+
 
             int count = 0;
 
+            ///Para cada item para cada lista de PictureBox na Matriz de Pictureboxes
+            ///Para cada carta na lista de cartas da matriz CartasPorJogador
+            ///Para cada objeto em TodasCartas
+            ///O item recebe a imagem do objeto em TodasCartas cujo id é igual ao da carta 
             foreach (List<PictureBox> l in MesaJogadoresImagem)
             {
                 foreach (PictureBox p in l)
@@ -353,6 +375,10 @@ namespace BodeOfWar
                 count++;
             }
 
+            ///Para cada item para cada lista de Labels na Matriz de Labels de bode
+            ///Para cada carta na lista de cartas da matriz CartasPorJogador
+            ///Para cada objeto em TodasCartas
+            ///O item recebe o texto de bode do objeto em TodasCartas cujo id é igual ao da carta 
             count = 0;
             foreach (List<Label> label in MesaJogadoresBode)
             {
@@ -375,6 +401,10 @@ namespace BodeOfWar
                 count++;
             }
 
+            ///Para cada item para cada lista de Labels na Matriz de Labels de ids
+            ///Para cada carta na lista de cartas da matriz CartasPorJogador
+            ///Para cada objeto em TodasCartas
+            ///O item recebe o texto de id do objeto em TodasCartas cujo id é igual ao da carta
             count = 0;
             foreach (List<Label> label in MesaJogadoresIds)
             {
@@ -398,6 +428,7 @@ namespace BodeOfWar
             }
         }
 
+        //Dinâmica dos botões
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
             Jogar(0);
@@ -443,13 +474,11 @@ namespace BodeOfWar
             AtualizarDetalhes();
         }
 
-        //Ver as opções de ilha
         private void btnVerIlhas_Click(object sender, EventArgs e)
         {
             VerIlhas();
         }
 
-        //Escolher a ilha
         private void btnIlha1_Click(object sender, EventArgs e)
         {
             BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
