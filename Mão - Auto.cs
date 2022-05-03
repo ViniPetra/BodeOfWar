@@ -462,7 +462,7 @@ namespace BodeOfWar
                 //Verifica se é hora de jogar uma carta
                 if (ret[3].Contains("B"))
                 {
-                    int rand = new Random().Next(0, jogador.Mao.Length);
+                    int rand = new Random().Next(0, 7);
 
                     ///Joga uma carta aleatória se o número gerado não está na lista de cartas jogadas
                     if (!(CartasJogadas.Contains(rand)))
