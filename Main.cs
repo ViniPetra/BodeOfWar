@@ -16,9 +16,14 @@ namespace BodeOfWar
         public Cartas[] TodasCartas = new Cartas[50];
         //Array das cartas designadas
         public Cartas[] MinhaMao = new Cartas[8];
-
+        //Definição do jogador
         public Jogador jogador = new Jogador();
 
+        /// <summary>
+        /// 1. Cria os objetos de cada as carta do jogo
+        /// 2. Cria a lista com todos os objetos de carta 
+        /// 3. Define o atributo de todas as cartas no jogador 
+        /// </summary>
         public Main()
         {
             InitializeComponent();
@@ -26,8 +31,6 @@ namespace BodeOfWar
             //Mostra a versão do servidor
             string Versao = BodeOfWarServer.Jogo.Versao;
             lblVersao.Text = Versao;
-
-            //Linhas 34 até 81 é a criação da matriz de cartas
 
             //Parse do retorno de ListarCartas() em uma array
             //Cartas1 {1, 1, 5, 2, 2, 5, ...}
@@ -80,10 +83,14 @@ namespace BodeOfWar
                 cartas.imagem = (Image)Properties.Resources.ResourceManager.GetObject("b" + cartas.imagemnum);
             }
 
+            //Atribuição de TodasCartas para atributo TodasCartas do objeto jogador
             jogador.TodasCartas = TodasCartas;
         }
 
-        //Função para atualizar a lista a qualquer momento
+        /// <summary>
+        /// Trata o retorno de "ListarPartidas" e adiciona cada partida como um item individual em uma lista.
+        /// </summary>
+        /// <param name="tipo"></param>
         private void ListarPartidas(string tipo)
         {
             lstPartidas.Items.Clear();
@@ -102,18 +109,22 @@ namespace BodeOfWar
             retPartidas = retPartidas.Substring(0, retPartidas.Length - 1);
             string[] Partidas = retPartidas.Split('\n');
 
+            //Loop de adição das partidas na lista
             for (int i = 0; i < Partidas.Length; i++)
             {
                 lstPartidas.Items.Add(Partidas[i]);
             }
 
+            //Traz para frente o painel com o tipo de partida selecionada
             pnlListarPartidas2.BringToFront();
         }
 
-        //Função para atualizar a lista de jogadores a qualquer momento
-        private void ListarJogadores(int idPartida)
+        /// <summary>
+        /// Mostra o retorno de ListarJogadores na textbox
+        /// </summary>
+        private void ListarJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
             if (Jogadores == "")
             {
                 Jogadores = "Partida vazia";
@@ -121,11 +132,14 @@ namespace BodeOfWar
             txtListarJogadores.Text = Jogadores;
         }
 
-        //Função de atualizar os detalhes da partida
-        public void AtualizarDetalhes(int idPartida)
+        /// <summary>
+        /// Atualiza as informações em txtVez, txtNarracao, txtJogadores
+        /// Verifica se a partida foi iniciada e bloqueia o btnIniciarPartida caso tenha sido
+        /// </summary>
+        public void AtualizarDetalhes()
         { 
-            ListarJogadores(jogador.idPartida);
-            txtVez.Text = VerificarVez(jogador.idPartida);
+            ListarJogadores();
+            txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
 
             if (txtVez.Text != "Partida não iniciada")
@@ -134,8 +148,11 @@ namespace BodeOfWar
             }
         }
 
-        //Função para verificar a vez a qualquer momento
-        private string VerificarVez(int idPartida)
+        /// <summary>
+        /// Trata o retorno da função do servidor "VerificarVez", bate com o retorno de "ListarJogadores" e mostra o nome do jogador que deve atuar.
+        /// </summary>
+        /// <returns>Nome do jogador que é a vez de atuar</returns>
+        private string VerificarVez()
         {
             string nome = "";
             string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
@@ -164,20 +181,29 @@ namespace BodeOfWar
             jogadores = jogadores.Replace("\n", ",");
             string[] Jogadores = jogadores.Split(',');
 
+            //Vez[0] = id
+            //Vez[1] = nome
             string[] Vez = vez.Split(',');
 
-            string x = Vez[1];
+            string NomeJogador = Vez[1];
 
+            //Comparação dos retornos
             for (int i = 0; i < Jogadores.Length; i++)
             {
-                if (Jogadores[i] == x)
+                if (Jogadores[i] == NomeJogador)
                 {
                     nome = Jogadores[i + 1];
                 }
             }
+
             return nome;
         }
 
+        /// <summary>
+        /// 1. Cria uma partida usando as informações em txtNomeCriarPartida e txtSenhaCriarPartida
+        /// 2. Define o atributo idPartida em jogador para o id da partida criada 
+        /// 3. Traz para frente os detalhes da partida criada instantâneamente
+        /// </summary>
         public void CriarPartida()
         {
             string nome = txtNomeCriarPartida.Text;
@@ -207,15 +233,21 @@ namespace BodeOfWar
             //Isolar a id da partida mais recente
             int idPartida = Int32.Parse(Partidas[((Partidas.Length) - 4)]);
 
+            //Define o atributo idPartida em jogador para o id da partida criada 
             jogador.idPartida = idPartida;
 
             //Atualizar detalhes
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
 
             //Chamar o painel de detalhes
             pnlDetalhesPartida.BringToFront();
         }
 
+        /// <summary>
+        /// 1. Entra na partida usando as informações em txtNome e txtSenhaPartida
+        /// 2. Traz para frente detalhes da partida recém entrada
+        /// 3. Define atributos Id, Senha e Nome do objeto jogador 
+        /// </summary>
         private void EntrarPartida()
         {
             string nome = txtNome.Text;
@@ -238,49 +270,50 @@ namespace BodeOfWar
             string[] senhaPartida = new string[2];
             senhaPartida = chamada.Split(',');
 
+            //Define atributos Id, Senha e Nome do objeto jogador 
             jogador.Id = Int32.Parse(senhaPartida[0]);
             jogador.Senha = senhaPartida[1];
             jogador.Nome = nome;
 
+            //Mostra seu nome na tela
             lblNomeJogador.Text = jogador.Nome;
 
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
         }
 
+        /// <summary>
+        /// 1. Inicia a partida em que o jogador está registrado
+        /// 2. Define os botões de escolha de moto de jogo como habilitados (naturalmente desabilitados)
+        /// </summary>
         private void IniciarPartida()
         {
-            string index = "";
-            string retIniciar = "";
-            int id = jogador.Id;
-            string senha = jogador.Senha;
+            string retIniciar;
 
             //Iniciando partida
-            retIniciar = BodeOfWarServer.Jogo.IniciarPartida(id, senha);
+            retIniciar = BodeOfWarServer.Jogo.IniciarPartida(jogador.Id, jogador.Senha);
 
             //Gerenciamento de erros
-            if (index.StartsWith("ERRO"))
-            {
-                MessageBox.Show(index, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-            }
-
             if (retIniciar.StartsWith("ERRO"))
             {
                 MessageBox.Show(retIniciar, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
             else MessageBox.Show("Partida iniciada com sucesso");
 
+            //Define os botões de escolha de moto de jogo como habilitados
             btnManual.Enabled = true;
             btnAutomatico.Enabled = true;
 
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
         }
 
+        /// <summary>
+        /// 1. Cria uma array com os objetos de cartas baseado no retorno de VerificarMao
+        /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
+        /// 3. Chama o formulário de Mão manual (sem automação)
+        /// </summary>
         private void MostrarMaoManual()
         {
-            int id = jogador.Id;
-            string senha = jogador.Senha;
-
-            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(jogador.Id, jogador.Senha);
 
             //Parse no retorno e criação da array de ids das cartas da mão
             //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
@@ -317,6 +350,11 @@ namespace BodeOfWar
             FormMao.ShowDialog();
         }
 
+        /// <summary>
+        /// 1. Cria uma array com os objetos de cartas baseado no retorno de VerificarMao
+        /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
+        /// 3. Chama o formulário de Mão automatizada
+        /// </summary>
         private void MostrarMaoAutomatica()
         {
             int id = jogador.Id;
@@ -359,18 +397,6 @@ namespace BodeOfWar
             FormMaoAuto.ShowDialog();
         }
 
-        //Abrir uma nvoa janela para mostrar suas cartas de forma manual
-        private void btnMostrarMao_Click(object sender, EventArgs e)
-        {
-            MostrarMaoManual();
-        }
-
-        //Abrir uma nvoa janela para mostrar suas cartas de forma automatizada
-        private void btnAutomatico_Click(object sender, EventArgs e)
-        {
-            MostrarMaoAutomatica();
-        }
-
         //Duplo clique na partida
         private void lstPartidas_DoubleClick(object sender, EventArgs e)
         {
@@ -393,7 +419,7 @@ namespace BodeOfWar
             
             jogador.idPartida = idPartida;
 
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
         }
 
 
@@ -433,7 +459,7 @@ namespace BodeOfWar
         //Atualizar a caixa de narração
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
-            AtualizarDetalhes(jogador.idPartida);
+            AtualizarDetalhes();
         }
 
         //Criar partida
@@ -442,15 +468,28 @@ namespace BodeOfWar
             CriarPartida();
         }
 
+        //Abrir uma nova janela para mostrar suas cartas de forma manual
+        private void btnMostrarMao_Click(object sender, EventArgs e)
+        {
+            MostrarMaoManual();
+        }
+
+        //Abrir uma nvoa janela para mostrar suas cartas de forma automatizada
+        private void btnAutomatico_Click(object sender, EventArgs e)
+        {
+            MostrarMaoAutomatica();
+        }
+
+        
         //Dinâmica UI
+
+        /// <summary>
+        /// Todas as funções abaixo são da dinâmica de telas
+        /// </summary>
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             pnlListarCriar.BringToFront();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnCriar_Click(object sender, EventArgs e)
@@ -481,6 +520,14 @@ namespace BodeOfWar
         private void btnVoltarListarCriar2_Click(object sender, EventArgs e)
         {
             pnlListarCriar.BringToFront();
+        }
+
+        /// <summary>
+        /// Fecha o jogo
+        /// </summary>
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
