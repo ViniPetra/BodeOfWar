@@ -492,10 +492,5 @@ namespace BodeOfWar
             AtualizarDetalhes();
             pnlVerIlhas.BringToFront();
         }
-
-        private void btnVerMesa_Click(object sender, EventArgs e)
-        {
-            VerMesa();
-        }
     }
 }

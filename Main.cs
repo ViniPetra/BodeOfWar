@@ -279,6 +279,9 @@ namespace BodeOfWar
             //Mostra seu nome na tela
             lblNomeJogador.Text = jogador.Nome;
 
+            //Desativa o botão de voltar
+            btnVoltarListarPartidas2.Enabled = false;
+
             AtualizarDetalhes();
         }
 
@@ -346,7 +349,7 @@ namespace BodeOfWar
 
             jogador.Mao = MinhaMao;
 
-            //Chamar a janela de cartas próprias
+            //Chamar a janela do jogo manual
             MãoManual FormMao = new MãoManual(jogador);
             FormMao.ShowDialog();
         }
@@ -393,7 +396,7 @@ namespace BodeOfWar
 
             jogador.Mao = MinhaMao;
 
-            //Chamar a janela de cartas próprias
+            //Chamar a janela do jogo automático
             MaoAuto FormMaoAuto = new MaoAuto(jogador);
             FormMaoAuto.ShowDialog();
         }
@@ -515,7 +518,7 @@ namespace BodeOfWar
 
         private void btnVoltarListarPartidas2_Click(object sender, EventArgs e)
         {
-            pnlListarPartidas2.BringToFront();
+            pnlListarPartidas.BringToFront();
         }
 
         private void btnVoltarListarCriar2_Click(object sender, EventArgs e)
