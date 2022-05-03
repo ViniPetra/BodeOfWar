@@ -515,7 +515,7 @@ namespace BodeOfWar
 
         private void btnVoltarListarPartidas2_Click(object sender, EventArgs e)
         {
-            pnlListarPartidas2.BringToFront();
+            pnlListarPartidas.BringToFront();
         }
 
         private void btnVoltarListarCriar2_Click(object sender, EventArgs e)

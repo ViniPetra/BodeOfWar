@@ -86,7 +86,7 @@
             // lblVersao
             // 
             this.lblVersao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersao.Location = new System.Drawing.Point(0, 514);
+            this.lblVersao.Location = new System.Drawing.Point(-6, 524);
             this.lblVersao.Name = "lblVersao";
             this.lblVersao.Size = new System.Drawing.Size(715, 25);
             this.lblVersao.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             // btnIniciarPartida
             // 
-            this.btnIniciarPartida.Location = new System.Drawing.Point(89, 13);
+            this.btnIniciarPartida.Location = new System.Drawing.Point(87, 23);
             this.btnIniciarPartida.Name = "btnIniciarPartida";
             this.btnIniciarPartida.Size = new System.Drawing.Size(91, 23);
             this.btnIniciarPartida.TabIndex = 25;
@@ -129,7 +129,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(323, 394);
+            this.btnSair.Location = new System.Drawing.Point(317, 404);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 5;
@@ -150,7 +150,7 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(323, 258);
+            this.btnIniciar.Location = new System.Drawing.Point(317, 262);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(75, 23);
             this.btnIniciar.TabIndex = 4;
@@ -547,8 +547,8 @@
             this.ClientSize = new System.Drawing.Size(715, 678);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlDetalhesPartida);
-            this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlDentroPartida);
+            this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlListarPartidas2);
             this.Controls.Add(this.pnlListarCriar);
             this.Controls.Add(this.pnlListarPartidas);
