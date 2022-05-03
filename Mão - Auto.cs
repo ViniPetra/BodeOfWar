@@ -157,7 +157,7 @@ namespace BodeOfWar
             ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-            VerificarMesaAtual(rodada);
+            PopularMatrizMesa(rodada);
         }
 
         /// <summary>
@@ -255,10 +255,11 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 
+        /// 1. Cria a lista Mesa com o retorno tratado de BodeOfWar.VerificarMesa
+        /// 2. Trata cada item da lista Mesa e os adiciona em na MatrizMesa[jogador, carta]
         /// </summary>
         /// <param name="rodada"></param>
-        private void VerificarMesaAtual(int rodada)
+        private void PopularMatrizMesa(int rodada)
         {
             string[] aux;
 
