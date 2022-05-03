@@ -201,7 +201,6 @@ namespace BodeOfWar
             else
             {
                 rodada++;
-                AtualizarDetalhes();
                 VerMesa();
                 panels[index].BringToFront();
                 return true;

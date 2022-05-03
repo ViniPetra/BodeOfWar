@@ -129,6 +129,7 @@ namespace BodeOfWar
             {
                 Jogadores = "Partida vazia";
             }
+
             txtListarJogadores.Text = Jogadores;
         }
 
@@ -149,7 +150,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Trata o retorno da função do servidor "VerificarVez", bate com o retorno de "ListarJogadores" e mostra o nome do jogador que deve atuar.
+        /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
         /// </summary>
         /// <returns>Nome do jogador que é a vez de atuar</returns>
         private string VerificarVez()
@@ -307,7 +308,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Cria uma array com os objetos de cartas baseado no retorno de VerificarMao
+        /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
         /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
         /// 3. Chama o formulário de Mão manual (sem automação)
         /// </summary>
@@ -351,7 +352,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Cria uma array com os objetos de cartas baseado no retorno de VerificarMao
+        /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
         /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
         /// 3. Chama o formulário de Mão automatizada
         /// </summary>

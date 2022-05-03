@@ -78,7 +78,6 @@
             this.btnVerMesa = new System.Windows.Forms.Button();
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblVc = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblIdJogador25 = new System.Windows.Forms.Label();
             this.lblIdJogador26 = new System.Windows.Forms.Label();
             this.lblIdJogador27 = new System.Windows.Forms.Label();
@@ -716,16 +715,6 @@
             this.lblVc.Size = new System.Drawing.Size(35, 13);
             this.lblVc.TabIndex = 97;
             this.lblVc.Text = "Você:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(732, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 98;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblIdJogador25
             // 
@@ -1757,7 +1746,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblVc);
             this.Controls.Add(this.lblJogador);
             this.Controls.Add(this.btnVerMesa);
@@ -1908,7 +1896,6 @@
         private System.Windows.Forms.Button btnVerMesa;
         private System.Windows.Forms.Label lblJogador;
         private System.Windows.Forms.Label lblVc;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblIdJogador25;
         private System.Windows.Forms.Label lblIdJogador26;
         private System.Windows.Forms.Label lblIdJogador27;

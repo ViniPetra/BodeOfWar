@@ -34,7 +34,6 @@ namespace BodeOfWar
         List<Label> ids;
         Panel[] panels;
 
-
         List<PictureBox> Jogador1;
         List<PictureBox> Jogador2;
         List<PictureBox> Jogador3;
@@ -56,16 +55,26 @@ namespace BodeOfWar
 
         List<List<Label>> MesaJogadoresIds;
 
+        /// <summary>
+        /// Define o jogador
+        /// </summary>
+        /// <param name="user"></param>
         public MãoManual(Jogador user)
         {
             InitializeComponent();
-
             jogador = user;
         }
 
+        /// <summary>
+        /// 1. Inicializa as listas na array CartasPorJogador
+        /// 2. Define as listas imagens, bodes e ids
+        /// 3. Define as imagens das PictureBox da lista imagens baseado em cada jogador.Mao.imagem
+        /// 4. Define os text de cada Label da lista bodes baseado em cada jogador.Mao.bode
+        /// 5. Define os text de cada Label da lista ids baseado em cada jogador.Mao.id
+        /// </summary>
         private void Mão_Load(object sender, EventArgs e)
         {
-            ListarJogadores(jogador.idPartida);
+            ListarJogadores();
 
             CartasPorJogador[0] = new List<int>();
             CartasPorJogador[1] = new List<int>();
@@ -108,10 +117,12 @@ namespace BodeOfWar
             PopularJogadores();
         }
 
-        //Função para atualizar a lista de jogadores a qualquer momento
-        private void ListarJogadores(int idPartida)
+        /// <summary>
+        /// Atualiza o txtListarJogadores com o retorno de BodeOfWarServer.ListarJogadores
+        /// </summary>
+        private void ListarJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
             if (Jogadores == "")
             {
                 Jogadores = "Partida vazia";
@@ -120,6 +131,9 @@ namespace BodeOfWar
             txtListarJogadores.Text = Jogadores;
         }
 
+        /// <summary>
+        /// Função auxiliar para popular a array idJogadoresInt
+        /// </summary>
         private void PopularJogadores()
         {
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
@@ -141,16 +155,22 @@ namespace BodeOfWar
             idJogadoresInt = idJogadores.Select(int.Parse).ToArray();
         }
 
-        //Função de atualizar os detalhes da partida
+        /// <summary>
+        /// Atualiza as informações em txtVez, txtNarracao, txtJogadores e a mesa
+        /// </summary>
         private void AtualizarDetalhes()
         {
-            ListarJogadores(jogador.idPartida);
+            ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             VerificarMesaAtual(jogador.idPartida, rodada);
         }
 
         //Função para verificar a vez a qualquer momento
+        /// <summary>
+        /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
+        /// </summary>
+        /// <returns>Nome do jogador que deve atuar</returns>
         private string VerificarVez()
         {
             string nome = "";
@@ -181,9 +201,12 @@ namespace BodeOfWar
             string[] Jogadores = jogadores.Split(',');
 
             string[] Vez = vez.Split(',');
-
+            
+            //Vez[0] = id
+            //Vez[1] = nome
             string x = Vez[1];
-
+            
+            //Comparação dos retornos
             for (int i = 0; i < Jogadores.Length; i++)
             {
                 if (Jogadores[i] == x)
@@ -193,7 +216,13 @@ namespace BodeOfWar
             }
             return nome;
         }
-
+        /// <summary>
+        /// 1. Joga uma carta baseada no índice da mesma na array em jogador.Mao
+        /// 2. Incrementa a rodada
+        /// 3. Traz o painel atrás da carta para frente
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns>true se foi possível jogar e false se não foi possível jogar</returns>
         private bool Jogar(int index)
         {
             panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
@@ -206,13 +235,17 @@ namespace BodeOfWar
             else
             {
                 rodada++;
-                AtualizarDetalhes();
                 VerMesa();
                 panels[index].BringToFront();
                 return true;
             }
         }
 
+        /// <summary>
+        /// 1. Trabalha os valores retornados em BodeOfWarServer.VerificarIlha e guarda cada valor em ilha1Global e ilha2Global
+        /// 2. Define o texto dos botões btnIlha1 e btnIlha2 como ilha1Global e ilha2Global respectivamente.
+        /// 3. Traz para frente os botões btnIlha1 e btnIlha2
+        /// </summary>
         private void VerIlhas()
         {
             string retIlha = BodeOfWarServer.Jogo.VerificarIlha(jogador.Id, jogador.Senha);
@@ -232,6 +265,11 @@ namespace BodeOfWar
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idPartida"></param>
+        /// <param name="rodada"></param>
         private void VerificarMesaAtual(int idPartida, int rodada)
         {
             string[] aux;
@@ -261,6 +299,9 @@ namespace BodeOfWar
             }
         }
 
+        /// <summary>
+        /// 1. 
+        /// </summary>
         private void VerMesa()
         {
             AtualizarDetalhes();
@@ -374,7 +415,6 @@ namespace BodeOfWar
             }
         }
 
-
         private void pcbCarta1_DoubleClick(object sender, EventArgs e)
         {
             Jogar(0);
@@ -444,11 +484,6 @@ namespace BodeOfWar
         private void btnVerMesa_Click(object sender, EventArgs e)
         {
             VerMesa();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida));
         }
     }
 }
