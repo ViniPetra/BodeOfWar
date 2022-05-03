@@ -21,6 +21,8 @@ namespace BodeOfWar
 
         public List<int>[] CartasPorJogador = new List<int>[4];
 
+        List<int> CartasJogadas = new List<int>();
+
         Jogador jogador = new Jogador();
 
         List<PictureBox> imagens;
@@ -426,8 +428,6 @@ namespace BodeOfWar
         /// </summary>
         private void IniciarAutoRandom()
         {
-            List<int> CartasJogadas = new List<int>();
-
             timer.Stop();
             AtualizarDetalhes();
 
