@@ -75,7 +75,6 @@
             this.pcbCarta3 = new System.Windows.Forms.PictureBox();
             this.pcbCarta2 = new System.Windows.Forms.PictureBox();
             this.pcbCarta1 = new System.Windows.Forms.PictureBox();
-            this.btnVerMesa = new System.Windows.Forms.Button();
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblVc = new System.Windows.Forms.Label();
             this.lblIdJogador25 = new System.Windows.Forms.Label();
@@ -508,6 +507,7 @@
             this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtVez.Location = new System.Drawing.Point(1115, 217);
             this.txtVez.Name = "txtVez";
+            this.txtVez.ReadOnly = true;
             this.txtVez.Size = new System.Drawing.Size(111, 20);
             this.txtVez.TabIndex = 47;
             // 
@@ -517,6 +517,7 @@
             this.txtNarracao.Location = new System.Drawing.Point(945, 259);
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
+            this.txtNarracao.ReadOnly = true;
             this.txtNarracao.Size = new System.Drawing.Size(303, 239);
             this.txtNarracao.TabIndex = 48;
             // 
@@ -536,6 +537,7 @@
             this.txtListarJogadores.Location = new System.Drawing.Point(953, 180);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
+            this.txtListarJogadores.ReadOnly = true;
             this.txtListarJogadores.Size = new System.Drawing.Size(100, 60);
             this.txtListarJogadores.TabIndex = 44;
             // 
@@ -684,17 +686,6 @@
             this.pcbCarta1.TabIndex = 1;
             this.pcbCarta1.TabStop = false;
             this.pcbCarta1.DoubleClick += new System.EventHandler(this.pcbCarta1_DoubleClick);
-            // 
-            // btnVerMesa
-            // 
-            this.btnVerMesa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVerMesa.Location = new System.Drawing.Point(563, 613);
-            this.btnVerMesa.Name = "btnVerMesa";
-            this.btnVerMesa.Size = new System.Drawing.Size(75, 23);
-            this.btnVerMesa.TabIndex = 86;
-            this.btnVerMesa.Text = "Ver mesa";
-            this.btnVerMesa.UseVisualStyleBackColor = true;
-            this.btnVerMesa.Click += new System.EventHandler(this.btnVerMesa_Click);
             // 
             // lblJogador
             // 
@@ -1748,7 +1739,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVc);
             this.Controls.Add(this.lblJogador);
-            this.Controls.Add(this.btnVerMesa);
             this.Controls.Add(this.lblBode4);
             this.Controls.Add(this.lblBode3);
             this.Controls.Add(this.lblBode2);
@@ -1893,7 +1883,6 @@
         private System.Windows.Forms.Button btnIlha2;
         private System.Windows.Forms.Button btnIlha1;
         private System.Windows.Forms.Panel pnlVerIlhas;
-        private System.Windows.Forms.Button btnVerMesa;
         private System.Windows.Forms.Label lblJogador;
         private System.Windows.Forms.Label lblVc;
         private System.Windows.Forms.Label lblIdJogador25;

@@ -503,6 +503,7 @@
             this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtVez.Location = new System.Drawing.Point(1115, 217);
             this.txtVez.Name = "txtVez";
+            this.txtVez.ReadOnly = true;
             this.txtVez.Size = new System.Drawing.Size(111, 20);
             this.txtVez.TabIndex = 47;
             // 
@@ -512,6 +513,7 @@
             this.txtNarracao.Location = new System.Drawing.Point(945, 259);
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
+            this.txtNarracao.ReadOnly = true;
             this.txtNarracao.Size = new System.Drawing.Size(303, 239);
             this.txtNarracao.TabIndex = 48;
             // 
@@ -531,6 +533,7 @@
             this.txtListarJogadores.Location = new System.Drawing.Point(953, 180);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
+            this.txtListarJogadores.ReadOnly = true;
             this.txtListarJogadores.Size = new System.Drawing.Size(100, 60);
             this.txtListarJogadores.TabIndex = 44;
             // 
