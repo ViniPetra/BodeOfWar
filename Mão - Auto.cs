@@ -21,8 +21,6 @@ namespace BodeOfWar
 
         public List<int>[] CartasPorJogador = new List<int>[4];
 
-        public string[,] MatrizMesa = new string[32, 2];
-
         Jogador jogador = new Jogador();
 
         List<PictureBox> imagens;
@@ -157,7 +155,6 @@ namespace BodeOfWar
             ListarJogadores();
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-            PopularMatrizMesa(rodada);
         }
 
         /// <summary>
@@ -251,40 +248,6 @@ namespace BodeOfWar
                 string[] opcIlha = retIlha.Split(',');
                 ilha1Global = Int32.Parse(opcIlha[0]);
                 ilha2Global = Int32.Parse(opcIlha[1]);
-            }
-        }
-
-        /// <summary>
-        /// 1. Cria a lista Mesa com o retorno tratado de BodeOfWar.VerificarMesa
-        /// 2. Trata cada item da lista Mesa e os adiciona em na MatrizMesa[jogador, carta]
-        /// </summary>
-        /// <param name="rodada"></param>
-        private void PopularMatrizMesa(int rodada)
-        {
-            string[] aux;
-
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
-
-            ret = ret.Replace("\r", "");
-            aux = ret.Split('\n');
-
-            foreach (string a in aux)
-            {
-                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
-                {
-                    Mesa.Add(a);
-                }
-            }
-
-            int count = 0;
-            foreach (string b in Mesa)
-            {
-                string[] aux2 = b.Split(',');
-
-                MatrizMesa[count, 0] = aux2[0];
-                MatrizMesa[count, 1] = aux2[1];
-
-                count++;
             }
         }
 
