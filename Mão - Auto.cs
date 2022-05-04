@@ -463,7 +463,7 @@ namespace BodeOfWar
                 //Verifica se é hora de jogar uma carta
                 if (ret[3].Contains("B"))
                 {
-                    int rand = new Random().Next(0, 7);
+                    int rand = new Random().Next(0, 8);
 
                     while (loop)
                     {
@@ -472,16 +472,17 @@ namespace BodeOfWar
                         {
                             Jogar(rand);
                             CartasJogadas.Add(rand);
-                            loop = false;
                             timer.Start();
+                            loop = false;
                         }
                         else
                         {
-                            rand = new Random().Next(0, 7);
+                            rand = new Random().Next(0, 8);
                         }
                     }
                 }
             }
+            timer.Start();
         }
 
         //Dinâmica dos botões
