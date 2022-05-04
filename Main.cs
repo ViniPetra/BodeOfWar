@@ -147,6 +147,11 @@ namespace BodeOfWar
             {
                 btnIniciarPartida.Enabled = false;
             }
+            if(txtVez.Text != "Partida não iniciada")
+            {
+                btnAutomatico.Enabled = true;
+                btnManual.Enabled = true;
+            }
         }
 
         /// <summary>

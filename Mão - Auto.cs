@@ -428,6 +428,7 @@ namespace BodeOfWar
         /// </summary>
         private void IniciarAutoRandom()
         {
+            bool loop = true;
             timer.Stop();
             AtualizarDetalhes();
 
@@ -464,12 +465,20 @@ namespace BodeOfWar
                 {
                     int rand = new Random().Next(0, 7);
 
-                    ///Joga uma carta aleatória se o número gerado não está na lista de cartas jogadas
-                    if (!(CartasJogadas.Contains(rand)))
+                    while (loop)
                     {
-                        Jogar(rand);
-                        CartasJogadas.Add(rand);
-                        timer.Start();
+                        ///Joga uma carta aleatória se o número gerado não está na lista de cartas jogadas
+                        if (!(CartasJogadas.Contains(rand)))
+                        {
+                            Jogar(rand);
+                            CartasJogadas.Add(rand);
+                            loop = false;
+                            timer.Start();
+                        }
+                        else
+                        {
+                            rand = new Random().Next(0, 7);
+                        }
                     }
                 }
             }
