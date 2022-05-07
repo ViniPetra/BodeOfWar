@@ -54,7 +54,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>616714.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -131,7 +132,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="616714.ico" />
     <Content Include="ImagensCartas\b1.PNG" />
     <Content Include="ImagensCartas\b10.PNG" />
     <Content Include="ImagensCartas\b2.PNG" />
@@ -142,9 +142,11 @@
     <Content Include="ImagensCartas\b7.PNG" />
     <Content Include="ImagensCartas\b8.PNG" />
     <Content Include="ImagensCartas\b9.PNG" />
+    <Content Include="OutrasImagens\616714.ico" />
+    <None Include="OutrasImagens\MainBack.jpg" />
+    <None Include="OutrasImagens\MainBg.png" />
+    <Content Include="OutrasImagens\maxresdefault.jpg" />
     <Content Include="OutrasImagens\User.jpg" />
-    <None Include="Resources\Jogador.bmp" />
-    <None Include="Resources\b1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
