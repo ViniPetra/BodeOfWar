@@ -446,7 +446,7 @@
             // 
             // pnlCarta6
             // 
-            this.pnlCarta6.Location = new System.Drawing.Point(169, 236);
+            this.pnlCarta6.Location = new System.Drawing.Point(169, 235);
             this.pnlCarta6.Name = "pnlCarta6";
             this.pnlCarta6.Size = new System.Drawing.Size(150, 216);
             this.pnlCarta6.TabIndex = 30;
