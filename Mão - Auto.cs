@@ -77,7 +77,7 @@ namespace BodeOfWar
             CartasPorJogador[2] = new List<int>();
             CartasPorJogador[3] = new List<int>();
 
-            lblJogador.Text = jogador.Nome;
+            lblJogador.Text = "Você: "+jogador.Nome;
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
@@ -107,6 +107,8 @@ namespace BodeOfWar
                 l.Text = jogador.Mao[count].id.ToString();
                 count++;
             }
+
+
 
             PopularJogadores();
         }
