@@ -281,9 +281,6 @@ namespace BodeOfWar
             jogador.Senha = senhaPartida[1];
             jogador.Nome = nome;
 
-            //Mostra seu nome na tela
-            lblNomeJogador.Text = jogador.Nome;
-
             //Desativa o botão de voltar
             btnVoltarListarPartidas2.Enabled = false;
 
@@ -531,6 +528,11 @@ namespace BodeOfWar
             pnlListarCriar.BringToFront();
         }
 
+        private void btnVoltarListarCriar_Click(object sender, EventArgs e)
+        {
+            pnlMenu.BringToFront();
+        }
+
         /// <summary>
         /// Fecha o jogo
         /// </summary>
@@ -538,5 +540,6 @@ namespace BodeOfWar
         {
             this.Close();
         }
+
     }
 }
