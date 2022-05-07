@@ -143,6 +143,7 @@
     <Content Include="ImagensCartas\b8.PNG" />
     <Content Include="ImagensCartas\b9.PNG" />
     <Content Include="OutrasImagens\616714.ico" />
+    <None Include="Resources\texture.jpg" />
     <None Include="OutrasImagens\MainBack.jpg" />
     <None Include="OutrasImagens\MainBg.png" />
     <Content Include="OutrasImagens\maxresdefault.jpg" />
