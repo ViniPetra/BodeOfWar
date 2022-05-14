@@ -429,6 +429,12 @@ namespace BodeOfWar
             jogador.idPartida = idPartida;
 
             AtualizarDetalhes();
+
+            //Verificação para não deixar entrar se a partida não estiver aberta
+            if (VerificarVez() != "Partida não iniciada")
+            {
+                pnlPartidaIndisponivel.BringToFront();
+            }
         }
 
 

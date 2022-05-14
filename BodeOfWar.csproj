@@ -166,6 +166,7 @@
     <None Include="OutrasImagens\Gif13.gif" />
     <None Include="OutrasImagens\Gif14.gif" />
     <Content Include="OutrasImagens\maxresdefault.jpg" />
+    <None Include="OutrasImagens\PartidaIndisponivel.png" />
     <Content Include="OutrasImagens\User.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
