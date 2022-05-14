@@ -131,6 +131,10 @@
             this.lblIdJogador31 = new System.Windows.Forms.Label();
             this.lblIdJogador32 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pcbJogador4 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador3 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador2 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador1 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
@@ -171,6 +175,10 @@
             this.pcbCarta3 = new System.Windows.Forms.PictureBox();
             this.pcbCarta2 = new System.Windows.Forms.PictureBox();
             this.pcbCarta1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
@@ -1368,6 +1376,50 @@
             this.timer.Interval = 3000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // pcbJogador4
+            // 
+            this.pcbJogador4.Image = global::BodeOfWar.Properties.Resources.J4;
+            this.pcbJogador4.Location = new System.Drawing.Point(27, 683);
+            this.pcbJogador4.Name = "pcbJogador4";
+            this.pcbJogador4.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador4.TabIndex = 166;
+            this.pcbJogador4.TabStop = false;
+            this.pcbJogador4.Visible = false;
+            // 
+            // pcbJogador3
+            // 
+            this.pcbJogador3.Image = global::BodeOfWar.Properties.Resources.J3;
+            this.pcbJogador3.Location = new System.Drawing.Point(27, 616);
+            this.pcbJogador3.Name = "pcbJogador3";
+            this.pcbJogador3.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador3.TabIndex = 165;
+            this.pcbJogador3.TabStop = false;
+            this.pcbJogador3.Visible = false;
+            // 
+            // pcbJogador2
+            // 
+            this.pcbJogador2.Image = global::BodeOfWar.Properties.Resources.J2;
+            this.pcbJogador2.Location = new System.Drawing.Point(27, 549);
+            this.pcbJogador2.Name = "pcbJogador2";
+            this.pcbJogador2.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador2.TabIndex = 164;
+            this.pcbJogador2.TabStop = false;
+            this.pcbJogador2.Visible = false;
+            // 
+            // pcbJogador1
+            // 
+            this.pcbJogador1.Image = global::BodeOfWar.Properties.Resources.J1;
+            this.pcbJogador1.Location = new System.Drawing.Point(27, 482);
+            this.pcbJogador1.Name = "pcbJogador1";
+            this.pcbJogador1.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador1.TabIndex = 163;
+            this.pcbJogador1.TabStop = false;
+            this.pcbJogador1.Visible = false;
+            // 
             // pictureBox32
             // 
             this.pictureBox32.Location = new System.Drawing.Point(477, 683);
@@ -1734,6 +1786,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(815, 768);
+            this.Controls.Add(this.pcbJogador4);
+            this.Controls.Add(this.pcbJogador3);
+            this.Controls.Add(this.pcbJogador2);
+            this.Controls.Add(this.pcbJogador1);
             this.Controls.Add(this.lblIdJogador25);
             this.Controls.Add(this.lblIdJogador26);
             this.Controls.Add(this.lblIdJogador27);
@@ -1879,6 +1935,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MaoAuto";
             this.Load += new System.EventHandler(this.Mão_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
@@ -2066,5 +2126,9 @@
         private System.Windows.Forms.Label lblIdJogador31;
         private System.Windows.Forms.Label lblIdJogador32;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.PictureBox pcbJogador1;
+        private System.Windows.Forms.PictureBox pcbJogador2;
+        private System.Windows.Forms.PictureBox pcbJogador3;
+        private System.Windows.Forms.PictureBox pcbJogador4;
     }
 }
