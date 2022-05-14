@@ -29,15 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.btnIniciarPartida = new System.Windows.Forms.Button();
-            this.btnManual = new System.Windows.Forms.Button();
-            this.pnlDentroPartida = new System.Windows.Forms.Panel();
-            this.btnAutomatico = new System.Windows.Forms.Button();
+            this.pnlTutorial1 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx1 = new System.Windows.Forms.Button();
+            this.txtTutorial1 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial1 = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnComoJogar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlListarPartidas = new System.Windows.Forms.Panel();
+            this.btnVoltarCriarListar = new System.Windows.Forms.Button();
+            this.btnEncerradas = new System.Windows.Forms.Button();
+            this.btnJogando = new System.Windows.Forms.Button();
+            this.btnAbertas = new System.Windows.Forms.Button();
+            this.btnTodas = new System.Windows.Forms.Button();
             this.pnlDetalhesPartida = new System.Windows.Forms.Panel();
             this.btnVoltarListarPartidas2 = new System.Windows.Forms.Button();
             this.txtSenhaPartida = new System.Windows.Forms.TextBox();
@@ -63,88 +70,115 @@
             this.btnVoltarListarPartidas = new System.Windows.Forms.Button();
             this.lstPartidas = new System.Windows.Forms.ListBox();
             this.lblPartidas = new System.Windows.Forms.Label();
-            this.pnlListarPartidas = new System.Windows.Forms.Panel();
-            this.btnVoltarCriarListar = new System.Windows.Forms.Button();
-            this.btnEncerradas = new System.Windows.Forms.Button();
-            this.btnJogando = new System.Windows.Forms.Button();
-            this.btnAbertas = new System.Windows.Forms.Button();
-            this.btnTodas = new System.Windows.Forms.Button();
             this.pnlListarCriar = new System.Windows.Forms.Panel();
             this.btnVoltarListarCriar = new System.Windows.Forms.Button();
             this.btnCriar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
-            this.pnlDentroPartida.SuspendLayout();
+            this.pnlDentroPartida = new System.Windows.Forms.Panel();
+            this.btnAutomatico = new System.Windows.Forms.Button();
+            this.btnManual = new System.Windows.Forms.Button();
+            this.btnIniciarPartida = new System.Windows.Forms.Button();
+            this.pnlTutorial2 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx2 = new System.Windows.Forms.Button();
+            this.txtTutorial2 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial2 = new System.Windows.Forms.PictureBox();
+            this.pnlTutorial3 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx3 = new System.Windows.Forms.Button();
+            this.txtTutorial3 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial3 = new System.Windows.Forms.PictureBox();
+            this.pnlTutorial4 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx4 = new System.Windows.Forms.Button();
+            this.txtTutorial4 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial4 = new System.Windows.Forms.PictureBox();
+            this.pnlTutorial5 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx5 = new System.Windows.Forms.Button();
+            this.txtTutorial5 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial5 = new System.Windows.Forms.PictureBox();
+            this.pnlTutorial6 = new System.Windows.Forms.Panel();
+            this.btnVerNovamente = new System.Windows.Forms.Button();
+            this.btnVoltarMenu = new System.Windows.Forms.Button();
+            this.txtTutorial6 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial6 = new System.Windows.Forms.PictureBox();
+            this.pnlTutorial1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.pnlListarPartidas.SuspendLayout();
             this.pnlDetalhesPartida.SuspendLayout();
             this.pnlCriarPartida.SuspendLayout();
             this.pnlListarPartidas2.SuspendLayout();
-            this.pnlListarPartidas.SuspendLayout();
             this.pnlListarCriar.SuspendLayout();
+            this.pnlDentroPartida.SuspendLayout();
+            this.pnlTutorial2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).BeginInit();
+            this.pnlTutorial3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).BeginInit();
+            this.pnlTutorial4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).BeginInit();
+            this.pnlTutorial5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).BeginInit();
+            this.pnlTutorial6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIniciarPartida
+            // pnlTutorial1
             // 
-            this.btnIniciarPartida.BackColor = System.Drawing.Color.Silver;
-            this.btnIniciarPartida.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnIniciarPartida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnIniciarPartida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnIniciarPartida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarPartida.Location = new System.Drawing.Point(85, 10);
-            this.btnIniciarPartida.Name = "btnIniciarPartida";
-            this.btnIniciarPartida.Size = new System.Drawing.Size(91, 23);
-            this.btnIniciarPartida.TabIndex = 25;
-            this.btnIniciarPartida.Text = "Iniciar partida";
-            this.btnIniciarPartida.UseVisualStyleBackColor = false;
-            this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
+            this.pnlTutorial1.Controls.Add(this.btnTutorialProx1);
+            this.pnlTutorial1.Controls.Add(this.txtTutorial1);
+            this.pnlTutorial1.Controls.Add(this.pcbTutorial1);
+            this.pnlTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial1.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial1.Name = "pnlTutorial1";
+            this.pnlTutorial1.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial1.TabIndex = 7;
             // 
-            // btnManual
+            // btnTutorialProx1
             // 
-            this.btnManual.BackColor = System.Drawing.Color.Silver;
-            this.btnManual.Enabled = false;
-            this.btnManual.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnManual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnManual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManual.Location = new System.Drawing.Point(27, 54);
-            this.btnManual.Name = "btnManual";
-            this.btnManual.Size = new System.Drawing.Size(91, 23);
-            this.btnManual.TabIndex = 32;
-            this.btnManual.Text = "Manual";
-            this.btnManual.UseVisualStyleBackColor = false;
-            this.btnManual.Click += new System.EventHandler(this.btnMostrarMao_Click);
+            this.btnTutorialProx1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx1.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx1.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx1.Name = "btnTutorialProx1";
+            this.btnTutorialProx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx1.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx1.TabIndex = 7;
+            this.btnTutorialProx1.Text = "Próximo";
+            this.btnTutorialProx1.UseVisualStyleBackColor = false;
+            this.btnTutorialProx1.Click += new System.EventHandler(this.btnTutorialProx1_Click);
             // 
-            // pnlDentroPartida
+            // txtTutorial1
             // 
-            this.pnlDentroPartida.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDentroPartida.BackgroundImage = global::BodeOfWar.Properties.Resources.texture;
-            this.pnlDentroPartida.Controls.Add(this.btnAutomatico);
-            this.pnlDentroPartida.Controls.Add(this.btnManual);
-            this.pnlDentroPartida.Controls.Add(this.btnIniciarPartida);
-            this.pnlDentroPartida.Location = new System.Drawing.Point(209, 452);
-            this.pnlDentroPartida.Name = "pnlDentroPartida";
-            this.pnlDentroPartida.Size = new System.Drawing.Size(277, 85);
-            this.pnlDentroPartida.TabIndex = 44;
+            this.txtTutorial1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial1.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial1.Multiline = true;
+            this.txtTutorial1.Name = "txtTutorial1";
+            this.txtTutorial1.Size = new System.Drawing.Size(315, 61);
+            this.txtTutorial1.TabIndex = 1;
+            this.txtTutorial1.Text = "Bode of War é um jogo de cartas rápido e divertido em que os jogadores tentarão a" +
+    "cumular bodes para habitar uma ilha deserta. Mas cuidado: a ilha é pequena e nen" +
+    "hum bode pode ficar de fora!";
+            this.txtTutorial1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnAutomatico
+            // pcbTutorial1
             // 
-            this.btnAutomatico.BackColor = System.Drawing.Color.Silver;
-            this.btnAutomatico.Enabled = false;
-            this.btnAutomatico.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnAutomatico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnAutomatico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAutomatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAutomatico.Location = new System.Drawing.Point(150, 54);
-            this.btnAutomatico.Name = "btnAutomatico";
-            this.btnAutomatico.Size = new System.Drawing.Size(91, 23);
-            this.btnAutomatico.TabIndex = 33;
-            this.btnAutomatico.Text = "Automático";
-            this.btnAutomatico.UseVisualStyleBackColor = false;
-            this.btnAutomatico.Click += new System.EventHandler(this.btnAutomatico_Click);
+            this.pcbTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial1.Image = global::BodeOfWar.Properties.Resources.Gif10;
+            this.pcbTutorial1.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial1.Name = "pcbTutorial1";
+            this.pcbTutorial1.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial1.TabIndex = 0;
+            this.pcbTutorial1.TabStop = false;
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackgroundImage = global::BodeOfWar.Properties.Resources.MainBg;
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlMenu.Controls.Add(this.btnComoJogar);
             this.pnlMenu.Controls.Add(this.btnSair);
             this.pnlMenu.Controls.Add(this.btnIniciar);
             this.pnlMenu.Controls.Add(this.lblVersao);
@@ -154,6 +188,25 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(716, 559);
             this.pnlMenu.TabIndex = 33;
+            // 
+            // btnComoJogar
+            // 
+            this.btnComoJogar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnComoJogar.BackColor = System.Drawing.Color.Silver;
+            this.btnComoJogar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnComoJogar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnComoJogar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnComoJogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComoJogar.Location = new System.Drawing.Point(319, 464);
+            this.btnComoJogar.Name = "btnComoJogar";
+            this.btnComoJogar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnComoJogar.Size = new System.Drawing.Size(73, 23);
+            this.btnComoJogar.TabIndex = 6;
+            this.btnComoJogar.Text = "Como jogar";
+            this.btnComoJogar.UseVisualStyleBackColor = false;
+            this.btnComoJogar.Click += new System.EventHandler(this.btnComoJogar_Click);
             // 
             // btnSair
             // 
@@ -180,7 +233,7 @@
             this.btnIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciar.Location = new System.Drawing.Point(319, 462);
+            this.btnIniciar.Location = new System.Drawing.Point(319, 433);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnIniciar.Size = new System.Drawing.Size(73, 23);
@@ -217,6 +270,96 @@
             this.lblTitulo.Tag = "";
             this.lblTitulo.Text = "Bode of War - Teletubbies";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlListarPartidas
+            // 
+            this.pnlListarPartidas.BackgroundImage = global::BodeOfWar.Properties.Resources.MainBg;
+            this.pnlListarPartidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlListarPartidas.Controls.Add(this.btnVoltarCriarListar);
+            this.pnlListarPartidas.Controls.Add(this.btnEncerradas);
+            this.pnlListarPartidas.Controls.Add(this.btnJogando);
+            this.pnlListarPartidas.Controls.Add(this.btnAbertas);
+            this.pnlListarPartidas.Controls.Add(this.btnTodas);
+            this.pnlListarPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListarPartidas.Location = new System.Drawing.Point(0, 0);
+            this.pnlListarPartidas.Name = "pnlListarPartidas";
+            this.pnlListarPartidas.Size = new System.Drawing.Size(716, 559);
+            this.pnlListarPartidas.TabIndex = 2;
+            // 
+            // btnVoltarCriarListar
+            // 
+            this.btnVoltarCriarListar.BackColor = System.Drawing.Color.Silver;
+            this.btnVoltarCriarListar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnVoltarCriarListar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnVoltarCriarListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVoltarCriarListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarCriarListar.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarCriarListar.Name = "btnVoltarCriarListar";
+            this.btnVoltarCriarListar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarCriarListar.TabIndex = 27;
+            this.btnVoltarCriarListar.Text = "Voltar";
+            this.btnVoltarCriarListar.UseVisualStyleBackColor = false;
+            this.btnVoltarCriarListar.Click += new System.EventHandler(this.btnVoltarCriarListar_Click);
+            // 
+            // btnEncerradas
+            // 
+            this.btnEncerradas.BackColor = System.Drawing.Color.Silver;
+            this.btnEncerradas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnEncerradas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnEncerradas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEncerradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncerradas.Location = new System.Drawing.Point(307, 337);
+            this.btnEncerradas.Name = "btnEncerradas";
+            this.btnEncerradas.Size = new System.Drawing.Size(75, 23);
+            this.btnEncerradas.TabIndex = 26;
+            this.btnEncerradas.Text = "Encerradas";
+            this.btnEncerradas.UseVisualStyleBackColor = false;
+            this.btnEncerradas.Click += new System.EventHandler(this.btnEncerradas_Click);
+            // 
+            // btnJogando
+            // 
+            this.btnJogando.BackColor = System.Drawing.Color.Silver;
+            this.btnJogando.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnJogando.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnJogando.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnJogando.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJogando.Location = new System.Drawing.Point(307, 297);
+            this.btnJogando.Name = "btnJogando";
+            this.btnJogando.Size = new System.Drawing.Size(75, 23);
+            this.btnJogando.TabIndex = 25;
+            this.btnJogando.Text = "Jogando";
+            this.btnJogando.UseVisualStyleBackColor = false;
+            this.btnJogando.Click += new System.EventHandler(this.btnJogando_Click);
+            // 
+            // btnAbertas
+            // 
+            this.btnAbertas.BackColor = System.Drawing.Color.Silver;
+            this.btnAbertas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnAbertas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnAbertas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAbertas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbertas.Location = new System.Drawing.Point(307, 257);
+            this.btnAbertas.Name = "btnAbertas";
+            this.btnAbertas.Size = new System.Drawing.Size(75, 23);
+            this.btnAbertas.TabIndex = 24;
+            this.btnAbertas.Text = "Abertas";
+            this.btnAbertas.UseVisualStyleBackColor = false;
+            this.btnAbertas.Click += new System.EventHandler(this.btnAbertas_Click);
+            // 
+            // btnTodas
+            // 
+            this.btnTodas.BackColor = System.Drawing.Color.Silver;
+            this.btnTodas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTodas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTodas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodas.Location = new System.Drawing.Point(307, 217);
+            this.btnTodas.Name = "btnTodas";
+            this.btnTodas.Size = new System.Drawing.Size(75, 23);
+            this.btnTodas.TabIndex = 23;
+            this.btnTodas.Text = "Todas";
+            this.btnTodas.UseVisualStyleBackColor = false;
+            this.btnTodas.Click += new System.EventHandler(this.btnTodas_Click);
             // 
             // pnlDetalhesPartida
             // 
@@ -514,96 +657,6 @@
             this.lblPartidas.Text = "Partidas";
             this.lblPartidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlListarPartidas
-            // 
-            this.pnlListarPartidas.BackgroundImage = global::BodeOfWar.Properties.Resources.MainBg;
-            this.pnlListarPartidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlListarPartidas.Controls.Add(this.btnVoltarCriarListar);
-            this.pnlListarPartidas.Controls.Add(this.btnEncerradas);
-            this.pnlListarPartidas.Controls.Add(this.btnJogando);
-            this.pnlListarPartidas.Controls.Add(this.btnAbertas);
-            this.pnlListarPartidas.Controls.Add(this.btnTodas);
-            this.pnlListarPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlListarPartidas.Location = new System.Drawing.Point(0, 0);
-            this.pnlListarPartidas.Name = "pnlListarPartidas";
-            this.pnlListarPartidas.Size = new System.Drawing.Size(716, 559);
-            this.pnlListarPartidas.TabIndex = 2;
-            // 
-            // btnVoltarCriarListar
-            // 
-            this.btnVoltarCriarListar.BackColor = System.Drawing.Color.Silver;
-            this.btnVoltarCriarListar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnVoltarCriarListar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnVoltarCriarListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnVoltarCriarListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarCriarListar.Location = new System.Drawing.Point(12, 13);
-            this.btnVoltarCriarListar.Name = "btnVoltarCriarListar";
-            this.btnVoltarCriarListar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarCriarListar.TabIndex = 27;
-            this.btnVoltarCriarListar.Text = "Voltar";
-            this.btnVoltarCriarListar.UseVisualStyleBackColor = false;
-            this.btnVoltarCriarListar.Click += new System.EventHandler(this.btnVoltarCriarListar_Click);
-            // 
-            // btnEncerradas
-            // 
-            this.btnEncerradas.BackColor = System.Drawing.Color.Silver;
-            this.btnEncerradas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnEncerradas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnEncerradas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEncerradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncerradas.Location = new System.Drawing.Point(307, 337);
-            this.btnEncerradas.Name = "btnEncerradas";
-            this.btnEncerradas.Size = new System.Drawing.Size(75, 23);
-            this.btnEncerradas.TabIndex = 26;
-            this.btnEncerradas.Text = "Encerradas";
-            this.btnEncerradas.UseVisualStyleBackColor = false;
-            this.btnEncerradas.Click += new System.EventHandler(this.btnEncerradas_Click);
-            // 
-            // btnJogando
-            // 
-            this.btnJogando.BackColor = System.Drawing.Color.Silver;
-            this.btnJogando.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnJogando.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnJogando.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnJogando.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJogando.Location = new System.Drawing.Point(307, 297);
-            this.btnJogando.Name = "btnJogando";
-            this.btnJogando.Size = new System.Drawing.Size(75, 23);
-            this.btnJogando.TabIndex = 25;
-            this.btnJogando.Text = "Jogando";
-            this.btnJogando.UseVisualStyleBackColor = false;
-            this.btnJogando.Click += new System.EventHandler(this.btnJogando_Click);
-            // 
-            // btnAbertas
-            // 
-            this.btnAbertas.BackColor = System.Drawing.Color.Silver;
-            this.btnAbertas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnAbertas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnAbertas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAbertas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbertas.Location = new System.Drawing.Point(307, 257);
-            this.btnAbertas.Name = "btnAbertas";
-            this.btnAbertas.Size = new System.Drawing.Size(75, 23);
-            this.btnAbertas.TabIndex = 24;
-            this.btnAbertas.Text = "Abertas";
-            this.btnAbertas.UseVisualStyleBackColor = false;
-            this.btnAbertas.Click += new System.EventHandler(this.btnAbertas_Click);
-            // 
-            // btnTodas
-            // 
-            this.btnTodas.BackColor = System.Drawing.Color.Silver;
-            this.btnTodas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnTodas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnTodas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTodas.Location = new System.Drawing.Point(307, 217);
-            this.btnTodas.Name = "btnTodas";
-            this.btnTodas.Size = new System.Drawing.Size(75, 23);
-            this.btnTodas.TabIndex = 23;
-            this.btnTodas.Text = "Todas";
-            this.btnTodas.UseVisualStyleBackColor = false;
-            this.btnTodas.Click += new System.EventHandler(this.btnTodas_Click);
-            // 
             // pnlListarCriar
             // 
             this.pnlListarCriar.BackgroundImage = global::BodeOfWar.Properties.Resources.MainBg;
@@ -662,17 +715,372 @@
             this.btnListar.UseVisualStyleBackColor = false;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
+            // pnlDentroPartida
+            // 
+            this.pnlDentroPartida.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDentroPartida.BackgroundImage = global::BodeOfWar.Properties.Resources.texture;
+            this.pnlDentroPartida.Controls.Add(this.btnAutomatico);
+            this.pnlDentroPartida.Controls.Add(this.btnManual);
+            this.pnlDentroPartida.Controls.Add(this.btnIniciarPartida);
+            this.pnlDentroPartida.Location = new System.Drawing.Point(209, 452);
+            this.pnlDentroPartida.Name = "pnlDentroPartida";
+            this.pnlDentroPartida.Size = new System.Drawing.Size(277, 85);
+            this.pnlDentroPartida.TabIndex = 44;
+            // 
+            // btnAutomatico
+            // 
+            this.btnAutomatico.BackColor = System.Drawing.Color.Silver;
+            this.btnAutomatico.Enabled = false;
+            this.btnAutomatico.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnAutomatico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnAutomatico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAutomatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAutomatico.Location = new System.Drawing.Point(150, 54);
+            this.btnAutomatico.Name = "btnAutomatico";
+            this.btnAutomatico.Size = new System.Drawing.Size(91, 23);
+            this.btnAutomatico.TabIndex = 33;
+            this.btnAutomatico.Text = "Automático";
+            this.btnAutomatico.UseVisualStyleBackColor = false;
+            this.btnAutomatico.Click += new System.EventHandler(this.btnAutomatico_Click);
+            // 
+            // btnManual
+            // 
+            this.btnManual.BackColor = System.Drawing.Color.Silver;
+            this.btnManual.Enabled = false;
+            this.btnManual.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnManual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnManual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManual.Location = new System.Drawing.Point(27, 54);
+            this.btnManual.Name = "btnManual";
+            this.btnManual.Size = new System.Drawing.Size(91, 23);
+            this.btnManual.TabIndex = 32;
+            this.btnManual.Text = "Manual";
+            this.btnManual.UseVisualStyleBackColor = false;
+            this.btnManual.Click += new System.EventHandler(this.btnMostrarMao_Click);
+            // 
+            // btnIniciarPartida
+            // 
+            this.btnIniciarPartida.BackColor = System.Drawing.Color.Silver;
+            this.btnIniciarPartida.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnIniciarPartida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnIniciarPartida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnIniciarPartida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarPartida.Location = new System.Drawing.Point(85, 10);
+            this.btnIniciarPartida.Name = "btnIniciarPartida";
+            this.btnIniciarPartida.Size = new System.Drawing.Size(91, 23);
+            this.btnIniciarPartida.TabIndex = 25;
+            this.btnIniciarPartida.Text = "Iniciar partida";
+            this.btnIniciarPartida.UseVisualStyleBackColor = false;
+            this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
+            // 
+            // pnlTutorial2
+            // 
+            this.pnlTutorial2.Controls.Add(this.btnTutorialProx2);
+            this.pnlTutorial2.Controls.Add(this.txtTutorial2);
+            this.pnlTutorial2.Controls.Add(this.pcbTutorial2);
+            this.pnlTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial2.Name = "pnlTutorial2";
+            this.pnlTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial2.TabIndex = 8;
+            // 
+            // btnTutorialProx2
+            // 
+            this.btnTutorialProx2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx2.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx2.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx2.Name = "btnTutorialProx2";
+            this.btnTutorialProx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx2.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx2.TabIndex = 8;
+            this.btnTutorialProx2.Text = "Próximo";
+            this.btnTutorialProx2.UseVisualStyleBackColor = false;
+            this.btnTutorialProx2.Click += new System.EventHandler(this.btnTutorialProx2_Click);
+            // 
+            // txtTutorial2
+            // 
+            this.txtTutorial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial2.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial2.Multiline = true;
+            this.txtTutorial2.Name = "txtTutorial2";
+            this.txtTutorial2.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial2.TabIndex = 1;
+            this.txtTutorial2.Text = "Para isso, os jogadores jogam cartas de bodes na mesa, cada uma com um valor, e l" +
+    "eva todas as cartas aquele que jogou a mais alta.";
+            this.txtTutorial2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial2
+            // 
+            this.pcbTutorial2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial2.Image = global::BodeOfWar.Properties.Resources.Gif6;
+            this.pcbTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial2.Name = "pcbTutorial2";
+            this.pcbTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial2.TabIndex = 0;
+            this.pcbTutorial2.TabStop = false;
+            // 
+            // pnlTutorial3
+            // 
+            this.pnlTutorial3.Controls.Add(this.btnTutorialProx3);
+            this.pnlTutorial3.Controls.Add(this.txtTutorial3);
+            this.pnlTutorial3.Controls.Add(this.pcbTutorial3);
+            this.pnlTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial3.Name = "pnlTutorial3";
+            this.pnlTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial3.TabIndex = 9;
+            // 
+            // btnTutorialProx3
+            // 
+            this.btnTutorialProx3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx3.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx3.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx3.Name = "btnTutorialProx3";
+            this.btnTutorialProx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx3.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx3.TabIndex = 8;
+            this.btnTutorialProx3.Text = "Próximo";
+            this.btnTutorialProx3.UseVisualStyleBackColor = false;
+            this.btnTutorialProx3.Click += new System.EventHandler(this.btnTutorialProx3_Click);
+            // 
+            // txtTutorial3
+            // 
+            this.txtTutorial3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial3.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial3.Multiline = true;
+            this.txtTutorial3.Name = "txtTutorial3";
+            this.txtTutorial3.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial3.TabIndex = 1;
+            this.txtTutorial3.Text = "No final da partida, quem tiver mais bodes que o limite é eliminado, e quem tiver" +
+    " a quantidade mais próxima ou igual ao limite vence.";
+            this.txtTutorial3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial3
+            // 
+            this.pcbTutorial3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial3.Image = global::BodeOfWar.Properties.Resources.Gif4;
+            this.pcbTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial3.Name = "pcbTutorial3";
+            this.pcbTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial3.TabIndex = 0;
+            this.pcbTutorial3.TabStop = false;
+            // 
+            // pnlTutorial4
+            // 
+            this.pnlTutorial4.Controls.Add(this.btnTutorialProx4);
+            this.pnlTutorial4.Controls.Add(this.txtTutorial4);
+            this.pnlTutorial4.Controls.Add(this.pcbTutorial4);
+            this.pnlTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial4.Name = "pnlTutorial4";
+            this.pnlTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial4.TabIndex = 10;
+            // 
+            // btnTutorialProx4
+            // 
+            this.btnTutorialProx4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx4.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx4.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx4.Name = "btnTutorialProx4";
+            this.btnTutorialProx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx4.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx4.TabIndex = 8;
+            this.btnTutorialProx4.Text = "Próximo";
+            this.btnTutorialProx4.UseVisualStyleBackColor = false;
+            this.btnTutorialProx4.Click += new System.EventHandler(this.btnTutorialProx4_Click);
+            // 
+            // txtTutorial4
+            // 
+            this.txtTutorial4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial4.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial4.Multiline = true;
+            this.txtTutorial4.Name = "txtTutorial4";
+            this.txtTutorial4.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial4.TabIndex = 1;
+            this.txtTutorial4.Text = "JOGUE A CARTA MAIS ALTA!\r\nPara vencer a rodada e ganhar bodes para colocar na ilh" +
+    "a.\r\n";
+            this.txtTutorial4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial4
+            // 
+            this.pcbTutorial4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial4.Image = global::BodeOfWar.Properties.Resources.Gif9;
+            this.pcbTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial4.Name = "pcbTutorial4";
+            this.pcbTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial4.TabIndex = 0;
+            this.pcbTutorial4.TabStop = false;
+            // 
+            // pnlTutorial5
+            // 
+            this.pnlTutorial5.Controls.Add(this.btnTutorialProx5);
+            this.pnlTutorial5.Controls.Add(this.txtTutorial5);
+            this.pnlTutorial5.Controls.Add(this.pcbTutorial5);
+            this.pnlTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial5.Name = "pnlTutorial5";
+            this.pnlTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial5.TabIndex = 11;
+            // 
+            // btnTutorialProx5
+            // 
+            this.btnTutorialProx5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx5.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx5.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx5.Name = "btnTutorialProx5";
+            this.btnTutorialProx5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx5.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx5.TabIndex = 8;
+            this.btnTutorialProx5.Text = "Próximo";
+            this.btnTutorialProx5.UseVisualStyleBackColor = false;
+            this.btnTutorialProx5.Click += new System.EventHandler(this.btnTutorialProx5_Click);
+            // 
+            // txtTutorial5
+            // 
+            this.txtTutorial5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial5.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial5.Multiline = true;
+            this.txtTutorial5.Name = "txtTutorial5";
+            this.txtTutorial5.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial5.TabIndex = 1;
+            this.txtTutorial5.Text = "OU JOGUE A CARTA MAIS BAIXA...\r\nPara colocar uma carta de ilha, escolhendo o tama" +
+    "nho que melhor acomode seus bodes.";
+            this.txtTutorial5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial5
+            // 
+            this.pcbTutorial5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial5.Image = global::BodeOfWar.Properties.Resources.Gif5;
+            this.pcbTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial5.Name = "pcbTutorial5";
+            this.pcbTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial5.TabIndex = 0;
+            this.pcbTutorial5.TabStop = false;
+            // 
+            // pnlTutorial6
+            // 
+            this.pnlTutorial6.Controls.Add(this.btnVerNovamente);
+            this.pnlTutorial6.Controls.Add(this.btnVoltarMenu);
+            this.pnlTutorial6.Controls.Add(this.txtTutorial6);
+            this.pnlTutorial6.Controls.Add(this.pcbTutorial6);
+            this.pnlTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial6.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial6.Name = "pnlTutorial6";
+            this.pnlTutorial6.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial6.TabIndex = 12;
+            // 
+            // btnVerNovamente
+            // 
+            this.btnVerNovamente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerNovamente.BackColor = System.Drawing.Color.Silver;
+            this.btnVerNovamente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnVerNovamente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnVerNovamente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVerNovamente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerNovamente.Location = new System.Drawing.Point(392, 477);
+            this.btnVerNovamente.Name = "btnVerNovamente";
+            this.btnVerNovamente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerNovamente.Size = new System.Drawing.Size(103, 23);
+            this.btnVerNovamente.TabIndex = 9;
+            this.btnVerNovamente.Text = "Ver novamente";
+            this.btnVerNovamente.UseVisualStyleBackColor = false;
+            this.btnVerNovamente.Click += new System.EventHandler(this.btnVerNovamente_Click);
+            // 
+            // btnVoltarMenu
+            // 
+            this.btnVoltarMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVoltarMenu.BackColor = System.Drawing.Color.Silver;
+            this.btnVoltarMenu.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarMenu.Location = new System.Drawing.Point(250, 477);
+            this.btnVoltarMenu.Name = "btnVoltarMenu";
+            this.btnVoltarMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVoltarMenu.Size = new System.Drawing.Size(103, 23);
+            this.btnVoltarMenu.TabIndex = 8;
+            this.btnVoltarMenu.Text = "Voltar ao Menu";
+            this.btnVoltarMenu.UseVisualStyleBackColor = false;
+            this.btnVoltarMenu.Click += new System.EventHandler(this.btnVoltarMenu_Click);
+            // 
+            // txtTutorial6
+            // 
+            this.txtTutorial6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial6.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial6.Multiline = true;
+            this.txtTutorial6.Name = "txtTutorial6";
+            this.txtTutorial6.Size = new System.Drawing.Size(315, 61);
+            this.txtTutorial6.TabIndex = 1;
+            this.txtTutorial6.Text = "TORNE-SE O BODE OF WAR!\r\nReivindique o título de Bode of War terminando a partida" +
+    " com a maior quantidade de bodes, mas sem exceder o limite da ilha!";
+            this.txtTutorial6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial6
+            // 
+            this.pcbTutorial6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial6.Image = global::BodeOfWar.Properties.Resources.Gif8;
+            this.pcbTutorial6.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial6.Name = "pcbTutorial6";
+            this.pcbTutorial6.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial6.TabIndex = 0;
+            this.pcbTutorial6.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(716, 559);
+            this.Controls.Add(this.pnlTutorial6);
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlTutorial5);
+            this.Controls.Add(this.pnlTutorial4);
+            this.Controls.Add(this.pnlTutorial3);
+            this.Controls.Add(this.pnlTutorial2);
+            this.Controls.Add(this.pnlTutorial1);
+            this.Controls.Add(this.pnlListarPartidas);
             this.Controls.Add(this.pnlDetalhesPartida);
             this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlListarPartidas2);
-            this.Controls.Add(this.pnlListarPartidas);
             this.Controls.Add(this.pnlListarCriar);
             this.Controls.Add(this.pnlDentroPartida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -682,15 +1090,33 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BodeOfWar ";
-            this.pnlDentroPartida.ResumeLayout(false);
+            this.pnlTutorial1.ResumeLayout(false);
+            this.pnlTutorial1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.pnlListarPartidas.ResumeLayout(false);
             this.pnlDetalhesPartida.ResumeLayout(false);
             this.pnlDetalhesPartida.PerformLayout();
             this.pnlCriarPartida.ResumeLayout(false);
             this.pnlCriarPartida.PerformLayout();
             this.pnlListarPartidas2.ResumeLayout(false);
-            this.pnlListarPartidas.ResumeLayout(false);
             this.pnlListarCriar.ResumeLayout(false);
+            this.pnlDentroPartida.ResumeLayout(false);
+            this.pnlTutorial2.ResumeLayout(false);
+            this.pnlTutorial2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).EndInit();
+            this.pnlTutorial3.ResumeLayout(false);
+            this.pnlTutorial3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).EndInit();
+            this.pnlTutorial4.ResumeLayout(false);
+            this.pnlTutorial4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).EndInit();
+            this.pnlTutorial5.ResumeLayout(false);
+            this.pnlTutorial5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).EndInit();
+            this.pnlTutorial6.ResumeLayout(false);
+            this.pnlTutorial6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -740,6 +1166,32 @@
         private System.Windows.Forms.Button btnVoltarListarCriar2;
         private System.Windows.Forms.Button btnAutomatico;
         private System.Windows.Forms.Button btnVoltarListarCriar;
+        private System.Windows.Forms.Button btnComoJogar;
+        private System.Windows.Forms.Panel pnlTutorial1;
+        private System.Windows.Forms.PictureBox pcbTutorial1;
+        private System.Windows.Forms.TextBox txtTutorial1;
+        private System.Windows.Forms.Button btnTutorialProx1;
+        private System.Windows.Forms.Panel pnlTutorial2;
+        private System.Windows.Forms.PictureBox pcbTutorial2;
+        private System.Windows.Forms.TextBox txtTutorial2;
+        private System.Windows.Forms.Button btnTutorialProx2;
+        private System.Windows.Forms.Panel pnlTutorial3;
+        private System.Windows.Forms.Button btnTutorialProx3;
+        private System.Windows.Forms.TextBox txtTutorial3;
+        private System.Windows.Forms.PictureBox pcbTutorial3;
+        private System.Windows.Forms.Panel pnlTutorial4;
+        private System.Windows.Forms.Button btnTutorialProx4;
+        private System.Windows.Forms.TextBox txtTutorial4;
+        private System.Windows.Forms.PictureBox pcbTutorial4;
+        private System.Windows.Forms.Panel pnlTutorial5;
+        private System.Windows.Forms.Button btnTutorialProx5;
+        private System.Windows.Forms.TextBox txtTutorial5;
+        private System.Windows.Forms.PictureBox pcbTutorial5;
+        private System.Windows.Forms.Panel pnlTutorial6;
+        private System.Windows.Forms.Button btnVoltarMenu;
+        private System.Windows.Forms.TextBox txtTutorial6;
+        private System.Windows.Forms.PictureBox pcbTutorial6;
+        private System.Windows.Forms.Button btnVerNovamente;
     }
 }
 

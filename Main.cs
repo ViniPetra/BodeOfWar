@@ -28,6 +28,9 @@ namespace BodeOfWar
         {
             InitializeComponent();
 
+            //Traz o menu como primeiro caso esteja codando
+            pnlMenu.BringToFront();
+
             //Mostra a versão do servidor
             string Versao = BodeOfWarServer.Jogo.Versao;
             lblVersao.Text = Versao;
@@ -541,5 +544,44 @@ namespace BodeOfWar
             this.Close();
         }
 
+        private void btnComoJogar_Click(object sender, EventArgs e)
+        {
+            pnlTutorial1.BringToFront();
+        }
+
+        private void btnTutorialProx1_Click(object sender, EventArgs e)
+        {
+            pnlTutorial2.BringToFront();
+        }
+
+        private void btnTutorialProx2_Click(object sender, EventArgs e)
+        {
+            pnlTutorial3.BringToFront();
+        }
+
+        private void btnTutorialProx3_Click(object sender, EventArgs e)
+        {
+            pnlTutorial4.BringToFront();
+        }
+
+        private void btnTutorialProx4_Click(object sender, EventArgs e)
+        {
+            pnlTutorial5.BringToFront();
+        }
+
+        private void btnTutorialProx5_Click(object sender, EventArgs e)
+        {
+            pnlTutorial6.BringToFront();
+        }
+
+        private void btnVoltarMenu_Click(object sender, EventArgs e)
+        {
+            pnlMenu.BringToFront();
+        }
+
+        private void btnVerNovamente_Click(object sender, EventArgs e)
+        {
+            pnlTutorial1.BringToFront();
+        }
     }
 }
