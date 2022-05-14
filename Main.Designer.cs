@@ -1080,9 +1080,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(716, 559);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlPartidaIndisponivel);
             this.Controls.Add(this.pnlTutorial6);
-            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlTutorial5);
             this.Controls.Add(this.pnlTutorial4);
             this.Controls.Add(this.pnlTutorial3);

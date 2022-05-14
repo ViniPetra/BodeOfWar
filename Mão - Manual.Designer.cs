@@ -173,6 +173,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador4 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador3 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador2 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador1 = new System.Windows.Forms.PictureBox();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
@@ -215,6 +219,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBode1
@@ -725,7 +733,7 @@
             this.lblIdJogador25.AutoSize = true;
             this.lblIdJogador25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador25.Location = new System.Drawing.Point(130, 677);
+            this.lblIdJogador25.Location = new System.Drawing.Point(107, 680);
             this.lblIdJogador25.Name = "lblIdJogador25";
             this.lblIdJogador25.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador25.TabIndex = 258;
@@ -736,7 +744,7 @@
             this.lblIdJogador26.AutoSize = true;
             this.lblIdJogador26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador26.Location = new System.Drawing.Point(183, 677);
+            this.lblIdJogador26.Location = new System.Drawing.Point(160, 680);
             this.lblIdJogador26.Name = "lblIdJogador26";
             this.lblIdJogador26.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador26.TabIndex = 257;
@@ -747,7 +755,7 @@
             this.lblIdJogador27.AutoSize = true;
             this.lblIdJogador27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador27.Location = new System.Drawing.Point(236, 677);
+            this.lblIdJogador27.Location = new System.Drawing.Point(213, 680);
             this.lblIdJogador27.Name = "lblIdJogador27";
             this.lblIdJogador27.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador27.TabIndex = 256;
@@ -758,7 +766,7 @@
             this.lblIdJogador28.AutoSize = true;
             this.lblIdJogador28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador28.Location = new System.Drawing.Point(289, 677);
+            this.lblIdJogador28.Location = new System.Drawing.Point(266, 680);
             this.lblIdJogador28.Name = "lblIdJogador28";
             this.lblIdJogador28.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador28.TabIndex = 255;
@@ -769,7 +777,7 @@
             this.lblIdJogador29.AutoSize = true;
             this.lblIdJogador29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador29.Location = new System.Drawing.Point(342, 677);
+            this.lblIdJogador29.Location = new System.Drawing.Point(319, 680);
             this.lblIdJogador29.Name = "lblIdJogador29";
             this.lblIdJogador29.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador29.TabIndex = 254;
@@ -780,7 +788,7 @@
             this.lblIdJogador30.AutoSize = true;
             this.lblIdJogador30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador30.Location = new System.Drawing.Point(395, 677);
+            this.lblIdJogador30.Location = new System.Drawing.Point(372, 680);
             this.lblIdJogador30.Name = "lblIdJogador30";
             this.lblIdJogador30.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador30.TabIndex = 253;
@@ -791,7 +799,7 @@
             this.lblIdJogador31.AutoSize = true;
             this.lblIdJogador31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador31.Location = new System.Drawing.Point(448, 677);
+            this.lblIdJogador31.Location = new System.Drawing.Point(425, 680);
             this.lblIdJogador31.Name = "lblIdJogador31";
             this.lblIdJogador31.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador31.TabIndex = 252;
@@ -802,7 +810,7 @@
             this.lblIdJogador32.AutoSize = true;
             this.lblIdJogador32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador32.Location = new System.Drawing.Point(501, 677);
+            this.lblIdJogador32.Location = new System.Drawing.Point(478, 680);
             this.lblIdJogador32.Name = "lblIdJogador32";
             this.lblIdJogador32.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador32.TabIndex = 251;
@@ -813,7 +821,7 @@
             this.lblIdJogador17.AutoSize = true;
             this.lblIdJogador17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador17.Location = new System.Drawing.Point(130, 610);
+            this.lblIdJogador17.Location = new System.Drawing.Point(107, 613);
             this.lblIdJogador17.Name = "lblIdJogador17";
             this.lblIdJogador17.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador17.TabIndex = 250;
@@ -824,7 +832,7 @@
             this.lblIdJogador18.AutoSize = true;
             this.lblIdJogador18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador18.Location = new System.Drawing.Point(183, 610);
+            this.lblIdJogador18.Location = new System.Drawing.Point(160, 613);
             this.lblIdJogador18.Name = "lblIdJogador18";
             this.lblIdJogador18.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador18.TabIndex = 249;
@@ -835,7 +843,7 @@
             this.lblIdJogador19.AutoSize = true;
             this.lblIdJogador19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador19.Location = new System.Drawing.Point(236, 610);
+            this.lblIdJogador19.Location = new System.Drawing.Point(213, 613);
             this.lblIdJogador19.Name = "lblIdJogador19";
             this.lblIdJogador19.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador19.TabIndex = 248;
@@ -846,7 +854,7 @@
             this.lblIdJogador20.AutoSize = true;
             this.lblIdJogador20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador20.Location = new System.Drawing.Point(289, 610);
+            this.lblIdJogador20.Location = new System.Drawing.Point(266, 613);
             this.lblIdJogador20.Name = "lblIdJogador20";
             this.lblIdJogador20.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador20.TabIndex = 247;
@@ -857,7 +865,7 @@
             this.lblIdJogador21.AutoSize = true;
             this.lblIdJogador21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador21.Location = new System.Drawing.Point(342, 610);
+            this.lblIdJogador21.Location = new System.Drawing.Point(319, 613);
             this.lblIdJogador21.Name = "lblIdJogador21";
             this.lblIdJogador21.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador21.TabIndex = 246;
@@ -868,7 +876,7 @@
             this.lblIdJogador22.AutoSize = true;
             this.lblIdJogador22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador22.Location = new System.Drawing.Point(395, 610);
+            this.lblIdJogador22.Location = new System.Drawing.Point(372, 613);
             this.lblIdJogador22.Name = "lblIdJogador22";
             this.lblIdJogador22.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador22.TabIndex = 245;
@@ -879,7 +887,7 @@
             this.lblIdJogador23.AutoSize = true;
             this.lblIdJogador23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador23.Location = new System.Drawing.Point(448, 610);
+            this.lblIdJogador23.Location = new System.Drawing.Point(425, 613);
             this.lblIdJogador23.Name = "lblIdJogador23";
             this.lblIdJogador23.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador23.TabIndex = 244;
@@ -890,7 +898,7 @@
             this.lblIdJogador24.AutoSize = true;
             this.lblIdJogador24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador24.Location = new System.Drawing.Point(501, 610);
+            this.lblIdJogador24.Location = new System.Drawing.Point(478, 613);
             this.lblIdJogador24.Name = "lblIdJogador24";
             this.lblIdJogador24.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador24.TabIndex = 243;
@@ -901,7 +909,7 @@
             this.lblIdJogador9.AutoSize = true;
             this.lblIdJogador9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador9.Location = new System.Drawing.Point(130, 543);
+            this.lblIdJogador9.Location = new System.Drawing.Point(107, 546);
             this.lblIdJogador9.Name = "lblIdJogador9";
             this.lblIdJogador9.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador9.TabIndex = 242;
@@ -912,7 +920,7 @@
             this.lblIdJogador10.AutoSize = true;
             this.lblIdJogador10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador10.Location = new System.Drawing.Point(183, 543);
+            this.lblIdJogador10.Location = new System.Drawing.Point(160, 546);
             this.lblIdJogador10.Name = "lblIdJogador10";
             this.lblIdJogador10.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador10.TabIndex = 241;
@@ -923,7 +931,7 @@
             this.lblIdJogador11.AutoSize = true;
             this.lblIdJogador11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador11.Location = new System.Drawing.Point(236, 543);
+            this.lblIdJogador11.Location = new System.Drawing.Point(213, 546);
             this.lblIdJogador11.Name = "lblIdJogador11";
             this.lblIdJogador11.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador11.TabIndex = 240;
@@ -934,7 +942,7 @@
             this.lblIdJogador12.AutoSize = true;
             this.lblIdJogador12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador12.Location = new System.Drawing.Point(289, 543);
+            this.lblIdJogador12.Location = new System.Drawing.Point(266, 546);
             this.lblIdJogador12.Name = "lblIdJogador12";
             this.lblIdJogador12.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador12.TabIndex = 239;
@@ -945,7 +953,7 @@
             this.lblIdJogador13.AutoSize = true;
             this.lblIdJogador13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador13.Location = new System.Drawing.Point(342, 543);
+            this.lblIdJogador13.Location = new System.Drawing.Point(319, 546);
             this.lblIdJogador13.Name = "lblIdJogador13";
             this.lblIdJogador13.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador13.TabIndex = 238;
@@ -956,7 +964,7 @@
             this.lblIdJogador14.AutoSize = true;
             this.lblIdJogador14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador14.Location = new System.Drawing.Point(395, 543);
+            this.lblIdJogador14.Location = new System.Drawing.Point(372, 546);
             this.lblIdJogador14.Name = "lblIdJogador14";
             this.lblIdJogador14.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador14.TabIndex = 237;
@@ -967,7 +975,7 @@
             this.lblIdJogador15.AutoSize = true;
             this.lblIdJogador15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador15.Location = new System.Drawing.Point(448, 543);
+            this.lblIdJogador15.Location = new System.Drawing.Point(425, 546);
             this.lblIdJogador15.Name = "lblIdJogador15";
             this.lblIdJogador15.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador15.TabIndex = 236;
@@ -978,7 +986,7 @@
             this.lblIdJogador16.AutoSize = true;
             this.lblIdJogador16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador16.Location = new System.Drawing.Point(501, 543);
+            this.lblIdJogador16.Location = new System.Drawing.Point(478, 546);
             this.lblIdJogador16.Name = "lblIdJogador16";
             this.lblIdJogador16.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador16.TabIndex = 235;
@@ -989,7 +997,7 @@
             this.lblIdJogador8.AutoSize = true;
             this.lblIdJogador8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador8.Location = new System.Drawing.Point(501, 476);
+            this.lblIdJogador8.Location = new System.Drawing.Point(478, 479);
             this.lblIdJogador8.Name = "lblIdJogador8";
             this.lblIdJogador8.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador8.TabIndex = 234;
@@ -1000,7 +1008,7 @@
             this.lblIdJogador7.AutoSize = true;
             this.lblIdJogador7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador7.Location = new System.Drawing.Point(448, 476);
+            this.lblIdJogador7.Location = new System.Drawing.Point(425, 479);
             this.lblIdJogador7.Name = "lblIdJogador7";
             this.lblIdJogador7.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador7.TabIndex = 233;
@@ -1011,7 +1019,7 @@
             this.lblIdJogador6.AutoSize = true;
             this.lblIdJogador6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador6.Location = new System.Drawing.Point(395, 476);
+            this.lblIdJogador6.Location = new System.Drawing.Point(372, 479);
             this.lblIdJogador6.Name = "lblIdJogador6";
             this.lblIdJogador6.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador6.TabIndex = 232;
@@ -1022,7 +1030,7 @@
             this.lblIdJogador5.AutoSize = true;
             this.lblIdJogador5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador5.Location = new System.Drawing.Point(342, 476);
+            this.lblIdJogador5.Location = new System.Drawing.Point(319, 479);
             this.lblIdJogador5.Name = "lblIdJogador5";
             this.lblIdJogador5.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador5.TabIndex = 231;
@@ -1033,7 +1041,7 @@
             this.lblIdJogador4.AutoSize = true;
             this.lblIdJogador4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador4.Location = new System.Drawing.Point(289, 476);
+            this.lblIdJogador4.Location = new System.Drawing.Point(266, 479);
             this.lblIdJogador4.Name = "lblIdJogador4";
             this.lblIdJogador4.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador4.TabIndex = 230;
@@ -1044,7 +1052,7 @@
             this.lblIdJogador3.AutoSize = true;
             this.lblIdJogador3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador3.Location = new System.Drawing.Point(236, 476);
+            this.lblIdJogador3.Location = new System.Drawing.Point(213, 479);
             this.lblIdJogador3.Name = "lblIdJogador3";
             this.lblIdJogador3.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador3.TabIndex = 229;
@@ -1055,7 +1063,7 @@
             this.lblIdJogador2.AutoSize = true;
             this.lblIdJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador2.Location = new System.Drawing.Point(183, 476);
+            this.lblIdJogador2.Location = new System.Drawing.Point(160, 479);
             this.lblIdJogador2.Name = "lblIdJogador2";
             this.lblIdJogador2.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador2.TabIndex = 228;
@@ -1066,7 +1074,7 @@
             this.lblIdJogador1.AutoSize = true;
             this.lblIdJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdJogador1.Location = new System.Drawing.Point(130, 476);
+            this.lblIdJogador1.Location = new System.Drawing.Point(107, 479);
             this.lblIdJogador1.Name = "lblIdJogador1";
             this.lblIdJogador1.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador1.TabIndex = 227;
@@ -1077,7 +1085,7 @@
             this.lblBodeJogador25.AutoSize = true;
             this.lblBodeJogador25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador25.Location = new System.Drawing.Point(130, 723);
+            this.lblBodeJogador25.Location = new System.Drawing.Point(107, 726);
             this.lblBodeJogador25.Name = "lblBodeJogador25";
             this.lblBodeJogador25.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador25.TabIndex = 226;
@@ -1088,7 +1096,7 @@
             this.lblBodeJogador26.AutoSize = true;
             this.lblBodeJogador26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador26.Location = new System.Drawing.Point(183, 723);
+            this.lblBodeJogador26.Location = new System.Drawing.Point(160, 726);
             this.lblBodeJogador26.Name = "lblBodeJogador26";
             this.lblBodeJogador26.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador26.TabIndex = 225;
@@ -1099,7 +1107,7 @@
             this.lblBodeJogador27.AutoSize = true;
             this.lblBodeJogador27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador27.Location = new System.Drawing.Point(236, 723);
+            this.lblBodeJogador27.Location = new System.Drawing.Point(213, 726);
             this.lblBodeJogador27.Name = "lblBodeJogador27";
             this.lblBodeJogador27.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador27.TabIndex = 224;
@@ -1110,7 +1118,7 @@
             this.lblBodeJogador28.AutoSize = true;
             this.lblBodeJogador28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador28.Location = new System.Drawing.Point(289, 723);
+            this.lblBodeJogador28.Location = new System.Drawing.Point(266, 726);
             this.lblBodeJogador28.Name = "lblBodeJogador28";
             this.lblBodeJogador28.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador28.TabIndex = 223;
@@ -1121,7 +1129,7 @@
             this.lblBodeJogador29.AutoSize = true;
             this.lblBodeJogador29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador29.Location = new System.Drawing.Point(342, 723);
+            this.lblBodeJogador29.Location = new System.Drawing.Point(319, 726);
             this.lblBodeJogador29.Name = "lblBodeJogador29";
             this.lblBodeJogador29.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador29.TabIndex = 222;
@@ -1132,7 +1140,7 @@
             this.lblBodeJogador30.AutoSize = true;
             this.lblBodeJogador30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador30.Location = new System.Drawing.Point(395, 723);
+            this.lblBodeJogador30.Location = new System.Drawing.Point(372, 726);
             this.lblBodeJogador30.Name = "lblBodeJogador30";
             this.lblBodeJogador30.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador30.TabIndex = 221;
@@ -1143,7 +1151,7 @@
             this.lblBodeJogador31.AutoSize = true;
             this.lblBodeJogador31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador31.Location = new System.Drawing.Point(448, 723);
+            this.lblBodeJogador31.Location = new System.Drawing.Point(425, 726);
             this.lblBodeJogador31.Name = "lblBodeJogador31";
             this.lblBodeJogador31.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador31.TabIndex = 220;
@@ -1154,7 +1162,7 @@
             this.lblBodeJogador32.AutoSize = true;
             this.lblBodeJogador32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador32.Location = new System.Drawing.Point(501, 723);
+            this.lblBodeJogador32.Location = new System.Drawing.Point(478, 726);
             this.lblBodeJogador32.Name = "lblBodeJogador32";
             this.lblBodeJogador32.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador32.TabIndex = 219;
@@ -1165,7 +1173,7 @@
             this.lblBodeJogador17.AutoSize = true;
             this.lblBodeJogador17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador17.Location = new System.Drawing.Point(130, 656);
+            this.lblBodeJogador17.Location = new System.Drawing.Point(107, 659);
             this.lblBodeJogador17.Name = "lblBodeJogador17";
             this.lblBodeJogador17.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador17.TabIndex = 218;
@@ -1176,7 +1184,7 @@
             this.lblBodeJogador18.AutoSize = true;
             this.lblBodeJogador18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador18.Location = new System.Drawing.Point(183, 656);
+            this.lblBodeJogador18.Location = new System.Drawing.Point(160, 659);
             this.lblBodeJogador18.Name = "lblBodeJogador18";
             this.lblBodeJogador18.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador18.TabIndex = 217;
@@ -1187,7 +1195,7 @@
             this.lblBodeJogador19.AutoSize = true;
             this.lblBodeJogador19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador19.Location = new System.Drawing.Point(236, 656);
+            this.lblBodeJogador19.Location = new System.Drawing.Point(213, 659);
             this.lblBodeJogador19.Name = "lblBodeJogador19";
             this.lblBodeJogador19.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador19.TabIndex = 216;
@@ -1198,7 +1206,7 @@
             this.lblBodeJogador20.AutoSize = true;
             this.lblBodeJogador20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador20.Location = new System.Drawing.Point(289, 656);
+            this.lblBodeJogador20.Location = new System.Drawing.Point(266, 659);
             this.lblBodeJogador20.Name = "lblBodeJogador20";
             this.lblBodeJogador20.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador20.TabIndex = 215;
@@ -1209,7 +1217,7 @@
             this.lblBodeJogador21.AutoSize = true;
             this.lblBodeJogador21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador21.Location = new System.Drawing.Point(342, 656);
+            this.lblBodeJogador21.Location = new System.Drawing.Point(319, 659);
             this.lblBodeJogador21.Name = "lblBodeJogador21";
             this.lblBodeJogador21.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador21.TabIndex = 214;
@@ -1220,7 +1228,7 @@
             this.lblBodeJogador22.AutoSize = true;
             this.lblBodeJogador22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador22.Location = new System.Drawing.Point(395, 656);
+            this.lblBodeJogador22.Location = new System.Drawing.Point(372, 659);
             this.lblBodeJogador22.Name = "lblBodeJogador22";
             this.lblBodeJogador22.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador22.TabIndex = 213;
@@ -1231,7 +1239,7 @@
             this.lblBodeJogador23.AutoSize = true;
             this.lblBodeJogador23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador23.Location = new System.Drawing.Point(448, 656);
+            this.lblBodeJogador23.Location = new System.Drawing.Point(425, 659);
             this.lblBodeJogador23.Name = "lblBodeJogador23";
             this.lblBodeJogador23.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador23.TabIndex = 212;
@@ -1242,7 +1250,7 @@
             this.lblBodeJogador24.AutoSize = true;
             this.lblBodeJogador24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador24.Location = new System.Drawing.Point(501, 656);
+            this.lblBodeJogador24.Location = new System.Drawing.Point(478, 659);
             this.lblBodeJogador24.Name = "lblBodeJogador24";
             this.lblBodeJogador24.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador24.TabIndex = 211;
@@ -1253,7 +1261,7 @@
             this.lblBodeJogador9.AutoSize = true;
             this.lblBodeJogador9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador9.Location = new System.Drawing.Point(130, 589);
+            this.lblBodeJogador9.Location = new System.Drawing.Point(107, 592);
             this.lblBodeJogador9.Name = "lblBodeJogador9";
             this.lblBodeJogador9.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador9.TabIndex = 210;
@@ -1264,7 +1272,7 @@
             this.lblBodeJogador10.AutoSize = true;
             this.lblBodeJogador10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador10.Location = new System.Drawing.Point(183, 589);
+            this.lblBodeJogador10.Location = new System.Drawing.Point(160, 592);
             this.lblBodeJogador10.Name = "lblBodeJogador10";
             this.lblBodeJogador10.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador10.TabIndex = 209;
@@ -1275,7 +1283,7 @@
             this.lblBodeJogador11.AutoSize = true;
             this.lblBodeJogador11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador11.Location = new System.Drawing.Point(236, 589);
+            this.lblBodeJogador11.Location = new System.Drawing.Point(213, 592);
             this.lblBodeJogador11.Name = "lblBodeJogador11";
             this.lblBodeJogador11.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador11.TabIndex = 208;
@@ -1286,7 +1294,7 @@
             this.lblBodeJogador12.AutoSize = true;
             this.lblBodeJogador12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador12.Location = new System.Drawing.Point(289, 589);
+            this.lblBodeJogador12.Location = new System.Drawing.Point(266, 592);
             this.lblBodeJogador12.Name = "lblBodeJogador12";
             this.lblBodeJogador12.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador12.TabIndex = 207;
@@ -1297,7 +1305,7 @@
             this.lblBodeJogador13.AutoSize = true;
             this.lblBodeJogador13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador13.Location = new System.Drawing.Point(342, 589);
+            this.lblBodeJogador13.Location = new System.Drawing.Point(319, 592);
             this.lblBodeJogador13.Name = "lblBodeJogador13";
             this.lblBodeJogador13.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador13.TabIndex = 206;
@@ -1308,7 +1316,7 @@
             this.lblBodeJogador14.AutoSize = true;
             this.lblBodeJogador14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador14.Location = new System.Drawing.Point(395, 589);
+            this.lblBodeJogador14.Location = new System.Drawing.Point(372, 592);
             this.lblBodeJogador14.Name = "lblBodeJogador14";
             this.lblBodeJogador14.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador14.TabIndex = 205;
@@ -1319,7 +1327,7 @@
             this.lblBodeJogador15.AutoSize = true;
             this.lblBodeJogador15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador15.Location = new System.Drawing.Point(448, 589);
+            this.lblBodeJogador15.Location = new System.Drawing.Point(425, 592);
             this.lblBodeJogador15.Name = "lblBodeJogador15";
             this.lblBodeJogador15.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador15.TabIndex = 204;
@@ -1330,7 +1338,7 @@
             this.lblBodeJogador16.AutoSize = true;
             this.lblBodeJogador16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador16.Location = new System.Drawing.Point(501, 589);
+            this.lblBodeJogador16.Location = new System.Drawing.Point(478, 592);
             this.lblBodeJogador16.Name = "lblBodeJogador16";
             this.lblBodeJogador16.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador16.TabIndex = 203;
@@ -1341,7 +1349,7 @@
             this.lblBodeJogador8.AutoSize = true;
             this.lblBodeJogador8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador8.Location = new System.Drawing.Point(501, 522);
+            this.lblBodeJogador8.Location = new System.Drawing.Point(478, 525);
             this.lblBodeJogador8.Name = "lblBodeJogador8";
             this.lblBodeJogador8.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador8.TabIndex = 202;
@@ -1352,7 +1360,7 @@
             this.lblBodeJogador7.AutoSize = true;
             this.lblBodeJogador7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador7.Location = new System.Drawing.Point(448, 522);
+            this.lblBodeJogador7.Location = new System.Drawing.Point(425, 525);
             this.lblBodeJogador7.Name = "lblBodeJogador7";
             this.lblBodeJogador7.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador7.TabIndex = 201;
@@ -1363,7 +1371,7 @@
             this.lblBodeJogador6.AutoSize = true;
             this.lblBodeJogador6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador6.Location = new System.Drawing.Point(395, 522);
+            this.lblBodeJogador6.Location = new System.Drawing.Point(372, 525);
             this.lblBodeJogador6.Name = "lblBodeJogador6";
             this.lblBodeJogador6.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador6.TabIndex = 200;
@@ -1374,7 +1382,7 @@
             this.lblBodeJogador5.AutoSize = true;
             this.lblBodeJogador5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador5.Location = new System.Drawing.Point(342, 522);
+            this.lblBodeJogador5.Location = new System.Drawing.Point(319, 525);
             this.lblBodeJogador5.Name = "lblBodeJogador5";
             this.lblBodeJogador5.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador5.TabIndex = 199;
@@ -1385,7 +1393,7 @@
             this.lblBodeJogador4.AutoSize = true;
             this.lblBodeJogador4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador4.Location = new System.Drawing.Point(289, 522);
+            this.lblBodeJogador4.Location = new System.Drawing.Point(266, 525);
             this.lblBodeJogador4.Name = "lblBodeJogador4";
             this.lblBodeJogador4.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador4.TabIndex = 198;
@@ -1396,7 +1404,7 @@
             this.lblBodeJogador3.AutoSize = true;
             this.lblBodeJogador3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador3.Location = new System.Drawing.Point(236, 522);
+            this.lblBodeJogador3.Location = new System.Drawing.Point(213, 525);
             this.lblBodeJogador3.Name = "lblBodeJogador3";
             this.lblBodeJogador3.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador3.TabIndex = 197;
@@ -1407,7 +1415,7 @@
             this.lblBodeJogador2.AutoSize = true;
             this.lblBodeJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador2.Location = new System.Drawing.Point(183, 522);
+            this.lblBodeJogador2.Location = new System.Drawing.Point(160, 525);
             this.lblBodeJogador2.Name = "lblBodeJogador2";
             this.lblBodeJogador2.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador2.TabIndex = 196;
@@ -1418,7 +1426,7 @@
             this.lblBodeJogador1.AutoSize = true;
             this.lblBodeJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBodeJogador1.Location = new System.Drawing.Point(130, 522);
+            this.lblBodeJogador1.Location = new System.Drawing.Point(107, 525);
             this.lblBodeJogador1.Name = "lblBodeJogador1";
             this.lblBodeJogador1.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador1.TabIndex = 195;
@@ -1426,7 +1434,7 @@
             // 
             // pictureBox32
             // 
-            this.pictureBox32.Location = new System.Drawing.Point(501, 677);
+            this.pictureBox32.Location = new System.Drawing.Point(478, 680);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(47, 61);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1435,7 +1443,7 @@
             // 
             // pictureBox31
             // 
-            this.pictureBox31.Location = new System.Drawing.Point(448, 677);
+            this.pictureBox31.Location = new System.Drawing.Point(425, 680);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(47, 61);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1444,7 +1452,7 @@
             // 
             // pictureBox30
             // 
-            this.pictureBox30.Location = new System.Drawing.Point(395, 677);
+            this.pictureBox30.Location = new System.Drawing.Point(372, 680);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(47, 61);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1453,7 +1461,7 @@
             // 
             // pictureBox29
             // 
-            this.pictureBox29.Location = new System.Drawing.Point(342, 677);
+            this.pictureBox29.Location = new System.Drawing.Point(319, 680);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(47, 61);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1462,7 +1470,7 @@
             // 
             // pictureBox28
             // 
-            this.pictureBox28.Location = new System.Drawing.Point(289, 677);
+            this.pictureBox28.Location = new System.Drawing.Point(266, 680);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(47, 61);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1471,7 +1479,7 @@
             // 
             // pictureBox27
             // 
-            this.pictureBox27.Location = new System.Drawing.Point(236, 677);
+            this.pictureBox27.Location = new System.Drawing.Point(213, 680);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(47, 61);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1480,7 +1488,7 @@
             // 
             // pictureBox26
             // 
-            this.pictureBox26.Location = new System.Drawing.Point(183, 677);
+            this.pictureBox26.Location = new System.Drawing.Point(160, 680);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(47, 61);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1489,7 +1497,7 @@
             // 
             // pictureBox25
             // 
-            this.pictureBox25.Location = new System.Drawing.Point(130, 677);
+            this.pictureBox25.Location = new System.Drawing.Point(107, 680);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(47, 61);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1498,7 +1506,7 @@
             // 
             // pictureBox24
             // 
-            this.pictureBox24.Location = new System.Drawing.Point(501, 610);
+            this.pictureBox24.Location = new System.Drawing.Point(478, 613);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(47, 61);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1507,7 +1515,7 @@
             // 
             // pictureBox23
             // 
-            this.pictureBox23.Location = new System.Drawing.Point(448, 610);
+            this.pictureBox23.Location = new System.Drawing.Point(425, 613);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(47, 61);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1516,7 +1524,7 @@
             // 
             // pictureBox22
             // 
-            this.pictureBox22.Location = new System.Drawing.Point(395, 610);
+            this.pictureBox22.Location = new System.Drawing.Point(372, 613);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(47, 61);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1525,7 +1533,7 @@
             // 
             // pictureBox21
             // 
-            this.pictureBox21.Location = new System.Drawing.Point(342, 610);
+            this.pictureBox21.Location = new System.Drawing.Point(319, 613);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(47, 61);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1534,7 +1542,7 @@
             // 
             // pictureBox20
             // 
-            this.pictureBox20.Location = new System.Drawing.Point(289, 610);
+            this.pictureBox20.Location = new System.Drawing.Point(266, 613);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(47, 61);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1543,7 +1551,7 @@
             // 
             // pictureBox19
             // 
-            this.pictureBox19.Location = new System.Drawing.Point(236, 610);
+            this.pictureBox19.Location = new System.Drawing.Point(213, 613);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(47, 61);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1552,7 +1560,7 @@
             // 
             // pictureBox18
             // 
-            this.pictureBox18.Location = new System.Drawing.Point(183, 610);
+            this.pictureBox18.Location = new System.Drawing.Point(160, 613);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(47, 61);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1561,7 +1569,7 @@
             // 
             // pictureBox17
             // 
-            this.pictureBox17.Location = new System.Drawing.Point(130, 610);
+            this.pictureBox17.Location = new System.Drawing.Point(107, 613);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(47, 61);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1570,7 +1578,7 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.Location = new System.Drawing.Point(501, 543);
+            this.pictureBox16.Location = new System.Drawing.Point(478, 546);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(47, 61);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1579,7 +1587,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(448, 543);
+            this.pictureBox15.Location = new System.Drawing.Point(425, 546);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(47, 61);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1588,7 +1596,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Location = new System.Drawing.Point(395, 543);
+            this.pictureBox14.Location = new System.Drawing.Point(372, 546);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(47, 61);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1597,7 +1605,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Location = new System.Drawing.Point(342, 543);
+            this.pictureBox13.Location = new System.Drawing.Point(319, 546);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(47, 61);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1606,7 +1614,7 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Location = new System.Drawing.Point(289, 543);
+            this.pictureBox12.Location = new System.Drawing.Point(266, 546);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(47, 61);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1615,7 +1623,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Location = new System.Drawing.Point(236, 543);
+            this.pictureBox11.Location = new System.Drawing.Point(213, 546);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(47, 61);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1624,7 +1632,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(183, 543);
+            this.pictureBox10.Location = new System.Drawing.Point(160, 546);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(47, 61);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1633,7 +1641,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(130, 543);
+            this.pictureBox9.Location = new System.Drawing.Point(107, 546);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(47, 61);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1642,7 +1650,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(501, 476);
+            this.pictureBox8.Location = new System.Drawing.Point(478, 479);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(47, 61);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1651,7 +1659,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(448, 476);
+            this.pictureBox7.Location = new System.Drawing.Point(425, 479);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(47, 61);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1660,7 +1668,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(395, 476);
+            this.pictureBox6.Location = new System.Drawing.Point(372, 479);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(47, 61);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1669,7 +1677,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(342, 476);
+            this.pictureBox5.Location = new System.Drawing.Point(319, 479);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 61);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1678,7 +1686,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(289, 476);
+            this.pictureBox4.Location = new System.Drawing.Point(266, 479);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 61);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1687,7 +1695,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(236, 476);
+            this.pictureBox3.Location = new System.Drawing.Point(213, 479);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 61);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1696,7 +1704,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(183, 476);
+            this.pictureBox2.Location = new System.Drawing.Point(160, 479);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1705,12 +1713,56 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(130, 476);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 479);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 163;
             this.pictureBox1.TabStop = false;
+            // 
+            // pcbJogador4
+            // 
+            this.pcbJogador4.Image = global::BodeOfWar.Properties.Resources.J4;
+            this.pcbJogador4.Location = new System.Drawing.Point(25, 680);
+            this.pcbJogador4.Name = "pcbJogador4";
+            this.pcbJogador4.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador4.TabIndex = 262;
+            this.pcbJogador4.TabStop = false;
+            this.pcbJogador4.Visible = false;
+            // 
+            // pcbJogador3
+            // 
+            this.pcbJogador3.Image = global::BodeOfWar.Properties.Resources.J3;
+            this.pcbJogador3.Location = new System.Drawing.Point(25, 613);
+            this.pcbJogador3.Name = "pcbJogador3";
+            this.pcbJogador3.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador3.TabIndex = 261;
+            this.pcbJogador3.TabStop = false;
+            this.pcbJogador3.Visible = false;
+            // 
+            // pcbJogador2
+            // 
+            this.pcbJogador2.Image = global::BodeOfWar.Properties.Resources.J2;
+            this.pcbJogador2.Location = new System.Drawing.Point(25, 546);
+            this.pcbJogador2.Name = "pcbJogador2";
+            this.pcbJogador2.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador2.TabIndex = 260;
+            this.pcbJogador2.TabStop = false;
+            this.pcbJogador2.Visible = false;
+            // 
+            // pcbJogador1
+            // 
+            this.pcbJogador1.Image = global::BodeOfWar.Properties.Resources.J1;
+            this.pcbJogador1.Location = new System.Drawing.Point(25, 479);
+            this.pcbJogador1.Name = "pcbJogador1";
+            this.pcbJogador1.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador1.TabIndex = 259;
+            this.pcbJogador1.TabStop = false;
+            this.pcbJogador1.Visible = false;
             // 
             // MãoManual
             // 
@@ -1718,6 +1770,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(913, 768);
+            this.Controls.Add(this.pcbJogador4);
+            this.Controls.Add(this.pcbJogador3);
+            this.Controls.Add(this.pcbJogador2);
+            this.Controls.Add(this.pcbJogador1);
             this.Controls.Add(this.lblIdJogador25);
             this.Controls.Add(this.lblIdJogador26);
             this.Controls.Add(this.lblIdJogador27);
@@ -1907,6 +1963,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2057,5 +2117,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbJogador4;
+        private System.Windows.Forms.PictureBox pcbJogador3;
+        private System.Windows.Forms.PictureBox pcbJogador2;
+        private System.Windows.Forms.PictureBox pcbJogador1;
     }
 }

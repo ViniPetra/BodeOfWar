@@ -194,15 +194,27 @@
     <value>..\OutrasImagens\GoatSim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\J1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="J1a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\J1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\J2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="J2a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\J2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\J3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="J3a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\J3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\J4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="J4a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\J4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MainBg" type="System.Resources.ResXFileRef, System.Windows.Forms">

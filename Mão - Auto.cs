@@ -51,6 +51,8 @@ namespace BodeOfWar
 
         List<List<Label>> MesaJogadoresIds;
 
+        List<PictureBox> ImagensJogadores;
+
         /// <summary>
         /// Define o jogador
         /// </summary>
@@ -77,13 +79,13 @@ namespace BodeOfWar
             CartasPorJogador[2] = new List<int>();
             CartasPorJogador[3] = new List<int>();
 
-            lblJogador.Text = "Você: "+jogador.Nome;
+            lblJogador.Text = "Você: " + jogador.Nome;
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
             bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8 };
             ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8 };
-            
+
             int count = 0;
             foreach (PictureBox p in imagens)
             {
@@ -108,9 +110,16 @@ namespace BodeOfWar
                 count++;
             }
 
-
-
             PopularJogadores();
+
+            //Lista de PictureBoxes dos jogadores
+            ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };
+
+            //Mostrando as imagens
+            for (int i = 0; i <= idJogadores.Count() - 1; i++)
+            {
+                ImagensJogadores[i].Visible = true;
+            }
         }
 
         /// <summary>
@@ -286,7 +295,6 @@ namespace BodeOfWar
         /// 2. Define as listas de PictureBoxes de imagem das cartas jogadas por cada jogador e cria uma matriz com as mesmas (lista de lista)
         /// 3. Define as listas de Labels de bodes das cartas jogadas por cada jogador e cria uma matriz com as mesmas (lista de lista)
         /// 4. Define as listas de Labels de ids das cartas jogadas por cada jogador e cria uma matriz com as mesmas (lista de lista)
-        /// 
         /// </summary>
         private void VerMesa()
         {
@@ -321,7 +329,7 @@ namespace BodeOfWar
             Jogador4 = new List<PictureBox>() { pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32 };
 
             //Define a matriz de PictureBoxes de imagens
-            MesaJogadoresImagem = new List<List<PictureBox>>{ Jogador1, Jogador2, Jogador3, Jogador4};
+            MesaJogadoresImagem = new List<List<PictureBox>> { Jogador1, Jogador2, Jogador3, Jogador4 };
 
             /// 3
             //Listas de Labels de bodes das cartas jogadas por cada jogador
@@ -343,14 +351,13 @@ namespace BodeOfWar
             //Matriz de labels de ids
             MesaJogadoresIds = new List<List<Label>>() { Jogador1Ids, Jogador2Ids, Jogador3Ids, Jogador4Ids };
 
-
             int count = 0;
 
             ///Para cada item para cada lista de PictureBox na Matriz de Pictureboxes
             ///Para cada carta na lista de cartas da matriz CartasPorJogador
             ///Para cada objeto em TodasCartas
             ///O item recebe a imagem do objeto em TodasCartas cujo id é igual ao da carta 
-            foreach (List<PictureBox> l in MesaJogadoresImagem) 
+            foreach (List<PictureBox> l in MesaJogadoresImagem)
             {
                 foreach (PictureBox p in l)
                 {

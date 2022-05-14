@@ -53,6 +53,8 @@ namespace BodeOfWar
 
         List<List<Label>> MesaJogadoresIds;
 
+        List<PictureBox> ImagensJogadores;
+
         /// <summary>
         /// Define o jogador
         /// </summary>
@@ -111,6 +113,15 @@ namespace BodeOfWar
             }
 
             PopularJogadores();
+
+            //Lista de PictureBoxes dos jogadores
+            ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };
+
+            //Mostrando as imagens
+            for (int i = 0; i <= idJogadores.Count() - 1; i++)
+            {
+                ImagensJogadores[i].Visible = true;
+            }
         }
 
         /// <summary>
