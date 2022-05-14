@@ -32,13 +32,35 @@
             this.pnlTutorial1 = new System.Windows.Forms.Panel();
             this.btnTutorialProx1 = new System.Windows.Forms.Button();
             this.txtTutorial1 = new System.Windows.Forms.TextBox();
-            this.pcbTutorial1 = new System.Windows.Forms.PictureBox();
+            this.pnlTutorial2 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx2 = new System.Windows.Forms.Button();
+            this.txtTutorial2 = new System.Windows.Forms.TextBox();
+            this.pnlTutorial3 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx3 = new System.Windows.Forms.Button();
+            this.txtTutorial3 = new System.Windows.Forms.TextBox();
+            this.pnlTutorial4 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx4 = new System.Windows.Forms.Button();
+            this.txtTutorial4 = new System.Windows.Forms.TextBox();
+            this.pnlTutorial5 = new System.Windows.Forms.Panel();
+            this.btnTutorialProx5 = new System.Windows.Forms.Button();
+            this.txtTutorial5 = new System.Windows.Forms.TextBox();
+            this.pnlTutorial6 = new System.Windows.Forms.Panel();
+            this.btnVerNovamente = new System.Windows.Forms.Button();
+            this.btnVoltarMenu = new System.Windows.Forms.Button();
+            this.txtTutorial6 = new System.Windows.Forms.TextBox();
+            this.pnlPartidaIndisponivel = new System.Windows.Forms.Panel();
+            this.pcbTutorial6 = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnComoJogar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.pcbTutorial5 = new System.Windows.Forms.PictureBox();
+            this.pcbTutorial4 = new System.Windows.Forms.PictureBox();
+            this.pcbTutorial3 = new System.Windows.Forms.PictureBox();
+            this.pcbTutorial2 = new System.Windows.Forms.PictureBox();
+            this.pcbTutorial1 = new System.Windows.Forms.PictureBox();
             this.pnlListarPartidas = new System.Windows.Forms.Panel();
             this.btnVoltarCriarListar = new System.Windows.Forms.Button();
             this.btnEncerradas = new System.Windows.Forms.Button();
@@ -78,46 +100,25 @@
             this.btnAutomatico = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
-            this.pnlTutorial2 = new System.Windows.Forms.Panel();
-            this.btnTutorialProx2 = new System.Windows.Forms.Button();
-            this.txtTutorial2 = new System.Windows.Forms.TextBox();
-            this.pcbTutorial2 = new System.Windows.Forms.PictureBox();
-            this.pnlTutorial3 = new System.Windows.Forms.Panel();
-            this.btnTutorialProx3 = new System.Windows.Forms.Button();
-            this.txtTutorial3 = new System.Windows.Forms.TextBox();
-            this.pcbTutorial3 = new System.Windows.Forms.PictureBox();
-            this.pnlTutorial4 = new System.Windows.Forms.Panel();
-            this.btnTutorialProx4 = new System.Windows.Forms.Button();
-            this.txtTutorial4 = new System.Windows.Forms.TextBox();
-            this.pcbTutorial4 = new System.Windows.Forms.PictureBox();
-            this.pnlTutorial5 = new System.Windows.Forms.Panel();
-            this.btnTutorialProx5 = new System.Windows.Forms.Button();
-            this.txtTutorial5 = new System.Windows.Forms.TextBox();
-            this.pcbTutorial5 = new System.Windows.Forms.PictureBox();
-            this.pnlTutorial6 = new System.Windows.Forms.Panel();
-            this.btnVerNovamente = new System.Windows.Forms.Button();
-            this.btnVoltarMenu = new System.Windows.Forms.Button();
-            this.txtTutorial6 = new System.Windows.Forms.TextBox();
-            this.pcbTutorial6 = new System.Windows.Forms.PictureBox();
             this.pnlTutorial1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).BeginInit();
+            this.pnlTutorial2.SuspendLayout();
+            this.pnlTutorial3.SuspendLayout();
+            this.pnlTutorial4.SuspendLayout();
+            this.pnlTutorial5.SuspendLayout();
+            this.pnlTutorial6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).BeginInit();
             this.pnlListarPartidas.SuspendLayout();
             this.pnlDetalhesPartida.SuspendLayout();
             this.pnlCriarPartida.SuspendLayout();
             this.pnlListarPartidas2.SuspendLayout();
             this.pnlListarCriar.SuspendLayout();
             this.pnlDentroPartida.SuspendLayout();
-            this.pnlTutorial2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).BeginInit();
-            this.pnlTutorial3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).BeginInit();
-            this.pnlTutorial4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).BeginInit();
-            this.pnlTutorial5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).BeginInit();
-            this.pnlTutorial6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTutorial1
@@ -163,16 +164,256 @@
     "hum bode pode ficar de fora!";
             this.txtTutorial1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pcbTutorial1
+            // pnlTutorial2
             // 
-            this.pcbTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial1.Image = global::BodeOfWar.Properties.Resources.Gif10;
-            this.pcbTutorial1.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial1.Name = "pcbTutorial1";
-            this.pcbTutorial1.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial1.TabIndex = 0;
-            this.pcbTutorial1.TabStop = false;
+            this.pnlTutorial2.Controls.Add(this.btnTutorialProx2);
+            this.pnlTutorial2.Controls.Add(this.txtTutorial2);
+            this.pnlTutorial2.Controls.Add(this.pcbTutorial2);
+            this.pnlTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial2.Name = "pnlTutorial2";
+            this.pnlTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial2.TabIndex = 8;
+            // 
+            // btnTutorialProx2
+            // 
+            this.btnTutorialProx2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx2.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx2.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx2.Name = "btnTutorialProx2";
+            this.btnTutorialProx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx2.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx2.TabIndex = 8;
+            this.btnTutorialProx2.Text = "Próximo";
+            this.btnTutorialProx2.UseVisualStyleBackColor = false;
+            this.btnTutorialProx2.Click += new System.EventHandler(this.btnTutorialProx2_Click);
+            // 
+            // txtTutorial2
+            // 
+            this.txtTutorial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial2.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial2.Multiline = true;
+            this.txtTutorial2.Name = "txtTutorial2";
+            this.txtTutorial2.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial2.TabIndex = 1;
+            this.txtTutorial2.Text = "Para isso, os jogadores jogam cartas de bodes na mesa, cada uma com um valor, e l" +
+    "eva todas as cartas aquele que jogou a mais alta.";
+            this.txtTutorial2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlTutorial3
+            // 
+            this.pnlTutorial3.Controls.Add(this.btnTutorialProx3);
+            this.pnlTutorial3.Controls.Add(this.txtTutorial3);
+            this.pnlTutorial3.Controls.Add(this.pcbTutorial3);
+            this.pnlTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial3.Name = "pnlTutorial3";
+            this.pnlTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial3.TabIndex = 9;
+            // 
+            // btnTutorialProx3
+            // 
+            this.btnTutorialProx3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx3.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx3.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx3.Name = "btnTutorialProx3";
+            this.btnTutorialProx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx3.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx3.TabIndex = 8;
+            this.btnTutorialProx3.Text = "Próximo";
+            this.btnTutorialProx3.UseVisualStyleBackColor = false;
+            this.btnTutorialProx3.Click += new System.EventHandler(this.btnTutorialProx3_Click);
+            // 
+            // txtTutorial3
+            // 
+            this.txtTutorial3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial3.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial3.Multiline = true;
+            this.txtTutorial3.Name = "txtTutorial3";
+            this.txtTutorial3.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial3.TabIndex = 1;
+            this.txtTutorial3.Text = "No final da partida, quem tiver mais bodes que o limite é eliminado, e quem tiver" +
+    " a quantidade mais próxima ou igual ao limite vence.";
+            this.txtTutorial3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlTutorial4
+            // 
+            this.pnlTutorial4.Controls.Add(this.btnTutorialProx4);
+            this.pnlTutorial4.Controls.Add(this.txtTutorial4);
+            this.pnlTutorial4.Controls.Add(this.pcbTutorial4);
+            this.pnlTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial4.Name = "pnlTutorial4";
+            this.pnlTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial4.TabIndex = 10;
+            // 
+            // btnTutorialProx4
+            // 
+            this.btnTutorialProx4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx4.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx4.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx4.Name = "btnTutorialProx4";
+            this.btnTutorialProx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx4.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx4.TabIndex = 8;
+            this.btnTutorialProx4.Text = "Próximo";
+            this.btnTutorialProx4.UseVisualStyleBackColor = false;
+            this.btnTutorialProx4.Click += new System.EventHandler(this.btnTutorialProx4_Click);
+            // 
+            // txtTutorial4
+            // 
+            this.txtTutorial4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial4.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial4.Multiline = true;
+            this.txtTutorial4.Name = "txtTutorial4";
+            this.txtTutorial4.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial4.TabIndex = 1;
+            this.txtTutorial4.Text = "JOGUE A CARTA MAIS ALTA!\r\nPara vencer a rodada e ganhar bodes para colocar na ilh" +
+    "a.\r\n";
+            this.txtTutorial4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlTutorial5
+            // 
+            this.pnlTutorial5.Controls.Add(this.btnTutorialProx5);
+            this.pnlTutorial5.Controls.Add(this.txtTutorial5);
+            this.pnlTutorial5.Controls.Add(this.pcbTutorial5);
+            this.pnlTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial5.Name = "pnlTutorial5";
+            this.pnlTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial5.TabIndex = 11;
+            // 
+            // btnTutorialProx5
+            // 
+            this.btnTutorialProx5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTutorialProx5.BackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnTutorialProx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTutorialProx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutorialProx5.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx5.Name = "btnTutorialProx5";
+            this.btnTutorialProx5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTutorialProx5.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx5.TabIndex = 8;
+            this.btnTutorialProx5.Text = "Próximo";
+            this.btnTutorialProx5.UseVisualStyleBackColor = false;
+            this.btnTutorialProx5.Click += new System.EventHandler(this.btnTutorialProx5_Click);
+            // 
+            // txtTutorial5
+            // 
+            this.txtTutorial5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial5.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial5.Multiline = true;
+            this.txtTutorial5.Name = "txtTutorial5";
+            this.txtTutorial5.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial5.TabIndex = 1;
+            this.txtTutorial5.Text = "OU JOGUE A CARTA MAIS BAIXA...\r\nPara colocar uma carta de ilha, escolhendo o tama" +
+    "nho que melhor acomode seus bodes.";
+            this.txtTutorial5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlTutorial6
+            // 
+            this.pnlTutorial6.Controls.Add(this.btnVerNovamente);
+            this.pnlTutorial6.Controls.Add(this.btnVoltarMenu);
+            this.pnlTutorial6.Controls.Add(this.txtTutorial6);
+            this.pnlTutorial6.Controls.Add(this.pcbTutorial6);
+            this.pnlTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTutorial6.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial6.Name = "pnlTutorial6";
+            this.pnlTutorial6.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial6.TabIndex = 12;
+            // 
+            // btnVerNovamente
+            // 
+            this.btnVerNovamente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerNovamente.BackColor = System.Drawing.Color.Silver;
+            this.btnVerNovamente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnVerNovamente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnVerNovamente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVerNovamente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerNovamente.Location = new System.Drawing.Point(392, 477);
+            this.btnVerNovamente.Name = "btnVerNovamente";
+            this.btnVerNovamente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerNovamente.Size = new System.Drawing.Size(103, 23);
+            this.btnVerNovamente.TabIndex = 9;
+            this.btnVerNovamente.Text = "Ver novamente";
+            this.btnVerNovamente.UseVisualStyleBackColor = false;
+            this.btnVerNovamente.Click += new System.EventHandler(this.btnVerNovamente_Click);
+            // 
+            // btnVoltarMenu
+            // 
+            this.btnVoltarMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVoltarMenu.BackColor = System.Drawing.Color.Silver;
+            this.btnVoltarMenu.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarMenu.Location = new System.Drawing.Point(250, 477);
+            this.btnVoltarMenu.Name = "btnVoltarMenu";
+            this.btnVoltarMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVoltarMenu.Size = new System.Drawing.Size(103, 23);
+            this.btnVoltarMenu.TabIndex = 8;
+            this.btnVoltarMenu.Text = "Voltar ao Menu";
+            this.btnVoltarMenu.UseVisualStyleBackColor = false;
+            this.btnVoltarMenu.Click += new System.EventHandler(this.btnVoltarMenu_Click);
+            // 
+            // txtTutorial6
+            // 
+            this.txtTutorial6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTutorial6.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial6.Multiline = true;
+            this.txtTutorial6.Name = "txtTutorial6";
+            this.txtTutorial6.Size = new System.Drawing.Size(315, 61);
+            this.txtTutorial6.TabIndex = 1;
+            this.txtTutorial6.Text = "TORNE-SE O BODE OF WAR!\r\nReivindique o título de Bode of War terminando a partida" +
+    " com a maior quantidade de bodes, mas sem exceder o limite da ilha!";
+            this.txtTutorial6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlPartidaIndisponivel
+            // 
+            this.pnlPartidaIndisponivel.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPartidaIndisponivel.BackgroundImage = global::BodeOfWar.Properties.Resources.PartidaIndisponivel;
+            this.pnlPartidaIndisponivel.Location = new System.Drawing.Point(209, 452);
+            this.pnlPartidaIndisponivel.Name = "pnlPartidaIndisponivel";
+            this.pnlPartidaIndisponivel.Size = new System.Drawing.Size(277, 85);
+            this.pnlPartidaIndisponivel.TabIndex = 45;
+            // 
+            // pcbTutorial6
+            // 
+            this.pcbTutorial6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial6.Image = global::BodeOfWar.Properties.Resources.Gif8;
+            this.pcbTutorial6.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial6.Name = "pcbTutorial6";
+            this.pcbTutorial6.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial6.TabIndex = 0;
+            this.pcbTutorial6.TabStop = false;
             // 
             // pnlMenu
             // 
@@ -270,6 +511,65 @@
             this.lblTitulo.Tag = "";
             this.lblTitulo.Text = "Bode of War - Teletubbies";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pcbTutorial5
+            // 
+            this.pcbTutorial5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial5.Image = global::BodeOfWar.Properties.Resources.Gif5;
+            this.pcbTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial5.Name = "pcbTutorial5";
+            this.pcbTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial5.TabIndex = 0;
+            this.pcbTutorial5.TabStop = false;
+            // 
+            // pcbTutorial4
+            // 
+            this.pcbTutorial4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial4.Image = global::BodeOfWar.Properties.Resources.Gif9;
+            this.pcbTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial4.Name = "pcbTutorial4";
+            this.pcbTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial4.TabIndex = 0;
+            this.pcbTutorial4.TabStop = false;
+            // 
+            // pcbTutorial3
+            // 
+            this.pcbTutorial3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial3.Image = global::BodeOfWar.Properties.Resources.Gif4;
+            this.pcbTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial3.Name = "pcbTutorial3";
+            this.pcbTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial3.TabIndex = 0;
+            this.pcbTutorial3.TabStop = false;
+            // 
+            // pcbTutorial2
+            // 
+            this.pcbTutorial2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial2.Image = global::BodeOfWar.Properties.Resources.Gif6;
+            this.pcbTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial2.Name = "pcbTutorial2";
+            this.pcbTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial2.TabIndex = 0;
+            this.pcbTutorial2.TabStop = false;
+            // 
+            // pcbTutorial1
+            // 
+            this.pcbTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial1.Image = global::BodeOfWar.Properties.Resources.Gif10;
+            this.pcbTutorial1.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial1.Name = "pcbTutorial1";
+            this.pcbTutorial1.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial1.TabIndex = 0;
+            this.pcbTutorial1.TabStop = false;
             // 
             // pnlListarPartidas
             // 
@@ -774,302 +1074,13 @@
             this.btnIniciarPartida.UseVisualStyleBackColor = false;
             this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
             // 
-            // pnlTutorial2
-            // 
-            this.pnlTutorial2.Controls.Add(this.btnTutorialProx2);
-            this.pnlTutorial2.Controls.Add(this.txtTutorial2);
-            this.pnlTutorial2.Controls.Add(this.pcbTutorial2);
-            this.pnlTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTutorial2.Location = new System.Drawing.Point(0, 0);
-            this.pnlTutorial2.Name = "pnlTutorial2";
-            this.pnlTutorial2.Size = new System.Drawing.Size(716, 559);
-            this.pnlTutorial2.TabIndex = 8;
-            // 
-            // btnTutorialProx2
-            // 
-            this.btnTutorialProx2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutorialProx2.BackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTutorialProx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx2.Location = new System.Drawing.Point(328, 477);
-            this.btnTutorialProx2.Name = "btnTutorialProx2";
-            this.btnTutorialProx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx2.Size = new System.Drawing.Size(73, 23);
-            this.btnTutorialProx2.TabIndex = 8;
-            this.btnTutorialProx2.Text = "Próximo";
-            this.btnTutorialProx2.UseVisualStyleBackColor = false;
-            this.btnTutorialProx2.Click += new System.EventHandler(this.btnTutorialProx2_Click);
-            // 
-            // txtTutorial2
-            // 
-            this.txtTutorial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial2.Location = new System.Drawing.Point(209, 122);
-            this.txtTutorial2.Multiline = true;
-            this.txtTutorial2.Name = "txtTutorial2";
-            this.txtTutorial2.Size = new System.Drawing.Size(315, 49);
-            this.txtTutorial2.TabIndex = 1;
-            this.txtTutorial2.Text = "Para isso, os jogadores jogam cartas de bodes na mesa, cada uma com um valor, e l" +
-    "eva todas as cartas aquele que jogou a mais alta.";
-            this.txtTutorial2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pcbTutorial2
-            // 
-            this.pcbTutorial2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial2.Image = global::BodeOfWar.Properties.Resources.Gif6;
-            this.pcbTutorial2.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial2.Name = "pcbTutorial2";
-            this.pcbTutorial2.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial2.TabIndex = 0;
-            this.pcbTutorial2.TabStop = false;
-            // 
-            // pnlTutorial3
-            // 
-            this.pnlTutorial3.Controls.Add(this.btnTutorialProx3);
-            this.pnlTutorial3.Controls.Add(this.txtTutorial3);
-            this.pnlTutorial3.Controls.Add(this.pcbTutorial3);
-            this.pnlTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTutorial3.Location = new System.Drawing.Point(0, 0);
-            this.pnlTutorial3.Name = "pnlTutorial3";
-            this.pnlTutorial3.Size = new System.Drawing.Size(716, 559);
-            this.pnlTutorial3.TabIndex = 9;
-            // 
-            // btnTutorialProx3
-            // 
-            this.btnTutorialProx3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutorialProx3.BackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTutorialProx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx3.Location = new System.Drawing.Point(328, 477);
-            this.btnTutorialProx3.Name = "btnTutorialProx3";
-            this.btnTutorialProx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx3.Size = new System.Drawing.Size(73, 23);
-            this.btnTutorialProx3.TabIndex = 8;
-            this.btnTutorialProx3.Text = "Próximo";
-            this.btnTutorialProx3.UseVisualStyleBackColor = false;
-            this.btnTutorialProx3.Click += new System.EventHandler(this.btnTutorialProx3_Click);
-            // 
-            // txtTutorial3
-            // 
-            this.txtTutorial3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial3.Location = new System.Drawing.Point(209, 122);
-            this.txtTutorial3.Multiline = true;
-            this.txtTutorial3.Name = "txtTutorial3";
-            this.txtTutorial3.Size = new System.Drawing.Size(315, 49);
-            this.txtTutorial3.TabIndex = 1;
-            this.txtTutorial3.Text = "No final da partida, quem tiver mais bodes que o limite é eliminado, e quem tiver" +
-    " a quantidade mais próxima ou igual ao limite vence.";
-            this.txtTutorial3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pcbTutorial3
-            // 
-            this.pcbTutorial3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial3.Image = global::BodeOfWar.Properties.Resources.Gif4;
-            this.pcbTutorial3.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial3.Name = "pcbTutorial3";
-            this.pcbTutorial3.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial3.TabIndex = 0;
-            this.pcbTutorial3.TabStop = false;
-            // 
-            // pnlTutorial4
-            // 
-            this.pnlTutorial4.Controls.Add(this.btnTutorialProx4);
-            this.pnlTutorial4.Controls.Add(this.txtTutorial4);
-            this.pnlTutorial4.Controls.Add(this.pcbTutorial4);
-            this.pnlTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTutorial4.Location = new System.Drawing.Point(0, 0);
-            this.pnlTutorial4.Name = "pnlTutorial4";
-            this.pnlTutorial4.Size = new System.Drawing.Size(716, 559);
-            this.pnlTutorial4.TabIndex = 10;
-            // 
-            // btnTutorialProx4
-            // 
-            this.btnTutorialProx4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutorialProx4.BackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTutorialProx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx4.Location = new System.Drawing.Point(328, 477);
-            this.btnTutorialProx4.Name = "btnTutorialProx4";
-            this.btnTutorialProx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx4.Size = new System.Drawing.Size(73, 23);
-            this.btnTutorialProx4.TabIndex = 8;
-            this.btnTutorialProx4.Text = "Próximo";
-            this.btnTutorialProx4.UseVisualStyleBackColor = false;
-            this.btnTutorialProx4.Click += new System.EventHandler(this.btnTutorialProx4_Click);
-            // 
-            // txtTutorial4
-            // 
-            this.txtTutorial4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial4.Location = new System.Drawing.Point(209, 122);
-            this.txtTutorial4.Multiline = true;
-            this.txtTutorial4.Name = "txtTutorial4";
-            this.txtTutorial4.Size = new System.Drawing.Size(315, 49);
-            this.txtTutorial4.TabIndex = 1;
-            this.txtTutorial4.Text = "JOGUE A CARTA MAIS ALTA!\r\nPara vencer a rodada e ganhar bodes para colocar na ilh" +
-    "a.\r\n";
-            this.txtTutorial4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pcbTutorial4
-            // 
-            this.pcbTutorial4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial4.Image = global::BodeOfWar.Properties.Resources.Gif9;
-            this.pcbTutorial4.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial4.Name = "pcbTutorial4";
-            this.pcbTutorial4.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial4.TabIndex = 0;
-            this.pcbTutorial4.TabStop = false;
-            // 
-            // pnlTutorial5
-            // 
-            this.pnlTutorial5.Controls.Add(this.btnTutorialProx5);
-            this.pnlTutorial5.Controls.Add(this.txtTutorial5);
-            this.pnlTutorial5.Controls.Add(this.pcbTutorial5);
-            this.pnlTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTutorial5.Location = new System.Drawing.Point(0, 0);
-            this.pnlTutorial5.Name = "pnlTutorial5";
-            this.pnlTutorial5.Size = new System.Drawing.Size(716, 559);
-            this.pnlTutorial5.TabIndex = 11;
-            // 
-            // btnTutorialProx5
-            // 
-            this.btnTutorialProx5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutorialProx5.BackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnTutorialProx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTutorialProx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx5.Location = new System.Drawing.Point(328, 477);
-            this.btnTutorialProx5.Name = "btnTutorialProx5";
-            this.btnTutorialProx5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx5.Size = new System.Drawing.Size(73, 23);
-            this.btnTutorialProx5.TabIndex = 8;
-            this.btnTutorialProx5.Text = "Próximo";
-            this.btnTutorialProx5.UseVisualStyleBackColor = false;
-            this.btnTutorialProx5.Click += new System.EventHandler(this.btnTutorialProx5_Click);
-            // 
-            // txtTutorial5
-            // 
-            this.txtTutorial5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial5.Location = new System.Drawing.Point(209, 122);
-            this.txtTutorial5.Multiline = true;
-            this.txtTutorial5.Name = "txtTutorial5";
-            this.txtTutorial5.Size = new System.Drawing.Size(315, 49);
-            this.txtTutorial5.TabIndex = 1;
-            this.txtTutorial5.Text = "OU JOGUE A CARTA MAIS BAIXA...\r\nPara colocar uma carta de ilha, escolhendo o tama" +
-    "nho que melhor acomode seus bodes.";
-            this.txtTutorial5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pcbTutorial5
-            // 
-            this.pcbTutorial5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial5.Image = global::BodeOfWar.Properties.Resources.Gif5;
-            this.pcbTutorial5.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial5.Name = "pcbTutorial5";
-            this.pcbTutorial5.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial5.TabIndex = 0;
-            this.pcbTutorial5.TabStop = false;
-            // 
-            // pnlTutorial6
-            // 
-            this.pnlTutorial6.Controls.Add(this.btnVerNovamente);
-            this.pnlTutorial6.Controls.Add(this.btnVoltarMenu);
-            this.pnlTutorial6.Controls.Add(this.txtTutorial6);
-            this.pnlTutorial6.Controls.Add(this.pcbTutorial6);
-            this.pnlTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTutorial6.Location = new System.Drawing.Point(0, 0);
-            this.pnlTutorial6.Name = "pnlTutorial6";
-            this.pnlTutorial6.Size = new System.Drawing.Size(716, 559);
-            this.pnlTutorial6.TabIndex = 12;
-            // 
-            // btnVerNovamente
-            // 
-            this.btnVerNovamente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVerNovamente.BackColor = System.Drawing.Color.Silver;
-            this.btnVerNovamente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnVerNovamente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnVerNovamente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnVerNovamente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerNovamente.Location = new System.Drawing.Point(392, 477);
-            this.btnVerNovamente.Name = "btnVerNovamente";
-            this.btnVerNovamente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVerNovamente.Size = new System.Drawing.Size(103, 23);
-            this.btnVerNovamente.TabIndex = 9;
-            this.btnVerNovamente.Text = "Ver novamente";
-            this.btnVerNovamente.UseVisualStyleBackColor = false;
-            this.btnVerNovamente.Click += new System.EventHandler(this.btnVerNovamente_Click);
-            // 
-            // btnVoltarMenu
-            // 
-            this.btnVoltarMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVoltarMenu.BackColor = System.Drawing.Color.Silver;
-            this.btnVoltarMenu.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarMenu.Location = new System.Drawing.Point(250, 477);
-            this.btnVoltarMenu.Name = "btnVoltarMenu";
-            this.btnVoltarMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVoltarMenu.Size = new System.Drawing.Size(103, 23);
-            this.btnVoltarMenu.TabIndex = 8;
-            this.btnVoltarMenu.Text = "Voltar ao Menu";
-            this.btnVoltarMenu.UseVisualStyleBackColor = false;
-            this.btnVoltarMenu.Click += new System.EventHandler(this.btnVoltarMenu_Click);
-            // 
-            // txtTutorial6
-            // 
-            this.txtTutorial6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial6.Location = new System.Drawing.Point(209, 122);
-            this.txtTutorial6.Multiline = true;
-            this.txtTutorial6.Name = "txtTutorial6";
-            this.txtTutorial6.Size = new System.Drawing.Size(315, 61);
-            this.txtTutorial6.TabIndex = 1;
-            this.txtTutorial6.Text = "TORNE-SE O BODE OF WAR!\r\nReivindique o título de Bode of War terminando a partida" +
-    " com a maior quantidade de bodes, mas sem exceder o limite da ilha!";
-            this.txtTutorial6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pcbTutorial6
-            // 
-            this.pcbTutorial6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial6.Image = global::BodeOfWar.Properties.Resources.Gif8;
-            this.pcbTutorial6.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial6.Name = "pcbTutorial6";
-            this.pcbTutorial6.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial6.TabIndex = 0;
-            this.pcbTutorial6.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(716, 559);
+            this.Controls.Add(this.pnlPartidaIndisponivel);
             this.Controls.Add(this.pnlTutorial6);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlTutorial5);
@@ -1092,8 +1103,23 @@
             this.Text = "BodeOfWar ";
             this.pnlTutorial1.ResumeLayout(false);
             this.pnlTutorial1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).EndInit();
+            this.pnlTutorial2.ResumeLayout(false);
+            this.pnlTutorial2.PerformLayout();
+            this.pnlTutorial3.ResumeLayout(false);
+            this.pnlTutorial3.PerformLayout();
+            this.pnlTutorial4.ResumeLayout(false);
+            this.pnlTutorial4.PerformLayout();
+            this.pnlTutorial5.ResumeLayout(false);
+            this.pnlTutorial5.PerformLayout();
+            this.pnlTutorial6.ResumeLayout(false);
+            this.pnlTutorial6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).EndInit();
             this.pnlListarPartidas.ResumeLayout(false);
             this.pnlDetalhesPartida.ResumeLayout(false);
             this.pnlDetalhesPartida.PerformLayout();
@@ -1102,21 +1128,6 @@
             this.pnlListarPartidas2.ResumeLayout(false);
             this.pnlListarCriar.ResumeLayout(false);
             this.pnlDentroPartida.ResumeLayout(false);
-            this.pnlTutorial2.ResumeLayout(false);
-            this.pnlTutorial2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).EndInit();
-            this.pnlTutorial3.ResumeLayout(false);
-            this.pnlTutorial3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).EndInit();
-            this.pnlTutorial4.ResumeLayout(false);
-            this.pnlTutorial4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).EndInit();
-            this.pnlTutorial5.ResumeLayout(false);
-            this.pnlTutorial5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).EndInit();
-            this.pnlTutorial6.ResumeLayout(false);
-            this.pnlTutorial6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1192,6 +1203,7 @@
         private System.Windows.Forms.TextBox txtTutorial6;
         private System.Windows.Forms.PictureBox pcbTutorial6;
         private System.Windows.Forms.Button btnVerNovamente;
+        private System.Windows.Forms.Panel pnlPartidaIndisponivel;
     }
 }
 
