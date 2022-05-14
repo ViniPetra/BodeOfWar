@@ -146,6 +146,25 @@
     <None Include="Resources\texture.jpg" />
     <None Include="OutrasImagens\MainBack.jpg" />
     <None Include="OutrasImagens\MainBg.png" />
+    <None Include="OutrasImagens\Gif1.gif" />
+    <None Include="OutrasImagens\Gif2.gif" />
+    <None Include="OutrasImagens\Goat-sacks-kid.gif" />
+    <None Include="OutrasImagens\GoatSim.jpg" />
+    <None Include="OutrasImagens\J1.png" />
+    <None Include="OutrasImagens\J2.png" />
+    <None Include="OutrasImagens\J3.png" />
+    <None Include="OutrasImagens\J4.png" />
+    <None Include="OutrasImagens\Gif4.gif" />
+    <None Include="OutrasImagens\Gif5.gif" />
+    <None Include="OutrasImagens\Gif6.gif" />
+    <None Include="OutrasImagens\Gif7.gif" />
+    <None Include="OutrasImagens\Gif8.gif" />
+    <None Include="OutrasImagens\Gif9.gif" />
+    <None Include="OutrasImagens\Gif10.gif" />
+    <None Include="OutrasImagens\Gif11.gif" />
+    <None Include="OutrasImagens\Gif12.gif" />
+    <None Include="OutrasImagens\Gif13.gif" />
+    <None Include="OutrasImagens\Gif14.gif" />
     <Content Include="OutrasImagens\maxresdefault.jpg" />
     <Content Include="OutrasImagens\User.jpg" />
   </ItemGroup>
