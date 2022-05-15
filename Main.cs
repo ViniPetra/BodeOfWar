@@ -438,7 +438,7 @@ namespace BodeOfWar
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
-                        MinhaMao.Add(TodasCartas[i]); ;
+                        MinhaMao.Add(TodasCartas[i]);
                     }
                 }
             }

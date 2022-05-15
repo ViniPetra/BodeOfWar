@@ -68,14 +68,6 @@
             this.btnIlha2 = new System.Windows.Forms.Button();
             this.btnIlha1 = new System.Windows.Forms.Button();
             this.pnlVerIlhas = new System.Windows.Forms.Panel();
-            this.pcbCarta8 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta7 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta6 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta5 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta4 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta3 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta2 = new System.Windows.Forms.PictureBox();
-            this.pcbCarta1 = new System.Windows.Forms.PictureBox();
             this.lblJogador = new System.Windows.Forms.Label();
             this.lblIdJogador25 = new System.Windows.Forms.Label();
             this.lblIdJogador26 = new System.Windows.Forms.Label();
@@ -141,6 +133,10 @@
             this.lblBodeJogador3 = new System.Windows.Forms.Label();
             this.lblBodeJogador2 = new System.Windows.Forms.Label();
             this.lblBodeJogador1 = new System.Windows.Forms.Label();
+            this.pcbJogador4 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador3 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador2 = new System.Windows.Forms.PictureBox();
+            this.pcbJogador1 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
@@ -173,20 +169,20 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pcbJogador4 = new System.Windows.Forms.PictureBox();
-            this.pcbJogador3 = new System.Windows.Forms.PictureBox();
-            this.pcbJogador2 = new System.Windows.Forms.PictureBox();
-            this.pcbJogador1 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta8 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta7 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta6 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta5 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta4 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta3 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta2 = new System.Windows.Forms.PictureBox();
+            this.pcbCarta1 = new System.Windows.Forms.PictureBox();
             this.pnlIlhas.SuspendLayout();
             this.pnlVerIlhas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
@@ -219,10 +215,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBode1
@@ -643,78 +643,6 @@
             this.pnlVerIlhas.Name = "pnlVerIlhas";
             this.pnlVerIlhas.Size = new System.Drawing.Size(222, 110);
             this.pnlVerIlhas.TabIndex = 2;
-            // 
-            // pcbCarta8
-            // 
-            this.pcbCarta8.Location = new System.Drawing.Point(481, 235);
-            this.pcbCarta8.Name = "pcbCarta8";
-            this.pcbCarta8.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta8.TabIndex = 8;
-            this.pcbCarta8.TabStop = false;
-            this.pcbCarta8.DoubleClick += new System.EventHandler(this.pcbCarta8_DoubleClick);
-            // 
-            // pcbCarta7
-            // 
-            this.pcbCarta7.Location = new System.Drawing.Point(325, 235);
-            this.pcbCarta7.Name = "pcbCarta7";
-            this.pcbCarta7.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta7.TabIndex = 7;
-            this.pcbCarta7.TabStop = false;
-            this.pcbCarta7.DoubleClick += new System.EventHandler(this.pcbCarta7_DoubleClick);
-            // 
-            // pcbCarta6
-            // 
-            this.pcbCarta6.Location = new System.Drawing.Point(169, 235);
-            this.pcbCarta6.Name = "pcbCarta6";
-            this.pcbCarta6.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta6.TabIndex = 6;
-            this.pcbCarta6.TabStop = false;
-            this.pcbCarta6.DoubleClick += new System.EventHandler(this.pcbCarta6_DoubleClick);
-            // 
-            // pcbCarta5
-            // 
-            this.pcbCarta5.Location = new System.Drawing.Point(13, 235);
-            this.pcbCarta5.Name = "pcbCarta5";
-            this.pcbCarta5.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta5.TabIndex = 5;
-            this.pcbCarta5.TabStop = false;
-            this.pcbCarta5.DoubleClick += new System.EventHandler(this.pcbCarta5_DoubleClick);
-            // 
-            // pcbCarta4
-            // 
-            this.pcbCarta4.Location = new System.Drawing.Point(481, 13);
-            this.pcbCarta4.Name = "pcbCarta4";
-            this.pcbCarta4.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta4.TabIndex = 4;
-            this.pcbCarta4.TabStop = false;
-            this.pcbCarta4.DoubleClick += new System.EventHandler(this.pcbCarta4_DoubleClick);
-            // 
-            // pcbCarta3
-            // 
-            this.pcbCarta3.Location = new System.Drawing.Point(325, 13);
-            this.pcbCarta3.Name = "pcbCarta3";
-            this.pcbCarta3.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta3.TabIndex = 3;
-            this.pcbCarta3.TabStop = false;
-            this.pcbCarta3.DoubleClick += new System.EventHandler(this.pcbCarta3_DoubleClick);
-            // 
-            // pcbCarta2
-            // 
-            this.pcbCarta2.Location = new System.Drawing.Point(169, 13);
-            this.pcbCarta2.Name = "pcbCarta2";
-            this.pcbCarta2.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta2.TabIndex = 2;
-            this.pcbCarta2.TabStop = false;
-            this.pcbCarta2.DoubleClick += new System.EventHandler(this.pcbCarta2_DoubleClick);
-            // 
-            // pcbCarta1
-            // 
-            this.pcbCarta1.Location = new System.Drawing.Point(13, 13);
-            this.pcbCarta1.Name = "pcbCarta1";
-            this.pcbCarta1.Size = new System.Drawing.Size(150, 216);
-            this.pcbCarta1.TabIndex = 1;
-            this.pcbCarta1.TabStop = false;
-            this.pcbCarta1.DoubleClick += new System.EventHandler(this.pcbCarta1_DoubleClick);
             // 
             // lblJogador
             // 
@@ -1432,6 +1360,50 @@
             this.lblBodeJogador1.TabIndex = 195;
             this.lblBodeJogador1.Text = " ";
             // 
+            // pcbJogador4
+            // 
+            this.pcbJogador4.Image = global::BodeOfWar.Properties.Resources.J4;
+            this.pcbJogador4.Location = new System.Drawing.Point(25, 680);
+            this.pcbJogador4.Name = "pcbJogador4";
+            this.pcbJogador4.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador4.TabIndex = 262;
+            this.pcbJogador4.TabStop = false;
+            this.pcbJogador4.Visible = false;
+            // 
+            // pcbJogador3
+            // 
+            this.pcbJogador3.Image = global::BodeOfWar.Properties.Resources.J3;
+            this.pcbJogador3.Location = new System.Drawing.Point(25, 613);
+            this.pcbJogador3.Name = "pcbJogador3";
+            this.pcbJogador3.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador3.TabIndex = 261;
+            this.pcbJogador3.TabStop = false;
+            this.pcbJogador3.Visible = false;
+            // 
+            // pcbJogador2
+            // 
+            this.pcbJogador2.Image = global::BodeOfWar.Properties.Resources.J2;
+            this.pcbJogador2.Location = new System.Drawing.Point(25, 546);
+            this.pcbJogador2.Name = "pcbJogador2";
+            this.pcbJogador2.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador2.TabIndex = 260;
+            this.pcbJogador2.TabStop = false;
+            this.pcbJogador2.Visible = false;
+            // 
+            // pcbJogador1
+            // 
+            this.pcbJogador1.Image = global::BodeOfWar.Properties.Resources.J1;
+            this.pcbJogador1.Location = new System.Drawing.Point(25, 479);
+            this.pcbJogador1.Name = "pcbJogador1";
+            this.pcbJogador1.Size = new System.Drawing.Size(61, 61);
+            this.pcbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbJogador1.TabIndex = 259;
+            this.pcbJogador1.TabStop = false;
+            this.pcbJogador1.Visible = false;
+            // 
             // pictureBox32
             // 
             this.pictureBox32.Location = new System.Drawing.Point(478, 680);
@@ -1720,49 +1692,77 @@
             this.pictureBox1.TabIndex = 163;
             this.pictureBox1.TabStop = false;
             // 
-            // pcbJogador4
+            // pcbCarta8
             // 
-            this.pcbJogador4.Image = global::BodeOfWar.Properties.Resources.J4;
-            this.pcbJogador4.Location = new System.Drawing.Point(25, 680);
-            this.pcbJogador4.Name = "pcbJogador4";
-            this.pcbJogador4.Size = new System.Drawing.Size(61, 61);
-            this.pcbJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbJogador4.TabIndex = 262;
-            this.pcbJogador4.TabStop = false;
-            this.pcbJogador4.Visible = false;
+            this.pcbCarta8.Location = new System.Drawing.Point(481, 235);
+            this.pcbCarta8.Name = "pcbCarta8";
+            this.pcbCarta8.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta8.TabIndex = 8;
+            this.pcbCarta8.TabStop = false;
+            this.pcbCarta8.DoubleClick += new System.EventHandler(this.pcbCarta8_DoubleClick);
             // 
-            // pcbJogador3
+            // pcbCarta7
             // 
-            this.pcbJogador3.Image = global::BodeOfWar.Properties.Resources.J3;
-            this.pcbJogador3.Location = new System.Drawing.Point(25, 613);
-            this.pcbJogador3.Name = "pcbJogador3";
-            this.pcbJogador3.Size = new System.Drawing.Size(61, 61);
-            this.pcbJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbJogador3.TabIndex = 261;
-            this.pcbJogador3.TabStop = false;
-            this.pcbJogador3.Visible = false;
+            this.pcbCarta7.Location = new System.Drawing.Point(325, 235);
+            this.pcbCarta7.Name = "pcbCarta7";
+            this.pcbCarta7.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta7.TabIndex = 7;
+            this.pcbCarta7.TabStop = false;
+            this.pcbCarta7.DoubleClick += new System.EventHandler(this.pcbCarta7_DoubleClick);
             // 
-            // pcbJogador2
+            // pcbCarta6
             // 
-            this.pcbJogador2.Image = global::BodeOfWar.Properties.Resources.J2;
-            this.pcbJogador2.Location = new System.Drawing.Point(25, 546);
-            this.pcbJogador2.Name = "pcbJogador2";
-            this.pcbJogador2.Size = new System.Drawing.Size(61, 61);
-            this.pcbJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbJogador2.TabIndex = 260;
-            this.pcbJogador2.TabStop = false;
-            this.pcbJogador2.Visible = false;
+            this.pcbCarta6.Location = new System.Drawing.Point(169, 235);
+            this.pcbCarta6.Name = "pcbCarta6";
+            this.pcbCarta6.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta6.TabIndex = 6;
+            this.pcbCarta6.TabStop = false;
+            this.pcbCarta6.DoubleClick += new System.EventHandler(this.pcbCarta6_DoubleClick);
             // 
-            // pcbJogador1
+            // pcbCarta5
             // 
-            this.pcbJogador1.Image = global::BodeOfWar.Properties.Resources.J1;
-            this.pcbJogador1.Location = new System.Drawing.Point(25, 479);
-            this.pcbJogador1.Name = "pcbJogador1";
-            this.pcbJogador1.Size = new System.Drawing.Size(61, 61);
-            this.pcbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbJogador1.TabIndex = 259;
-            this.pcbJogador1.TabStop = false;
-            this.pcbJogador1.Visible = false;
+            this.pcbCarta5.Location = new System.Drawing.Point(13, 235);
+            this.pcbCarta5.Name = "pcbCarta5";
+            this.pcbCarta5.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta5.TabIndex = 5;
+            this.pcbCarta5.TabStop = false;
+            this.pcbCarta5.DoubleClick += new System.EventHandler(this.pcbCarta5_DoubleClick);
+            // 
+            // pcbCarta4
+            // 
+            this.pcbCarta4.Location = new System.Drawing.Point(481, 13);
+            this.pcbCarta4.Name = "pcbCarta4";
+            this.pcbCarta4.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta4.TabIndex = 4;
+            this.pcbCarta4.TabStop = false;
+            this.pcbCarta4.DoubleClick += new System.EventHandler(this.pcbCarta4_DoubleClick);
+            // 
+            // pcbCarta3
+            // 
+            this.pcbCarta3.Location = new System.Drawing.Point(325, 13);
+            this.pcbCarta3.Name = "pcbCarta3";
+            this.pcbCarta3.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta3.TabIndex = 3;
+            this.pcbCarta3.TabStop = false;
+            this.pcbCarta3.DoubleClick += new System.EventHandler(this.pcbCarta3_DoubleClick);
+            // 
+            // pcbCarta2
+            // 
+            this.pcbCarta2.Location = new System.Drawing.Point(169, 13);
+            this.pcbCarta2.Name = "pcbCarta2";
+            this.pcbCarta2.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta2.TabIndex = 2;
+            this.pcbCarta2.TabStop = false;
+            this.pcbCarta2.DoubleClick += new System.EventHandler(this.pcbCarta2_DoubleClick);
+            // 
+            // pcbCarta1
+            // 
+            this.pcbCarta1.Location = new System.Drawing.Point(13, 13);
+            this.pcbCarta1.Name = "pcbCarta1";
+            this.pcbCarta1.Size = new System.Drawing.Size(150, 216);
+            this.pcbCarta1.TabIndex = 1;
+            this.pcbCarta1.TabStop = false;
+            this.pcbCarta1.DoubleClick += new System.EventHandler(this.pcbCarta1_DoubleClick);
             // 
             // MãoManual
             // 
@@ -1923,14 +1923,10 @@
             this.Load += new System.EventHandler(this.Mão_Load);
             this.pnlIlhas.ResumeLayout(false);
             this.pnlVerIlhas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
@@ -1963,10 +1959,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogador1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

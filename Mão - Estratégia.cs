@@ -178,6 +178,7 @@ namespace BodeOfWar
                 EmJogo = false;
                 MessageBox.Show("O vencedor é " + txtVez.Text);
             }
+            MessageBox.Show(QuantidadeBodes().ToString());
         }
 
         /// <summary>
@@ -248,7 +249,7 @@ namespace BodeOfWar
             }
             else
             {
-                //jogador.Mao = jogador.Mao.Except(new Cartas[] { jogador.Mao[index] }).ToArray();
+                jogador.Mao.RemoveAt(index);
                 rodada++;
                 VerMesa();
                 panels[index].BringToFront();
@@ -443,6 +444,27 @@ namespace BodeOfWar
         }
 
         /// <summary>
+        /// Calcula quantidade de bodes na mão do jogador
+        /// </summary>
+        /// <returns>Quantidade de bodes na mão do jogador quando é chamada</returns>
+        private int QuantidadeBodes()
+        {
+            int QuantidadeBodes = 0;
+            for (int i = 0; i < jogador.Mao.Count; i++)
+            {
+                if (jogador.Mao[i] == null)
+                {
+
+                }
+                else
+                {
+                    QuantidadeBodes += jogador.Mao[i].bode;
+                }
+            }
+            return QuantidadeBodes;
+        }
+
+        /// <summary>
         /// Automação do jogo modo aleatório
         /// </summary>
         private void IniciarAutoRandom()
@@ -524,11 +546,6 @@ namespace BodeOfWar
         private void timer_Tick(object sender, EventArgs e)
         {
             IniciarAutoRandom();
-        }
-
-        private int QuantidadeBodes()
-        {
-            return 0;
         }
     }
 }
