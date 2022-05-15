@@ -44,7 +44,7 @@ namespace BodeOfWar
         List<PictureBox> ImagensJogadores;
 
         /// <summary>
-        /// Define o jogador
+        /// Define o jogador e inicializa partida
         /// </summary>
         /// <param name="user"></param>
         public MaoEstrategia(Jogador user)
@@ -55,11 +55,15 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Inicializa as listas na array partida.CartasPorJogador
+        /// 1. Inicializa as listas da array partida.CartasPorJogador
         /// 2. Define as listas imagens, bodes e ids
-        /// 3. Define as imagens das PictureBox da lista imagens baseado em cada jogador.Mao.imagem
-        /// 4. Define os text de cada Label da lista bodes baseado em cada jogador.Mao.bode
-        /// 5. Define os text de cada Label da lista ids baseado em cada jogador.Mao.id
+        /// 3. Define a label de nome do jogador
+        /// 4. Define as imagens das PictureBox da lista imagens baseado em cada jogador.Mao.imagem
+        /// 5. Define os text de cada Label da lista bodes baseado em cada jogador.Mao.bode
+        /// 6. Define os text de cada Label da lista ids baseado em cada jogador.Mao.id
+        /// 7. Popula a partida.IdJogadores
+        /// 8. Torna visível a mesma quantidade de PicturBoxes de imagem dos jogadores que a quantidade de jogadores na partida
+        /// 9. Define o ídice do jogador na lista de jogadores
         /// </summary>
         private void Mão_Load(object sender, EventArgs e)
         {
@@ -123,7 +127,10 @@ namespace BodeOfWar
             jogador.IndiceJogador = partida.idJogadores.IndexOf(jogador.Id);
         }
         /// <summary>
-        /// Atualiza as informações em txtVez, txtNarracao, txtJogadores e a partida.Mesa
+        /// 1. Atualiza as informações em txtVez, txtNarracao, txtJogadores
+        /// 2. Popula a partida.Mesa
+        /// 3. Chama a VerMesa() para mostrar cartas jogadas
+        /// 4. Verifica se já houve um vencedor
         /// </summary>
         private void AtualizarDetalhes()
         {
@@ -140,7 +147,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Joga uma carta baseada no índice da mesma na array em jogador.Mao
+        /// 1. Joga uma carta baseado no Id da mesma na classe
         /// 2. Incrementa a partida.rodada
         /// 3. Traz o painel atrás da carta para frente
         /// </summary>
@@ -168,7 +175,6 @@ namespace BodeOfWar
                 jogador.Mao.RemoveAt(indexCarta);
                 panels[jogador.MaoId.IndexOf(ID)].BringToFront();
                 partida.rodada++;
-                VerMesa();
                 AtualizarDetalhes();
                 return true;
             }
@@ -361,7 +367,10 @@ namespace BodeOfWar
             VerIlhas();
             BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Int32.Parse(textBox2.Text));
         }
-
+        
+        /// <summary>
+        /// Preciso comentar ainda
+        /// </summary>
         private void Analise()
         {
             if (partida.EmJogo == false)

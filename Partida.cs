@@ -144,6 +144,12 @@ namespace BodeOfWar
             }
         }
 
+        /// <summary>
+        /// Analisar se o jogador no índice pasasado venceu a partida anterior à atual ([rodada-1])
+        /// </summary>
+        /// <param name="IndiceJogador"></param>
+        /// <returns>true se o jogador no índice pasasado venceu a partida</returns>
+        /// <returns>false se o jogador no índice pasasado não venceu a partida</returns>
         public bool Venceu(int IndiceJogador)
         {
             List<int> CartasRodada = new List<int>();
