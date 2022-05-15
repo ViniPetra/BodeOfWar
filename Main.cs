@@ -15,7 +15,7 @@ namespace BodeOfWar
         //Array de todas as cartas do jogo
         public Cartas[] TodasCartas = new Cartas[50];
         //Array das cartas designadas
-        public Cartas[] MinhaMao = new Cartas[8];
+        public List<Cartas> MinhaMao = new List<Cartas>();
         //Definição do jogador
         public Jogador jogador = new Jogador();
 
@@ -156,6 +156,7 @@ namespace BodeOfWar
             {
                 btnAutomatico.Enabled = true;
                 btnManual.Enabled = true;
+                btnEstrategia.Enabled = true;
             }
         }
 
@@ -340,18 +341,16 @@ namespace BodeOfWar
                 Mao[i] = Int32.Parse(StringMao1[i]);
             }
 
-            //Criação da array de objetos apenas de cartas próprias
-            int count = 0;
+            //Criação da lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
                 for (int i = 0; i < TodasCartas.Length; i++)
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
-                        MinhaMao[count] = TodasCartas[i];
+                        MinhaMao.Add(TodasCartas[i]);
                     }
                 }
-                count++;
             }
 
             jogador.Mao = MinhaMao;
@@ -387,18 +386,16 @@ namespace BodeOfWar
                 Mao[i] = Int32.Parse(StringMao1[i]);
             }
 
-            //Criação da array de objetos apenas de cartas próprias
-            int count = 0;
+            //Criação da Lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
                 for (int i = 0; i < TodasCartas.Length; i++)
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
-                        MinhaMao[count] = TodasCartas[i];
+                        MinhaMao.Add(TodasCartas[i]);
                     }
                 }
-                count++;
             }
 
             jogador.Mao = MinhaMao;
@@ -434,18 +431,16 @@ namespace BodeOfWar
                 Mao[i] = Int32.Parse(StringMao1[i]);
             }
 
-            //Criação da array de objetos apenas de cartas próprias
-            int count = 0;
+            //Criação da Lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
                 for (int i = 0; i < TodasCartas.Length; i++)
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
-                        MinhaMao[count] = TodasCartas[i];
+                        MinhaMao.Add(TodasCartas[i]); ;
                     }
                 }
-                count++;
             }
 
             jogador.Mao = MinhaMao;

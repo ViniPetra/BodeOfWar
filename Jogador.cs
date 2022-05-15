@@ -8,7 +8,7 @@ namespace BodeOfWar
 {
     public class Jogador
     {
-        public Jogador(int id, string senha, int idpartida, Cartas[] mao, Cartas[] todascartas, string nome)
+        public Jogador(int id, string senha, int idpartida, List<Cartas> mao, Cartas[] todascartas, string nome)
         {
             Id = id;
             Senha = senha;
@@ -26,9 +26,8 @@ namespace BodeOfWar
         public int Id { get; set; }
         public string Senha { get; set; }
         public int idPartida { get; set; }
-        public Cartas[] Mao { get; set; }
+        public List<Cartas> Mao { get; set; }
         public Cartas[] TodasCartas { get; set; }
         public string Nome { get; set; }
-
     }
 }

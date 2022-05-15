@@ -525,7 +525,6 @@
             this.txtNarracao.ReadOnly = true;
             this.txtNarracao.Size = new System.Drawing.Size(133, 148);
             this.txtNarracao.TabIndex = 48;
-            this.txtNarracao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblJogadores
             // 
@@ -1716,7 +1715,6 @@
             this.pcbCarta8.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta8.TabIndex = 8;
             this.pcbCarta8.TabStop = false;
-            this.pcbCarta8.DoubleClick += new System.EventHandler(this.pcbCarta8_DoubleClick);
             // 
             // pcbCarta7
             // 
@@ -1725,7 +1723,6 @@
             this.pcbCarta7.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta7.TabIndex = 7;
             this.pcbCarta7.TabStop = false;
-            this.pcbCarta7.DoubleClick += new System.EventHandler(this.pcbCarta7_DoubleClick);
             // 
             // pcbCarta6
             // 
@@ -1734,7 +1731,6 @@
             this.pcbCarta6.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta6.TabIndex = 6;
             this.pcbCarta6.TabStop = false;
-            this.pcbCarta6.DoubleClick += new System.EventHandler(this.pcbCarta6_DoubleClick);
             // 
             // pcbCarta5
             // 
@@ -1743,7 +1739,6 @@
             this.pcbCarta5.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta5.TabIndex = 5;
             this.pcbCarta5.TabStop = false;
-            this.pcbCarta5.DoubleClick += new System.EventHandler(this.pcbCarta5_DoubleClick);
             // 
             // pcbCarta4
             // 
@@ -1752,7 +1747,6 @@
             this.pcbCarta4.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta4.TabIndex = 4;
             this.pcbCarta4.TabStop = false;
-            this.pcbCarta4.DoubleClick += new System.EventHandler(this.pcbCarta4_DoubleClick);
             // 
             // pcbCarta3
             // 
@@ -1761,7 +1755,6 @@
             this.pcbCarta3.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta3.TabIndex = 3;
             this.pcbCarta3.TabStop = false;
-            this.pcbCarta3.DoubleClick += new System.EventHandler(this.pcbCarta3_DoubleClick);
             // 
             // pcbCarta2
             // 
@@ -1770,7 +1763,6 @@
             this.pcbCarta2.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta2.TabIndex = 2;
             this.pcbCarta2.TabStop = false;
-            this.pcbCarta2.DoubleClick += new System.EventHandler(this.pcbCarta2_DoubleClick);
             // 
             // pcbCarta1
             // 
@@ -1779,7 +1771,6 @@
             this.pcbCarta1.Size = new System.Drawing.Size(150, 216);
             this.pcbCarta1.TabIndex = 1;
             this.pcbCarta1.TabStop = false;
-            this.pcbCarta1.DoubleClick += new System.EventHandler(this.pcbCarta1_DoubleClick);
             // 
             // MaoAuto
             // 
