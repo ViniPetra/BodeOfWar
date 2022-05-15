@@ -358,17 +358,6 @@ namespace BodeOfWar
             Analise();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Jogar(Int32.Parse(textBox1.Text));
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            VerIlhas();
-            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Int32.Parse(textBox2.Text));
-        }
-        
         /// <summary>
         /// Preciso comentar ainda
         /// </summary>
