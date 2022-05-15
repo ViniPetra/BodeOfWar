@@ -12,6 +12,8 @@ namespace BodeOfWar
 {
     public partial class MãoManual : Form
     {
+        bool EmJogo = true;
+
         int ilha1Global;
         int ilha2Global;
 
@@ -171,6 +173,11 @@ namespace BodeOfWar
             txtVez.Text = VerificarVez();
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             PopularMesa(rodada);
+            if (txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
+            {
+                EmJogo = false;
+                MessageBox.Show("O vencedor é " + txtVez.Text);
+            }
         }
 
         /// <summary>
