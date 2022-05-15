@@ -15,6 +15,7 @@ namespace BodeOfWar
         public Cartas[] TodasCartas { get; set; }
         public string Nome { get; set; }
         public List<int> MaoId { get; set; }
+        public int IndiceJogador { get; set; }
 
         public Jogador(int id, string senha, int idpartida, List<Cartas> mao, Cartas[] todascartas, string nome)
         {
@@ -82,6 +83,11 @@ namespace BodeOfWar
                 }
             }
             return QuantidadeBodes;
+        }
+
+        public bool Venceu(List<string> Mesa)
+        {
+            
         }
     }
 }

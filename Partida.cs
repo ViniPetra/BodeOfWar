@@ -134,12 +134,11 @@ namespace BodeOfWar
 
             foreach (string a in aux)
             {
-                if (!(this.Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
+                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
                 {
-                    this.Mesa.Add(a);
+                    Mesa.Add(a);
                 }
             }
         }
-
     }
 }

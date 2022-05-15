@@ -118,6 +118,15 @@ namespace BodeOfWar
             {
                 ImagensJogadores[i].Visible = true;
             }
+
+            foreach(int id in partida.idJogadores)
+            {
+                if(id == jogador.Id)
+                {
+                    jogador.IndiceJogador = partida.idJogadores
+                }
+            }
+
         }
 
         /// <summary>
@@ -334,11 +343,6 @@ namespace BodeOfWar
             }
         }
 
-        private bool Venceu()
-        {
-            return true;
-        }
-
         //Dinâmica dos botões
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
@@ -357,7 +361,7 @@ namespace BodeOfWar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Venceu().ToString());
+
         }
 
         private void button2_Click(object sender, EventArgs e)
