@@ -13,14 +13,15 @@ namespace BodeOfWar
         public List<string> Mesa { get; set; }
         public int[] idJogadores { get; set; }
         public List<int>[] CartasPorJogador { get; set; }
+        public int QntJogadores { get; set; }
 
         public Partida()
         {
             EmJogo = true;
             rodada = 0;
-            List<int>[] CartasPorJogador = new List<int>[4];
-            List<string> Mesa = new List<string>();
-            int[] idJogadores = new int[4];
+            CartasPorJogador = new List<int>[4];
+            Mesa = new List<string>();
+            idJogadores = new int[4];
         }
 
         /// <summary>
@@ -32,7 +33,7 @@ namespace BodeOfWar
             Jogadores = Jogadores.Replace("\r", "");
             string[] Players = Jogadores.Split('\n');
 
-            List<string> idJogadores = new List<string>();
+            List<string> auxidJogadores = new List<string>();
 
             foreach (string a in Players)
             {
@@ -40,13 +41,14 @@ namespace BodeOfWar
 
                 int[] auxInt = new int[aux.Length];
 
-                if (!(idJogadores.Contains(aux[0])) && !(aux[0] == "") && !(aux[0].StartsWith(" ")))
+                if (!(auxidJogadores.Contains(aux[0])) && !(aux[0] == "") && !(aux[0].StartsWith(" ")))
                 {
-                    idJogadores.Add((aux[0]));
+                    auxidJogadores.Add((aux[0]));
                 }
             }
 
-            this.idJogadores = idJogadores.Select(int.Parse).ToArray();
+            idJogadores = auxidJogadores.Select(int.Parse).ToArray();
+            QntJogadores = idJogadores.Count();
         }
 
         /// <summary>

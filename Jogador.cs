@@ -8,6 +8,14 @@ namespace BodeOfWar
 {
     public class Jogador
     {
+        public int Id { get; set; }
+        public string Senha { get; set; }
+        public int idPartida { get; set; }
+        public List<Cartas> Mao { get; set; }
+        public Cartas[] TodasCartas { get; set; }
+        public string Nome { get; set; }
+        public List<int> MaoId { get; set; }
+
         public Jogador(int id, string senha, int idpartida, List<Cartas> mao, Cartas[] todascartas, string nome)
         {
             Id = id;
@@ -22,14 +30,6 @@ namespace BodeOfWar
         {
             this.MaoId = new List<int>();
         }
-
-        public int Id { get; set; }
-        public string Senha { get; set; }
-        public int idPartida { get; set; }
-        public List<Cartas> Mao { get; set; }
-        public Cartas[] TodasCartas { get; set; }
-        public string Nome { get; set; }
-        public List<int> MaoId { get; set; }
 
         /// <summary>
         /// Calcula a menor carta na mão do jogador

@@ -8,14 +8,12 @@ namespace BodeOfWar
 {
     public partial class MaoEstrategia : Form
     {
-        bool EmJogo = true;
+        Jogador jogador;
+
+        Partida partida = new Partida();
 
         int ilha1Global;
         int ilha2Global;
-
-        Jogador jogador = new Jogador();
-
-        Partida partida = new Partida();
 
         List<PictureBox> imagens;
         List<Label> bodes;
@@ -51,12 +49,12 @@ namespace BodeOfWar
         /// <param name="user"></param>
         public MaoEstrategia(Jogador user)
         {
-            InitializeComponent();
             jogador = user;
+            InitializeComponent();
         }
 
         /// <summary>
-        /// 1. Inicializa as listas na array CartasPorJogador
+        /// 1. Inicializa as listas na array partida.CartasPorJogador
         /// 2. Define as listas imagens, bodes e ids
         /// 3. Define as imagens das PictureBox da lista imagens baseado em cada jogador.Mao.imagem
         /// 4. Define os text de cada Label da lista bodes baseado em cada jogador.Mao.bode
@@ -66,15 +64,16 @@ namespace BodeOfWar
         {
             AtualizarDetalhes();
 
-            partida.CartasPorJogador[0] = new List<int>();
-            partida.CartasPorJogador[1] = new List<int>();
-            partida.CartasPorJogador[2] = new List<int>();
-            partida.CartasPorJogador[3] = new List<int>();
+            //Inicializa as listas na array partida.CartasPorJogador
+            for (int i = 0; i < partida.QntJogadores-1; i++)
+            {
+                partida.CartasPorJogador[i] = new List<int>();
+            }
 
             //Seu nome na tela!
             lblJogador.Text = "Você: " + jogador.Nome;
 
-            //Popular a MaoId
+            //Popular a Jogador.MaoId
             for (int i = 0; i < jogador.Mao.Count; i++)
             {
                 jogador.MaoId.Add(jogador.Mao[i].id);
@@ -115,7 +114,7 @@ namespace BodeOfWar
             ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };
 
             //Mostrando as imagens
-            for (int i = 0; i <= partida.idJogadores.Count() - 1; i++)
+            for (int i = 0; i <= partida.QntJogadores - 1; i++)
             {
                 ImagensJogadores[i].Visible = true;
             }
@@ -132,7 +131,7 @@ namespace BodeOfWar
             partida.PopularMesa(partida.rodada, jogador.idPartida);
             if (txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
             {
-                EmJogo = false;
+                partida.EmJogo = false;
                 MessageBox.Show("O vencedor é " + txtVez.Text);
             }
         }
