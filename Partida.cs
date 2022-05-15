@@ -143,5 +143,25 @@ namespace BodeOfWar
                 }
             }
         }
+
+        public bool Venceu(int IndiceJogador)
+        {
+            List<int> CartasRodada = new List<int>();
+            for(int i = 0; i <= QntJogadores-1; i++)
+            {
+                CartasRodada.Add(CartasPorJogador[i][rodada-1]);
+            }
+
+            int indexVencedor = CartasRodada.IndexOf(CartasRodada.Max());
+
+            if(indexVencedor == IndiceJogador)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

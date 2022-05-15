@@ -84,10 +84,5 @@ namespace BodeOfWar
             }
             return QuantidadeBodes;
         }
-
-        public bool Venceu(List<string> Mesa)
-        {
-            return true;
-        }
     }
 }

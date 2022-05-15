@@ -131,6 +131,7 @@ namespace BodeOfWar
             txtVez.Text = partida.VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             partida.PopularMesa(partida.rodada, jogador.idPartida);
+            VerMesa();
             if (txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
             {
                 partida.EmJogo = false;
@@ -202,8 +203,6 @@ namespace BodeOfWar
         /// </summary>
         private void VerMesa()
         {
-            AtualizarDetalhes();
-
             /// 1
             //Compara cada item na partida.Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em partida.idJogadores se a carta já não estiver adicionada
             foreach (string a in partida.Mesa)
@@ -354,7 +353,7 @@ namespace BodeOfWar
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(partida.Venceu(jogador.IndiceJogador).ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -366,6 +365,11 @@ namespace BodeOfWar
         {
             VerIlhas();
             BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Int32.Parse(textBox2.Text));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            VerMesa();
         }
     }
 }
