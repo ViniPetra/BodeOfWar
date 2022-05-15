@@ -30,5 +30,58 @@ namespace BodeOfWar
         public Cartas[] TodasCartas { get; set; }
         public string Nome { get; set; }
         public List<int> MaoId { get; set; }
+
+        /// <summary>
+        /// Calcula a menor carta na mão do jogador
+        /// </summary>
+        /// <returns>Id da menor carta</returns>
+        public int MenorCarta()
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            int Min = aux.Min();
+            return Min;
+        }
+
+        /// <summary>
+        /// Calcula a maior carta na mão do jogador
+        /// </summary>
+        /// <returns>Id da maior carta</returns>
+        public int MaiorCarta()
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            int max = aux.Max();
+            return max;
+        }
+
+        /// <summary>
+        /// Calcula quantidade de bodes na mão do jogador
+        /// </summary>
+        /// <returns>Quantidade de bodes na mão do jogador quando é chamada</returns>
+        public int QuantidadeBodes()
+        {
+            int QuantidadeBodes = 0;
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                if (this.Mao[i] == null)
+                {
+
+                }
+                else
+                {
+                    QuantidadeBodes += this.Mao[i].bode;
+                }
+            }
+            return QuantidadeBodes;
+        }
     }
 }

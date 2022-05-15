@@ -13,19 +13,9 @@ namespace BodeOfWar
         int ilha1Global;
         int ilha2Global;
 
-        int rodada = 0;
-
-        public List<string> Mesa = new List<string>();
-
-        public List<string> idJogadores = new List<string>();
-
-        public int[] idJogadoresInt = new int[4];
-
-        public List<int>[] CartasPorJogador = new List<int>[4];
-
-        List<int> CartasJogadas = new List<int>();
-
         Jogador jogador = new Jogador();
+
+        Partida partida = new Partida();
 
         List<PictureBox> imagens;
         List<Label> bodes;
@@ -76,10 +66,10 @@ namespace BodeOfWar
         {
             AtualizarDetalhes();
 
-            CartasPorJogador[0] = new List<int>();
-            CartasPorJogador[1] = new List<int>();
-            CartasPorJogador[2] = new List<int>();
-            CartasPorJogador[3] = new List<int>();
+            partida.CartasPorJogador[0] = new List<int>();
+            partida.CartasPorJogador[1] = new List<int>();
+            partida.CartasPorJogador[2] = new List<int>();
+            partida.CartasPorJogador[3] = new List<int>();
 
             //Seu nome na tela!
             lblJogador.Text = "Você: " + jogador.Nome;
@@ -119,67 +109,27 @@ namespace BodeOfWar
                 count++;
             }
 
-            PopularJogadores();
+            partida.PopularJogadores(jogador.idPartida);
 
             //Lista de PictureBoxes dos jogadores
             ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };
 
             //Mostrando as imagens
-            for (int i = 0; i <= idJogadores.Count() - 1; i++)
+            for (int i = 0; i <= partida.idJogadores.Count() - 1; i++)
             {
                 ImagensJogadores[i].Visible = true;
             }
         }
 
         /// <summary>
-        /// Atualiza o txtListarJogadores com o retorno de BodeOfWarServer.ListarJogadores
-        /// </summary>
-        private void ListarJogadores()
-        {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
-            if (Jogadores == "")
-            {
-                Jogadores = "Partida vazia";
-            }
-
-            Jogadores = Jogadores.Replace(",", " - ");
-
-            txtListarJogadores.Text = Jogadores;
-        }
-
-        /// <summary>
-        /// Função auxiliar para popular a array idJogadoresInt
-        /// </summary>
-        private void PopularJogadores()
-        {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
-            Jogadores = Jogadores.Replace("\r", "");
-            string[] Players = Jogadores.Split('\n');
-
-            foreach (string a in Players)
-            {
-                string[] aux = a.Split(',');
-
-                int[] auxInt = new int[aux.Length];
-
-                if (!(idJogadores.Contains(aux[0])) && !(aux[0] == "") && !(aux[0].StartsWith(" ")))
-                {
-                    idJogadores.Add((aux[0]));
-                }
-            }
-
-            idJogadoresInt = idJogadores.Select(int.Parse).ToArray();
-        }
-
-        /// <summary>
-        /// Atualiza as informações em txtVez, txtNarracao, txtJogadores e a mesa
+        /// Atualiza as informações em txtVez, txtNarracao, txtJogadores e a partida.Mesa
         /// </summary>
         private void AtualizarDetalhes()
         {
-            ListarJogadores();
-            txtVez.Text = VerificarVez();
+            txtListarJogadores.Text = partida.ListarJogadores(jogador.idPartida);
+            txtVez.Text = partida.VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-            PopularMesa(rodada);
+            partida.PopularMesa(partida.rodada, jogador.idPartida);
             if (txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
             {
                 EmJogo = false;
@@ -188,58 +138,8 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
-        /// </summary>
-        /// <returns>Nome do jogador que deve atuar</returns>
-        private string VerificarVez()
-        {
-            string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
-
-            //Gerenciamento de erros
-            if (vez.Contains("ERRO:Partida não está em jogo"))
-            {
-                nome = "Partida não iniciada";
-                return nome;
-            }
-            if (vez.Contains("ERRO"))
-            {
-                MessageBox.Show(vez, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return vez;
-            }
-
-            if (jogadores.Contains("ERRO"))
-            {
-                MessageBox.Show(jogadores, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return jogadores;
-            }
-
-            //Mostra apenas o nome do jogador da vez
-            jogadores = jogadores.Replace("\r", "");
-            jogadores = jogadores.Replace("\n", ",");
-            string[] Jogadores = jogadores.Split(',');
-
-            string[] Vez = vez.Split(',');
-
-            //Vez[0] = id
-            //Vez[1] = nome
-            string x = Vez[1];
-
-            //Comparação dos retornos
-            for (int i = 0; i < Jogadores.Length; i++)
-            {
-                if (Jogadores[i] == x)
-                {
-                    nome = Jogadores[i + 1];
-                }
-            }
-            return nome;
-        }
-
-        /// <summary>
         /// 1. Joga uma carta baseada no índice da mesma na array em jogador.Mao
-        /// 2. Incrementa a rodada
+        /// 2. Incrementa a partida.rodada
         /// 3. Traz o painel atrás da carta para frente
         /// </summary>
         /// <param name="ID"></param>
@@ -265,7 +165,7 @@ namespace BodeOfWar
                 }
                 jogador.Mao.RemoveAt(indexCarta);
                 panels[jogador.MaoId.IndexOf(ID)].BringToFront();
-                rodada++;
+                partida.rodada++;
                 VerMesa();
                 AtualizarDetalhes();
                 return true;
@@ -291,29 +191,6 @@ namespace BodeOfWar
             }
         }
 
-        /// <summary>
-        /// Popula a lista Mesa com o retorno tratado e BodeOfWar.VerificarMesa
-        /// </summary>
-        /// <param name="rodada"></param>
-        private void PopularMesa(int rodada)
-        {
-            string[] aux;
-
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
-
-            ret = ret.Replace("\r", "");
-            aux = ret.Split('\n');
-
-            foreach (string a in aux)
-            {
-                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
-                {
-                    Mesa.Add(a);
-                }
-            }
-        }
-
-
         //ATENÇÃO -> O código abaixo é o trecho que mais deu trabalho e eu tenho maior orgulho - Vinicius Petratti
 
         /// <summary>
@@ -327,21 +204,21 @@ namespace BodeOfWar
             AtualizarDetalhes();
 
             /// 1
-            //Compara cada item na Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em idJogadoresInt se a carta já não estiver adicionada
-            foreach (string a in Mesa)
+            //Compara cada item na partida.Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em partida.idJogadores se a carta já não estiver adicionada
+            foreach (string a in partida.Mesa)
             {
                 string[] b = a.Split(',');
 
                 int id = Int32.Parse(b[0]);
                 int carta = Int32.Parse(b[1]);
 
-                foreach (int index in idJogadoresInt)
+                foreach (int index in partida.idJogadores)
                 {
                     if (index == id)
                     {
-                        if (!(CartasPorJogador[Array.IndexOf<int>(idJogadoresInt, id)].Contains(carta)))
+                        if (!(partida.CartasPorJogador[Array.IndexOf<int>(partida.idJogadores, id)].Contains(carta)))
                         {
-                            CartasPorJogador[Array.IndexOf<int>(idJogadoresInt, id)].Add(carta);
+                            partida.CartasPorJogador[Array.IndexOf<int>(partida.idJogadores, id)].Add(carta);
                         }
                     }
                 }
@@ -387,9 +264,9 @@ namespace BodeOfWar
             {
                 foreach (PictureBox p in l)
                 {
-                    foreach (int cartas in CartasPorJogador[count])
+                    foreach (int cartas in partida.CartasPorJogador[count])
                     {
-                        if (l.IndexOf(p) == CartasPorJogador[count].IndexOf(cartas))
+                        if (l.IndexOf(p) == partida.CartasPorJogador[count].IndexOf(cartas))
                         {
                             foreach (Cartas carta in jogador.TodasCartas)
                             {
@@ -414,9 +291,9 @@ namespace BodeOfWar
             {
                 foreach (Label l in label)
                 {
-                    foreach (int cartas in CartasPorJogador[count])
+                    foreach (int cartas in partida.CartasPorJogador[count])
                     {
-                        if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
+                        if (label.IndexOf(l) == partida.CartasPorJogador[count].IndexOf(cartas))
                         {
                             foreach (Cartas carta in jogador.TodasCartas)
                             {
@@ -440,9 +317,9 @@ namespace BodeOfWar
             {
                 foreach (Label l in label)
                 {
-                    foreach (int cartas in CartasPorJogador[count])
+                    foreach (int cartas in partida.CartasPorJogador[count])
                     {
-                        if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
+                        if (label.IndexOf(l) == partida.CartasPorJogador[count].IndexOf(cartas))
                         {
                             foreach (Cartas carta in jogador.TodasCartas)
                             {
@@ -458,125 +335,9 @@ namespace BodeOfWar
             }
         }
 
-        /// <summary>
-        /// Calcula quantidade de bodes na mão do jogador
-        /// </summary>
-        /// <returns>Quantidade de bodes na mão do jogador quando é chamada</returns>
-        private int QuantidadeBodes()
+        private bool Venceu()
         {
-            int QuantidadeBodes = 0;
-            for (int i = 0; i < jogador.Mao.Count; i++)
-            {
-                if (jogador.Mao[i] == null)
-                {
-
-                }
-                else
-                {
-                    QuantidadeBodes += jogador.Mao[i].bode;
-                }
-            }
-            return QuantidadeBodes;
-        }
-
-        /// <summary>
-        /// Calcula a maior carta na mão do jogador
-        /// </summary>
-        /// <returns>Id da maior carta</returns>
-        private int MaiorCarta()
-        {
-            List<int> aux = new List<int>();
-            for(int i = 0; i < jogador.Mao.Count; i++)
-            {
-                aux.Add(jogador.Mao[i].id);
-            }
-
-            int max = aux.Max();
-            return max;
-        }
-
-        /// <summary>
-        /// Calcula a menor carta na mão do jogador
-        /// </summary>
-        /// <returns>Id da menor carta</returns>
-        private int MenorCarta()
-        {
-            List<int> aux = new List<int>();
-            for (int i = 0; i < jogador.Mao.Count; i++)
-            {
-                aux.Add(jogador.Mao[i].id);
-            }
-
-            int Min = aux.Min();
-            return Min;
-        }
-
-        /// <summary>
-        /// Automação do jogo modo aleatório
-        /// </summary>
-        private void IniciarAutoRandom()
-        {
-            if (EmJogo == false)
-            {
-                timer.Stop();
-                return;
-            }
-
-            bool loop = true;
-            timer.Stop();
-            AtualizarDetalhes();
-
-            //Verifica se é a vez deste jogador
-            if (VerificarVez() == jogador.Nome)
-            {
-                string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
-
-                //Verifica se é hora de escolher ilha
-                if (ret[3].Contains("I"))
-                {
-                    VerIlhas();
-
-                    int random = new Random().Next(1, 2);
-
-                    //Escolher uma ilha aleatória
-                    if (random == 1)
-                    {
-                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha1Global);
-                        AtualizarDetalhes();
-                        timer.Start();
-                    }
-
-                    if (random == 2)
-                    {
-                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, ilha2Global);
-                        AtualizarDetalhes();
-                        timer.Start();
-                    }
-                }
-
-                //Verifica se é hora de jogar uma carta
-                if (ret[3].Contains("B"))
-                {
-                    int rand = new Random().Next(0, 8);
-
-                    while (loop)
-                    {
-                        ///Joga uma carta aleatória se o número gerado não está na lista de cartas jogadas
-                        if (!(CartasJogadas.Contains(rand)))
-                        {
-                            Jogar(rand);
-                            CartasJogadas.Add(rand);
-                            timer.Start();
-                            loop = false;
-                        }
-                        else
-                        {
-                            rand = new Random().Next(0, 8);
-                        }
-                    }
-                }
-            }
-            timer.Start();
+            return true;
         }
 
         //Dinâmica dos botões
@@ -592,7 +353,23 @@ namespace BodeOfWar
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            IniciarAutoRandom();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Venceu().ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Jogar(Int32.Parse(textBox1.Text));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VerIlhas();
+            BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Int32.Parse(textBox2.Text));
         }
     }
 }

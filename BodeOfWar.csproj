@@ -103,6 +103,7 @@
     <Compile Include="Mão - Manual.Designer.cs">
       <DependentUpon>Mão - Manual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partida.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Mão - Auto.resx">
