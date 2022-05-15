@@ -103,6 +103,7 @@
     <Compile Include="Mão - Manual.Designer.cs">
       <DependentUpon>Mão - Manual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partida.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Mão - Auto.resx">
@@ -178,6 +179,7 @@
     <None Include="OutrasImagens\Gif12.gif" />
     <None Include="OutrasImagens\Gif13.gif" />
     <None Include="OutrasImagens\Gif14.gif" />
+    <None Include="OutrasImagens\J3_v2.gif" />
     <Content Include="OutrasImagens\maxresdefault.jpg" />
     <None Include="OutrasImagens\PartidaIndisponivel.png" />
     <Content Include="OutrasImagens\User.jpg" />

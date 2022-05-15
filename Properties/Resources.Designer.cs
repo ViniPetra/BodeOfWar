@@ -363,6 +363,16 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap J3_v2 {
+            get {
+                object obj = ResourceManager.GetObject("J3_v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap J3a {
             get {
                 object obj = ResourceManager.GetObject("J3a", resourceCulture);

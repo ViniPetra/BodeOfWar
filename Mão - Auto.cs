@@ -510,46 +510,6 @@ namespace BodeOfWar
         }
 
         //Dinâmica dos botões
-        private void pcbCarta1_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(0);
-        }
-
-        private void pcbCarta2_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(1);
-        }
-
-        private void pcbCarta3_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(2);
-        }
-
-        private void pcbCarta4_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(3);
-        }
-
-        private void pcbCarta5_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(4);
-        }
-
-        private void pcbCarta6_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(5);
-        }
-
-        private void pcbCarta7_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(6);
-        }
-
-        private void pcbCarta8_DoubleClick(object sender, EventArgs e)
-        {
-            Jogar(7);
-        }
-
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
             AtualizarDetalhes();
