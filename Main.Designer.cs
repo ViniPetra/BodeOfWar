@@ -1080,6 +1080,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(716, 559);
+            this.Controls.Add(this.pnlListarPartidas2);
+            this.Controls.Add(this.pnlListarPartidas);
+            this.Controls.Add(this.pnlDetalhesPartida);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlPartidaIndisponivel);
             this.Controls.Add(this.pnlTutorial6);
@@ -1088,10 +1091,7 @@
             this.Controls.Add(this.pnlTutorial3);
             this.Controls.Add(this.pnlTutorial2);
             this.Controls.Add(this.pnlTutorial1);
-            this.Controls.Add(this.pnlListarPartidas);
-            this.Controls.Add(this.pnlDetalhesPartida);
             this.Controls.Add(this.pnlCriarPartida);
-            this.Controls.Add(this.pnlListarPartidas2);
             this.Controls.Add(this.pnlListarCriar);
             this.Controls.Add(this.pnlDentroPartida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

@@ -525,6 +525,7 @@
             this.txtNarracao.ReadOnly = true;
             this.txtNarracao.Size = new System.Drawing.Size(133, 148);
             this.txtNarracao.TabIndex = 48;
+            this.txtNarracao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblJogadores
             // 

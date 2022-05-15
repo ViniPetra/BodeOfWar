@@ -135,6 +135,8 @@ namespace BodeOfWar
                 Jogadores = "Partida vazia";
             }
 
+            Jogadores = Jogadores.Replace(",", " - ");
+            
             txtListarJogadores.Text = Jogadores;
         }
 
