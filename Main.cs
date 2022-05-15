@@ -408,6 +408,53 @@ namespace BodeOfWar
             FormMaoAuto.ShowDialog();
         }
 
+        /// <summary>
+        /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
+        /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
+        /// 3. Chama o formulário de Mão com a estratégia do grupo
+        /// </summary>
+        private void MostrarMaoEstrategia()
+        {
+            int id = jogador.Id;
+            string senha = jogador.Senha;
+
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+
+            //Parse no retorno e criação da array de ids das cartas da mão
+            //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
+            StringMao = StringMao.Replace("\r", "");
+            StringMao = StringMao.Substring(0, StringMao.Length - 1);
+            StringMao = StringMao.Replace("\n", ",");
+            string[] StringMao1 = StringMao.Split(',');
+
+            //Conversão da array de ids em int
+            int[] Mao = new int[StringMao1.Length];
+            for (int i = 0; i < StringMao1.Length; i++)
+            {
+                Mao[i] = Int32.Parse(StringMao1[i]);
+            }
+
+            //Criação da array de objetos apenas de cartas próprias
+            int count = 0;
+            for (int j = 0; j < Mao.Length; j++)
+            {
+                for (int i = 0; i < TodasCartas.Length; i++)
+                {
+                    if (TodasCartas[i].id == Mao[j])
+                    {
+                        MinhaMao[count] = TodasCartas[i];
+                    }
+                }
+                count++;
+            }
+
+            jogador.Mao = MinhaMao;
+
+            //Chamar a janela do jogo automático
+            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(jogador);
+            FormMaoEstrategia.ShowDialog();
+        }
+
         //Duplo clique na partida
         private void lstPartidas_DoubleClick(object sender, EventArgs e)
         {
@@ -497,7 +544,13 @@ namespace BodeOfWar
             MostrarMaoAutomatica();
         }
 
-        
+        //Abrir uma nvoa janela para mostrar suas cartas com a estratégia do grupo
+        private void btnEstrategia_Click(object sender, EventArgs e)
+        {
+            MostrarMaoEstrategia();
+        }
+
+
         //Dinâmica UI
 
         /// <summary>
