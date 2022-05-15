@@ -87,7 +87,7 @@ namespace BodeOfWar
 
         public bool Venceu(List<string> Mesa)
         {
-            
+            return true;
         }
     }
 }

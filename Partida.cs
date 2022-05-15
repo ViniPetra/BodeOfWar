@@ -11,7 +11,7 @@ namespace BodeOfWar
         public bool EmJogo { get; set; }
         public int rodada { get; set; }
         public List<string> Mesa { get; set; }
-        public int[] idJogadores { get; set; }
+        public List<int> idJogadores { get; set; }
         public List<int>[] CartasPorJogador { get; set; }
         public int QntJogadores { get; set; }
 
@@ -21,7 +21,7 @@ namespace BodeOfWar
             rodada = 0;
             CartasPorJogador = new List<int>[4];
             Mesa = new List<string>();
-            idJogadores = new int[4];
+            idJogadores = new List<int>();
         }
 
         /// <summary>
@@ -47,7 +47,10 @@ namespace BodeOfWar
                 }
             }
 
-            idJogadores = auxidJogadores.Select(int.Parse).ToArray();
+            foreach(string a in auxidJogadores)
+            {
+                idJogadores.Add(Int32.Parse(a));
+            }
             QntJogadores = idJogadores.Count();
         }
 

@@ -65,7 +65,7 @@ namespace BodeOfWar
             AtualizarDetalhes();
 
             //Inicializa as listas na array partida.CartasPorJogador
-            for (int i = 0; i < partida.QntJogadores-1; i++)
+            for (int i = 0; i < partida.QntJogadores - 1; i++)
             {
                 partida.CartasPorJogador[i] = new List<int>();
             }
@@ -119,16 +119,8 @@ namespace BodeOfWar
                 ImagensJogadores[i].Visible = true;
             }
 
-            foreach(int id in partida.idJogadores)
-            {
-                if(id == jogador.Id)
-                {
-                    jogador.IndiceJogador = partida.idJogadores
-                }
-            }
-
+            jogador.IndiceJogador = partida.idJogadores.IndexOf(jogador.Id);
         }
-
         /// <summary>
         /// Atualiza as informações em txtVez, txtNarracao, txtJogadores e a partida.Mesa
         /// </summary>
@@ -224,9 +216,9 @@ namespace BodeOfWar
                 {
                     if (index == id)
                     {
-                        if (!(partida.CartasPorJogador[Array.IndexOf<int>(partida.idJogadores, id)].Contains(carta)))
+                        if (!(partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Contains(carta)))
                         {
-                            partida.CartasPorJogador[Array.IndexOf<int>(partida.idJogadores, id)].Add(carta);
+                            partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Add(carta);
                         }
                     }
                 }
