@@ -142,6 +142,7 @@ namespace BodeOfWar
             if (txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
             {
                 partida.EmJogo = false;
+                timer.Stop();
                 MessageBox.Show("O vencedor é " + txtVez.Text);
             }
         }
@@ -372,13 +373,7 @@ namespace BodeOfWar
         /// Preciso comentar ainda
         /// </summary>
         private void Analise()
-        {
-            if (partida.EmJogo == false)
-            {
-                timer.Stop();
-                return;
-            }
-
+        { 
             timer.Stop();
 
             AtualizarDetalhes();
