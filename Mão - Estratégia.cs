@@ -348,12 +348,7 @@ namespace BodeOfWar
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(partida.Venceu(jogador.IndiceJogador).ToString());
+            Analise();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -367,9 +362,74 @@ namespace BodeOfWar
             BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Int32.Parse(textBox2.Text));
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Analise()
         {
-            VerMesa();
+            if (partida.EmJogo == false)
+            {
+                timer.Stop();
+                return;
+            }
+
+            timer.Stop();
+
+            AtualizarDetalhes();
+
+            //Verifica se é a vez deste jogador
+            if (partida.VerificarVez(jogador.idPartida) == jogador.Nome)
+            {
+                string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+
+                //Verifica se é hora de escolher ilha
+                if (ret[3].Contains("I"))
+                {
+                    if (partida.Venceu(jogador.Id)) //nucna vai ser true pq escolhe ilha quem perde
+                    {
+                        VerIlhas();
+
+                        //Escolher maior ilha
+                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Max(ilha1Global, ilha2Global));
+                        AtualizarDetalhes();
+                        timer.Start();
+                    }
+                    else
+                    {
+                        VerIlhas();
+
+                        //Escolher menor ilha
+                        BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Min(ilha1Global, ilha2Global));
+                        AtualizarDetalhes();
+                        timer.Start();
+                    }
+                }
+
+                //Verifica se é hora de jogar uma carta
+                if (ret[3].Contains("B"))
+                {
+                    int bodes = jogador.QuantidadeBodes();
+
+                    if (bodes <= 9)
+                    {
+                        Jogar(jogador.MaiorCarta());
+                        timer.Start();
+                    }
+                    if (bodes > 9 || bodes <= 15)
+                    {
+                        Jogar(jogador.MenorCarta());
+                        timer.Start();
+                    }
+                    if (bodes > 15 || bodes <= 20)
+                    {
+                        Jogar(jogador.MenorCarta());
+                        timer.Start();
+                    }
+                    if (bodes > 20)
+                    {
+                        Jogar(jogador.MenorCarta());
+                        timer.Start();
+                    }
+                }
+            }
+            timer.Start();
         }
     }
 }
