@@ -81,7 +81,14 @@ namespace BodeOfWar
             CartasPorJogador[2] = new List<int>();
             CartasPorJogador[3] = new List<int>();
 
+            //Seu nome na tela!
             lblJogador.Text = "Você: " + jogador.Nome;
+
+            //Popular a MaoId
+            for (int i = 0; i < jogador.Mao.Count; i++)
+            {
+                jogador.MaoId.Add(jogador.Mao[i].id);
+            }
 
             //Criação de listas com todas as PictureBoxes e Labels do formulário
             imagens = new List<PictureBox>() { pcbCarta1, pcbCarta2, pcbCarta3, pcbCarta4, pcbCarta5, pcbCarta6, pcbCarta7, pcbCarta8 };
@@ -178,7 +185,6 @@ namespace BodeOfWar
                 EmJogo = false;
                 MessageBox.Show("O vencedor é " + txtVez.Text);
             }
-            MessageBox.Show(QuantidadeBodes().ToString());
         }
 
         /// <summary>
@@ -236,12 +242,12 @@ namespace BodeOfWar
         /// 2. Incrementa a rodada
         /// 3. Traz o painel atrás da carta para frente
         /// </summary>
-        /// <param name="index"></param>
+        /// <param name="ID"></param>
         /// <returns>true se foi possível jogar e false se não foi possível jogar</returns>
-        private bool Jogar(int index)
+        private bool Jogar(int ID)
         {
             panels = new Panel[8] { pnlCarta1, pnlCarta2, pnlCarta3, pnlCarta4, pnlCarta5, pnlCarta6, pnlCarta7, pnlCarta8 };
-            string ret = BodeOfWarServer.Jogo.Jogar(jogador.Id, jogador.Senha, jogador.Mao[index].id);
+            string ret = BodeOfWarServer.Jogo.Jogar(jogador.Id, jogador.Senha, ID);
             if (ret.StartsWith("ERRO"))
             {
                 MessageBox.Show(ret);
@@ -249,10 +255,19 @@ namespace BodeOfWar
             }
             else
             {
-                jogador.Mao.RemoveAt(index);
+                int indexCarta = -1;
+                foreach(Cartas carta in jogador.Mao)
+                {
+                    if(carta.id == ID)
+                    {
+                        indexCarta = jogador.Mao.IndexOf(carta);
+                    }
+                }
+                jogador.Mao.RemoveAt(indexCarta);
+                panels[jogador.MaoId.IndexOf(ID)].BringToFront();
                 rodada++;
                 VerMesa();
-                panels[index].BringToFront();
+                AtualizarDetalhes();
                 return true;
             }
         }
@@ -462,6 +477,38 @@ namespace BodeOfWar
                 }
             }
             return QuantidadeBodes;
+        }
+
+        /// <summary>
+        /// Calcula a maior carta na mão do jogador
+        /// </summary>
+        /// <returns>Id da maior carta</returns>
+        private int MaiorCarta()
+        {
+            List<int> aux = new List<int>();
+            for(int i = 0; i < jogador.Mao.Count; i++)
+            {
+                aux.Add(jogador.Mao[i].id);
+            }
+
+            int max = aux.Max();
+            return max;
+        }
+
+        /// <summary>
+        /// Calcula a menor carta na mão do jogador
+        /// </summary>
+        /// <returns>Id da menor carta</returns>
+        private int MenorCarta()
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < jogador.Mao.Count; i++)
+            {
+                aux.Add(jogador.Mao[i].id);
+            }
+
+            int Min = aux.Min();
+            return Min;
         }
 
         /// <summary>

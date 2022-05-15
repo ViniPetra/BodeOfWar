@@ -20,7 +20,7 @@ namespace BodeOfWar
 
         public Jogador()
         {
-
+            this.MaoId = new List<int>();
         }
 
         public int Id { get; set; }
@@ -29,5 +29,6 @@ namespace BodeOfWar
         public List<Cartas> Mao { get; set; }
         public Cartas[] TodasCartas { get; set; }
         public string Nome { get; set; }
+        public List<int> MaoId { get; set; }
     }
 }
