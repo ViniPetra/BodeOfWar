@@ -19,9 +19,9 @@ namespace BodeOfWar
         {
             EmJogo = true;
             rodada = 0;
-            CartasPorJogador = new List<int>[4];
             Mesa = new List<string>();
             idJogadores = new List<int>();
+            CartasPorJogador = new List<int>[4];
         }
 
         /// <summary>

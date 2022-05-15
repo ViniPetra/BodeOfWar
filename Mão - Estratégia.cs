@@ -10,7 +10,7 @@ namespace BodeOfWar
     {
         Jogador jogador;
 
-        Partida partida = new Partida();
+        Partida partida;
 
         int ilha1Global;
         int ilha2Global;
@@ -50,6 +50,7 @@ namespace BodeOfWar
         public MaoEstrategia(Jogador user)
         {
             jogador = user;
+            partida = new Partida();
             InitializeComponent();
         }
 
@@ -65,10 +66,10 @@ namespace BodeOfWar
             AtualizarDetalhes();
 
             //Inicializa as listas na array partida.CartasPorJogador
-            for (int i = 0; i < partida.QntJogadores - 1; i++)
-            {
-                partida.CartasPorJogador[i] = new List<int>();
-            }
+            partida.CartasPorJogador[0] = new List<int>();
+            partida.CartasPorJogador[1] = new List<int>();
+            partida.CartasPorJogador[2] = new List<int>();
+            partida.CartasPorJogador[3] = new List<int>();
 
             //Seu nome na tela!
             lblJogador.Text = "Você: " + jogador.Nome;
