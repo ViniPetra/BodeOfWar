@@ -169,5 +169,29 @@ namespace BodeOfWar
                 return false;
             }
         }
+
+        /// <summary>
+        /// Verifica tamanho atual da ilha
+        /// </summary>
+        /// <param name="idJogador"></param>
+        /// <returns>tamanho atual da ilha</returns>
+        public int TamanhoIlha(int idJogador)
+        {
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idJogador);
+            ret = ret.Replace("\r", "");
+            string[] aux = ret.Split('\n');
+
+            if (aux[0] == "" || aux[0] == " " || aux[0] == null)
+            {
+                return 0;
+            }
+            string tamanhoString = aux[0];
+            tamanhoString = tamanhoString.Replace("\n", "");
+            tamanhoString = tamanhoString.Replace("I", "");
+
+            int tamanho = Int32.Parse(tamanhoString);
+
+            return tamanho;
+        }
     }
 }

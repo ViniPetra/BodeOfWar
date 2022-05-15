@@ -386,7 +386,8 @@ namespace BodeOfWar
                 //Verifica se é hora de escolher ilha
                 if (ret[3].Contains("I"))
                 {
-                    if (partida.Venceu(jogador.Id)) //nucna vai ser true pq escolhe ilha quem perde
+                    int bodes = jogador.BodesComprados();
+                    if (bodes > partida.TamanhoIlha(jogador.idPartida))
                     {
                         VerIlhas();
 
@@ -409,27 +410,39 @@ namespace BodeOfWar
                 //Verifica se é hora de jogar uma carta
                 if (ret[3].Contains("B"))
                 {
-                    int bodes = jogador.QuantidadeBodes();
+                    //Se for a primeira rodada
+                    if ((partida.rodada + 1) == 1)
+                    {
+                        int rand = new Random().Next(0, 7);
+                        Jogar(jogador.Mao[rand].id);
+                    }
+                    else
+                    {
+                        int bodes = jogador.BodesComprados();
+                        int tamanhoIlha = partida.TamanhoIlha(jogador.idPartida);
 
-                    if (bodes <= 9)
-                    {
-                        Jogar(jogador.MaiorCarta());
-                        timer.Start();
-                    }
-                    if (bodes > 9 || bodes <= 15)
-                    {
-                        Jogar(jogador.MenorCarta());
-                        timer.Start();
-                    }
-                    if (bodes > 15 || bodes <= 20)
-                    {
-                        Jogar(jogador.MenorCarta());
-                        timer.Start();
-                    }
-                    if (bodes > 20)
-                    {
-                        Jogar(jogador.MenorCarta());
-                        timer.Start();
+                        int fator = ((bodes * 100) / tamanhoIlha);
+
+                        if (fator <= 25)
+                        {
+                            Jogar(jogador.MaiorCarta());
+                            timer.Start();
+                        }
+                        if (fator > 25 && fator <= 100)
+                        {
+                            Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
+                            timer.Start();
+                        }
+                        if (fator > 100 && fator <= 150)
+                        {
+                            Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
+                            timer.Start();
+                        }
+                        if (bodes > 150)
+                        {
+                            Jogar(jogador.MenorCarta());
+                            timer.Start();
+                        }
                     }
                 }
             }

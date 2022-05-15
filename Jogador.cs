@@ -84,5 +84,45 @@ namespace BodeOfWar
             }
             return QuantidadeBodes;
         }
+
+        /// <summary>
+        /// Contagem de bodes que o jogador já comprou na partida inteira
+        /// </summary>
+        /// <returns>Quantidade de bodes que o jogador já comprou na partida inteira</returns>
+        public int BodesComprados()
+        {
+            string ret = BodeOfWarServer.Jogo.ExibirNarracao(idPartida);
+
+            List<string> lista = new List<string>();
+
+            ret = ret.Replace("\r", "");
+
+            string[] ret2 = ret.Split('\n');
+
+            int contagem = 0;
+
+            foreach(string s in ret2)
+            {
+                if (s.Contains("venceu a rodada e recebeu"))
+                {
+                    string aux = s;
+                    aux = aux.Replace("\n", "");
+                    aux = aux.Replace(" venceu a rodada e recebeu ", ",");
+                    aux = aux.Replace(" bodes", "");
+                    lista.Add(aux);
+                }
+            }
+
+            foreach(string s in lista)
+            {
+                string[] aux = s.Split(',');
+                if(aux[0] == Nome)
+                {
+                    contagem += Int32.Parse(aux[1]);
+                }
+            }
+
+            return contagem;
+        }
     }
 }
