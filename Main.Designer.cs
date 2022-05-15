@@ -32,35 +32,35 @@
             this.pnlTutorial1 = new System.Windows.Forms.Panel();
             this.btnTutorialProx1 = new System.Windows.Forms.Button();
             this.txtTutorial1 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial1 = new System.Windows.Forms.PictureBox();
             this.pnlTutorial2 = new System.Windows.Forms.Panel();
             this.btnTutorialProx2 = new System.Windows.Forms.Button();
             this.txtTutorial2 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial2 = new System.Windows.Forms.PictureBox();
             this.pnlTutorial3 = new System.Windows.Forms.Panel();
             this.btnTutorialProx3 = new System.Windows.Forms.Button();
             this.txtTutorial3 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial3 = new System.Windows.Forms.PictureBox();
             this.pnlTutorial4 = new System.Windows.Forms.Panel();
             this.btnTutorialProx4 = new System.Windows.Forms.Button();
             this.txtTutorial4 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial4 = new System.Windows.Forms.PictureBox();
             this.pnlTutorial5 = new System.Windows.Forms.Panel();
             this.btnTutorialProx5 = new System.Windows.Forms.Button();
             this.txtTutorial5 = new System.Windows.Forms.TextBox();
+            this.pcbTutorial5 = new System.Windows.Forms.PictureBox();
             this.pnlTutorial6 = new System.Windows.Forms.Panel();
             this.btnVerNovamente = new System.Windows.Forms.Button();
             this.btnVoltarMenu = new System.Windows.Forms.Button();
             this.txtTutorial6 = new System.Windows.Forms.TextBox();
-            this.pnlPartidaIndisponivel = new System.Windows.Forms.Panel();
             this.pcbTutorial6 = new System.Windows.Forms.PictureBox();
+            this.pnlPartidaIndisponivel = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnComoJogar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.pcbTutorial5 = new System.Windows.Forms.PictureBox();
-            this.pcbTutorial4 = new System.Windows.Forms.PictureBox();
-            this.pcbTutorial3 = new System.Windows.Forms.PictureBox();
-            this.pcbTutorial2 = new System.Windows.Forms.PictureBox();
-            this.pcbTutorial1 = new System.Windows.Forms.PictureBox();
             this.pnlListarPartidas = new System.Windows.Forms.Panel();
             this.btnVoltarCriarListar = new System.Windows.Forms.Button();
             this.btnEncerradas = new System.Windows.Forms.Button();
@@ -100,19 +100,20 @@
             this.btnAutomatico = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
+            this.btnEstrategia = new System.Windows.Forms.Button();
             this.pnlTutorial1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).BeginInit();
             this.pnlTutorial2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).BeginInit();
             this.pnlTutorial3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).BeginInit();
             this.pnlTutorial4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).BeginInit();
             this.pnlTutorial5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).BeginInit();
             this.pnlTutorial6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).BeginInit();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).BeginInit();
             this.pnlListarPartidas.SuspendLayout();
             this.pnlDetalhesPartida.SuspendLayout();
             this.pnlCriarPartida.SuspendLayout();
@@ -164,6 +165,17 @@
     "hum bode pode ficar de fora!";
             this.txtTutorial1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pcbTutorial1
+            // 
+            this.pcbTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial1.Image = global::BodeOfWar.Properties.Resources.Gif10;
+            this.pcbTutorial1.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial1.Name = "pcbTutorial1";
+            this.pcbTutorial1.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial1.TabIndex = 0;
+            this.pcbTutorial1.TabStop = false;
+            // 
             // pnlTutorial2
             // 
             this.pnlTutorial2.Controls.Add(this.btnTutorialProx2);
@@ -205,6 +217,18 @@
             this.txtTutorial2.Text = "Para isso, os jogadores jogam cartas de bodes na mesa, cada uma com um valor, e l" +
     "eva todas as cartas aquele que jogou a mais alta.";
             this.txtTutorial2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial2
+            // 
+            this.pcbTutorial2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial2.Image = global::BodeOfWar.Properties.Resources.Gif6;
+            this.pcbTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial2.Name = "pcbTutorial2";
+            this.pcbTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial2.TabIndex = 0;
+            this.pcbTutorial2.TabStop = false;
             // 
             // pnlTutorial3
             // 
@@ -248,6 +272,18 @@
     " a quantidade mais próxima ou igual ao limite vence.";
             this.txtTutorial3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pcbTutorial3
+            // 
+            this.pcbTutorial3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial3.Image = global::BodeOfWar.Properties.Resources.Gif4;
+            this.pcbTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial3.Name = "pcbTutorial3";
+            this.pcbTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial3.TabIndex = 0;
+            this.pcbTutorial3.TabStop = false;
+            // 
             // pnlTutorial4
             // 
             this.pnlTutorial4.Controls.Add(this.btnTutorialProx4);
@@ -290,6 +326,18 @@
     "a.\r\n";
             this.txtTutorial4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pcbTutorial4
+            // 
+            this.pcbTutorial4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial4.Image = global::BodeOfWar.Properties.Resources.Gif9;
+            this.pcbTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial4.Name = "pcbTutorial4";
+            this.pcbTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial4.TabIndex = 0;
+            this.pcbTutorial4.TabStop = false;
+            // 
             // pnlTutorial5
             // 
             this.pnlTutorial5.Controls.Add(this.btnTutorialProx5);
@@ -331,6 +379,18 @@
             this.txtTutorial5.Text = "OU JOGUE A CARTA MAIS BAIXA...\r\nPara colocar uma carta de ilha, escolhendo o tama" +
     "nho que melhor acomode seus bodes.";
             this.txtTutorial5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pcbTutorial5
+            // 
+            this.pcbTutorial5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbTutorial5.Image = global::BodeOfWar.Properties.Resources.Gif5;
+            this.pcbTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial5.Name = "pcbTutorial5";
+            this.pcbTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTutorial5.TabIndex = 0;
+            this.pcbTutorial5.TabStop = false;
             // 
             // pnlTutorial6
             // 
@@ -394,15 +454,6 @@
     " com a maior quantidade de bodes, mas sem exceder o limite da ilha!";
             this.txtTutorial6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pnlPartidaIndisponivel
-            // 
-            this.pnlPartidaIndisponivel.BackColor = System.Drawing.Color.Transparent;
-            this.pnlPartidaIndisponivel.BackgroundImage = global::BodeOfWar.Properties.Resources.PartidaIndisponivel;
-            this.pnlPartidaIndisponivel.Location = new System.Drawing.Point(209, 452);
-            this.pnlPartidaIndisponivel.Name = "pnlPartidaIndisponivel";
-            this.pnlPartidaIndisponivel.Size = new System.Drawing.Size(277, 85);
-            this.pnlPartidaIndisponivel.TabIndex = 45;
-            // 
             // pcbTutorial6
             // 
             this.pcbTutorial6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -414,6 +465,15 @@
             this.pcbTutorial6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial6.TabIndex = 0;
             this.pcbTutorial6.TabStop = false;
+            // 
+            // pnlPartidaIndisponivel
+            // 
+            this.pnlPartidaIndisponivel.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPartidaIndisponivel.BackgroundImage = global::BodeOfWar.Properties.Resources.PartidaIndisponivel;
+            this.pnlPartidaIndisponivel.Location = new System.Drawing.Point(209, 452);
+            this.pnlPartidaIndisponivel.Name = "pnlPartidaIndisponivel";
+            this.pnlPartidaIndisponivel.Size = new System.Drawing.Size(277, 85);
+            this.pnlPartidaIndisponivel.TabIndex = 45;
             // 
             // pnlMenu
             // 
@@ -511,65 +571,6 @@
             this.lblTitulo.Tag = "";
             this.lblTitulo.Text = "Bode of War - Teletubbies";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pcbTutorial5
-            // 
-            this.pcbTutorial5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial5.Image = global::BodeOfWar.Properties.Resources.Gif5;
-            this.pcbTutorial5.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial5.Name = "pcbTutorial5";
-            this.pcbTutorial5.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial5.TabIndex = 0;
-            this.pcbTutorial5.TabStop = false;
-            // 
-            // pcbTutorial4
-            // 
-            this.pcbTutorial4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial4.Image = global::BodeOfWar.Properties.Resources.Gif9;
-            this.pcbTutorial4.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial4.Name = "pcbTutorial4";
-            this.pcbTutorial4.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial4.TabIndex = 0;
-            this.pcbTutorial4.TabStop = false;
-            // 
-            // pcbTutorial3
-            // 
-            this.pcbTutorial3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial3.Image = global::BodeOfWar.Properties.Resources.Gif4;
-            this.pcbTutorial3.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial3.Name = "pcbTutorial3";
-            this.pcbTutorial3.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial3.TabIndex = 0;
-            this.pcbTutorial3.TabStop = false;
-            // 
-            // pcbTutorial2
-            // 
-            this.pcbTutorial2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial2.Image = global::BodeOfWar.Properties.Resources.Gif6;
-            this.pcbTutorial2.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial2.Name = "pcbTutorial2";
-            this.pcbTutorial2.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial2.TabIndex = 0;
-            this.pcbTutorial2.TabStop = false;
-            // 
-            // pcbTutorial1
-            // 
-            this.pcbTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbTutorial1.Image = global::BodeOfWar.Properties.Resources.Gif10;
-            this.pcbTutorial1.Location = new System.Drawing.Point(0, 0);
-            this.pcbTutorial1.Name = "pcbTutorial1";
-            this.pcbTutorial1.Size = new System.Drawing.Size(716, 559);
-            this.pcbTutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbTutorial1.TabIndex = 0;
-            this.pcbTutorial1.TabStop = false;
             // 
             // pnlListarPartidas
             // 
@@ -1019,6 +1020,7 @@
             // 
             this.pnlDentroPartida.BackColor = System.Drawing.Color.Transparent;
             this.pnlDentroPartida.BackgroundImage = global::BodeOfWar.Properties.Resources.texture;
+            this.pnlDentroPartida.Controls.Add(this.btnEstrategia);
             this.pnlDentroPartida.Controls.Add(this.btnAutomatico);
             this.pnlDentroPartida.Controls.Add(this.btnManual);
             this.pnlDentroPartida.Controls.Add(this.btnIniciarPartida);
@@ -1035,11 +1037,11 @@
             this.btnAutomatico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnAutomatico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAutomatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAutomatico.Location = new System.Drawing.Point(150, 54);
+            this.btnAutomatico.Location = new System.Drawing.Point(93, 54);
             this.btnAutomatico.Name = "btnAutomatico";
-            this.btnAutomatico.Size = new System.Drawing.Size(91, 23);
+            this.btnAutomatico.Size = new System.Drawing.Size(74, 23);
             this.btnAutomatico.TabIndex = 33;
-            this.btnAutomatico.Text = "Automático";
+            this.btnAutomatico.Text = "Aleatório";
             this.btnAutomatico.UseVisualStyleBackColor = false;
             this.btnAutomatico.Click += new System.EventHandler(this.btnAutomatico_Click);
             // 
@@ -1051,9 +1053,9 @@
             this.btnManual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnManual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManual.Location = new System.Drawing.Point(27, 54);
+            this.btnManual.Location = new System.Drawing.Point(3, 54);
             this.btnManual.Name = "btnManual";
-            this.btnManual.Size = new System.Drawing.Size(91, 23);
+            this.btnManual.Size = new System.Drawing.Size(74, 23);
             this.btnManual.TabIndex = 32;
             this.btnManual.Text = "Manual";
             this.btnManual.UseVisualStyleBackColor = false;
@@ -1074,16 +1076,33 @@
             this.btnIniciarPartida.UseVisualStyleBackColor = false;
             this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
             // 
+            // btnEstrategia
+            // 
+            this.btnEstrategia.BackColor = System.Drawing.Color.Silver;
+            this.btnEstrategia.Enabled = false;
+            this.btnEstrategia.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnEstrategia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnEstrategia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEstrategia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstrategia.Location = new System.Drawing.Point(183, 54);
+            this.btnEstrategia.Name = "btnEstrategia";
+            this.btnEstrategia.Size = new System.Drawing.Size(74, 23);
+            this.btnEstrategia.TabIndex = 34;
+            this.btnEstrategia.Text = "Estratégia";
+            this.btnEstrategia.UseVisualStyleBackColor = false;
+            this.btnEstrategia.Click += new System.EventHandler(this.btnEstrategia_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(716, 559);
+            this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlDentroPartida);
             this.Controls.Add(this.pnlListarPartidas2);
             this.Controls.Add(this.pnlListarPartidas);
             this.Controls.Add(this.pnlDetalhesPartida);
-            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlPartidaIndisponivel);
             this.Controls.Add(this.pnlTutorial6);
             this.Controls.Add(this.pnlTutorial5);
@@ -1093,7 +1112,6 @@
             this.Controls.Add(this.pnlTutorial1);
             this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlListarCriar);
-            this.Controls.Add(this.pnlDentroPartida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1103,23 +1121,23 @@
             this.Text = "BodeOfWar ";
             this.pnlTutorial1.ResumeLayout(false);
             this.pnlTutorial1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).EndInit();
             this.pnlTutorial2.ResumeLayout(false);
             this.pnlTutorial2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).EndInit();
             this.pnlTutorial3.ResumeLayout(false);
             this.pnlTutorial3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).EndInit();
             this.pnlTutorial4.ResumeLayout(false);
             this.pnlTutorial4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).EndInit();
             this.pnlTutorial5.ResumeLayout(false);
             this.pnlTutorial5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).EndInit();
             this.pnlTutorial6.ResumeLayout(false);
             this.pnlTutorial6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial6)).EndInit();
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).EndInit();
             this.pnlListarPartidas.ResumeLayout(false);
             this.pnlDetalhesPartida.ResumeLayout(false);
             this.pnlDetalhesPartida.PerformLayout();
@@ -1204,6 +1222,7 @@
         private System.Windows.Forms.PictureBox pcbTutorial6;
         private System.Windows.Forms.Button btnVerNovamente;
         private System.Windows.Forms.Panel pnlPartidaIndisponivel;
+        private System.Windows.Forms.Button btnEstrategia;
     }
 }
 
