@@ -148,62 +148,53 @@
   <data name="b9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ImagensCartas\b9.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Deck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Deck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Deck2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\Menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gif1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OutrasImagens\FundoCartas\fundo8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gif10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif10.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif12.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif13.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif14.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Goat-sacks-kid.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\OutrasImagens\Gifs\Gif10.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gif4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\OutrasImagens\Gifs\Gif4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gif5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\OutrasImagens\Gifs\Gif5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gif6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gif7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\OutrasImagens\Gifs\Gif6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gif8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif8.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\OutrasImagens\Gifs\Gif8.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gif9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\Gif9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GoatSim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\GoatSim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\OutrasImagens\Gifs\Gif9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\J1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="J1a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\J1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J1_v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\Jogadores\J1_v3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,29 +202,17 @@
   <data name="J2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\J2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="J2a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\J2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="J2_v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\Jogadores\J2_v3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\J3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="J3a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\J3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="J3_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\J3_v2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="J3_v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\Jogadores\J3_v3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\J4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="J4a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\OutrasImagens\J4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="J4_v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\Jogadores\J4_v3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

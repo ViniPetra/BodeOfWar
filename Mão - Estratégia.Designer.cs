@@ -415,6 +415,8 @@
             // 
             // pnlCarta1
             // 
+            this.pnlCarta1.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta1.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo1;
             this.pnlCarta1.Location = new System.Drawing.Point(119, 124);
             this.pnlCarta1.Name = "pnlCarta1";
             this.pnlCarta1.Size = new System.Drawing.Size(140, 206);
@@ -422,6 +424,8 @@
             // 
             // pnlCarta2
             // 
+            this.pnlCarta2.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta2.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo2;
             this.pnlCarta2.Location = new System.Drawing.Point(275, 123);
             this.pnlCarta2.Name = "pnlCarta2";
             this.pnlCarta2.Size = new System.Drawing.Size(140, 206);
@@ -429,6 +433,8 @@
             // 
             // pnlCarta3
             // 
+            this.pnlCarta3.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta3.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo3;
             this.pnlCarta3.Location = new System.Drawing.Point(431, 123);
             this.pnlCarta3.Name = "pnlCarta3";
             this.pnlCarta3.Size = new System.Drawing.Size(140, 206);
@@ -436,6 +442,8 @@
             // 
             // pnlCarta4
             // 
+            this.pnlCarta4.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta4.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo4;
             this.pnlCarta4.Location = new System.Drawing.Point(587, 123);
             this.pnlCarta4.Name = "pnlCarta4";
             this.pnlCarta4.Size = new System.Drawing.Size(140, 206);
@@ -443,6 +451,8 @@
             // 
             // pnlCarta5
             // 
+            this.pnlCarta5.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta5.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo5;
             this.pnlCarta5.Location = new System.Drawing.Point(120, 336);
             this.pnlCarta5.Name = "pnlCarta5";
             this.pnlCarta5.Size = new System.Drawing.Size(140, 206);
@@ -450,6 +460,8 @@
             // 
             // pnlCarta6
             // 
+            this.pnlCarta6.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta6.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo6;
             this.pnlCarta6.Location = new System.Drawing.Point(276, 336);
             this.pnlCarta6.Name = "pnlCarta6";
             this.pnlCarta6.Size = new System.Drawing.Size(140, 206);
@@ -457,6 +469,8 @@
             // 
             // pnlCarta7
             // 
+            this.pnlCarta7.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta7.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo7;
             this.pnlCarta7.Location = new System.Drawing.Point(432, 335);
             this.pnlCarta7.Name = "pnlCarta7";
             this.pnlCarta7.Size = new System.Drawing.Size(140, 206);
@@ -464,6 +478,8 @@
             // 
             // pnlCarta8
             // 
+            this.pnlCarta8.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCarta8.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo8;
             this.pnlCarta8.Location = new System.Drawing.Point(588, 335);
             this.pnlCarta8.Name = "pnlCarta8";
             this.pnlCarta8.Size = new System.Drawing.Size(140, 206);
