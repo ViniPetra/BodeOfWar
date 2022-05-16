@@ -12,6 +12,8 @@ Alguns prints das telas detro do jogo:
 ![image](https://user-images.githubusercontent.com/89108219/168503179-3dafa30c-2033-4ba1-a82a-6d5e4181285d.png)
 ![image](https://user-images.githubusercontent.com/89108219/168503250-0ba77b7f-37cd-42c3-aea7-0f92a64e69a1.png)
 
+Agradecimento especial ao @Yuri-barbosa21, que foi quem fez todas as imagens do projeto
+
 O projeto foi pensado para funcionar de forma extremamente dinâmica.
 Só form principal de menus (Main), há 14 paineis com os controles necessários para cada etapa.
 Isso permitiu que fossem feitas telas criativas, como os GIFs das telas de tutorial.
