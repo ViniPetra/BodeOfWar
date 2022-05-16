@@ -163,9 +163,89 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gif1 {
+        internal static System.Drawing.Bitmap Deck2 {
             get {
-                object obj = ResourceManager.GetObject("Gif1", resourceCulture);
+                object obj = ResourceManager.GetObject("Deck2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo1 {
+            get {
+                object obj = ResourceManager.GetObject("fundo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo2 {
+            get {
+                object obj = ResourceManager.GetObject("fundo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo3 {
+            get {
+                object obj = ResourceManager.GetObject("fundo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo4 {
+            get {
+                object obj = ResourceManager.GetObject("fundo4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo5 {
+            get {
+                object obj = ResourceManager.GetObject("fundo5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo6 {
+            get {
+                object obj = ResourceManager.GetObject("fundo6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo7 {
+            get {
+                object obj = ResourceManager.GetObject("fundo7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo8 {
+            get {
+                object obj = ResourceManager.GetObject("fundo8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,66 +256,6 @@ namespace BodeOfWar.Properties {
         internal static System.Drawing.Bitmap Gif10 {
             get {
                 object obj = ResourceManager.GetObject("Gif10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gif11 {
-            get {
-                object obj = ResourceManager.GetObject("Gif11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gif12 {
-            get {
-                object obj = ResourceManager.GetObject("Gif12", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gif13 {
-            get {
-                object obj = ResourceManager.GetObject("Gif13", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gif14 {
-            get {
-                object obj = ResourceManager.GetObject("Gif14", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gif2 {
-            get {
-                object obj = ResourceManager.GetObject("Gif2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gif3 {
-            get {
-                object obj = ResourceManager.GetObject("Gif3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,16 +293,6 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gif7 {
-            get {
-                object obj = ResourceManager.GetObject("Gif7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Gif8 {
             get {
                 object obj = ResourceManager.GetObject("Gif8", resourceCulture);
@@ -303,16 +313,6 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GoatSim {
-            get {
-                object obj = ResourceManager.GetObject("GoatSim", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap J1 {
             get {
                 object obj = ResourceManager.GetObject("J1", resourceCulture);
@@ -323,9 +323,9 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap J1a {
+        internal static System.Drawing.Bitmap J1_v3 {
             get {
-                object obj = ResourceManager.GetObject("J1a", resourceCulture);
+                object obj = ResourceManager.GetObject("J1_v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap J2a {
+        internal static System.Drawing.Bitmap J2_v3 {
             get {
-                object obj = ResourceManager.GetObject("J2a", resourceCulture);
+                object obj = ResourceManager.GetObject("J2_v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,19 +363,9 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap J3_v2 {
+        internal static System.Drawing.Bitmap J3_v3 {
             get {
-                object obj = ResourceManager.GetObject("J3_v2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap J3a {
-            get {
-                object obj = ResourceManager.GetObject("J3a", resourceCulture);
+                object obj = ResourceManager.GetObject("J3_v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +383,9 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap J4a {
+        internal static System.Drawing.Bitmap J4_v3 {
             get {
-                object obj = ResourceManager.GetObject("J4a", resourceCulture);
+                object obj = ResourceManager.GetObject("J4_v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +396,16 @@ namespace BodeOfWar.Properties {
         internal static System.Drawing.Bitmap MainBg {
             get {
                 object obj = ResourceManager.GetObject("MainBg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Menu {
+            get {
+                object obj = ResourceManager.GetObject("Menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

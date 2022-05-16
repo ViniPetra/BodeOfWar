@@ -67,13 +67,13 @@ namespace BodeOfWar
         /// </summary>
         private void Mão_Load(object sender, EventArgs e)
         {
-            AtualizarDetalhes();
-
             //Inicializa as listas na array partida.CartasPorJogador
             partida.CartasPorJogador[0] = new List<int>();
             partida.CartasPorJogador[1] = new List<int>();
             partida.CartasPorJogador[2] = new List<int>();
             partida.CartasPorJogador[3] = new List<int>();
+
+            AtualizarDetalhes();
 
             //Seu nome na tela!
             lblJogador.Text = "Você: " + jogador.Nome;
@@ -212,6 +212,7 @@ namespace BodeOfWar
         {
             /// 1
             //Compara cada item na partida.Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em partida.idJogadores se a carta já não estiver adicionada
+
             foreach (string a in partida.Mesa)
             {
                 string[] b = a.Split(',');
@@ -355,7 +356,10 @@ namespace BodeOfWar
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            Analise();
+            if(partida.EmJogo == true)
+            {
+                Analise();
+            }
         }
 
         /// <summary>

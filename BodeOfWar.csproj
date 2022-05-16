@@ -120,18 +120,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -180,8 +180,29 @@
     <None Include="OutrasImagens\Gif13.gif" />
     <None Include="OutrasImagens\Gif14.gif" />
     <None Include="OutrasImagens\J3_v2.gif" />
+    <None Include="OutrasImagens\Jogadores\J1_v3.gif" />
+    <None Include="OutrasImagens\Jogadores\J2_v3.gif" />
+    <None Include="OutrasImagens\Jogadores\J3_v3.gif" />
+    <None Include="OutrasImagens\Jogadores\J4_v3.gif" />
+    <None Include="OutrasImagens\Deck.png" />
+    <None Include="OutrasImagens\Gifs\Gif4.gif" />
+    <None Include="OutrasImagens\Gifs\Gif5.gif" />
+    <None Include="OutrasImagens\Gifs\Gif6.gif" />
+    <None Include="OutrasImagens\Gifs\Gif8.gif" />
+    <None Include="OutrasImagens\Gifs\Gif9.gif" />
+    <None Include="OutrasImagens\Gifs\Gif10.gif" />
+    <None Include="OutrasImagens\FundoCartas\fundo1.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo2.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo3.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo4.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo5.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo6.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo7.png" />
+    <None Include="OutrasImagens\FundoCartas\fundo8.png" />
     <Content Include="OutrasImagens\maxresdefault.jpg" />
     <None Include="OutrasImagens\PartidaIndisponivel.png" />
+    <None Include="OutrasImagens\Menu.png" />
+    <None Include="OutrasImagens\Menu2.png" />
     <Content Include="OutrasImagens\User.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
