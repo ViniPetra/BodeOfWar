@@ -543,13 +543,14 @@
             // 
             // lblVersao
             // 
-            this.lblVersao.BackColor = System.Drawing.Color.Transparent;
+            this.lblVersao.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblVersao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblVersao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblVersao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersao.ForeColor = System.Drawing.Color.Black;
-            this.lblVersao.Location = new System.Drawing.Point(588, 526);
+            this.lblVersao.Location = new System.Drawing.Point(641, 528);
             this.lblVersao.Name = "lblVersao";
-            this.lblVersao.Size = new System.Drawing.Size(125, 33);
+            this.lblVersao.Size = new System.Drawing.Size(75, 30);
             this.lblVersao.TabIndex = 2;
             this.lblVersao.Tag = "lblVersao";
             this.lblVersao.Text = "Versão";
@@ -1095,6 +1096,7 @@
             this.Controls.Add(this.pnlTutorial1);
             this.Controls.Add(this.pnlCriarPartida);
             this.Controls.Add(this.pnlListarCriar);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

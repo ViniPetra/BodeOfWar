@@ -212,22 +212,21 @@ namespace BodeOfWar
         {
             /// 1
             //Compara cada item na partida.Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em partida.idJogadores se a carta já não estiver adicionada
-            if (!(partida.Mesa.Any())){
-                foreach (string a in partida.Mesa)
+
+            foreach (string a in partida.Mesa)
+            {
+                string[] b = a.Split(',');
+
+                int id = Int32.Parse(b[0]);
+                int carta = Int32.Parse(b[1]);
+
+                foreach (int index in partida.idJogadores)
                 {
-                    string[] b = a.Split(',');
-
-                    int id = Int32.Parse(b[0]);
-                    int carta = Int32.Parse(b[1]);
-
-                    foreach (int index in partida.idJogadores)
+                    if (index == id)
                     {
-                        if (index == id)
+                        if (!(partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Contains(carta)))
                         {
-                            if (!(partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Contains(carta)))
-                            {
-                                partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Add(carta);
-                            }
+                            partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Add(carta);
                         }
                     }
                 }
@@ -357,7 +356,10 @@ namespace BodeOfWar
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            Analise();
+            if(partida.EmJogo == true)
+            {
+                Analise();
+            }
         }
 
         /// <summary>
