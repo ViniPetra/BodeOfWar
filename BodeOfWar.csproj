@@ -180,8 +180,15 @@
     <None Include="OutrasImagens\Gif13.gif" />
     <None Include="OutrasImagens\Gif14.gif" />
     <None Include="OutrasImagens\J3_v2.gif" />
+    <None Include="OutrasImagens\Jogadores\J1_v3.gif" />
+    <None Include="OutrasImagens\Jogadores\J2_v3.gif" />
+    <None Include="OutrasImagens\Jogadores\J3_v3.gif" />
+    <None Include="OutrasImagens\Jogadores\J4_v3.gif" />
+    <None Include="OutrasImagens\Deck.png" />
     <Content Include="OutrasImagens\maxresdefault.jpg" />
     <None Include="OutrasImagens\PartidaIndisponivel.png" />
+    <None Include="OutrasImagens\Menu.png" />
+    <None Include="OutrasImagens\Menu2.png" />
     <Content Include="OutrasImagens\User.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

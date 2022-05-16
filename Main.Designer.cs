@@ -60,7 +60,6 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlListarPartidas = new System.Windows.Forms.Panel();
             this.btnVoltarCriarListar = new System.Windows.Forms.Button();
             this.btnEncerradas = new System.Windows.Forms.Button();
@@ -97,10 +96,10 @@
             this.btnCriar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.pnlDentroPartida = new System.Windows.Forms.Panel();
+            this.btnEstrategia = new System.Windows.Forms.Button();
             this.btnAutomatico = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
-            this.btnEstrategia = new System.Windows.Forms.Button();
             this.pnlTutorial1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTutorial1)).BeginInit();
             this.pnlTutorial2.SuspendLayout();
@@ -477,13 +476,12 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackgroundImage = global::BodeOfWar.Properties.Resources.MainBg;
+            this.pnlMenu.BackgroundImage = global::BodeOfWar.Properties.Resources.Menu;
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlMenu.Controls.Add(this.btnComoJogar);
             this.pnlMenu.Controls.Add(this.btnSair);
             this.pnlMenu.Controls.Add(this.btnIniciar);
             this.pnlMenu.Controls.Add(this.lblVersao);
-            this.pnlMenu.Controls.Add(this.lblTitulo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
@@ -546,31 +544,16 @@
             // lblVersao
             // 
             this.lblVersao.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersao.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblVersao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblVersao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersao.ForeColor = System.Drawing.Color.Black;
-            this.lblVersao.Location = new System.Drawing.Point(0, 51);
+            this.lblVersao.Location = new System.Drawing.Point(588, 526);
             this.lblVersao.Name = "lblVersao";
-            this.lblVersao.Size = new System.Drawing.Size(716, 51);
+            this.lblVersao.Size = new System.Drawing.Size(125, 33);
             this.lblVersao.TabIndex = 2;
             this.lblVersao.Tag = "lblVersao";
             this.lblVersao.Text = "Versão";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(716, 51);
-            this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Tag = "";
-            this.lblTitulo.Text = "Bode of War - Teletubbies";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlListarPartidas
             // 
@@ -1029,6 +1012,22 @@
             this.pnlDentroPartida.Size = new System.Drawing.Size(277, 85);
             this.pnlDentroPartida.TabIndex = 44;
             // 
+            // btnEstrategia
+            // 
+            this.btnEstrategia.BackColor = System.Drawing.Color.Silver;
+            this.btnEstrategia.Enabled = false;
+            this.btnEstrategia.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.btnEstrategia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnEstrategia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEstrategia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstrategia.Location = new System.Drawing.Point(183, 54);
+            this.btnEstrategia.Name = "btnEstrategia";
+            this.btnEstrategia.Size = new System.Drawing.Size(74, 23);
+            this.btnEstrategia.TabIndex = 34;
+            this.btnEstrategia.Text = "Estratégia";
+            this.btnEstrategia.UseVisualStyleBackColor = false;
+            this.btnEstrategia.Click += new System.EventHandler(this.btnEstrategia_Click);
+            // 
             // btnAutomatico
             // 
             this.btnAutomatico.BackColor = System.Drawing.Color.Silver;
@@ -1075,22 +1074,6 @@
             this.btnIniciarPartida.Text = "Iniciar partida";
             this.btnIniciarPartida.UseVisualStyleBackColor = false;
             this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
-            // 
-            // btnEstrategia
-            // 
-            this.btnEstrategia.BackColor = System.Drawing.Color.Silver;
-            this.btnEstrategia.Enabled = false;
-            this.btnEstrategia.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnEstrategia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnEstrategia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEstrategia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstrategia.Location = new System.Drawing.Point(183, 54);
-            this.btnEstrategia.Name = "btnEstrategia";
-            this.btnEstrategia.Size = new System.Drawing.Size(74, 23);
-            this.btnEstrategia.TabIndex = 34;
-            this.btnEstrategia.Text = "Estratégia";
-            this.btnEstrategia.UseVisualStyleBackColor = false;
-            this.btnEstrategia.Click += new System.EventHandler(this.btnEstrategia_Click);
             // 
             // Main
             // 
@@ -1157,7 +1140,6 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlListarCriar;
         private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.Button btnListar;
