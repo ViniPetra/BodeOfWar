@@ -25,6 +25,10 @@ Foram usados conceitos de Orientação a Objetos na criação de classes como Ca
 
 Todas as funções estão comentadas dentro do código e podem ser acessadas caso tenha curiosidade.
 
+A estratégia adotada para o sistema autônomo segue a seguinte lógica:
+
+![image](https://user-images.githubusercontent.com/89108219/168651744-78f48d95-1d82-4f62-a10f-ed5c52f1f259.png)
+
 Este foi um projeto bem longo e horas de dedicação que serviu grandiosamente para ganhos de conhecimento em programação e problem-solving skills.
 
 Infelizmente, após o desligamento do serviço que o professor Thiago Ribeiro Claro criou para este projeto, não será mais possível interagir com o programa.
