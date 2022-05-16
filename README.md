@@ -6,6 +6,7 @@ Este é um projeto em que foi recriado o jogo Bode Of War em C# usando .NET e Wi
 Não só a estrutura dos menus e toda as mecânicas de jogo, mas também, um *SISTEMA AUTONOMO* que joga uma partida inteira sozinho!
 
 Alguns prints das telas detro do jogo:
+
 ![image](https://user-images.githubusercontent.com/89108219/168503100-54c0de2e-46bf-44d2-be3f-49890181fff2.png)
 ![image](https://user-images.githubusercontent.com/89108219/168503130-5aaa1a38-68bf-43f2-b7e0-ac2af3415a5d.png)
 ![image](https://user-images.githubusercontent.com/89108219/168503157-8547b517-6b3e-4312-9de0-e717de318649.png)
