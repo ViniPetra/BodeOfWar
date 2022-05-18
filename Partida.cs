@@ -193,5 +193,30 @@ namespace BodeOfWar
 
             return tamanho;
         }
+
+        public bool JaTemVencedor(int idPartida)
+        {
+            string jogadores = this.ListarJogadores(idPartida);
+            string[] VerificarVencedor = BodeOfWarServer.Jogo.VerificarVez(idPartida).Split(',');
+            string Vencedor;
+            if (VerificarVencedor[0] == "E")
+            {
+                string[] jogadoresAux = jogadores.Split(',');
+                foreach (string s in jogadoresAux)
+                {
+                    if (s == jogadoresAux[1])
+                    {
+                        Vencedor = s;
+                        System.Windows.Forms.MessageBox.Show("O vencedor é " + Vencedor);
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                return false;
+            }
+            return false;
+        }    
     }
 }
