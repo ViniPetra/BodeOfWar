@@ -196,7 +196,8 @@ namespace BodeOfWar
 
         public bool JaTemVencedor(int idPartida)
         {
-            string jogadores = this.ListarJogadores(idPartida);
+            string jogadoresRaw = this.ListarJogadores(idPartida);
+            string jogadores = jogadoresRaw.Replace("\n", ",");
             string[] VerificarVencedor = BodeOfWarServer.Jogo.VerificarVez(idPartida).Split(',');
             string Vencedor;
             if (VerificarVencedor[0] == "E")
