@@ -438,8 +438,11 @@ namespace BodeOfWar
                         }
                     }
                 }
+                else
+                {
+                    timer.Start();
+                }
             }
-            timer.Start();
         }
     }
 }
