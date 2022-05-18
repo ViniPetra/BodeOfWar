@@ -19,6 +19,8 @@ namespace BodeOfWar
         //Definição do jogador
         public Jogador jogador = new Jogador();
 
+        public int PartidaAberta;
+
         /// <summary>
         /// 1. Cria os objetos de cada as carta do jogo
         /// 2. Cria a lista com todos os objetos de carta 
@@ -127,7 +129,7 @@ namespace BodeOfWar
         /// </summary>
         private void ListarJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(PartidaAberta);
             if (Jogadores == "")
             {
                 Jogadores = "Partida vazia";
@@ -146,18 +148,7 @@ namespace BodeOfWar
         { 
             ListarJogadores();
             txtVez.Text = VerificarVez();
-            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
-
-            if (txtVez.Text != "Partida não iniciada")
-            {
-                btnIniciarPartida.Enabled = false;
-            }
-            if(txtVez.Text != "Partida não iniciada")
-            {
-                btnAutomatico.Enabled = true;
-                btnManual.Enabled = true;
-                btnEstrategia.Enabled = true;
-            }
+            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(PartidaAberta);
         }
 
         /// <summary>
@@ -167,19 +158,14 @@ namespace BodeOfWar
         private string VerificarVez()
         {
             string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(PartidaAberta);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(PartidaAberta);
 
             //Gerenciamento de erros
             if (vez.StartsWith("ERRO:Partida não está em jogo"))
             {
                 nome = "Partida não iniciada";
                 return nome;
-            }
-            if (vez.StartsWith("ERRO"))
-            {
-                MessageBox.Show(vez, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return vez;
             }
 
             if (jogadores.StartsWith("ERRO"))
@@ -193,9 +179,34 @@ namespace BodeOfWar
             jogadores = jogadores.Replace("\n", ",");
             string[] Jogadores = jogadores.Split(',');
 
-            //Vez[0] = id
+            //Vez[0] = status da partida
             //Vez[1] = nome
             string[] Vez = vez.Split(',');
+
+            string Status = Vez[0];
+
+            if (Status == "E" || Status == "")
+            {
+                pnlPartidaIndisponivel.BringToFront();
+                btnVoltarListarPartidas2.Enabled = true;
+            }
+            else if (Status == "J" && jogador.idPartida == PartidaAberta)
+            {
+                btnAutomatico.Enabled = true;
+                btnManual.Enabled = true;
+                btnEstrategia.Enabled = true;
+                btnIniciarPartida.Enabled = false;
+                btnVoltarListarPartidas2.Enabled = false;
+            }
+            else if (Status == "A" && jogador.idPartida == PartidaAberta)
+            {
+                btnVoltarListarPartidas2.Enabled = false;
+            }
+            else
+            {
+                pnlPartidaIndisponivel.BringToFront();
+                btnVoltarListarPartidas2.Enabled = true;
+            }
 
             string NomeJogador = Vez[1];
 
@@ -245,8 +256,10 @@ namespace BodeOfWar
             //Isolar a id da partida mais recente
             int idPartida = Int32.Parse(Partidas[((Partidas.Length) - 4)]);
 
+            //Recomentar
             //Define o atributo idPartida em jogador para o id da partida criada 
-            jogador.idPartida = idPartida;
+            //jogador.idPartida = idPartida;
+            PartidaAberta = idPartida;
 
             //Atualizar detalhes
             AtualizarDetalhes();
@@ -264,7 +277,7 @@ namespace BodeOfWar
         {
             string nome = txtNome.Text;
             string senha = txtSenhaPartida.Text;
-            string chamada = BodeOfWarServer.Jogo.EntrarPartida(jogador.idPartida, nome, senha);
+            string chamada = BodeOfWarServer.Jogo.EntrarPartida(PartidaAberta, nome, senha);
 
             if (chamada.StartsWith("ERRO"))
             {
@@ -273,7 +286,7 @@ namespace BodeOfWar
             }
             else
             {
-                MessageBox.Show("Entrada com sucesso!");
+                jogador.idPartida = PartidaAberta;
 
                 pnlDentroPartida.BringToFront();
             }
@@ -286,9 +299,6 @@ namespace BodeOfWar
             jogador.Id = Int32.Parse(senhaPartida[0]);
             jogador.Senha = senhaPartida[1];
             jogador.Nome = nome;
-
-            //Desativa o botão de voltar
-            btnVoltarListarPartidas2.Enabled = false;
 
             AtualizarDetalhes();
         }
@@ -309,11 +319,6 @@ namespace BodeOfWar
             {
                 MessageBox.Show(retIniciar, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             }
-            else MessageBox.Show("Partida iniciada com sucesso");
-
-            //Define os botões de escolha de moto de jogo como habilitados
-            btnManual.Enabled = true;
-            btnAutomatico.Enabled = true;
 
             AtualizarDetalhes();
         }
@@ -470,7 +475,7 @@ namespace BodeOfWar
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
             
-            jogador.idPartida = idPartida;
+            PartidaAberta = idPartida;
 
             AtualizarDetalhes();
 

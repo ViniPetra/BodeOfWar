@@ -408,6 +408,7 @@ namespace BodeOfWar
                     {
                         int rand = new Random().Next(0, 7);
                         Jogar(jogador.Mao[rand].id);
+                        timer.Start();
                     }
                     else
                     {
