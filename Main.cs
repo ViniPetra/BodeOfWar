@@ -223,6 +223,24 @@ namespace BodeOfWar
         }
 
         /// <summary>
+        /// Responsável pela tela de detalhes da partida
+        /// Define a PartidaAberta
+        /// </summary>
+        /// <param name="PartidaSelecionada"></param>
+        public void AbrirPartida(string PartidaSelecionada)
+        {
+            pnlDetalhesPartida.BringToFront();
+
+            //Parse da string para extração do id
+            string[] Partidas = PartidaSelecionada.Split(',');
+            int idPartida = Int32.Parse(Partidas[0]);
+
+            PartidaAberta = idPartida;
+
+            AtualizarDetalhes();
+        }
+
+        /// <summary>
         /// 1. Cria uma partida usando as informações em txtNomeCriarPartida e txtSenhaCriarPartida
         /// 2. Define o atributo idPartida em jogador para o id da partida criada 
         /// 3. Traz para frente os detalhes da partida criada instantâneamente
@@ -458,7 +476,6 @@ namespace BodeOfWar
         //Duplo clique na partida
         private void lstPartidas_DoubleClick(object sender, EventArgs e)
         {
-            string PartidaSelecionada;
             if (lstPartidas.SelectedItem == null)
             {
                 MessageBox.Show("Nenhuma partida selecionada", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
@@ -466,26 +483,9 @@ namespace BodeOfWar
             }
             else
             {
-                PartidaSelecionada = lstPartidas.SelectedItem.ToString();
-            }
-
-            pnlDetalhesPartida.BringToFront();
-
-            //Parse da string para extração do id
-            string[] Partidas = PartidaSelecionada.Split(',');
-            int idPartida = Int32.Parse(Partidas[0]);
-            
-            PartidaAberta = idPartida;
-
-            AtualizarDetalhes();
-
-            //Verificação para não deixar entrar se a partida não estiver aberta
-            if (VerificarVez() != "Partida não iniciada")
-            {
-                pnlPartidaIndisponivel.BringToFront();
+                AbrirPartida(lstPartidas.SelectedItem.ToString());
             }
         }
-
 
         //Chamadas de listar partidas
         private void btnTodas_Click(object sender, EventArgs e)
