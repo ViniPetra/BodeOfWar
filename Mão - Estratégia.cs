@@ -126,6 +126,7 @@ namespace BodeOfWar
 
             jogador.IndiceJogador = partida.idJogadores.IndexOf(jogador.Id);
         }
+
         /// <summary>
         /// 1. Atualiza as informações em txtVez, txtNarracao, txtJogadores
         /// 2. Popula a partida.Mesa
@@ -139,11 +140,13 @@ namespace BodeOfWar
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             partida.PopularMesa(partida.rodada, jogador.idPartida);
             VerMesa();
-            if (txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
+
+            string[] Vencedor = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+            if (Vencedor[0] == "E")
             {
                 partida.EmJogo = false;
                 timer.Stop();
-                MessageBox.Show("O vencedor é " + txtVez.Text);
+                MessageBox.Show("O vencedor é " + Vencedor[1]);
             }
         }
 
