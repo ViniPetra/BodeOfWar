@@ -195,20 +195,19 @@ namespace BodeOfWar
         }
 
         public bool JaTemVencedor(int idPartida)
-        {
-            string jogadoresRaw = this.ListarJogadores(idPartida);
-            string jogadores = jogadoresRaw.Replace("\n", ",");
+        {  
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida).Replace("\n", ",");
+            string[] jogadoresAux = jogadores.Split(',');
             string[] VerificarVencedor = BodeOfWarServer.Jogo.VerificarVez(idPartida).Split(',');
-            string Vencedor;
+
             if (VerificarVencedor[0] == "E")
             {
-                string[] jogadoresAux = jogadores.Split(',');
-                foreach (string s in jogadoresAux)
+                for (int i = 0; i <= jogadoresAux.Length; i++)
                 {
-                    if (s == jogadoresAux[1])
+                    if (jogadoresAux[i] == VerificarVencedor[1])
                     {
-                        Vencedor = s;
-                        System.Windows.Forms.MessageBox.Show("O vencedor é " + Vencedor);
+                        string Vencedor = jogadoresAux[i+1].ToString();
+                        System.Windows.Forms.MessageBox.Show("O vencedor é " + Vencedor.ToUpper());
                         return true;
                     }
                 }
