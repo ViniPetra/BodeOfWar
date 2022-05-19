@@ -439,10 +439,10 @@ namespace BodeOfWar
                         }
                     }
                 }
-                else
-                {
-                    timer.Start();
-                }
+            }
+            else
+            {
+                timer.Start();
             }
         }
     }
