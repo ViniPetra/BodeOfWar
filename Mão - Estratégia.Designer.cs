@@ -2333,6 +2333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::BodeOfWar.Properties.Resources.Deck2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
