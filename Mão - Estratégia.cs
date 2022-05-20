@@ -140,13 +140,10 @@ namespace BodeOfWar
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             partida.PopularMesa(partida.rodada, jogador.idPartida);
             VerMesa();
-
-            string[] Vencedor = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
-            if (Vencedor[0] == "E")
+            if (partida.JaTemVencedor(jogador.idPartida))
             {
                 partida.EmJogo = false;
                 timer.Stop();
-                MessageBox.Show("O vencedor é " + Vencedor[1]);
             }
         }
 
@@ -442,10 +439,10 @@ namespace BodeOfWar
                         }
                     }
                 }
-                else
-                {
-                    timer.Start();
-                }
+            }
+            else
+            {
+                timer.Start();
             }
         }
     }

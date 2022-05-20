@@ -128,8 +128,9 @@
             this.pnlTutorial1.Controls.Add(this.pcbTutorial1);
             this.pnlTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTutorial1.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTutorial1.Name = "pnlTutorial1";
-            this.pnlTutorial1.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial1.Size = new System.Drawing.Size(955, 688);
             this.pnlTutorial1.TabIndex = 7;
             // 
             // btnTutorialProx1
@@ -142,10 +143,11 @@
             this.btnTutorialProx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnTutorialProx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTutorialProx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx1.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx1.Location = new System.Drawing.Point(437, 587);
+            this.btnTutorialProx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTutorialProx1.Name = "btnTutorialProx1";
             this.btnTutorialProx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx1.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx1.Size = new System.Drawing.Size(97, 28);
             this.btnTutorialProx1.TabIndex = 7;
             this.btnTutorialProx1.Text = "Próximo";
             this.btnTutorialProx1.UseVisualStyleBackColor = false;
@@ -154,10 +156,11 @@
             // txtTutorial1
             // 
             this.txtTutorial1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial1.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial1.Location = new System.Drawing.Point(279, 150);
+            this.txtTutorial1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutorial1.Multiline = true;
             this.txtTutorial1.Name = "txtTutorial1";
-            this.txtTutorial1.Size = new System.Drawing.Size(315, 61);
+            this.txtTutorial1.Size = new System.Drawing.Size(419, 74);
             this.txtTutorial1.TabIndex = 1;
             this.txtTutorial1.Text = "Bode of War é um jogo de cartas rápido e divertido em que os jogadores tentarão a" +
     "cumular bodes para habitar uma ilha deserta. Mas cuidado: a ilha é pequena e nen" +
@@ -169,8 +172,9 @@
             this.pcbTutorial1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbTutorial1.Image = global::BodeOfWar.Properties.Resources.Gif10;
             this.pcbTutorial1.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTutorial1.Name = "pcbTutorial1";
-            this.pcbTutorial1.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial1.Size = new System.Drawing.Size(955, 688);
             this.pcbTutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial1.TabIndex = 0;
             this.pcbTutorial1.TabStop = false;
@@ -182,8 +186,9 @@
             this.pnlTutorial2.Controls.Add(this.pcbTutorial2);
             this.pnlTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTutorial2.Name = "pnlTutorial2";
-            this.pnlTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial2.Size = new System.Drawing.Size(955, 688);
             this.pnlTutorial2.TabIndex = 8;
             // 
             // btnTutorialProx2
@@ -196,10 +201,11 @@
             this.btnTutorialProx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnTutorialProx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTutorialProx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx2.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx2.Location = new System.Drawing.Point(437, 587);
+            this.btnTutorialProx2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTutorialProx2.Name = "btnTutorialProx2";
             this.btnTutorialProx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx2.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx2.Size = new System.Drawing.Size(97, 28);
             this.btnTutorialProx2.TabIndex = 8;
             this.btnTutorialProx2.Text = "Próximo";
             this.btnTutorialProx2.UseVisualStyleBackColor = false;
@@ -208,10 +214,11 @@
             // txtTutorial2
             // 
             this.txtTutorial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial2.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial2.Location = new System.Drawing.Point(279, 150);
+            this.txtTutorial2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutorial2.Multiline = true;
             this.txtTutorial2.Name = "txtTutorial2";
-            this.txtTutorial2.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial2.Size = new System.Drawing.Size(419, 59);
             this.txtTutorial2.TabIndex = 1;
             this.txtTutorial2.Text = "Para isso, os jogadores jogam cartas de bodes na mesa, cada uma com um valor, e l" +
     "eva todas as cartas aquele que jogou a mais alta.";
@@ -223,8 +230,9 @@
             this.pcbTutorial2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbTutorial2.Image = global::BodeOfWar.Properties.Resources.Gif6;
             this.pcbTutorial2.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTutorial2.Name = "pcbTutorial2";
-            this.pcbTutorial2.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial2.Size = new System.Drawing.Size(955, 688);
             this.pcbTutorial2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial2.TabIndex = 0;
             this.pcbTutorial2.TabStop = false;
@@ -236,8 +244,9 @@
             this.pnlTutorial3.Controls.Add(this.pcbTutorial3);
             this.pnlTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTutorial3.Name = "pnlTutorial3";
-            this.pnlTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial3.Size = new System.Drawing.Size(955, 688);
             this.pnlTutorial3.TabIndex = 9;
             // 
             // btnTutorialProx3
@@ -250,10 +259,11 @@
             this.btnTutorialProx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnTutorialProx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTutorialProx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx3.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx3.Location = new System.Drawing.Point(437, 587);
+            this.btnTutorialProx3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTutorialProx3.Name = "btnTutorialProx3";
             this.btnTutorialProx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx3.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx3.Size = new System.Drawing.Size(97, 28);
             this.btnTutorialProx3.TabIndex = 8;
             this.btnTutorialProx3.Text = "Próximo";
             this.btnTutorialProx3.UseVisualStyleBackColor = false;
@@ -262,10 +272,11 @@
             // txtTutorial3
             // 
             this.txtTutorial3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial3.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial3.Location = new System.Drawing.Point(279, 150);
+            this.txtTutorial3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutorial3.Multiline = true;
             this.txtTutorial3.Name = "txtTutorial3";
-            this.txtTutorial3.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial3.Size = new System.Drawing.Size(419, 59);
             this.txtTutorial3.TabIndex = 1;
             this.txtTutorial3.Text = "No final da partida, quem tiver mais bodes que o limite é eliminado, e quem tiver" +
     " a quantidade mais próxima ou igual ao limite vence.";
@@ -277,8 +288,9 @@
             this.pcbTutorial3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbTutorial3.Image = global::BodeOfWar.Properties.Resources.Gif4;
             this.pcbTutorial3.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTutorial3.Name = "pcbTutorial3";
-            this.pcbTutorial3.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial3.Size = new System.Drawing.Size(955, 688);
             this.pcbTutorial3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial3.TabIndex = 0;
             this.pcbTutorial3.TabStop = false;
@@ -290,8 +302,9 @@
             this.pnlTutorial4.Controls.Add(this.pcbTutorial4);
             this.pnlTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTutorial4.Name = "pnlTutorial4";
-            this.pnlTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial4.Size = new System.Drawing.Size(955, 688);
             this.pnlTutorial4.TabIndex = 10;
             // 
             // btnTutorialProx4
@@ -304,10 +317,11 @@
             this.btnTutorialProx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnTutorialProx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTutorialProx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx4.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx4.Location = new System.Drawing.Point(437, 587);
+            this.btnTutorialProx4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTutorialProx4.Name = "btnTutorialProx4";
             this.btnTutorialProx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx4.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx4.Size = new System.Drawing.Size(97, 28);
             this.btnTutorialProx4.TabIndex = 8;
             this.btnTutorialProx4.Text = "Próximo";
             this.btnTutorialProx4.UseVisualStyleBackColor = false;
@@ -316,10 +330,11 @@
             // txtTutorial4
             // 
             this.txtTutorial4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial4.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial4.Location = new System.Drawing.Point(279, 150);
+            this.txtTutorial4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutorial4.Multiline = true;
             this.txtTutorial4.Name = "txtTutorial4";
-            this.txtTutorial4.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial4.Size = new System.Drawing.Size(419, 59);
             this.txtTutorial4.TabIndex = 1;
             this.txtTutorial4.Text = "JOGUE A CARTA MAIS ALTA!\r\nPara vencer a rodada e ganhar bodes para colocar na ilh" +
     "a.\r\n";
@@ -331,8 +346,9 @@
             this.pcbTutorial4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbTutorial4.Image = global::BodeOfWar.Properties.Resources.Gif9;
             this.pcbTutorial4.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTutorial4.Name = "pcbTutorial4";
-            this.pcbTutorial4.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial4.Size = new System.Drawing.Size(955, 688);
             this.pcbTutorial4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial4.TabIndex = 0;
             this.pcbTutorial4.TabStop = false;
@@ -344,8 +360,9 @@
             this.pnlTutorial5.Controls.Add(this.pcbTutorial5);
             this.pnlTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTutorial5.Name = "pnlTutorial5";
-            this.pnlTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial5.Size = new System.Drawing.Size(955, 688);
             this.pnlTutorial5.TabIndex = 11;
             // 
             // btnTutorialProx5
@@ -358,10 +375,11 @@
             this.btnTutorialProx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnTutorialProx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTutorialProx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutorialProx5.Location = new System.Drawing.Point(328, 477);
+            this.btnTutorialProx5.Location = new System.Drawing.Point(437, 587);
+            this.btnTutorialProx5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTutorialProx5.Name = "btnTutorialProx5";
             this.btnTutorialProx5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTutorialProx5.Size = new System.Drawing.Size(73, 23);
+            this.btnTutorialProx5.Size = new System.Drawing.Size(97, 28);
             this.btnTutorialProx5.TabIndex = 8;
             this.btnTutorialProx5.Text = "Próximo";
             this.btnTutorialProx5.UseVisualStyleBackColor = false;
@@ -370,10 +388,11 @@
             // txtTutorial5
             // 
             this.txtTutorial5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial5.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial5.Location = new System.Drawing.Point(279, 150);
+            this.txtTutorial5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutorial5.Multiline = true;
             this.txtTutorial5.Name = "txtTutorial5";
-            this.txtTutorial5.Size = new System.Drawing.Size(315, 49);
+            this.txtTutorial5.Size = new System.Drawing.Size(419, 59);
             this.txtTutorial5.TabIndex = 1;
             this.txtTutorial5.Text = "OU JOGUE A CARTA MAIS BAIXA...\r\nPara colocar uma carta de ilha, escolhendo o tama" +
     "nho que melhor acomode seus bodes.";
@@ -385,8 +404,9 @@
             this.pcbTutorial5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbTutorial5.Image = global::BodeOfWar.Properties.Resources.Gif5;
             this.pcbTutorial5.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTutorial5.Name = "pcbTutorial5";
-            this.pcbTutorial5.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial5.Size = new System.Drawing.Size(955, 688);
             this.pcbTutorial5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial5.TabIndex = 0;
             this.pcbTutorial5.TabStop = false;
@@ -399,8 +419,9 @@
             this.pnlTutorial6.Controls.Add(this.pcbTutorial6);
             this.pnlTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTutorial6.Location = new System.Drawing.Point(0, 0);
+            this.pnlTutorial6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTutorial6.Name = "pnlTutorial6";
-            this.pnlTutorial6.Size = new System.Drawing.Size(716, 559);
+            this.pnlTutorial6.Size = new System.Drawing.Size(955, 688);
             this.pnlTutorial6.TabIndex = 12;
             // 
             // btnVerNovamente
@@ -413,10 +434,11 @@
             this.btnVerNovamente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVerNovamente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVerNovamente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerNovamente.Location = new System.Drawing.Point(392, 477);
+            this.btnVerNovamente.Location = new System.Drawing.Point(523, 587);
+            this.btnVerNovamente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVerNovamente.Name = "btnVerNovamente";
             this.btnVerNovamente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVerNovamente.Size = new System.Drawing.Size(103, 23);
+            this.btnVerNovamente.Size = new System.Drawing.Size(137, 28);
             this.btnVerNovamente.TabIndex = 9;
             this.btnVerNovamente.Text = "Ver novamente";
             this.btnVerNovamente.UseVisualStyleBackColor = false;
@@ -432,10 +454,11 @@
             this.btnVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarMenu.Location = new System.Drawing.Point(250, 477);
+            this.btnVoltarMenu.Location = new System.Drawing.Point(333, 587);
+            this.btnVoltarMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarMenu.Name = "btnVoltarMenu";
             this.btnVoltarMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVoltarMenu.Size = new System.Drawing.Size(103, 23);
+            this.btnVoltarMenu.Size = new System.Drawing.Size(137, 28);
             this.btnVoltarMenu.TabIndex = 8;
             this.btnVoltarMenu.Text = "Voltar ao Menu";
             this.btnVoltarMenu.UseVisualStyleBackColor = false;
@@ -444,10 +467,11 @@
             // txtTutorial6
             // 
             this.txtTutorial6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTutorial6.Location = new System.Drawing.Point(209, 122);
+            this.txtTutorial6.Location = new System.Drawing.Point(279, 150);
+            this.txtTutorial6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutorial6.Multiline = true;
             this.txtTutorial6.Name = "txtTutorial6";
-            this.txtTutorial6.Size = new System.Drawing.Size(315, 61);
+            this.txtTutorial6.Size = new System.Drawing.Size(419, 74);
             this.txtTutorial6.TabIndex = 1;
             this.txtTutorial6.Text = "TORNE-SE O BODE OF WAR!\r\nReivindique o título de Bode of War terminando a partida" +
     " com a maior quantidade de bodes, mas sem exceder o limite da ilha!";
@@ -459,8 +483,9 @@
             this.pcbTutorial6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbTutorial6.Image = global::BodeOfWar.Properties.Resources.Gif8;
             this.pcbTutorial6.Location = new System.Drawing.Point(0, 0);
+            this.pcbTutorial6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTutorial6.Name = "pcbTutorial6";
-            this.pcbTutorial6.Size = new System.Drawing.Size(716, 559);
+            this.pcbTutorial6.Size = new System.Drawing.Size(955, 688);
             this.pcbTutorial6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTutorial6.TabIndex = 0;
             this.pcbTutorial6.TabStop = false;
@@ -469,23 +494,25 @@
             // 
             this.pnlPartidaIndisponivel.BackColor = System.Drawing.Color.Transparent;
             this.pnlPartidaIndisponivel.BackgroundImage = global::BodeOfWar.Properties.Resources.PartidaIndisponivel;
-            this.pnlPartidaIndisponivel.Location = new System.Drawing.Point(209, 452);
+            this.pnlPartidaIndisponivel.Location = new System.Drawing.Point(279, 556);
+            this.pnlPartidaIndisponivel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlPartidaIndisponivel.Name = "pnlPartidaIndisponivel";
-            this.pnlPartidaIndisponivel.Size = new System.Drawing.Size(277, 85);
+            this.pnlPartidaIndisponivel.Size = new System.Drawing.Size(369, 105);
             this.pnlPartidaIndisponivel.TabIndex = 45;
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackgroundImage = global::BodeOfWar.Properties.Resources.Menu;
-            this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMenu.Controls.Add(this.btnComoJogar);
             this.pnlMenu.Controls.Add(this.btnSair);
             this.pnlMenu.Controls.Add(this.btnIniciar);
             this.pnlMenu.Controls.Add(this.lblVersao);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(716, 559);
+            this.pnlMenu.Size = new System.Drawing.Size(955, 688);
             this.pnlMenu.TabIndex = 33;
             // 
             // btnComoJogar
@@ -498,10 +525,11 @@
             this.btnComoJogar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnComoJogar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnComoJogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComoJogar.Location = new System.Drawing.Point(319, 464);
+            this.btnComoJogar.Location = new System.Drawing.Point(425, 571);
+            this.btnComoJogar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComoJogar.Name = "btnComoJogar";
             this.btnComoJogar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnComoJogar.Size = new System.Drawing.Size(73, 23);
+            this.btnComoJogar.Size = new System.Drawing.Size(97, 28);
             this.btnComoJogar.TabIndex = 6;
             this.btnComoJogar.Text = "Como jogar";
             this.btnComoJogar.UseVisualStyleBackColor = false;
@@ -514,9 +542,10 @@
             this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Location = new System.Drawing.Point(319, 494);
+            this.btnSair.Location = new System.Drawing.Point(425, 608);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(73, 23);
+            this.btnSair.Size = new System.Drawing.Size(97, 28);
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -532,10 +561,11 @@
             this.btnIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciar.Location = new System.Drawing.Point(319, 433);
+            this.btnIniciar.Location = new System.Drawing.Point(425, 533);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnIniciar.Size = new System.Drawing.Size(73, 23);
+            this.btnIniciar.Size = new System.Drawing.Size(97, 28);
             this.btnIniciar.TabIndex = 4;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
@@ -548,9 +578,10 @@
             this.lblVersao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblVersao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersao.ForeColor = System.Drawing.Color.Black;
-            this.lblVersao.Location = new System.Drawing.Point(641, 528);
+            this.lblVersao.Location = new System.Drawing.Point(855, 650);
+            this.lblVersao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVersao.Name = "lblVersao";
-            this.lblVersao.Size = new System.Drawing.Size(75, 30);
+            this.lblVersao.Size = new System.Drawing.Size(100, 37);
             this.lblVersao.TabIndex = 2;
             this.lblVersao.Tag = "lblVersao";
             this.lblVersao.Text = "Versão";
@@ -567,8 +598,9 @@
             this.pnlListarPartidas.Controls.Add(this.btnTodas);
             this.pnlListarPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlListarPartidas.Location = new System.Drawing.Point(0, 0);
+            this.pnlListarPartidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlListarPartidas.Name = "pnlListarPartidas";
-            this.pnlListarPartidas.Size = new System.Drawing.Size(716, 559);
+            this.pnlListarPartidas.Size = new System.Drawing.Size(955, 688);
             this.pnlListarPartidas.TabIndex = 2;
             // 
             // btnVoltarCriarListar
@@ -578,9 +610,10 @@
             this.btnVoltarCriarListar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVoltarCriarListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVoltarCriarListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarCriarListar.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarCriarListar.Location = new System.Drawing.Point(16, 16);
+            this.btnVoltarCriarListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarCriarListar.Name = "btnVoltarCriarListar";
-            this.btnVoltarCriarListar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarCriarListar.Size = new System.Drawing.Size(100, 28);
             this.btnVoltarCriarListar.TabIndex = 27;
             this.btnVoltarCriarListar.Text = "Voltar";
             this.btnVoltarCriarListar.UseVisualStyleBackColor = false;
@@ -593,9 +626,10 @@
             this.btnEncerradas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnEncerradas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEncerradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncerradas.Location = new System.Drawing.Point(307, 337);
+            this.btnEncerradas.Location = new System.Drawing.Point(409, 415);
+            this.btnEncerradas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEncerradas.Name = "btnEncerradas";
-            this.btnEncerradas.Size = new System.Drawing.Size(75, 23);
+            this.btnEncerradas.Size = new System.Drawing.Size(100, 28);
             this.btnEncerradas.TabIndex = 26;
             this.btnEncerradas.Text = "Encerradas";
             this.btnEncerradas.UseVisualStyleBackColor = false;
@@ -608,9 +642,10 @@
             this.btnJogando.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnJogando.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJogando.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJogando.Location = new System.Drawing.Point(307, 297);
+            this.btnJogando.Location = new System.Drawing.Point(409, 366);
+            this.btnJogando.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnJogando.Name = "btnJogando";
-            this.btnJogando.Size = new System.Drawing.Size(75, 23);
+            this.btnJogando.Size = new System.Drawing.Size(100, 28);
             this.btnJogando.TabIndex = 25;
             this.btnJogando.Text = "Jogando";
             this.btnJogando.UseVisualStyleBackColor = false;
@@ -623,9 +658,10 @@
             this.btnAbertas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnAbertas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAbertas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbertas.Location = new System.Drawing.Point(307, 257);
+            this.btnAbertas.Location = new System.Drawing.Point(409, 316);
+            this.btnAbertas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbertas.Name = "btnAbertas";
-            this.btnAbertas.Size = new System.Drawing.Size(75, 23);
+            this.btnAbertas.Size = new System.Drawing.Size(100, 28);
             this.btnAbertas.TabIndex = 24;
             this.btnAbertas.Text = "Abertas";
             this.btnAbertas.UseVisualStyleBackColor = false;
@@ -638,9 +674,10 @@
             this.btnTodas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnTodas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTodas.Location = new System.Drawing.Point(307, 217);
+            this.btnTodas.Location = new System.Drawing.Point(409, 267);
+            this.btnTodas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTodas.Name = "btnTodas";
-            this.btnTodas.Size = new System.Drawing.Size(75, 23);
+            this.btnTodas.Size = new System.Drawing.Size(100, 28);
             this.btnTodas.TabIndex = 23;
             this.btnTodas.Text = "Todas";
             this.btnTodas.UseVisualStyleBackColor = false;
@@ -665,8 +702,9 @@
             this.pnlDetalhesPartida.Controls.Add(this.btnAtualizarNarracao);
             this.pnlDetalhesPartida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDetalhesPartida.Location = new System.Drawing.Point(0, 0);
+            this.pnlDetalhesPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDetalhesPartida.Name = "pnlDetalhesPartida";
-            this.pnlDetalhesPartida.Size = new System.Drawing.Size(716, 559);
+            this.pnlDetalhesPartida.Size = new System.Drawing.Size(955, 688);
             this.pnlDetalhesPartida.TabIndex = 33;
             // 
             // btnVoltarListarPartidas2
@@ -676,9 +714,10 @@
             this.btnVoltarListarPartidas2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVoltarListarPartidas2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVoltarListarPartidas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarListarPartidas2.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarListarPartidas2.Location = new System.Drawing.Point(16, 16);
+            this.btnVoltarListarPartidas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarListarPartidas2.Name = "btnVoltarListarPartidas2";
-            this.btnVoltarListarPartidas2.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarListarPartidas2.Size = new System.Drawing.Size(100, 28);
             this.btnVoltarListarPartidas2.TabIndex = 44;
             this.btnVoltarListarPartidas2.Text = "Voltar";
             this.btnVoltarListarPartidas2.UseVisualStyleBackColor = false;
@@ -687,10 +726,11 @@
             // txtSenhaPartida
             // 
             this.txtSenhaPartida.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtSenhaPartida.Location = new System.Drawing.Point(341, 480);
+            this.txtSenhaPartida.Location = new System.Drawing.Point(455, 591);
+            this.txtSenhaPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenhaPartida.Name = "txtSenhaPartida";
             this.txtSenhaPartida.PasswordChar = '*';
-            this.txtSenhaPartida.Size = new System.Drawing.Size(100, 20);
+            this.txtSenhaPartida.Size = new System.Drawing.Size(132, 22);
             this.txtSenhaPartida.TabIndex = 35;
             // 
             // btnEntrarPartida
@@ -700,9 +740,10 @@
             this.btnEntrarPartida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnEntrarPartida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEntrarPartida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrarPartida.Location = new System.Drawing.Point(292, 514);
+            this.btnEntrarPartida.Location = new System.Drawing.Point(389, 633);
+            this.btnEntrarPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntrarPartida.Name = "btnEntrarPartida";
-            this.btnEntrarPartida.Size = new System.Drawing.Size(100, 23);
+            this.btnEntrarPartida.Size = new System.Drawing.Size(133, 28);
             this.btnEntrarPartida.TabIndex = 34;
             this.btnEntrarPartida.Text = "Entrar na partida";
             this.btnEntrarPartida.UseVisualStyleBackColor = false;
@@ -711,18 +752,20 @@
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNome.Location = new System.Drawing.Point(235, 480);
+            this.txtNome.Location = new System.Drawing.Point(313, 591);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(132, 22);
             this.txtNome.TabIndex = 37;
             // 
             // lblSenhaPartida
             // 
             this.lblSenhaPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblSenhaPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaPartida.Location = new System.Drawing.Point(341, 464);
+            this.lblSenhaPartida.Location = new System.Drawing.Point(455, 571);
+            this.lblSenhaPartida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenhaPartida.Name = "lblSenhaPartida";
-            this.lblSenhaPartida.Size = new System.Drawing.Size(100, 13);
+            this.lblSenhaPartida.Size = new System.Drawing.Size(133, 16);
             this.lblSenhaPartida.TabIndex = 36;
             this.lblSenhaPartida.Text = "Senha";
             // 
@@ -730,9 +773,10 @@
             // 
             this.lblNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(235, 464);
+            this.lblNome.Location = new System.Drawing.Point(313, 571);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(100, 13);
+            this.lblNome.Size = new System.Drawing.Size(133, 16);
             this.lblNome.TabIndex = 38;
             this.lblNome.Text = "Nome";
             // 
@@ -740,58 +784,64 @@
             // 
             this.lblVez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVez.Location = new System.Drawing.Point(341, 80);
+            this.lblVez.Location = new System.Drawing.Point(455, 98);
+            this.lblVez.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVez.Name = "lblVez";
-            this.lblVez.Size = new System.Drawing.Size(111, 13);
+            this.lblVez.Size = new System.Drawing.Size(148, 16);
             this.lblVez.TabIndex = 39;
             this.lblVez.Text = "Vez de:";
             // 
             // txtVez
             // 
             this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtVez.Location = new System.Drawing.Point(341, 96);
+            this.txtVez.Location = new System.Drawing.Point(455, 118);
+            this.txtVez.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVez.Name = "txtVez";
             this.txtVez.ReadOnly = true;
-            this.txtVez.Size = new System.Drawing.Size(111, 20);
+            this.txtVez.Size = new System.Drawing.Size(147, 22);
             this.txtVez.TabIndex = 40;
             // 
             // txtNarracao
             // 
             this.txtNarracao.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNarracao.Location = new System.Drawing.Point(192, 163);
+            this.txtNarracao.Location = new System.Drawing.Point(256, 201);
+            this.txtNarracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
             this.txtNarracao.ReadOnly = true;
-            this.txtNarracao.Size = new System.Drawing.Size(303, 239);
+            this.txtNarracao.Size = new System.Drawing.Size(403, 293);
             this.txtNarracao.TabIndex = 41;
             // 
             // lblJogadores
             // 
             this.lblJogadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblJogadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJogadores.Location = new System.Drawing.Point(214, 53);
+            this.lblJogadores.Location = new System.Drawing.Point(285, 65);
+            this.lblJogadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJogadores.Name = "lblJogadores";
-            this.lblJogadores.Size = new System.Drawing.Size(100, 13);
+            this.lblJogadores.Size = new System.Drawing.Size(133, 16);
             this.lblJogadores.TabIndex = 33;
             this.lblJogadores.Text = "Jogadores:";
             // 
             // txtListarJogadores
             // 
             this.txtListarJogadores.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtListarJogadores.Location = new System.Drawing.Point(214, 69);
+            this.txtListarJogadores.Location = new System.Drawing.Point(285, 85);
+            this.txtListarJogadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
             this.txtListarJogadores.ReadOnly = true;
-            this.txtListarJogadores.Size = new System.Drawing.Size(100, 60);
+            this.txtListarJogadores.Size = new System.Drawing.Size(132, 73);
             this.txtListarJogadores.TabIndex = 32;
             // 
             // lblNarracao
             // 
             this.lblNarracao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblNarracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNarracao.Location = new System.Drawing.Point(192, 144);
+            this.lblNarracao.Location = new System.Drawing.Point(256, 177);
+            this.lblNarracao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNarracao.Name = "lblNarracao";
-            this.lblNarracao.Size = new System.Drawing.Size(303, 16);
+            this.lblNarracao.Size = new System.Drawing.Size(404, 20);
             this.lblNarracao.TabIndex = 42;
             this.lblNarracao.Text = "Narração:";
             // 
@@ -802,9 +852,10 @@
             this.btnAtualizarNarracao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnAtualizarNarracao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAtualizarNarracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarNarracao.Location = new System.Drawing.Point(301, 423);
+            this.btnAtualizarNarracao.Location = new System.Drawing.Point(401, 521);
+            this.btnAtualizarNarracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtualizarNarracao.Name = "btnAtualizarNarracao";
-            this.btnAtualizarNarracao.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizarNarracao.Size = new System.Drawing.Size(100, 28);
             this.btnAtualizarNarracao.TabIndex = 43;
             this.btnAtualizarNarracao.Text = "Atualizar";
             this.btnAtualizarNarracao.UseVisualStyleBackColor = false;
@@ -822,8 +873,9 @@
             this.pnlCriarPartida.Controls.Add(this.btnCriarPartida);
             this.pnlCriarPartida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCriarPartida.Location = new System.Drawing.Point(0, 0);
+            this.pnlCriarPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlCriarPartida.Name = "pnlCriarPartida";
-            this.pnlCriarPartida.Size = new System.Drawing.Size(716, 559);
+            this.pnlCriarPartida.Size = new System.Drawing.Size(955, 688);
             this.pnlCriarPartida.TabIndex = 34;
             // 
             // btnVoltarListarCriar2
@@ -833,9 +885,10 @@
             this.btnVoltarListarCriar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVoltarListarCriar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVoltarListarCriar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarListarCriar2.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarListarCriar2.Location = new System.Drawing.Point(16, 16);
+            this.btnVoltarListarCriar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarListarCriar2.Name = "btnVoltarListarCriar2";
-            this.btnVoltarListarCriar2.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarListarCriar2.Size = new System.Drawing.Size(100, 28);
             this.btnVoltarListarCriar2.TabIndex = 20;
             this.btnVoltarListarCriar2.Text = "Voltar";
             this.btnVoltarListarCriar2.UseVisualStyleBackColor = false;
@@ -845,9 +898,10 @@
             // 
             this.lblNomeCriarPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblNomeCriarPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeCriarPartida.Location = new System.Drawing.Point(298, 231);
+            this.lblNomeCriarPartida.Location = new System.Drawing.Point(397, 284);
+            this.lblNomeCriarPartida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeCriarPartida.Name = "lblNomeCriarPartida";
-            this.lblNomeCriarPartida.Size = new System.Drawing.Size(100, 12);
+            this.lblNomeCriarPartida.Size = new System.Drawing.Size(133, 15);
             this.lblNomeCriarPartida.TabIndex = 18;
             this.lblNomeCriarPartida.Text = "Nome da partida";
             // 
@@ -855,27 +909,30 @@
             // 
             this.lblSenhaCriarPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblSenhaCriarPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaCriarPartida.Location = new System.Drawing.Point(301, 284);
+            this.lblSenhaCriarPartida.Location = new System.Drawing.Point(401, 350);
+            this.lblSenhaCriarPartida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenhaCriarPartida.Name = "lblSenhaCriarPartida";
-            this.lblSenhaCriarPartida.Size = new System.Drawing.Size(100, 13);
+            this.lblSenhaCriarPartida.Size = new System.Drawing.Size(133, 16);
             this.lblSenhaCriarPartida.TabIndex = 17;
             this.lblSenhaCriarPartida.Text = "Senha";
             // 
             // txtSenhaCriarPartida
             // 
             this.txtSenhaCriarPartida.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtSenhaCriarPartida.Location = new System.Drawing.Point(301, 300);
+            this.txtSenhaCriarPartida.Location = new System.Drawing.Point(401, 369);
+            this.txtSenhaCriarPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenhaCriarPartida.Name = "txtSenhaCriarPartida";
             this.txtSenhaCriarPartida.PasswordChar = '*';
-            this.txtSenhaCriarPartida.Size = new System.Drawing.Size(100, 20);
+            this.txtSenhaCriarPartida.Size = new System.Drawing.Size(132, 22);
             this.txtSenhaCriarPartida.TabIndex = 16;
             // 
             // txtNomeCriarPartida
             // 
             this.txtNomeCriarPartida.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNomeCriarPartida.Location = new System.Drawing.Point(298, 246);
+            this.txtNomeCriarPartida.Location = new System.Drawing.Point(397, 303);
+            this.txtNomeCriarPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomeCriarPartida.Name = "txtNomeCriarPartida";
-            this.txtNomeCriarPartida.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeCriarPartida.Size = new System.Drawing.Size(132, 22);
             this.txtNomeCriarPartida.TabIndex = 15;
             // 
             // btnCriarPartida
@@ -885,9 +942,10 @@
             this.btnCriarPartida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnCriarPartida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCriarPartida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriarPartida.Location = new System.Drawing.Point(314, 326);
+            this.btnCriarPartida.Location = new System.Drawing.Point(419, 401);
+            this.btnCriarPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCriarPartida.Name = "btnCriarPartida";
-            this.btnCriarPartida.Size = new System.Drawing.Size(75, 23);
+            this.btnCriarPartida.Size = new System.Drawing.Size(100, 28);
             this.btnCriarPartida.TabIndex = 14;
             this.btnCriarPartida.Text = "Criar partida";
             this.btnCriarPartida.UseVisualStyleBackColor = false;
@@ -902,8 +960,9 @@
             this.pnlListarPartidas2.Controls.Add(this.lblPartidas);
             this.pnlListarPartidas2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlListarPartidas2.Location = new System.Drawing.Point(0, 0);
+            this.pnlListarPartidas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlListarPartidas2.Name = "pnlListarPartidas2";
-            this.pnlListarPartidas2.Size = new System.Drawing.Size(716, 559);
+            this.pnlListarPartidas2.Size = new System.Drawing.Size(955, 688);
             this.pnlListarPartidas2.TabIndex = 24;
             // 
             // btnVoltarListarPartidas
@@ -912,9 +971,10 @@
             this.btnVoltarListarPartidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVoltarListarPartidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVoltarListarPartidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarListarPartidas.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarListarPartidas.Location = new System.Drawing.Point(16, 16);
+            this.btnVoltarListarPartidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarListarPartidas.Name = "btnVoltarListarPartidas";
-            this.btnVoltarListarPartidas.Size = new System.Drawing.Size(75, 22);
+            this.btnVoltarListarPartidas.Size = new System.Drawing.Size(100, 27);
             this.btnVoltarListarPartidas.TabIndex = 22;
             this.btnVoltarListarPartidas.Text = "Voltar";
             this.btnVoltarListarPartidas.UseVisualStyleBackColor = false;
@@ -924,9 +984,11 @@
             // 
             this.lstPartidas.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lstPartidas.FormattingEnabled = true;
-            this.lstPartidas.Location = new System.Drawing.Point(260, 110);
+            this.lstPartidas.ItemHeight = 16;
+            this.lstPartidas.Location = new System.Drawing.Point(347, 135);
+            this.lstPartidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstPartidas.Name = "lstPartidas";
-            this.lstPartidas.Size = new System.Drawing.Size(194, 368);
+            this.lstPartidas.Size = new System.Drawing.Size(257, 452);
             this.lstPartidas.TabIndex = 21;
             this.lstPartidas.DoubleClick += new System.EventHandler(this.lstPartidas_DoubleClick);
             // 
@@ -935,9 +997,10 @@
             this.lblPartidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblPartidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPartidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPartidas.Location = new System.Drawing.Point(260, 86);
+            this.lblPartidas.Location = new System.Drawing.Point(347, 106);
+            this.lblPartidas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPartidas.Name = "lblPartidas";
-            this.lblPartidas.Size = new System.Drawing.Size(194, 21);
+            this.lblPartidas.Size = new System.Drawing.Size(259, 26);
             this.lblPartidas.TabIndex = 20;
             this.lblPartidas.Text = "Partidas";
             this.lblPartidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -951,8 +1014,9 @@
             this.pnlListarCriar.Controls.Add(this.btnListar);
             this.pnlListarCriar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlListarCriar.Location = new System.Drawing.Point(0, 0);
+            this.pnlListarCriar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlListarCriar.Name = "pnlListarCriar";
-            this.pnlListarCriar.Size = new System.Drawing.Size(716, 559);
+            this.pnlListarCriar.Size = new System.Drawing.Size(955, 688);
             this.pnlListarCriar.TabIndex = 6;
             // 
             // btnVoltarListarCriar
@@ -962,9 +1026,10 @@
             this.btnVoltarListarCriar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnVoltarListarCriar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnVoltarListarCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarListarCriar.Location = new System.Drawing.Point(12, 13);
+            this.btnVoltarListarCriar.Location = new System.Drawing.Point(16, 16);
+            this.btnVoltarListarCriar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarListarCriar.Name = "btnVoltarListarCriar";
-            this.btnVoltarListarCriar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarListarCriar.Size = new System.Drawing.Size(100, 28);
             this.btnVoltarListarCriar.TabIndex = 21;
             this.btnVoltarListarCriar.Text = "Voltar";
             this.btnVoltarListarCriar.UseVisualStyleBackColor = false;
@@ -977,9 +1042,10 @@
             this.btnCriar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnCriar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriar.Location = new System.Drawing.Point(301, 297);
+            this.btnCriar.Location = new System.Drawing.Point(401, 366);
+            this.btnCriar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCriar.Name = "btnCriar";
-            this.btnCriar.Size = new System.Drawing.Size(100, 23);
+            this.btnCriar.Size = new System.Drawing.Size(133, 28);
             this.btnCriar.TabIndex = 1;
             this.btnCriar.Text = "Criar partida";
             this.btnCriar.UseVisualStyleBackColor = false;
@@ -992,9 +1058,10 @@
             this.btnListar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListar.Location = new System.Drawing.Point(301, 228);
+            this.btnListar.Location = new System.Drawing.Point(401, 281);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(100, 23);
+            this.btnListar.Size = new System.Drawing.Size(133, 28);
             this.btnListar.TabIndex = 0;
             this.btnListar.Text = "Listar partidas";
             this.btnListar.UseVisualStyleBackColor = false;
@@ -1008,9 +1075,10 @@
             this.pnlDentroPartida.Controls.Add(this.btnAutomatico);
             this.pnlDentroPartida.Controls.Add(this.btnManual);
             this.pnlDentroPartida.Controls.Add(this.btnIniciarPartida);
-            this.pnlDentroPartida.Location = new System.Drawing.Point(209, 452);
+            this.pnlDentroPartida.Location = new System.Drawing.Point(279, 556);
+            this.pnlDentroPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDentroPartida.Name = "pnlDentroPartida";
-            this.pnlDentroPartida.Size = new System.Drawing.Size(277, 85);
+            this.pnlDentroPartida.Size = new System.Drawing.Size(369, 105);
             this.pnlDentroPartida.TabIndex = 44;
             // 
             // btnEstrategia
@@ -1021,9 +1089,10 @@
             this.btnEstrategia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnEstrategia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEstrategia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstrategia.Location = new System.Drawing.Point(183, 54);
+            this.btnEstrategia.Location = new System.Drawing.Point(244, 66);
+            this.btnEstrategia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEstrategia.Name = "btnEstrategia";
-            this.btnEstrategia.Size = new System.Drawing.Size(74, 23);
+            this.btnEstrategia.Size = new System.Drawing.Size(99, 28);
             this.btnEstrategia.TabIndex = 34;
             this.btnEstrategia.Text = "Estratégia";
             this.btnEstrategia.UseVisualStyleBackColor = false;
@@ -1037,9 +1106,10 @@
             this.btnAutomatico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnAutomatico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAutomatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAutomatico.Location = new System.Drawing.Point(93, 54);
+            this.btnAutomatico.Location = new System.Drawing.Point(124, 66);
+            this.btnAutomatico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAutomatico.Name = "btnAutomatico";
-            this.btnAutomatico.Size = new System.Drawing.Size(74, 23);
+            this.btnAutomatico.Size = new System.Drawing.Size(99, 28);
             this.btnAutomatico.TabIndex = 33;
             this.btnAutomatico.Text = "Aleatório";
             this.btnAutomatico.UseVisualStyleBackColor = false;
@@ -1053,9 +1123,10 @@
             this.btnManual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnManual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManual.Location = new System.Drawing.Point(3, 54);
+            this.btnManual.Location = new System.Drawing.Point(4, 66);
+            this.btnManual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManual.Name = "btnManual";
-            this.btnManual.Size = new System.Drawing.Size(74, 23);
+            this.btnManual.Size = new System.Drawing.Size(99, 28);
             this.btnManual.TabIndex = 32;
             this.btnManual.Text = "Manual";
             this.btnManual.UseVisualStyleBackColor = false;
@@ -1068,9 +1139,10 @@
             this.btnIniciarPartida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnIniciarPartida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnIniciarPartida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarPartida.Location = new System.Drawing.Point(85, 10);
+            this.btnIniciarPartida.Location = new System.Drawing.Point(113, 12);
+            this.btnIniciarPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIniciarPartida.Name = "btnIniciarPartida";
-            this.btnIniciarPartida.Size = new System.Drawing.Size(91, 23);
+            this.btnIniciarPartida.Size = new System.Drawing.Size(121, 28);
             this.btnIniciarPartida.TabIndex = 25;
             this.btnIniciarPartida.Text = "Iniciar partida";
             this.btnIniciarPartida.UseVisualStyleBackColor = false;
@@ -1078,10 +1150,10 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(716, 559);
+            this.ClientSize = new System.Drawing.Size(955, 688);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlDentroPartida);
             this.Controls.Add(this.pnlListarPartidas2);
@@ -1099,6 +1171,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";

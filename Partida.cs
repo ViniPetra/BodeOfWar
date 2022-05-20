@@ -193,5 +193,30 @@ namespace BodeOfWar
 
             return tamanho;
         }
+
+        public bool JaTemVencedor(int idPartida)
+        {  
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida).Replace("\n", ",");
+            string[] jogadoresAux = jogadores.Split(',');
+            string[] VerificarVencedor = BodeOfWarServer.Jogo.VerificarVez(idPartida).Split(',');
+
+            if (VerificarVencedor[0] == "E")
+            {
+                for (int i = 0; i <= jogadoresAux.Length; i++)
+                {
+                    if (jogadoresAux[i] == VerificarVencedor[1])
+                    {
+                        string Vencedor = jogadoresAux[i+1].ToString();
+                        System.Windows.Forms.MessageBox.Show("O vencedor é " + Vencedor.ToUpper());
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                return false;
+            }
+            return false;
+        }    
     }
 }
