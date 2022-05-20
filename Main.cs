@@ -512,6 +512,9 @@ namespace BodeOfWar
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
             EntrarPartida();
+
+            //Limpa os campos
+            txtSenhaPartida.Text = "";
         }
 
         //Iniciar a partida
@@ -530,6 +533,10 @@ namespace BodeOfWar
         private void btnCriarPartida_Click(object sender, EventArgs e)
         {
             CriarPartida();
+
+            //Limpa os campos
+            txtNomeCriarPartida.Text = "";
+            txtSenhaCriarPartida.Text = "";
         }
 
         //Abrir uma nova janela para mostrar suas cartas de forma manual

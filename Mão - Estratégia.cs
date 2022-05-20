@@ -139,6 +139,7 @@ namespace BodeOfWar
             txtVez.Text = partida.VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             partida.PopularMesa(partida.rodada, jogador.idPartida);
+            txtTamIlha.Text = partida.TamanhoIlha(jogador.idPartida).ToString();
             VerMesa();
             if (partida.JaTemVencedor(jogador.idPartida))
             {
@@ -344,14 +345,14 @@ namespace BodeOfWar
         }
 
         //Dinâmica dos botões
-        private void btnAtualizarNarracao_Click(object sender, EventArgs e)
-        {
-            AtualizarDetalhes();
-        }
-
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             timer.Start();
+        }
+
+        private void txtNarracao_DoubleClick(object sender, EventArgs e)
+        {
+            AtualizarDetalhes();
         }
 
         private void timer_Tick(object sender, EventArgs e)

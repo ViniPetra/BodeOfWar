@@ -60,7 +60,6 @@
             this.lblJogadores = new System.Windows.Forms.Label();
             this.txtListarJogadores = new System.Windows.Forms.TextBox();
             this.lblNarracao = new System.Windows.Forms.Label();
-            this.btnAtualizarNarracao = new System.Windows.Forms.Button();
             this.lblJogador = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblBodeJogador1 = new System.Windows.Forms.Label();
@@ -172,6 +171,8 @@
             this.pcbCarta3 = new System.Windows.Forms.PictureBox();
             this.pcbCarta2 = new System.Windows.Forms.PictureBox();
             this.pcbCarta1 = new System.Windows.Forms.PictureBox();
+            this.lblTamIlha = new System.Windows.Forms.Label();
+            this.txtTamIlha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
@@ -594,12 +595,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNarracao.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNarracao.Location = new System.Drawing.Point(651, 264);
+            this.txtNarracao.Location = new System.Drawing.Point(651, 238);
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
             this.txtNarracao.ReadOnly = true;
             this.txtNarracao.Size = new System.Drawing.Size(111, 100);
             this.txtNarracao.TabIndex = 48;
+            this.txtNarracao.DoubleClick += new System.EventHandler(this.txtNarracao_DoubleClick);
             // 
             // lblJogadores
             // 
@@ -609,7 +611,7 @@
             this.lblJogadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblJogadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJogadores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJogadores.Location = new System.Drawing.Point(651, 151);
+            this.lblJogadores.Location = new System.Drawing.Point(651, 139);
             this.lblJogadores.Name = "lblJogadores";
             this.lblJogadores.Size = new System.Drawing.Size(111, 16);
             this.lblJogadores.TabIndex = 45;
@@ -621,7 +623,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtListarJogadores.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtListarJogadores.Location = new System.Drawing.Point(651, 169);
+            this.txtListarJogadores.Location = new System.Drawing.Point(651, 157);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
             this.txtListarJogadores.ReadOnly = true;
@@ -636,30 +638,11 @@
             this.lblNarracao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblNarracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNarracao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNarracao.Location = new System.Drawing.Point(651, 245);
+            this.lblNarracao.Location = new System.Drawing.Point(651, 219);
             this.lblNarracao.Name = "lblNarracao";
             this.lblNarracao.Size = new System.Drawing.Size(111, 14);
             this.lblNarracao.TabIndex = 49;
             this.lblNarracao.Text = "Narração";
-            // 
-            // btnAtualizarNarracao
-            // 
-            this.btnAtualizarNarracao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtualizarNarracao.BackColor = System.Drawing.Color.Silver;
-            this.btnAtualizarNarracao.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
-            this.btnAtualizarNarracao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnAtualizarNarracao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAtualizarNarracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarNarracao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAtualizarNarracao.Location = new System.Drawing.Point(664, 369);
-            this.btnAtualizarNarracao.Name = "btnAtualizarNarracao";
-            this.btnAtualizarNarracao.Size = new System.Drawing.Size(80, 22);
-            this.btnAtualizarNarracao.TabIndex = 50;
-            this.btnAtualizarNarracao.Text = "Atualizar";
-            this.btnAtualizarNarracao.UseVisualStyleBackColor = false;
-            this.btnAtualizarNarracao.Click += new System.EventHandler(this.btnAtualizarNarracao_Click);
             // 
             // lblJogador
             // 
@@ -671,7 +654,7 @@
             this.lblJogador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJogador.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJogador.Location = new System.Drawing.Point(651, 70);
+            this.lblJogador.Location = new System.Drawing.Point(651, 71);
             this.lblJogador.Name = "lblJogador";
             this.lblJogador.Size = new System.Drawing.Size(42, 15);
             this.lblJogador.TabIndex = 96;
@@ -688,7 +671,7 @@
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIniciar.Location = new System.Drawing.Point(664, 397);
+            this.btnIniciar.Location = new System.Drawing.Point(664, 391);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(80, 22);
             this.btnIniciar.TabIndex = 98;
@@ -2373,6 +2356,34 @@
             this.pcbCarta1.TabIndex = 1;
             this.pcbCarta1.TabStop = false;
             // 
+            // lblTamIlha
+            // 
+            this.lblTamIlha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTamIlha.AutoSize = true;
+            this.lblTamIlha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblTamIlha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTamIlha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTamIlha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTamIlha.Location = new System.Drawing.Point(651, 341);
+            this.lblTamIlha.Name = "lblTamIlha";
+            this.lblTamIlha.Size = new System.Drawing.Size(111, 15);
+            this.lblTamIlha.TabIndex = 167;
+            this.lblTamIlha.Text = "Tamanho da ilha: ";
+            // 
+            // txtTamIlha
+            // 
+            this.txtTamIlha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTamIlha.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtTamIlha.Location = new System.Drawing.Point(651, 359);
+            this.txtTamIlha.Name = "txtTamIlha";
+            this.txtTamIlha.ReadOnly = true;
+            this.txtTamIlha.Size = new System.Drawing.Size(111, 20);
+            this.txtTamIlha.TabIndex = 168;
+            // 
             // MaoEstrategia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2381,6 +2392,8 @@
             this.BackgroundImage = global::BodeOfWar.Properties.Resources.Deck2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(811, 764);
+            this.Controls.Add(this.txtTamIlha);
+            this.Controls.Add(this.lblTamIlha);
             this.Controls.Add(this.pcbJogador4);
             this.Controls.Add(this.pcbJogador3);
             this.Controls.Add(this.pcbJogador2);
@@ -2492,7 +2505,6 @@
             this.Controls.Add(this.lblJogadores);
             this.Controls.Add(this.txtListarJogadores);
             this.Controls.Add(this.lblNarracao);
-            this.Controls.Add(this.btnAtualizarNarracao);
             this.Controls.Add(this.lblBode1);
             this.Controls.Add(this.lblNum8);
             this.Controls.Add(this.lblBode8);
@@ -2619,7 +2631,6 @@
         private System.Windows.Forms.Label lblJogadores;
         private System.Windows.Forms.TextBox txtListarJogadores;
         private System.Windows.Forms.Label lblNarracao;
-        private System.Windows.Forms.Button btnAtualizarNarracao;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -2723,5 +2734,7 @@
         private System.Windows.Forms.PictureBox pcbJogador2;
         private System.Windows.Forms.PictureBox pcbJogador3;
         private System.Windows.Forms.PictureBox pcbJogador4;
+        private System.Windows.Forms.Label lblTamIlha;
+        private System.Windows.Forms.TextBox txtTamIlha;
     }
 }
