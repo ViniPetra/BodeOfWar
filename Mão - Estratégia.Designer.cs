@@ -465,6 +465,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta1.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta1.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo1;
+            this.pnlCarta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta1.Location = new System.Drawing.Point(107, 100);
             this.pnlCarta1.Name = "pnlCarta1";
             this.pnlCarta1.Size = new System.Drawing.Size(100, 150);
@@ -477,6 +478,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta2.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta2.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo2;
+            this.pnlCarta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta2.Location = new System.Drawing.Point(221, 100);
             this.pnlCarta2.Name = "pnlCarta2";
             this.pnlCarta2.Size = new System.Drawing.Size(100, 150);
@@ -489,6 +491,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta3.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta3.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo3;
+            this.pnlCarta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta3.Location = new System.Drawing.Point(337, 100);
             this.pnlCarta3.Name = "pnlCarta3";
             this.pnlCarta3.Size = new System.Drawing.Size(100, 150);
@@ -501,6 +504,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta4.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta4.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo4;
+            this.pnlCarta4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta4.Location = new System.Drawing.Point(452, 100);
             this.pnlCarta4.Name = "pnlCarta4";
             this.pnlCarta4.Size = new System.Drawing.Size(100, 150);
@@ -513,6 +517,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta5.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta5.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo5;
+            this.pnlCarta5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta5.Location = new System.Drawing.Point(107, 268);
             this.pnlCarta5.Name = "pnlCarta5";
             this.pnlCarta5.Size = new System.Drawing.Size(100, 150);
@@ -525,6 +530,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta6.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta6.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo6;
+            this.pnlCarta6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta6.Location = new System.Drawing.Point(222, 268);
             this.pnlCarta6.Name = "pnlCarta6";
             this.pnlCarta6.Size = new System.Drawing.Size(100, 150);
@@ -537,6 +543,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta7.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta7.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo7;
+            this.pnlCarta7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta7.Location = new System.Drawing.Point(339, 267);
             this.pnlCarta7.Name = "pnlCarta7";
             this.pnlCarta7.Size = new System.Drawing.Size(100, 150);
@@ -549,6 +556,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCarta8.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta8.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo8;
+            this.pnlCarta8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCarta8.Location = new System.Drawing.Point(454, 267);
             this.pnlCarta8.Name = "pnlCarta8";
             this.pnlCarta8.Size = new System.Drawing.Size(100, 150);
@@ -1723,6 +1731,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbJogador4.BackColor = System.Drawing.Color.Transparent;
+            this.pcbJogador4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador4.Image = global::BodeOfWar.Properties.Resources.J4_v3;
             this.pcbJogador4.Location = new System.Drawing.Point(17, 677);
             this.pcbJogador4.Name = "pcbJogador4";
@@ -1738,6 +1747,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbJogador3.BackColor = System.Drawing.Color.Transparent;
+            this.pcbJogador3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador3.Image = global::BodeOfWar.Properties.Resources.J3_v3;
             this.pcbJogador3.Location = new System.Drawing.Point(17, 613);
             this.pcbJogador3.Name = "pcbJogador3";
@@ -1753,6 +1763,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbJogador2.BackColor = System.Drawing.Color.Transparent;
+            this.pcbJogador2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador2.Image = global::BodeOfWar.Properties.Resources.J2_v3;
             this.pcbJogador2.Location = new System.Drawing.Point(17, 547);
             this.pcbJogador2.Name = "pcbJogador2";
@@ -1768,6 +1779,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbJogador1.BackColor = System.Drawing.Color.Transparent;
+            this.pcbJogador1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador1.Image = global::BodeOfWar.Properties.Resources.J1_v3;
             this.pcbJogador1.Location = new System.Drawing.Point(17, 483);
             this.pcbJogador1.Name = "pcbJogador1";
@@ -1783,6 +1795,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox32.Location = new System.Drawing.Point(574, 686);
             this.pictureBox32.Name = "pictureBox32";
@@ -1797,6 +1810,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox31.Location = new System.Drawing.Point(524, 686);
             this.pictureBox31.Name = "pictureBox31";
@@ -1811,6 +1825,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox30.Location = new System.Drawing.Point(468, 686);
             this.pictureBox30.Name = "pictureBox30";
@@ -1825,6 +1840,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox29.Location = new System.Drawing.Point(415, 686);
             this.pictureBox29.Name = "pictureBox29";
@@ -1839,6 +1855,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox28.Location = new System.Drawing.Point(362, 686);
             this.pictureBox28.Name = "pictureBox28";
@@ -1853,6 +1870,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox27.Location = new System.Drawing.Point(312, 686);
             this.pictureBox27.Name = "pictureBox27";
@@ -1867,6 +1885,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox26.Location = new System.Drawing.Point(256, 685);
             this.pictureBox26.Name = "pictureBox26";
@@ -1881,6 +1900,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox25.Location = new System.Drawing.Point(204, 686);
             this.pictureBox25.Name = "pictureBox25";
@@ -1895,6 +1915,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox24.Location = new System.Drawing.Point(574, 622);
             this.pictureBox24.Name = "pictureBox24";
@@ -1909,6 +1930,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox23.Location = new System.Drawing.Point(524, 622);
             this.pictureBox23.Name = "pictureBox23";
@@ -1923,6 +1945,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox22.Location = new System.Drawing.Point(468, 622);
             this.pictureBox22.Name = "pictureBox22";
@@ -1937,6 +1960,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox21.Location = new System.Drawing.Point(415, 622);
             this.pictureBox21.Name = "pictureBox21";
@@ -1951,6 +1975,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox20.Location = new System.Drawing.Point(362, 622);
             this.pictureBox20.Name = "pictureBox20";
@@ -1965,6 +1990,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox19.Location = new System.Drawing.Point(312, 622);
             this.pictureBox19.Name = "pictureBox19";
@@ -1979,6 +2005,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox18.Location = new System.Drawing.Point(256, 622);
             this.pictureBox18.Name = "pictureBox18";
@@ -1993,6 +2020,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox17.Location = new System.Drawing.Point(204, 622);
             this.pictureBox17.Name = "pictureBox17";
@@ -2007,6 +2035,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox16.Location = new System.Drawing.Point(574, 554);
             this.pictureBox16.Name = "pictureBox16";
@@ -2021,6 +2050,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox15.Location = new System.Drawing.Point(524, 554);
             this.pictureBox15.Name = "pictureBox15";
@@ -2035,6 +2065,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox14.Location = new System.Drawing.Point(468, 554);
             this.pictureBox14.Name = "pictureBox14";
@@ -2049,6 +2080,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox13.Location = new System.Drawing.Point(414, 554);
             this.pictureBox13.Name = "pictureBox13";
@@ -2063,6 +2095,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox12.Location = new System.Drawing.Point(362, 554);
             this.pictureBox12.Name = "pictureBox12";
@@ -2077,6 +2110,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox11.Location = new System.Drawing.Point(312, 554);
             this.pictureBox11.Name = "pictureBox11";
@@ -2091,6 +2125,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox10.Location = new System.Drawing.Point(255, 552);
             this.pictureBox10.Name = "pictureBox10";
@@ -2105,6 +2140,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox9.Location = new System.Drawing.Point(204, 554);
             this.pictureBox9.Name = "pictureBox9";
@@ -2119,6 +2155,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Location = new System.Drawing.Point(574, 492);
             this.pictureBox8.Name = "pictureBox8";
@@ -2133,6 +2170,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Location = new System.Drawing.Point(521, 492);
             this.pictureBox7.Name = "pictureBox7";
@@ -2147,6 +2185,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Location = new System.Drawing.Point(468, 492);
             this.pictureBox6.Name = "pictureBox6";
@@ -2161,6 +2200,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Location = new System.Drawing.Point(415, 492);
             this.pictureBox5.Name = "pictureBox5";
@@ -2175,6 +2215,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Location = new System.Drawing.Point(362, 492);
             this.pictureBox4.Name = "pictureBox4";
@@ -2189,6 +2230,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(309, 492);
             this.pictureBox3.Name = "pictureBox3";
@@ -2203,6 +2245,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(256, 492);
             this.pictureBox2.Name = "pictureBox2";
@@ -2217,6 +2260,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(204, 492);
             this.pictureBox1.Name = "pictureBox1";
@@ -2333,7 +2377,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::BodeOfWar.Properties.Resources.Deck2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
