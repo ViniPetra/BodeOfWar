@@ -430,7 +430,7 @@ namespace BodeOfWar
 
                         if (fator <= 25)
                         {
-                            if (jogador.TemMaiorCarta(partida.MesaAtual(jogador.idPartida)))
+                            if (jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
                                 Jogar(jogador.MaiorCarta());
                                 timer.Start();
@@ -443,9 +443,9 @@ namespace BodeOfWar
                         }
                         if (fator > 25 && fator <= 100)
                         {
-                            if (!jogador.TemMaiorCarta(partida.MesaAtual(jogador.idPartida)))
+                            if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
-                                Jogar(jogador.MaiorBode());
+                                Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
                                 timer.Start();
                             }
                             else
@@ -456,9 +456,9 @@ namespace BodeOfWar
                         }
                         if (fator > 100 && fator <= 150)
                         {
-                            if (!jogador.TemMaiorCarta(partida.MesaAtual(jogador.idPartida)))
+                            if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
-                                Jogar(jogador.MaiorBode());
+                                Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
                                 timer.Start();
                             }
                             else
@@ -469,7 +469,7 @@ namespace BodeOfWar
                         }
                         if (bodes > 150)
                         {
-                            if (jogador.TemMenorCarta(partida.MesaAtual(jogador.idPartida)))
+                            if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
                                 Jogar(jogador.MenorCarta());
                                 timer.Start();

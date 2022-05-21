@@ -73,7 +73,16 @@ namespace BodeOfWar
             }
 
             int max = aux.Max();
-            return max;
+            int IndexMax = 0;
+            foreach(Cartas carta in Mao)
+            {
+                if(carta.bode == max)
+                {
+                    IndexMax = carta.id;
+                }
+            }
+
+            return IndexMax;
         }
 
         public int MenorBode()
@@ -85,7 +94,38 @@ namespace BodeOfWar
             }
 
             int min = aux.Min();
-            return min;
+            int IndexMin = 0;
+            foreach (Cartas carta in Mao)
+            {
+                if (carta.bode == min)
+                {
+                    IndexMin = carta.id;
+                }
+            }
+
+            return IndexMin;
+        }
+
+        public int Descartar(List<int> CartasJogadas)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            int minCJ = CartasJogadas.Min();
+            int maxCJ = CartasJogadas.Max();
+
+            foreach(Cartas carta in Mao)
+            {
+                if(carta.id > maxCJ && carta.id < minCJ)
+                {
+                    return carta.id;
+                }
+            }
+
+            return Mao[((Mao.Count())) / 2].id;
         }
 
         /// <summary>

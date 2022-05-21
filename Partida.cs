@@ -219,7 +219,7 @@ namespace BodeOfWar
             return false;
         }
 
-        public List<int> MesaAtual(int idPartida)
+        public List<int> CartasJogadas(int idPartida)
         {
             string[] aux;
 
