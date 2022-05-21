@@ -316,8 +316,9 @@ namespace BodeOfWar
             else
             {
                 jogador.idPartida = PartidaAberta;
-
                 pnlDentroPartida.BringToFront();
+                txtNome.Text = "";
+                txtSenhaPartida.Text = "";
             }
 
             //Mandar senha e Id pro objeto
