@@ -72,7 +72,7 @@ namespace BodeOfWar
         /// 8. Torna visível a mesma quantidade de PicturBoxes de imagem dos jogadores que a quantidade de jogadores na partida
         /// 9. Define o ídice do jogador na lista de jogadores
         /// </summary>
-        private void Mão_Load(object sender, EventArgs e)
+        private void Carregar()
         {
             //Inicializa as listas na array partida.CartasPorJogador
             partida.CartasPorJogador[0] = new List<int>();
@@ -134,7 +134,7 @@ namespace BodeOfWar
             jogador.IndiceJogador = partida.idJogadores.IndexOf(jogador.Id);
 
             status.Show();
-            status.Left = this.Location.X + this.Size.Width -10;
+            status.Left = this.Location.X + this.Size.Width - 10;
             status.Top = this.Location.Y;
         }
 
@@ -462,6 +462,11 @@ namespace BodeOfWar
         {
             status.Left = this.Location.X + this.Size.Width -10;
             status.Top = this.Location.Y;
+        }
+
+        private void Mão_Load(object sender, EventArgs e)
+        {
+            Carregar();
         }
 
         private void MaoEstrategia_FormClosed(object sender, FormClosedEventArgs e)

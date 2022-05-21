@@ -21,15 +21,19 @@ namespace BodeOfWar
 
         public int PartidaAberta;
 
+        public Main()
+        {
+            InitializeComponent();
+            Inicializar();
+        }
+
         /// <summary>
         /// 1. Cria os objetos de cada as carta do jogo
         /// 2. Cria a lista com todos os objetos de carta 
         /// 3. Define o atributo de todas as cartas no jogador 
         /// </summary>
-        public Main()
+        public void Inicializar()
         {
-            InitializeComponent();
-
             //Traz o menu como primeiro caso esteja codando
             pnlMenu.BringToFront();
 
@@ -42,7 +46,7 @@ namespace BodeOfWar
             string retCartas = BodeOfWarServer.Jogo.ListarCartas();
             retCartas = retCartas.Replace("\r", "");
             retCartas = retCartas.Substring(0, retCartas.Length - 1);
-            retCartas = retCartas.Replace("\n", ",");;
+            retCartas = retCartas.Replace("\n", ","); ;
             string[] Cartas1 = retCartas.Split(',');
 
             //Declaração da nova array que receberá int
@@ -83,7 +87,7 @@ namespace BodeOfWar
                 TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2]);
             }
 
-            foreach(Cartas cartas in TodasCartas)
+            foreach (Cartas cartas in TodasCartas)
             {
                 cartas.imagem = (Image)Properties.Resources.ResourceManager.GetObject("b" + cartas.imagemnum);
             }
