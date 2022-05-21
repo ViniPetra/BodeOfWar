@@ -217,6 +217,38 @@ namespace BodeOfWar
                 return false;
             }
             return false;
-        }    
+        }
+
+        public List<int> MesaAtual(int idPartida)
+        {
+            string[] aux;
+
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida, rodada);
+
+            ret = ret.Replace("\r", "");
+            aux = ret.Split('\n');
+
+            List<string> retAux = new List<string>();
+
+            List<int> CartasJogadas = new List<int>();
+
+            foreach (string a in aux)
+            {
+                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
+                {
+                    retAux.Add(a);
+                }
+            }
+
+            foreach (string a in retAux)
+            {
+                string[] b = a.Split(',');
+
+                int carta = Int32.Parse(b[1]);
+
+                CartasJogadas.Add(carta);
+            }
+            return CartasJogadas;
+        }
     }
 }

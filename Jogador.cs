@@ -64,6 +64,30 @@ namespace BodeOfWar
             return max;
         }
 
+        public int MaiorBode()
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].bode);
+            }
+
+            int max = aux.Max();
+            return max;
+        }
+
+        public int MenorBode()
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].bode);
+            }
+
+            int min = aux.Min();
+            return min;
+        }
+
         /// <summary>
         /// Calcula quantidade de bodes na mão do jogador
         /// </summary>
@@ -123,6 +147,50 @@ namespace BodeOfWar
             }
 
             return contagem;
+        }
+
+        public bool TemMaiorCarta(List<int> CartasJogadas)
+        {
+            int maior = CartasJogadas.Max();
+
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            int max = aux.Max();
+
+            if (max > maior)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        public bool TemMenorCarta(List<int> CartasJogadas)
+        {
+            int menor = CartasJogadas.Min();
+
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            int min = aux.Min();
+
+            if (min < menor)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

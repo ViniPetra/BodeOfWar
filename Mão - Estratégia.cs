@@ -380,7 +380,6 @@ namespace BodeOfWar
         private void Analise()
         { 
             timer.Stop();
-
             AtualizarDetalhes();
 
             //Verifica se é a vez deste jogador
@@ -431,23 +430,55 @@ namespace BodeOfWar
 
                         if (fator <= 25)
                         {
-                            Jogar(jogador.MaiorCarta());
-                            timer.Start();
+                            if (jogador.TemMaiorCarta(partida.MesaAtual(jogador.idPartida)))
+                            {
+                                Jogar(jogador.MaiorCarta());
+                                timer.Start();
+                            }
+                            else
+                            {
+                                Jogar(jogador.MaiorBode());
+                                timer.Start();
+                            }
                         }
                         if (fator > 25 && fator <= 100)
                         {
-                            Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
-                            timer.Start();
+                            if (!jogador.TemMaiorCarta(partida.MesaAtual(jogador.idPartida)))
+                            {
+                                Jogar(jogador.MaiorBode());
+                                timer.Start();
+                            }
+                            else
+                            {
+                                Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
+                                timer.Start();
+                            }
                         }
                         if (fator > 100 && fator <= 150)
                         {
-                            Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
-                            timer.Start();
+                            if (!jogador.TemMaiorCarta(partida.MesaAtual(jogador.idPartida)))
+                            {
+                                Jogar(jogador.MaiorBode());
+                                timer.Start();
+                            }
+                            else
+                            {
+                                Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
+                                timer.Start();
+                            }
                         }
                         if (bodes > 150)
                         {
-                            Jogar(jogador.MenorCarta());
-                            timer.Start();
+                            if (jogador.TemMenorCarta(partida.MesaAtual(jogador.idPartida)))
+                            {
+                                Jogar(jogador.MenorCarta());
+                                timer.Start();
+                            }
+                            else
+                            {
+                                Jogar(jogador.MaiorBode());
+                                timer.Start();
+                            }
                         }
                     }
                 }
@@ -472,6 +503,7 @@ namespace BodeOfWar
         private void MaoEstrategia_FormClosed(object sender, FormClosedEventArgs e)
         {
             pai.AtualizarDetalhes();
+            timer.Stop();
         }
     }
 }
