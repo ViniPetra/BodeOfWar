@@ -12,6 +12,10 @@ namespace BodeOfWar
 
         Partida partida;
 
+        Main pai;
+
+        MãoEstratégiaStatus status;
+
         int ilha1Global;
         int ilha2Global;
 
@@ -47,10 +51,13 @@ namespace BodeOfWar
         /// Define o jogador e inicializa partida
         /// </summary>
         /// <param name="user"></param>
-        public MaoEstrategia(Jogador user)
+        public MaoEstrategia(Jogador user, Main pai)
         {
             jogador = user;
             partida = new Partida();
+            status = new MãoEstratégiaStatus(jogador, partida);
+            status.Owner = this;
+            this.pai = pai;
             InitializeComponent();
         }
 
@@ -125,6 +132,10 @@ namespace BodeOfWar
             }
 
             jogador.IndiceJogador = partida.idJogadores.IndexOf(jogador.Id);
+
+            status.Show();
+            status.Left = this.Location.X + this.Size.Width -10;
+            status.Top = this.Location.Y;
         }
 
         /// <summary>
@@ -445,6 +456,17 @@ namespace BodeOfWar
             {
                 timer.Start();
             }
+        }
+
+        private void MaoEstrategia_LocationChanged(object sender, EventArgs e)
+        {
+            status.Left = this.Location.X + this.Size.Width -10;
+            status.Top = this.Location.Y;
+        }
+
+        private void MaoEstrategia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            pai.AtualizarDetalhes();
         }
     }
 }

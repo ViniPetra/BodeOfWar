@@ -183,24 +183,19 @@ namespace BodeOfWar
             //Vez[1] = nome
             string[] Vez = vez.Split(',');
 
-            string Status = Vez[0];
+            string Status = StatusPartidaAberta();
 
             if (Status == "E" || Status == "")
             {
                 pnlPartidaIndisponivel.BringToFront();
                 btnVoltarListarPartidas2.Enabled = true;
             }
-            else if (Status == "J" && jogador.idPartida == PartidaAberta)
+            else if (Status == "J" && NaPartida())
             {
                 btnAutomatico.Enabled = true;
                 btnManual.Enabled = true;
                 btnEstrategia.Enabled = true;
                 btnIniciarPartida.Enabled = false;
-                btnVoltarListarPartidas2.Enabled = false;
-            }
-            else if (Status == "A" && jogador.idPartida == PartidaAberta)
-            {
-                btnVoltarListarPartidas2.Enabled = false;
             }
             else
             {
@@ -237,6 +232,22 @@ namespace BodeOfWar
 
             PartidaAberta = idPartida;
 
+            if(NaPartida() && StatusPartidaAberta() == "A")
+            {
+                pnlDentroPartida.BringToFront();
+                btnAutomatico.Enabled = false;
+                btnManual.Enabled = false;
+                btnEstrategia.Enabled = false;
+                btnIniciarPartida.Enabled = true;
+            }
+            else if(NaPartida() && StatusPartidaAberta() == "J")
+            {
+                pnlDentroPartida.BringToFront();
+                btnAutomatico.Enabled = true;
+                btnManual.Enabled = true;
+                btnEstrategia.Enabled = true;
+                btnIniciarPartida.Enabled = false;
+            }
             AtualizarDetalhes();
         }
 
@@ -339,6 +350,37 @@ namespace BodeOfWar
             }
 
             AtualizarDetalhes();
+        }
+
+        /// <summary>
+        /// Verifica se o usuário está na partida atual
+        /// </summary>
+        /// <returns>true se está e false se não está</returns>
+        private bool NaPartida()
+        {
+            if(jogador.idPartida == PartidaAberta)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private string StatusPartidaAberta()
+        {
+            string vez = BodeOfWarServer.Jogo.VerificarVez(PartidaAberta);
+
+            //Vez[0] = status da partida
+            //Vez[1] = nome
+            string[] Vez = vez.Split(',');
+            string Status = Vez[0];
+            if (Status.StartsWith("ERRO:Partida não"))
+            {
+                return "A";
+            }
+            return Status;
         }
 
         /// <summary>
@@ -469,7 +511,7 @@ namespace BodeOfWar
             jogador.Mao = MinhaMao;
 
             //Chamar a janela do jogo automático
-            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(jogador);
+            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(jogador, this);
             FormMaoEstrategia.ShowDialog();
         }
 
@@ -591,7 +633,22 @@ namespace BodeOfWar
 
         private void btnVoltarListarPartidas2_Click(object sender, EventArgs e)
         {
-            pnlListarPartidas.BringToFront();
+            if (StatusPartidaAberta() == "J" && NaPartida())
+            {
+                DialogResult dialogResult = MessageBox.Show("A partida está em jogo.\nVocê tem certeza que deseja sair?", "Partida em andamento", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    pnlListarPartidas.BringToFront();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            else
+            {
+                pnlListarPartidas.BringToFront();
+            }
         }
 
         private void btnVoltarListarCriar2_Click(object sender, EventArgs e)
@@ -602,14 +659,6 @@ namespace BodeOfWar
         private void btnVoltarListarCriar_Click(object sender, EventArgs e)
         {
             pnlMenu.BringToFront();
-        }
-
-        /// <summary>
-        /// Fecha o jogo
-        /// </summary>
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnComoJogar_Click(object sender, EventArgs e)
@@ -650,6 +699,14 @@ namespace BodeOfWar
         private void btnVerNovamente_Click(object sender, EventArgs e)
         {
             pnlTutorial1.BringToFront();
+        }
+
+        /// <summary>
+        /// Fecha o jogo
+        /// </summary>
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

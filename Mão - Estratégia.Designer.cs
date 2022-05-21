@@ -2542,7 +2542,9 @@
             this.MinimizeBox = false;
             this.Name = "MaoEstrategia";
             this.Text = "Mão - Estratégia";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MaoEstrategia_FormClosed);
             this.Load += new System.EventHandler(this.Mão_Load);
+            this.LocationChanged += new System.EventHandler(this.MaoEstrategia_LocationChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).EndInit();
