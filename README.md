@@ -25,6 +25,10 @@ Foram usados conceitos de Orientação a Objetos na criação de classes como Ca
 
 Todas as funções estão comentadas dentro do código e podem ser acessadas caso tenha curiosidade.
 
+A arquitetura das classes está dividida como:
+
+![image](https://user-images.githubusercontent.com/89108219/169663012-9de8fa41-1fbc-4708-b513-29349d3972c4.png)
+
 A estratégia adotada para o sistema autônomo segue a seguinte lógica:
 
 ![image](https://user-images.githubusercontent.com/89108219/168651744-78f48d95-1d82-4f62-a10f-ed5c52f1f259.png)
