@@ -117,11 +117,18 @@ namespace BodeOfWar
             int minCJ = CartasJogadas.Min();
             int maxCJ = CartasJogadas.Max();
 
-            foreach(Cartas carta in Mao)
+            if (minCJ == maxCJ)
             {
-                if(carta.id > maxCJ && carta.id < minCJ)
+                return Mao[((Mao.Count())) / 2].id;
+            }
+            else
+            {
+                foreach (Cartas carta in Mao)
                 {
-                    return carta.id;
+                    if (carta.id > maxCJ && carta.id < minCJ)
+                    {
+                        return carta.id;
+                    }
                 }
             }
 
