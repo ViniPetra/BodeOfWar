@@ -92,6 +92,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mão - Estratégia - Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mão - Estratégia - Status.Designer.cs">
+      <DependentUpon>Mão - Estratégia - Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mão - Estratégia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mão - Estratégia - Status.resx">
+      <DependentUpon>Mão - Estratégia - Status.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mão - Estratégia.resx">
       <DependentUpon>Mão - Estratégia.cs</DependentUpon>
