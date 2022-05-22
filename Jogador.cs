@@ -216,7 +216,16 @@ namespace BodeOfWar
         /// <returns>bool</returns>
         public bool TemMaiorCarta(List<int> CartasJogadas)
         {
-            int maior = CartasJogadas.Max();
+            int maior;
+
+            if (CartasJogadas.Any())
+            {
+                maior = CartasJogadas.Max();
+            }
+            else
+            {
+                return true;
+            }
 
             List<int> aux = new List<int>();
             for (int i = 0; i < this.Mao.Count; i++)
@@ -243,7 +252,16 @@ namespace BodeOfWar
         /// <returns></returns>
         public bool TemMenorCarta(List<int> CartasJogadas)
         {
-            int menor = CartasJogadas.Min();
+            int menor;
+            if (CartasJogadas.Any())
+            {
+                menor = CartasJogadas.Min();
+            }
+            else
+            {
+                return true;
+            }
+
 
             List<int> aux = new List<int>();
             for (int i = 0; i < this.Mao.Count; i++)

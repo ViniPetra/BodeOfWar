@@ -242,6 +242,15 @@ namespace BodeOfWar
                         }
                     }
                 }
+
+                //comentar
+                foreach(Adversário adversário in partida.Jogadores)
+                {
+                    if(adversário.id == id)
+                    {
+                        adversário.AdicionarCartasJogadas(carta);
+                    }
+                }
             }
 
             /// 2
@@ -385,6 +394,11 @@ namespace BodeOfWar
             //Verifica se é a vez deste jogador
             if (partida.VerificarVez(jogador.idPartida) == jogador.Nome)
             {
+                if (partida.rodada != 0)
+                {
+                    partida.VerificarQuemPerdeuAnterior(jogador.TodasCartas);
+                }
+
                 string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
 
                 //Verifica se é hora de escolher ilha
@@ -441,20 +455,7 @@ namespace BodeOfWar
                                 timer.Start();
                             }
                         }
-                        if (fator > 25 && fator <= 100)
-                        {
-                            if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
-                            {
-                                Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
-                                timer.Start();
-                            }
-                            else
-                            {
-                                Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
-                                timer.Start();
-                            }
-                        }
-                        if (fator > 100 && fator <= 150)
+                        if (fator > 25 && fator <= 150)
                         {
                             if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {

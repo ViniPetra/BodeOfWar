@@ -15,6 +15,8 @@ namespace BodeOfWar
         public List<int>[] CartasPorJogador { get; set; }
         public int QntJogadores { get; set; }
 
+        public List<Adversário> Jogadores { get; set; }
+
         public Partida()
         {
             EmJogo = true;
@@ -22,6 +24,7 @@ namespace BodeOfWar
             Mesa = new List<string>();
             idJogadores = new List<int>();
             CartasPorJogador = new List<int>[4];
+            Jogadores = new List<Adversário>();
         }
 
         /// <summary>
@@ -39,17 +42,20 @@ namespace BodeOfWar
             {
                 string[] aux = a.Split(',');
 
-                int[] auxInt = new int[aux.Length];
-
                 if (!(auxidJogadores.Contains(aux[0])) && !(aux[0] == "") && !(aux[0].StartsWith(" ")))
                 {
                     auxidJogadores.Add((aux[0]));
                 }
             }
 
-            foreach(string a in auxidJogadores)
+            foreach(string p in Players)
             {
-                idJogadores.Add(Int32.Parse(a));
+                string[] a = p.Split(',');
+                int idJogador = Int32.Parse(a[0]);
+                string nomeJogador = a[1];
+                idJogadores.Add(idJogador);
+                //
+                this.Jogadores.Add(new Adversário(idJogador, nomeJogador, auxidJogadores.IndexOf(a[0])));
             }
             QntJogadores = idJogadores.Count();
         }
@@ -259,6 +265,48 @@ namespace BodeOfWar
                 CartasJogadas.Add(carta);
             }
             return CartasJogadas;
+        }
+
+
+        public string VerificarQuemPerdeuAnterior(Cartas[] TodasCartas)
+        {
+            List<int> CartasRodadaAnterior = new List<int>();
+
+            foreach (Adversário adv in this.Jogadores)
+            {
+                CartasRodadaAnterior.Add(adv.CartasJogadas[rodada - 1]);
+            }
+
+            List<Cartas> CartasJogadas = new List<Cartas>();
+
+            int bodesJogados = 0;
+
+            int IndexMin = CartasRodadaAnterior.IndexOf(CartasRodadaAnterior.Min());
+
+            foreach(Cartas carta in TodasCartas)
+            {
+                foreach(int i in CartasRodadaAnterior)
+                {
+                    if(carta.id == i)
+                    {
+                        CartasJogadas.Add(carta);
+                    }
+                }
+            }
+
+            foreach(Cartas carta in CartasJogadas)
+            {
+                bodesJogados += carta.bode;
+            }
+
+            foreach(Adversário jogador in Jogadores)
+            {
+                if(jogador.IndexJogador == IndexMin)
+                {
+                    jogador.AdicionarBodes(bodesJogados);
+                }
+            }
+            return IndexMin.ToString() + "," + bodesJogados.ToString();
         }
     }
 }
