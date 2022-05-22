@@ -373,6 +373,10 @@ namespace BodeOfWar
             }
         }
 
+        /// <summary>
+        /// Verifica o status da partida ("A", "J", "E")
+        /// </summary>
+        /// <returns>status da partida</returns>
         private string StatusPartidaAberta()
         {
             string vez = BodeOfWarServer.Jogo.VerificarVez(PartidaAberta);

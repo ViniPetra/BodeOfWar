@@ -64,6 +64,10 @@ namespace BodeOfWar
             return max;
         }
 
+        /// <summary>
+        /// Descobre a carta com maior bode na mão do jogador
+        /// </summary>
+        /// <returns>Id da carta com maior bode</returns>
         public int MaiorBode()
         {
             List<int> aux = new List<int>();
@@ -85,6 +89,10 @@ namespace BodeOfWar
             return IndexMax;
         }
 
+        /// <summary>
+        /// Descobre a carta com menor bode na mão do jogador
+        /// </summary>
+        /// <returns>Id da carta com menor bode</returns>
         public int MenorBode()
         {
             List<int> aux = new List<int>();
@@ -106,6 +114,11 @@ namespace BodeOfWar
             return IndexMin;
         }
 
+        /// <summary>
+        /// Joga uma carta entre a maior e a menor carta jogada na rodada
+        /// </summary>
+        /// <param name="CartasJogadas"></param>
+        /// <returns>Id da carta</returns>
         public int Descartar(List<int> CartasJogadas)
         {
             List<int> aux = new List<int>();
@@ -196,6 +209,11 @@ namespace BodeOfWar
             return contagem;
         }
 
+        /// <summary>
+        /// Verifica se o jogador tem uma carta maior que as já jogadas na mesa
+        /// </summary>
+        /// <param name="CartasJogadas"></param>
+        /// <returns>bool</returns>
         public bool TemMaiorCarta(List<int> CartasJogadas)
         {
             int maior = CartasJogadas.Max();
@@ -218,6 +236,11 @@ namespace BodeOfWar
             }
         }
         
+        /// <summary>
+        /// Verifica se o jogador tem uma carta menor que as já jogadas na mesa
+        /// </summary>
+        /// <param name="CartasJogadas"></param>
+        /// <returns></returns>
         public bool TemMenorCarta(List<int> CartasJogadas)
         {
             int menor = CartasJogadas.Min();

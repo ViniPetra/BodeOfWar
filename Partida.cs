@@ -194,6 +194,11 @@ namespace BodeOfWar
             return tamanho;
         }
 
+        /// <summary>
+        /// Verifica se a partida já acabou e quem venceu
+        /// </summary>
+        /// <param name="idPartida"></param>
+        /// <returns>Nome do vencedor em UpperCase</returns>
         public bool JaTemVencedor(int idPartida)
         {  
             string jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida).Replace("\n", ",");
@@ -219,6 +224,11 @@ namespace BodeOfWar
             return false;
         }
 
+        /// <summary>
+        /// Verifica quais cartas foram jogadas na rodada atual
+        /// </summary>
+        /// <param name="idPartida"></param>
+        /// <returns>Lista de ids das cartas</returns>
         public List<int> CartasJogadas(int idPartida)
         {
             string[] aux;
