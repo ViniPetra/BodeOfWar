@@ -69,11 +69,6 @@ namespace BodeOfWar
 
         }
 
-        public void UpdateTamIlha(string tamanho)
-        {
-            txtTamIlha.Text = tamanho;
-        }
-
         /// <summary>
         /// 0 - Aguardando timer
         /// 1 - Analisando
@@ -94,7 +89,13 @@ namespace BodeOfWar
                 //Analisando
                 case 1:
                     lblStatusAuto.Text = "Analisando";
+                    lblStatusMao.Text = "Analisando";
+                    lblStatusMesa.Text = "Analisando";
+                    lblStatusDecisao.Text = "Analisando";
                     lblStatusAuto.ForeColor = Color.Orange;
+                    lblStatusMao.ForeColor = Color.Orange;
+                    lblStatusMesa.ForeColor = Color.Orange;
+                    lblStatusDecisao.ForeColor = Color.Orange;
                     break;
                 //Jogando ilha
                 case 2:
@@ -180,8 +181,8 @@ namespace BodeOfWar
                     lblStatusMesa.ForeColor = Color.Red;
                     break;
                 case 4:
-                    lblStatusMao.Text = "Aguardando timer...";
-                    lblStatusMao.ForeColor = Color.Green;
+                    lblStatusMesa.Text = "Aguardando timer...";
+                    lblStatusMesa.ForeColor = Color.Green;
                     break;
                 case 5:
                     lblStatusMesa.Text = "Escolhendo ilha";
@@ -252,6 +253,28 @@ namespace BodeOfWar
         public void UpdateUltimoPerdedor(string perdedor)
         {
             txtUltimoPerdedor.Text = perdedor;
+        }
+
+        public void UpdateMetricas(List<Adversário> jogadores, int rodada, int tamIlha)
+        {
+            List<int> BodesIndexes = new List<int>();
+            List<int> VencedoresIndexes = new List<int>();
+            List<int> PerdedoresIndexes = new List<int>();
+
+            foreach(Adversário adversário in jogadores)
+            {
+                BodesIndexes.Add(adversário.QntBodes);
+                VencedoresIndexes.Add(adversário.Vencidas);
+                PerdedoresIndexes.Add(adversário.Perdidas);
+            }
+
+            txtMaisBodes.Text = jogadores[BodesIndexes.IndexOf(BodesIndexes.Max())].nome;
+            txtMaisVenceu.Text = jogadores[VencedoresIndexes.IndexOf(VencedoresIndexes.Max())].nome;
+            txtMenosBodes.Text = jogadores[BodesIndexes.IndexOf(BodesIndexes.Min())].nome;
+            txtMaisPerdeu.Text = jogadores[PerdedoresIndexes.IndexOf(PerdedoresIndexes.Max())].nome;
+
+            txtRodada.Text = rodada.ToString();
+            txtTamIlha.Text = tamIlha.ToString();
         }
     }
 }

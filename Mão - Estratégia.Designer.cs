@@ -568,6 +568,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblVez.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVez.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblVez.Location = new System.Drawing.Point(651, 95);
@@ -635,6 +636,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNarracao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblNarracao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNarracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNarracao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNarracao.Location = new System.Drawing.Point(651, 219);

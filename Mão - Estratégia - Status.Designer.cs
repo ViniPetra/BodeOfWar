@@ -78,6 +78,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.lblStatusDecisao = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMenosBodes = new System.Windows.Forms.TextBox();
+            this.txtMaisBodes = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMaisVenceu = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMaisPerdeu = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtRodada = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.pnlStatus1.SuspendLayout();
             this.gpb1.SuspendLayout();
             this.gpb2.SuspendLayout();
@@ -89,6 +101,8 @@
             this.gpbPartidaAnterior.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStatusAutomaçao
@@ -450,7 +464,8 @@
             // txtTamIlha
             // 
             this.txtTamIlha.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTamIlha.Location = new System.Drawing.Point(86, 636);
+            this.txtTamIlha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTamIlha.Location = new System.Drawing.Point(17, 35);
             this.txtTamIlha.Name = "txtTamIlha";
             this.txtTamIlha.ReadOnly = true;
             this.txtTamIlha.Size = new System.Drawing.Size(111, 20);
@@ -466,7 +481,7 @@
             this.lblTamIlha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTamIlha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTamIlha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTamIlha.Location = new System.Drawing.Point(86, 618);
+            this.lblTamIlha.Location = new System.Drawing.Point(17, 17);
             this.lblTamIlha.Name = "lblTamIlha";
             this.lblTamIlha.Size = new System.Drawing.Size(111, 15);
             this.lblTamIlha.TabIndex = 169;
@@ -657,6 +672,150 @@
             this.lblStatusDecisao.TabIndex = 5;
             this.lblStatusDecisao.Text = "Não iniciado";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtMaisPerdeu);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtMaisVenceu);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.txtMenosBodes);
+            this.groupBox2.Controls.Add(this.txtMaisBodes);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(12, 567);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(276, 105);
+            this.groupBox2.TabIndex = 178;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Métricas dos jogadores";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(17, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 15);
+            this.label6.TabIndex = 173;
+            this.label6.Text = "Mais bodes:";
+            // 
+            // txtMenosBodes
+            // 
+            this.txtMenosBodes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMenosBodes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMenosBodes.Location = new System.Drawing.Point(148, 34);
+            this.txtMenosBodes.Name = "txtMenosBodes";
+            this.txtMenosBodes.ReadOnly = true;
+            this.txtMenosBodes.Size = new System.Drawing.Size(111, 20);
+            this.txtMenosBodes.TabIndex = 176;
+            // 
+            // txtMaisBodes
+            // 
+            this.txtMaisBodes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMaisBodes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaisBodes.Location = new System.Drawing.Point(17, 34);
+            this.txtMaisBodes.Name = "txtMaisBodes";
+            this.txtMaisBodes.ReadOnly = true;
+            this.txtMaisBodes.Size = new System.Drawing.Size(111, 20);
+            this.txtMaisBodes.TabIndex = 174;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(148, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 15);
+            this.label10.TabIndex = 175;
+            this.label10.Text = "Menos bodes:";
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(17, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(111, 15);
+            this.label11.TabIndex = 177;
+            this.label11.Text = "Mais venceu:";
+            // 
+            // txtMaisVenceu
+            // 
+            this.txtMaisVenceu.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMaisVenceu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaisVenceu.Location = new System.Drawing.Point(17, 75);
+            this.txtMaisVenceu.Name = "txtMaisVenceu";
+            this.txtMaisVenceu.ReadOnly = true;
+            this.txtMaisVenceu.Size = new System.Drawing.Size(111, 20);
+            this.txtMaisVenceu.TabIndex = 178;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(148, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 15);
+            this.label12.TabIndex = 179;
+            this.label12.Text = "Mais perdeu:";
+            // 
+            // txtMaisPerdeu
+            // 
+            this.txtMaisPerdeu.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMaisPerdeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaisPerdeu.Location = new System.Drawing.Point(148, 75);
+            this.txtMaisPerdeu.Name = "txtMaisPerdeu";
+            this.txtMaisPerdeu.ReadOnly = true;
+            this.txtMaisPerdeu.Size = new System.Drawing.Size(111, 20);
+            this.txtMaisPerdeu.TabIndex = 180;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtRodada);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.lblTamIlha);
+            this.groupBox3.Controls.Add(this.txtTamIlha);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(12, 678);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(276, 63);
+            this.groupBox3.TabIndex = 181;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Métricas da partida";
+            // 
+            // txtRodada
+            // 
+            this.txtRodada.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtRodada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRodada.Location = new System.Drawing.Point(148, 34);
+            this.txtRodada.Name = "txtRodada";
+            this.txtRodada.ReadOnly = true;
+            this.txtRodada.Size = new System.Drawing.Size(111, 20);
+            this.txtRodada.TabIndex = 176;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(148, 16);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 15);
+            this.label16.TabIndex = 175;
+            this.label16.Text = "Rodada";
+            // 
             // MãoEstratégiaStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -664,11 +823,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(306, 768);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gpbPartidaAnterior);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbJogadores);
-            this.Controls.Add(this.txtTamIlha);
-            this.Controls.Add(this.lblTamIlha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -695,8 +854,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -750,5 +912,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblStatusMesa;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtMaisPerdeu;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtMaisVenceu;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtMenosBodes;
+        private System.Windows.Forms.TextBox txtMaisBodes;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtRodada;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -143,10 +143,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Atualiza as informações em txtVez, txtNarracao, txtJogadores
-        /// 2. Popula a partida.Mesa
-        /// 3. Chama a VerMesa() para mostrar cartas jogadas
-        /// 4. Verifica se já houve um vencedor
+        /// 
         /// </summary>
         private void AtualizarDetalhes()
         {
@@ -154,12 +151,13 @@ namespace BodeOfWar
             txtVez.Text = partida.VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             partida.PopularMesa(partida.rodada, jogador.idPartida);
-            //
-            status.UpdateTamIlha(partida.TamanhoIlha(jogador.idPartida).ToString());
-            
             VerMesa();
-            //
             status.UpdateJogadores(partida.Jogadores);
+            //
+            if (partida.rodada != 0)
+            {
+                status.UpdateMetricas(partida.Jogadores, partida.rodada, partida.TamanhoIlha(jogador.idPartida));
+            }
 
             if (partida.JaTemVencedor(jogador.idPartida))
             {
@@ -168,7 +166,7 @@ namespace BodeOfWar
                 status.UpdateStatusAuto(9);
                 status.UpdateDecisao(9);
                 status.UpdateStatusMao(9);
-                status.UpdateStatusMesa(9);
+                status.UpdateStatusMesa(4);
             }
         }
 
@@ -442,6 +440,12 @@ namespace BodeOfWar
                         //Escolher maior ilha
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Max(ilha1Global, ilha2Global));
                         AtualizarDetalhes();
+
+                        status.UpdateStatusAuto(0);
+                        status.UpdateStatusMao(0);
+                        status.UpdateStatusMesa(4);
+                        status.UpdateDecisao(7);
+
                         return;
                     }
                     else
@@ -454,6 +458,12 @@ namespace BodeOfWar
                         //Escolher menor ilha
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Min(ilha1Global, ilha2Global));
                         AtualizarDetalhes();
+
+                        status.UpdateStatusAuto(0);
+                        status.UpdateStatusMao(0);
+                        status.UpdateStatusMesa(4);
+                        status.UpdateDecisao(7);
+
                         return;
                     }
                 }
