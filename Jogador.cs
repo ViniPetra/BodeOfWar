@@ -144,7 +144,6 @@ namespace BodeOfWar
                     }
                 }
             }
-
             return Mao[((Mao.Count())) / 2].id;
         }
 

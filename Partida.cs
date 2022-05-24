@@ -49,13 +49,16 @@ namespace BodeOfWar
             }
 
             foreach(string p in Players)
-            {
+            { 
                 string[] a = p.Split(',');
-                int idJogador = Int32.Parse(a[0]);
-                string nomeJogador = a[1];
-                idJogadores.Add(idJogador);
-                //
-                this.Jogadores.Add(new Adversário(idJogador, nomeJogador, auxidJogadores.IndexOf(a[0])));
+                if (!(a[0] == "") && !(a[0].StartsWith(" ")))
+                {
+                    int idJogador = Int32.Parse(a[0]);
+                    string nomeJogador = a[1];
+                    idJogadores.Add(idJogador);
+                    //
+                    this.Jogadores.Add(new Adversário(idJogador, nomeJogador, auxidJogadores.IndexOf(a[0])));
+                }
             }
             QntJogadores = idJogadores.Count();
         }
@@ -267,7 +270,11 @@ namespace BodeOfWar
             return CartasJogadas;
         }
 
-
+        /// <summary>
+        /// Verifica quem perdeu a rodada anterior à que foi chamada e soma os bodes em quem perdeu
+        /// </summary>
+        /// <param name="TodasCartas"></param>
+        /// <returns>índice do jogador que perdeu e número de bodes comprados</returns>
         public string VerificarQuemPerdeuAnterior(Cartas[] TodasCartas)
         {
             List<int> CartasRodadaAnterior = new List<int>();
