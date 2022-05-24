@@ -171,8 +171,6 @@
             this.pcbCarta3 = new System.Windows.Forms.PictureBox();
             this.pcbCarta2 = new System.Windows.Forms.PictureBox();
             this.pcbCarta1 = new System.Windows.Forms.PictureBox();
-            this.lblTamIlha = new System.Windows.Forms.Label();
-            this.txtTamIlha = new System.Windows.Forms.TextBox();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
@@ -600,7 +598,7 @@
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
             this.txtNarracao.ReadOnly = true;
-            this.txtNarracao.Size = new System.Drawing.Size(111, 100);
+            this.txtNarracao.Size = new System.Drawing.Size(111, 147);
             this.txtNarracao.TabIndex = 48;
             this.txtNarracao.DoubleClick += new System.EventHandler(this.txtNarracao_DoubleClick);
             // 
@@ -1642,7 +1640,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 3000;
+            this.timer.Interval = 7000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // pcbJogador4
@@ -2261,34 +2259,6 @@
             this.pcbCarta1.TabIndex = 1;
             this.pcbCarta1.TabStop = false;
             // 
-            // lblTamIlha
-            // 
-            this.lblTamIlha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTamIlha.AutoSize = true;
-            this.lblTamIlha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblTamIlha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTamIlha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTamIlha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTamIlha.Location = new System.Drawing.Point(651, 341);
-            this.lblTamIlha.Name = "lblTamIlha";
-            this.lblTamIlha.Size = new System.Drawing.Size(111, 15);
-            this.lblTamIlha.TabIndex = 167;
-            this.lblTamIlha.Text = "Tamanho da ilha: ";
-            // 
-            // txtTamIlha
-            // 
-            this.txtTamIlha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTamIlha.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTamIlha.Location = new System.Drawing.Point(651, 359);
-            this.txtTamIlha.Name = "txtTamIlha";
-            this.txtTamIlha.ReadOnly = true;
-            this.txtTamIlha.Size = new System.Drawing.Size(111, 20);
-            this.txtTamIlha.TabIndex = 168;
-            // 
             // backgroundWorker
             // 
             this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
@@ -2302,8 +2272,6 @@
             this.BackgroundImage = global::BodeOfWar.Properties.Resources.Deck2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(811, 764);
-            this.Controls.Add(this.txtTamIlha);
-            this.Controls.Add(this.lblTamIlha);
             this.Controls.Add(this.pcbJogador4);
             this.Controls.Add(this.pcbJogador3);
             this.Controls.Add(this.pcbJogador2);
@@ -2646,8 +2614,6 @@
         private System.Windows.Forms.PictureBox pcbJogador2;
         private System.Windows.Forms.PictureBox pcbJogador3;
         private System.Windows.Forms.PictureBox pcbJogador4;
-        private System.Windows.Forms.Label lblTamIlha;
-        private System.Windows.Forms.TextBox txtTamIlha;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }

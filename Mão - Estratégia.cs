@@ -134,7 +134,10 @@ namespace BodeOfWar
 
             jogador.IndiceJogador = partida.idJogadores.IndexOf(jogador.Id);
 
+            status.Config_UpdateJogadores(partida.Jogadores);
+
             status.Show();
+
             status.Left = this.Location.X + this.Size.Width - 10;
             status.Top = this.Location.Y;
         }
@@ -151,12 +154,21 @@ namespace BodeOfWar
             txtVez.Text = partida.VerificarVez(jogador.idPartida);
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
             partida.PopularMesa(partida.rodada, jogador.idPartida);
-            txtTamIlha.Text = partida.TamanhoIlha(jogador.idPartida).ToString();
+            //
+            status.UpdateTamIlha(partida.TamanhoIlha(jogador.idPartida).ToString());
+            
             VerMesa();
+            //
+            status.UpdateJogadores(partida.Jogadores);
+
             if (partida.JaTemVencedor(jogador.idPartida))
             {
-                partida.EmJogo = false;
                 timer.Stop();
+                partida.EmJogo = false;
+                status.UpdateStatusAuto(9);
+                status.UpdateDecisao(9);
+                status.UpdateStatusMao(9);
+                status.UpdateStatusMesa(9);
             }
         }
 
@@ -189,6 +201,12 @@ namespace BodeOfWar
                 jogador.Mao.RemoveAt(indexCarta);
                 panels[jogador.MaoId.IndexOf(ID)].BringToFront();
                 partida.rodada++;
+
+                status.UpdateStatusAuto(0);
+                status.UpdateStatusMao(0);
+                status.UpdateStatusMesa(4);
+                status.UpdateDecisao(7);
+
                 AtualizarDetalhes();
                 return true;
             }
@@ -369,6 +387,7 @@ namespace BodeOfWar
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             timer.Start();
+            status.UpdateStatusAuto(0);
         }
 
         private void txtNarracao_DoubleClick(object sender, EventArgs e)
@@ -380,14 +399,13 @@ namespace BodeOfWar
         { 
             if (partida.EmJogo == true)
             {
-                status.UpdateJogador1Status(partida.Jogadores[0].id.ToString(), partida.Jogadores[0].nome, partida.Jogadores[0].QntBodes.ToString());
                 if (!backgroundWorker.IsBusy)
                 {
                     backgroundWorker.RunWorkerAsync();
                 }
-                //Analise();
             }
         }
+
         /// <summary>
         /// Preciso comentar ainda
         /// </summary>
@@ -401,7 +419,8 @@ namespace BodeOfWar
             {
                 if (partida.rodada != 0)
                 {
-                    partida.VerificarQuemPerdeuAnterior(jogador.TodasCartas);
+                    status.UpdateUltimoPerdedor(partida.VerificarQuemPerdeuAnterior(jogador.TodasCartas));
+                    status.UpdateUltimoVencedor(partida.VerificarQuemVenceuAnterior());
                 }
 
                 string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
@@ -409,25 +428,32 @@ namespace BodeOfWar
                 //Verifica se é hora de escolher ilha
                 if (ret[3].Contains("I"))
                 {
+                    status.UpdateStatusAuto(2);
+                    status.UpdateStatusMesa(5);
+
                     int bodes = jogador.BodesComprados();
                     if (bodes > partida.TamanhoIlha(jogador.idPartida))
                     {
+                        status.UpdateStatusMao(1);
+                        status.UpdateDecisao(5);
+
                         VerIlhas();
 
                         //Escolher maior ilha
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Max(ilha1Global, ilha2Global));
                         AtualizarDetalhes();
-                        //timer.Start();
                         return;
                     }
                     else
                     {
+                        status.UpdateStatusMao(2);
+                        status.UpdateDecisao(6);
+
                         VerIlhas();
 
                         //Escolher menor ilha
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Min(ilha1Global, ilha2Global));
                         AtualizarDetalhes();
-                        //timer.Start();
                         return;
                     }
                 }
@@ -435,12 +461,13 @@ namespace BodeOfWar
                 //Verifica se é hora de jogar uma carta
                 if (ret[3].Contains("B"))
                 {
+                    status.UpdateStatusAuto(3);
+
                     //Se for a primeira rodada
                     if ((partida.rodada + 1) == 1)
                     {
                         int rand = new Random().Next(0, 7);
                         Jogar(jogador.Mao[rand].id);
-                        //timer.Start();
                         return;
                     }
                     else
@@ -452,46 +479,63 @@ namespace BodeOfWar
 
                         if (fator <= 25)
                         {
+                            status.UpdateStatusMao(2);
                             if (jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
+                                status.UpdateStatusMesa(0);
+                                status.UpdateDecisao(0);
                                 Jogar(jogador.MaiorCarta());
-                                //timer.Start();
                                 return;
                             }
                             else
                             {
+                                status.UpdateStatusMesa(1);
+                                status.UpdateDecisao(3);
                                 Jogar(jogador.MaiorBode());
-                                //timer.Start();
                                 return;
                             }
                         }
                         if (fator > 25 && fator <= 150)
                         {
+                            /*
                             if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
+                                status.UpdateStatusMesa(1);
+                                status.UpdateDecisao(2);
                                 Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
                                 //timer.Start();
                                 return;
                             }
                             else
                             {
+                                status.UpdateStatusMesa(1);
+                                status.UpdateDecisao(3);
                                 Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
                                 //timer.Start();
                                 return;
                             }
+                            */
+
+                            status.UpdateStatusMesa(9);
+                            status.UpdateDecisao(2);
+                            Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
+                            return;
                         }
-                        if (bodes > 150)
+                        if (fator > 150)
                         {
+                            status.UpdateStatusMao(1);
                             if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
+                                status.UpdateStatusMesa(2);
+                                status.UpdateDecisao(1);
                                 Jogar(jogador.MenorCarta());
-                                //timer.Start();
                                 return;
                             }
                             else
                             {
+                                status.UpdateStatusMesa(3);
+                                status.UpdateDecisao(3);
                                 Jogar(jogador.MaiorBode());
-                                //timer.Start();
                                 return;
                             }
                         }
@@ -500,7 +544,10 @@ namespace BodeOfWar
             }
             else
             {
-                //timer.Start();
+                status.UpdateStatusAuto(4);
+                status.UpdateStatusMao(0);
+                status.UpdateStatusMesa(4);
+                status.UpdateDecisao(7);
                 return;
             }
         }
@@ -525,12 +572,14 @@ namespace BodeOfWar
         private void backgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             timer.Stop();
+            status.UpdateStatusAuto(1);
             Analise();
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             AtualizarDetalhes();
+            status.UpdateStatusAuto(0);
             timer.Start();
         }
     }

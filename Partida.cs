@@ -314,7 +314,26 @@ namespace BodeOfWar
                     jogador.AdicionarBodes(bodesJogados);
                 }
             }
-            return IndexMin.ToString() + "," + bodesJogados.ToString();
+
+            Jogadores[IndexMin].Perdidas++;
+            return Jogadores[IndexMin].nome;
+        }
+
+        public string VerificarQuemVenceuAnterior()
+        {
+            List<int> CartasRodadaAnterior = new List<int>();
+
+            foreach (Adversário adv in this.Jogadores)
+            {
+                CartasRodadaAnterior.Add(adv.CartasJogadas[rodada - 1]);
+            }
+
+            List<Cartas> CartasJogadas = new List<Cartas>();
+
+            int IndexMax = CartasRodadaAnterior.IndexOf(CartasRodadaAnterior.Max());
+
+            Jogadores[IndexMax].Vencidas++;
+            return Jogadores[IndexMax].nome;
         }
     }
 }
