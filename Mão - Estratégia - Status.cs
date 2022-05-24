@@ -14,11 +14,18 @@ namespace BodeOfWar
     {
         Jogador jogador;
         Partida partida;
-        public MãoEstratégiaStatus(Jogador jogador, Partida partida)
+        MaoEstrategia Mao;
+        public MãoEstratégiaStatus(Jogador jogador, Partida partida, MaoEstrategia mao)
         {
             this.jogador = jogador;
             this.partida = partida;
+            this.Mao = mao;
             InitializeComponent();
+        }
+
+        public void UpdateJogador1Status(string id, string nome, string bodes)
+        {
+            txtJogador1.Text = "id: " + id + "\r\n" + "nome: " + nome + "\r\n" + "bodes: " + bodes;
         }
     }
 }

@@ -173,6 +173,7 @@
             this.pcbCarta1 = new System.Windows.Forms.PictureBox();
             this.lblTamIlha = new System.Windows.Forms.Label();
             this.txtTamIlha = new System.Windows.Forms.TextBox();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
@@ -2288,6 +2289,11 @@
             this.txtTamIlha.Size = new System.Drawing.Size(111, 20);
             this.txtTamIlha.TabIndex = 168;
             // 
+            // backgroundWorker
+            // 
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
+            // 
             // MaoEstrategia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2642,5 +2648,6 @@
         private System.Windows.Forms.PictureBox pcbJogador4;
         private System.Windows.Forms.Label lblTamIlha;
         private System.Windows.Forms.TextBox txtTamIlha;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }

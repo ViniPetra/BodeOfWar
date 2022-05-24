@@ -28,8 +28,9 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Função auxiliar para popular a array partida.idJogadores
+        /// Popula a lista idJogadores, Cria os adversários na lista Jogadores e define a quantidade de jogadores
         /// </summary>
+        /// <param name="idPartida"></param>
         public void PopularJogadores(int idPartida)
         {
             string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(idPartida);

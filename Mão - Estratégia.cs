@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace BodeOfWar
 {
@@ -55,7 +56,7 @@ namespace BodeOfWar
         {
             jogador = user;
             partida = new Partida();
-            status = new MãoEstratégiaStatus(jogador, partida);
+            status = new MãoEstratégiaStatus(jogador, partida, this);
             status.Owner = this;
             this.pai = pai;
             InitializeComponent();
@@ -178,9 +179,9 @@ namespace BodeOfWar
             else
             {
                 int indexCarta = -1;
-                foreach(Cartas carta in jogador.Mao)
+                foreach (Cartas carta in jogador.Mao)
                 {
-                    if(carta.id == ID)
+                    if (carta.id == ID)
                     {
                         indexCarta = jogador.Mao.IndexOf(carta);
                     }
@@ -244,9 +245,9 @@ namespace BodeOfWar
                 }
 
                 //comentar
-                foreach(Adversário adversário in partida.Jogadores)
+                foreach (Adversário adversário in partida.Jogadores)
                 {
-                    if(adversário.id == id)
+                    if (adversário.id == id)
                     {
                         adversário.AdicionarCartasJogadas(carta);
                     }
@@ -376,19 +377,23 @@ namespace BodeOfWar
         }
 
         private void timer_Tick(object sender, EventArgs e)
-        {
-            if(partida.EmJogo == true)
+        { 
+            if (partida.EmJogo == true)
             {
-                Analise();
+                status.UpdateJogador1Status(partida.Jogadores[0].id.ToString(), partida.Jogadores[0].nome, partida.Jogadores[0].QntBodes.ToString());
+                if (!backgroundWorker.IsBusy)
+                {
+                    backgroundWorker.RunWorkerAsync();
+                }
+                //Analise();
             }
         }
-
         /// <summary>
         /// Preciso comentar ainda
         /// </summary>
         private void Analise()
         { 
-            timer.Stop();
+            //timer.Stop();
             AtualizarDetalhes();
 
             //Verifica se é a vez deste jogador
@@ -412,7 +417,8 @@ namespace BodeOfWar
                         //Escolher maior ilha
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Max(ilha1Global, ilha2Global));
                         AtualizarDetalhes();
-                        timer.Start();
+                        //timer.Start();
+                        return;
                     }
                     else
                     {
@@ -421,7 +427,8 @@ namespace BodeOfWar
                         //Escolher menor ilha
                         BodeOfWarServer.Jogo.DefinirIlha(jogador.Id, jogador.Senha, Math.Min(ilha1Global, ilha2Global));
                         AtualizarDetalhes();
-                        timer.Start();
+                        //timer.Start();
+                        return;
                     }
                 }
 
@@ -433,7 +440,8 @@ namespace BodeOfWar
                     {
                         int rand = new Random().Next(0, 7);
                         Jogar(jogador.Mao[rand].id);
-                        timer.Start();
+                        //timer.Start();
+                        return;
                     }
                     else
                     {
@@ -447,12 +455,14 @@ namespace BodeOfWar
                             if (jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
                                 Jogar(jogador.MaiorCarta());
-                                timer.Start();
+                                //timer.Start();
+                                return;
                             }
                             else
                             {
                                 Jogar(jogador.MaiorBode());
-                                timer.Start();
+                                //timer.Start();
+                                return;
                             }
                         }
                         if (fator > 25 && fator <= 150)
@@ -460,12 +470,14 @@ namespace BodeOfWar
                             if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
                                 Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
-                                timer.Start();
+                                //timer.Start();
+                                return;
                             }
                             else
                             {
                                 Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
-                                timer.Start();
+                                //timer.Start();
+                                return;
                             }
                         }
                         if (bodes > 150)
@@ -473,12 +485,14 @@ namespace BodeOfWar
                             if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
                                 Jogar(jogador.MenorCarta());
-                                timer.Start();
+                                //timer.Start();
+                                return;
                             }
                             else
                             {
                                 Jogar(jogador.MaiorBode());
-                                timer.Start();
+                                //timer.Start();
+                                return;
                             }
                         }
                     }
@@ -486,7 +500,8 @@ namespace BodeOfWar
             }
             else
             {
-                timer.Start();
+                //timer.Start();
+                return;
             }
         }
 
@@ -505,6 +520,18 @@ namespace BodeOfWar
         {
             pai.AtualizarDetalhes();
             timer.Stop();
+        }
+
+        private void backgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            timer.Stop();
+            Analise();
+        }
+
+        private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            AtualizarDetalhes();
+            timer.Start();
         }
     }
 }
