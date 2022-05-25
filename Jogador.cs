@@ -252,7 +252,6 @@ namespace BodeOfWar
                     contagem += Int32.Parse(aux[1]);
                 }
             }
-
             return contagem;
         }
 
@@ -325,6 +324,37 @@ namespace BodeOfWar
             else
             {
                 return false;
+            }
+        }
+
+        /// <summary>
+        /// Verifica se o jogador vai estourar se comprar a mesa atual
+        /// </summary>
+        /// <param name="CartasJogadas"></param>
+        /// <param name="TamIlha"></param>
+        /// <returns></returns>
+        public bool FazSentidoComprar(List<int> CartasJogadas, int TamIlha)
+        {
+            int BodesNaMesa = 0;
+
+            foreach (int cartaJogada in CartasJogadas)
+            {
+                foreach (Cartas carta in this.TodasCartas)
+                {
+                    if (cartaJogada == carta.id)
+                    {
+                        BodesNaMesa += carta.bode;
+                    }
+                }
+            }
+
+            if (BodesNaMesa > (TamIlha - this.QuantidadeBodes()))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }
