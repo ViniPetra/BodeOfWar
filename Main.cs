@@ -64,17 +64,17 @@ namespace BodeOfWar
             }
 
             //Criação da matriz
-            for (i = 0; i <= 149; i = i + 3)
+            for (i = 0; i <= 149; i += 3)
             {
                 Cartas2[(i / 3), 0] = IntCartas1[i];
             }
 
-            for (i = 1; i <= 149; i = i + 3)
+            for (i = 1; i <= 149; i += 3)
             {
                 Cartas2[(i / 3), 1] = IntCartas1[i];
             }
 
-            for (i = 2; i <= 149; i = i + 3)
+            for (i = 2; i <= 149; i += 3)
             {
                 Cartas2[(i / 3), 2] = IntCartas1[i];
             }
@@ -110,7 +110,7 @@ namespace BodeOfWar
                 }
                 else
                 {
-                    MessageBox.Show("Deu merda");
+                    throw new Exception("Algo deu ruim na instanciação das cartas");
                 }
             }
 
@@ -353,8 +353,7 @@ namespace BodeOfWar
             }
 
             //Mandar senha e Id pro objeto
-            string[] senhaPartida = new string[2];
-            senhaPartida = chamada.Split(',');
+            string[] senhaPartida = chamada.Split(',');
 
             //Define atributos Id, Senha e Nome do objeto jogador 
             jogador.Id = Int32.Parse(senhaPartida[0]);

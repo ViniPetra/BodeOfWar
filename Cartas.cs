@@ -18,11 +18,6 @@ namespace BodeOfWar
             this.ClasseNum = ClasseNum;
         }
 
-        public Cartas()
-        {
-
-        }
-
         public int id { get; set; }
         public int bode { get; set; }
         public int imagemnum { get; set; }
