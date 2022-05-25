@@ -1642,7 +1642,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 7000;
+            this.timer.Interval = 3000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // pcbJogador4

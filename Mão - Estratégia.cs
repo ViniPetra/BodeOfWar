@@ -153,12 +153,10 @@ namespace BodeOfWar
             partida.PopularMesa(partida.rodada, jogador.idPartida);
             VerMesa();
             status.UpdateJogadores(partida.Jogadores);
-            //
             if (partida.rodada != 0)
             {
                 status.UpdateMetricas(partida.Jogadores, partida.rodada, partida.TamanhoIlha(jogador.idPartida));
             }
-
             if (partida.JaTemVencedor(jogador.idPartida))
             {
                 timer.Stop();
@@ -199,11 +197,6 @@ namespace BodeOfWar
                 jogador.Mao.RemoveAt(indexCarta);
                 panels[jogador.MaoId.IndexOf(ID)].BringToFront();
                 partida.rodada++;
-
-                status.UpdateStatusAuto(0);
-                status.UpdateStatusMao(0);
-                status.UpdateStatusMesa(4);
-                status.UpdateDecisao(7);
 
                 AtualizarDetalhes();
                 return true;
@@ -428,7 +421,6 @@ namespace BodeOfWar
                     int bodes = jogador.BodesComprados();
                     if (bodes > partida.TamanhoIlha(jogador.idPartida))
                     {
-
                         VerIlhas();
 
                         //Escolher maior ilha
@@ -438,9 +430,6 @@ namespace BodeOfWar
                     }
                     else
                     {
-                        status.UpdateStatusMao(2);
-                        status.UpdateDecisao(6);
-
                         VerIlhas();
 
                         //Escolher menor ilha
@@ -470,8 +459,6 @@ namespace BodeOfWar
 
                         if (fator <= 50)
                         {
-                            
-                            status.UpdateStatusMao(2);
                             if (jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
                                 Jogar(jogador.MaiorCarta());
@@ -633,11 +620,7 @@ namespace BodeOfWar
                 }
             }
             else
-            {
-                status.UpdateStatusAuto(4);
-                status.UpdateStatusMao(0);
-                status.UpdateStatusMesa(4);
-                status.UpdateDecisao(7);
+            { 
                 return;
             }
         }
@@ -662,14 +645,12 @@ namespace BodeOfWar
         private void backgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             timer.Stop();
-            status.UpdateStatusAuto(1);
             Analise();
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             AtualizarDetalhes();
-            status.UpdateStatusAuto(0);
             timer.Start();
         }
     }
