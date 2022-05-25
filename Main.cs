@@ -86,27 +86,27 @@ namespace BodeOfWar
             {
                 if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
                 {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], false, 1);
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1);
                 }
                 else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] <= 2)
                 {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], false, 2);
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 2);
                 }
                 else if (Cartas2[i, 0] > 32  && Cartas2[i, 1] <= 2)
                 {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], false, 3);
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 3);
                 }
                 else if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] > 2)
                 {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], true, 1);
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 4);
                 }
                 else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] > 2)
                 {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], true, 2);
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 5);
                 }
                 else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] > 2)
                 {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], true, 3);
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 6);
                 }
                 else
                 {

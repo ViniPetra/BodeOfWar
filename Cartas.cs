@@ -9,13 +9,12 @@ namespace BodeOfWar
 {
     public class Cartas
     {
-        public Cartas(int id, int bode, int imagemnum, bool BodeAlto, int ClasseNum)
+        public Cartas(int id, int bode, int imagemnum, int ClasseNum)
         {
             this.id = id;
             this.bode = bode;
             this.imagemnum = imagemnum;
-            this.BodeAlto = BodeAlto;
-            this.ClasseNum = ClasseNum;
+            this.classe = ClasseNum;
         }
 
         public int id { get; set; }
@@ -23,16 +22,14 @@ namespace BodeOfWar
         public int imagemnum { get; set; }
 
         /// <summary>
-        /// true para bodes > 2
+        /// 1 para números até 16 e bodes <= 2;
+        /// 2 para entre 17 e 32 e bodes <= 2;
+        /// 3 para maiores que 32 e bodes <= 2;
+        /// 4 para números até 16 e bodes > 2;
+        /// 5 para entre 17 e 32 e bodes > 2;
+        /// 6 para maiores que 32 e bodes > 2;
         /// </summary>
-        public bool BodeAlto { get; set; }
-
-        /// <summary>
-        /// 1 para números até 16;
-        /// 2 para entre 17 e 32;
-        /// 3 para maiores que 32;
-        /// </summary>
-        public int ClasseNum { get; set; }
+        public int classe { get; set; }
 
         public Image imagem { get; set; }
     }

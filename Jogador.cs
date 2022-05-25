@@ -115,6 +115,54 @@ namespace BodeOfWar
         }
 
         /// <summary>
+        /// Verifica se o jogador tem carta de uma classe 
+        /// </summary>
+        /// <param name="classe"></param>
+        /// <returns></returns>
+        public bool TemCartaClasse(int classe)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].classe);
+            }
+
+            if (aux.Contains(classe))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Escolhe a primeira ocorrência da carta com a classe escolhida
+        /// </summary>
+        /// <param name="classe"></param>
+        /// <returns>Índice da carta na mão</returns>
+        public int CartaClasse(int classe)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].bode);
+            }
+
+            int IndexClasse = 0;
+            foreach (Cartas carta in Mao)
+            {
+                if (carta.classe == classe)
+                {
+                    IndexClasse = carta.id;
+                }
+            }
+
+            return IndexClasse;
+        }
+
+        /// <summary>
         /// Joga uma carta entre a maior e a menor carta jogada na rodada
         /// </summary>
         /// <param name="CartasJogadas"></param>
