@@ -327,6 +327,42 @@ namespace BodeOfWar
             }
         }
 
+        public bool TemCartaMenorQue(int numero)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            foreach(int id in aux)
+            {
+                if(numero > id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool TemCartaMaiorQue(int numero)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            foreach (int id in aux)
+            {
+                if (numero < id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /// <summary>
         /// Verifica se o jogador vai estourar se comprar a mesa atual
         /// </summary>

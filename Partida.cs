@@ -335,5 +335,66 @@ namespace BodeOfWar
             Jogadores[IndexMax].Vencidas++;
             return Jogadores[IndexMax].nome;
         }
+
+        public bool AlguémVaiEstourar(int idPartida, Cartas[] TodasCartas)
+        {
+            string[] aux;
+
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida, rodada);
+
+            ret = ret.Replace("\r", "");
+            aux = ret.Split('\n');
+
+            List<string> retAux = new List<string>();
+
+            List<int> CartasJogadas = new List<int>();
+
+            List<int> Jogadores = new List<int>();
+
+            foreach (string a in aux)
+            {
+                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
+                {
+                    retAux.Add(a);
+                }
+            }
+
+            foreach (string a in retAux)
+            {
+                string[] b = a.Split(',');
+
+                int carta = Int32.Parse(b[1]);
+                int jogador = Int32.Parse(b[0]);
+
+                CartasJogadas.Add(carta);
+                Jogadores.Add(jogador);
+            }
+
+            int BodesNaMesa = 0;
+
+            foreach (int cartaJogada in CartasJogadas)
+            {
+                foreach (Cartas carta in TodasCartas)
+                {
+                    if (cartaJogada == carta.id)
+                    {
+                        BodesNaMesa += carta.bode;
+                    }
+                }
+            }
+
+            foreach(Adversário adversário in this.Jogadores)
+            {
+                if (Jogadores.Contains(adversário.id))
+                {
+                    if (BodesNaMesa + adversário.QntBodes > this.TamanhoIlha(idPartida))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
     }
 }
