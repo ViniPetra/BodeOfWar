@@ -409,7 +409,6 @@ namespace BodeOfWar
         /// </summary>
         private void Analise()
         { 
-            //timer.Stop();
             AtualizarDetalhes();
 
             //Verifica se é a vez deste jogador
@@ -474,7 +473,7 @@ namespace BodeOfWar
                     status.UpdateStatusAuto(3);
 
                     //Se for a primeira rodada
-                    if ((partida.rodada + 1) == 1)
+                    if (partida.rodada == 0)
                     {
                         int rand = new Random().Next(0, 7);
                         Jogar(jogador.Mao[rand].id);
@@ -545,7 +544,7 @@ namespace BodeOfWar
                             {
                                 status.UpdateStatusMesa(3);
                                 status.UpdateDecisao(3);
-                                Jogar(jogador.MaiorBode());
+                                Jogar(jogador.MenorBode());
                                 return;
                             }
                         }
