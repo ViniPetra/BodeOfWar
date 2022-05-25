@@ -81,10 +81,37 @@ namespace BodeOfWar
 
             //Criação da array de objetos com todas as cartas
             //TodasCartas {(id, bode, num),(id, bode num),(id, bode, num)}
+            //
             for (i = 0; i <= 49; i++)
             {
-                //Utilizando o metodo construtor
-                TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2]);
+                if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
+                {
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], false, 1);
+                }
+                else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] <= 2)
+                {
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], false, 2);
+                }
+                else if (Cartas2[i, 0] > 32  && Cartas2[i, 1] <= 2)
+                {
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], false, 3);
+                }
+                else if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] > 2)
+                {
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], true, 1);
+                }
+                else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] > 2)
+                {
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], true, 2);
+                }
+                else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] > 2)
+                {
+                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], true, 3);
+                }
+                else
+                {
+                    MessageBox.Show("Deu merda");
+                }
             }
 
             foreach (Cartas cartas in TodasCartas)
