@@ -492,57 +492,142 @@ namespace BodeOfWar
                             }
                             else if (partida.AlguémVaiEstourar(jogador.idPartida, jogador.TodasCartas))
                             {
-                                if()
+                                if (jogador.TemCartaMenorQue(partida.CartasJogadas(jogador.idPartida).Max()))
+                                {
+                                    if (jogador.TemCartaClasse(4))
+                                    {
+                                        Jogar(jogador.CartaClasse(4));
+                                    }
+                                    else if (jogador.TemCartaClasse(5))
+                                    {
+                                        Jogar(jogador.CartaClasse(5));
+                                    }
+                                    else if (jogador.TemCartaClasse(6))
+                                    {
+                                        Jogar(jogador.CartaClasse(6));
+                                    }
+                                    else if (jogador.TemCartaClasse(1))
+                                    {
+                                        Jogar(jogador.CartaClasse(1));
+                                    }
+                                    else if (jogador.TemCartaClasse(2))
+                                    {
+                                        Jogar(jogador.CartaClasse(2));
+                                    }
+                                    else if (jogador.TemCartaClasse(3))
+                                    {
+                                        Jogar(jogador.CartaClasse(3));
+                                    }
+                                    else
+                                    {
+                                        Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
+                                    }
+                                }
+                                else
+                                {
+                                    if(jogador.FazSentidoComprar(partida.CartasJogadas(jogador.idPartida), partida.TamanhoIlha(jogador.idPartida)))
+                                    {
+                                        Jogar(jogador.CartaMaiorQueMesa(partida.CartasJogadas(jogador.idPartida)));
+                                    }
+                                    else
+                                    {
+                                        Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
+                                    }
+                                }
 
                             }
-                            /*
-                            if (!jogador.TemMaiorCarta(partida.CartasJogadas(jogador.idPartida)))
-                            {
-                                status.UpdateStatusMesa(1);
-                                status.UpdateDecisao(2);
-                                Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
-                                //timer.Start();
-                                return;
-                            }
-                            else
-                            {
-                                status.UpdateStatusMesa(1);
-                                status.UpdateDecisao(3);
-                                Jogar(jogador.Mao[((jogador.Mao.Count())) / 2].id);
-                                //timer.Start();
-                                return;
-                            }
-                            */
-                            /*
-                            status.UpdateStatusMesa(9);
-                            status.UpdateDecisao(2);
-                            Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
-                            return;
-                            */
                         }
                         else if (fator > 100 && fator <= 150)
                         {
-
+                            if (partida.rodada <= 4)
+                            {
+                                if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
+                                {
+                                    Jogar(jogador.MenorCarta());
+                                    return;
+                                }
+                                else
+                                {
+                                    Jogar(jogador.MenorBode());
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                if (partida.AlguémVaiEstourar(jogador.idPartida, jogador.TodasCartas))
+                                {
+                                    if (jogador.TemCartaMenorQue(partida.CartasJogadas(jogador.idPartida).Max()))
+                                    {
+                                        if (jogador.TemCartaClasse(4))
+                                        {
+                                            Jogar(jogador.CartaClasse(4));
+                                        }
+                                        else if (jogador.TemCartaClasse(5))
+                                        {
+                                            Jogar(jogador.CartaClasse(5));
+                                        }
+                                        else if (jogador.TemCartaClasse(6))
+                                        {
+                                            Jogar(jogador.CartaClasse(6));
+                                        }
+                                        else if (jogador.TemCartaClasse(1))
+                                        {
+                                            Jogar(jogador.CartaClasse(1));
+                                        }
+                                        else if (jogador.TemCartaClasse(2))
+                                        {
+                                            Jogar(jogador.CartaClasse(2));
+                                        }
+                                        else if (jogador.TemCartaClasse(3))
+                                        {
+                                            Jogar(jogador.CartaClasse(3));
+                                        }
+                                        else
+                                        {
+                                            Jogar(jogador.Descartar(partida.CartasJogadas(jogador.idPartida)));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
+                                        {
+                                            Jogar(jogador.MenorCarta());
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            Jogar(jogador.MenorBode());
+                                            return;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
+                                    {
+                                        Jogar(jogador.MenorCarta());
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        Jogar(jogador.MenorBode());
+                                        return;
+                                    }
+                                }
+                            }
                         }
                         if (fator > 150)
                         {
-                            /*
-                            status.UpdateStatusMao(1);
                             if (jogador.TemMenorCarta(partida.CartasJogadas(jogador.idPartida)))
                             {
-                                status.UpdateStatusMesa(2);
-                                status.UpdateDecisao(1);
                                 Jogar(jogador.MenorCarta());
                                 return;
                             }
                             else
                             {
-                                status.UpdateStatusMesa(3);
-                                status.UpdateDecisao(3);
                                 Jogar(jogador.MenorBode());
                                 return;
                             }
-                            */
                         }
                     }
                 }

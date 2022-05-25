@@ -77,16 +77,16 @@ namespace BodeOfWar
             }
 
             int max = aux.Max();
-            int IndexMax = 0;
+            int IdMax = 0;
             foreach(Cartas carta in Mao)
             {
                 if(carta.bode == max)
                 {
-                    IndexMax = carta.id;
+                    IdMax = carta.id;
                 }
             }
 
-            return IndexMax;
+            return IdMax;
         }
 
         /// <summary>
@@ -102,16 +102,16 @@ namespace BodeOfWar
             }
 
             int min = aux.Min();
-            int IndexMin = 0;
+            int IdMin = 0;
             foreach (Cartas carta in Mao)
             {
                 if (carta.bode == min)
                 {
-                    IndexMin = carta.id;
+                    IdMin = carta.id;
                 }
             }
 
-            return IndexMin;
+            return IdMin;
         }
 
         /// <summary>
@@ -363,6 +363,42 @@ namespace BodeOfWar
             return false;
         }
 
+        public int CartaMaiorQueMesa(List<int> CartasJogadas)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            foreach (int id in aux)
+            {
+                if (id > CartasJogadas.Max())
+                {
+                    return id;
+                }
+            }
+            return -1;
+        }
+
+        public int CartaMenorQueMesa(List<int> CartasJogadas)
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].id);
+            }
+
+            foreach (int id in aux)
+            {
+                if (id < CartasJogadas.Max())
+                {
+                    return id;
+                }
+            }
+            return -1;
+        }
+
         /// <summary>
         /// Verifica se o jogador vai estourar se comprar a mesa atual
         /// </summary>
@@ -392,6 +428,41 @@ namespace BodeOfWar
             {
                 return true;
             }
+        }
+
+        /// <summary>
+        /// Vrifica qual a classe da carta olhando id e bode
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="bode"></param>
+        /// <returns>Classe da carta</returns>
+        public int VerClasse(int id, int bode)
+        {
+            if (id <= 16 && bode <= 2)
+            {
+                return 1;
+            }
+            else if (id > 16 && id <= 32 && bode <= 2)
+            {
+                return 2;
+            }
+            else if (id > 32 && bode <= 2)
+            {
+                return 3;
+            }
+            else if (id <= 16 && bode > 2)
+            {
+                return 4;
+            }
+            else if (id > 16 && id <= 32 && bode > 2)
+            {
+                return 5;
+            }
+            else if (id > 32 && bode > 2)
+            {
+                return 6;
+            }
+            return 0;
         }
     }
 }
