@@ -183,11 +183,11 @@ namespace BodeOfWar
         /// <summary>
         /// Verifica tamanho atual da ilha
         /// </summary>
-        /// <param name="idJogador"></param>
+        /// <param name="idPartida"></param>
         /// <returns>tamanho atual da ilha</returns>
-        public int TamanhoIlha(int idJogador)
+        public int TamanhoIlha(int idPartida)
         {
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(idJogador);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(idPartida);
             ret = ret.Replace("\r", "");
             string[] aux = ret.Split('\n');
 
