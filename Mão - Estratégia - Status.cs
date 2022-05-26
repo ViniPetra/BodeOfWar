@@ -12,10 +12,10 @@ namespace BodeOfWar
 {
     public partial class MãoEstratégiaStatus : Form
     {
-        Jogador jogador;
+        User jogador;
         Partida partida;
         MaoEstrategia Mao;
-        public MãoEstratégiaStatus(Jogador jogador, Partida partida, MaoEstrategia mao)
+        public MãoEstratégiaStatus(User jogador, Partida partida, MaoEstrategia mao)
         {
             this.jogador = jogador;
             this.partida = partida;
@@ -23,7 +23,7 @@ namespace BodeOfWar
             InitializeComponent();
         }
 
-        public void UpdateJogadores(List<Adversário> adversários)
+        public void UpdateJogadores(List<Jogador> adversários)
         {
             int index = adversários.Count;
 
@@ -32,22 +32,22 @@ namespace BodeOfWar
                 switch (i)
                 {
                     case 0:
-                        txtBodesJ1.Text = adversários[0].QntBodes.ToString();
+                        txtBodesJ1.Text = adversários[0].Bodes.ToString();
                         txtPerdidas1.Text = adversários[0].Perdidas.ToString();
                         txtVencidas1.Text = adversários[0].Vencidas.ToString();
                         break;
                     case 1:
-                        txtBodesJ2.Text = adversários[1].QntBodes.ToString();
+                        txtBodesJ2.Text = adversários[1].Bodes.ToString();
                         txtPerdidas2.Text = adversários[1].Perdidas.ToString();
                         txtVencidas2.Text = adversários[1].Vencidas.ToString();
                         break;
                     case 2:
-                        txtBodesJ3.Text = adversários[2].QntBodes.ToString();
+                        txtBodesJ3.Text = adversários[2].Bodes.ToString();
                         txtPerdidas3.Text = adversários[2].Perdidas.ToString();
                         txtVencidas3.Text = adversários[2].Vencidas.ToString();
                         break;
                     case 3:
-                        txtBodesJ4.Text = adversários[3].QntBodes.ToString();
+                        txtBodesJ4.Text = adversários[3].Bodes.ToString();
                         txtPerdidas4.Text = adversários[3].Perdidas.ToString();
                         txtVencidas4.Text = adversários[3].Vencidas.ToString();
                         break;
@@ -55,7 +55,7 @@ namespace BodeOfWar
             }
         }
 
-        public void Config_UpdateJogadores(List<Adversário> adversários)
+        public void Config_UpdateJogadores(List<Jogador> adversários)
         {
             List<GroupBox> groupBoxes = new List<GroupBox> { gpb1, gpb2, gpb3, gpb4 };
 
@@ -64,7 +64,7 @@ namespace BodeOfWar
             for(int i = 0; i < size; i++)
             {
                 groupBoxes[i].Visible = true;
-                groupBoxes[i].Text = adversários[i].id.ToString() + " - " + adversários[i].nome.ToString();
+                groupBoxes[i].Text = adversários[i].Id.ToString() + " - " + adversários[i].Nome.ToString();
             }
 
         }
@@ -255,23 +255,23 @@ namespace BodeOfWar
             txtUltimoPerdedor.Text = perdedor;
         }
 
-        public void UpdateMetricas(List<Adversário> jogadores, int rodada, int tamIlha)
+        public void UpdateMetricas(List<Jogador> jogadores, int rodada, int tamIlha)
         {
             List<int> BodesIndexes = new List<int>();
             List<int> VencedoresIndexes = new List<int>();
             List<int> PerdedoresIndexes = new List<int>();
 
-            foreach(Adversário adversário in jogadores)
+            foreach(Jogador adversário in jogadores)
             {
-                BodesIndexes.Add(adversário.QntBodes);
+                BodesIndexes.Add(adversário.Bodes);
                 VencedoresIndexes.Add(adversário.Vencidas);
                 PerdedoresIndexes.Add(adversário.Perdidas);
             }
 
-            txtMaisBodes.Text = jogadores[BodesIndexes.IndexOf(BodesIndexes.Max())].nome;
-            txtMaisVenceu.Text = jogadores[VencedoresIndexes.IndexOf(VencedoresIndexes.Max())].nome;
-            txtMenosBodes.Text = jogadores[BodesIndexes.IndexOf(BodesIndexes.Min())].nome;
-            txtMaisPerdeu.Text = jogadores[PerdedoresIndexes.IndexOf(PerdedoresIndexes.Max())].nome;
+            txtMaisBodes.Text = jogadores[BodesIndexes.IndexOf(BodesIndexes.Max())].Nome;
+            txtMaisVenceu.Text = jogadores[VencedoresIndexes.IndexOf(VencedoresIndexes.Max())].Nome;
+            txtMenosBodes.Text = jogadores[BodesIndexes.IndexOf(BodesIndexes.Min())].Nome;
+            txtMaisPerdeu.Text = jogadores[PerdedoresIndexes.IndexOf(PerdedoresIndexes.Max())].Nome;
 
             txtRodada.Text = rodada.ToString();
             txtTamIlha.Text = tamIlha.ToString();

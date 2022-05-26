@@ -13,11 +13,10 @@ namespace BodeOfWar
     public partial class Main : Form
     {
         //Array de todas as cartas do jogo
-        public Cartas[] TodasCartas = new Cartas[50];
-        //Array das cartas designadas
+        public List<Cartas> TodasCartas = new List<Cartas>();
         public List<Cartas> MinhaMao = new List<Cartas>();
-        //Definição do jogador
-        public Jogador jogador = new Jogador();
+        public User user = new User();
+        public Partida partida = new Partida();
 
         public int PartidaAberta;
 
@@ -120,7 +119,7 @@ namespace BodeOfWar
             }
 
             //Atribuição de TodasCartas para atributo TodasCartas do objeto jogador
-            jogador.TodasCartas = TodasCartas;
+            //partida.TodasCartas = TodasCartas;
         }
 
         /// <summary>
@@ -346,7 +345,7 @@ namespace BodeOfWar
             }
             else
             {
-                jogador.idPartida = PartidaAberta;
+                user.Partida.Id = PartidaAberta;
                 pnlDentroPartida.BringToFront();
                 txtNome.Text = "";
                 txtSenhaPartida.Text = "";
@@ -356,9 +355,9 @@ namespace BodeOfWar
             string[] senhaPartida = chamada.Split(',');
 
             //Define atributos Id, Senha e Nome do objeto jogador 
-            jogador.Id = Int32.Parse(senhaPartida[0]);
-            jogador.Senha = senhaPartida[1];
-            jogador.Nome = nome;
+            user.Id = Int32.Parse(senhaPartida[0]);
+            user.Senha = senhaPartida[1];
+            user.Nome = nome;
 
             AtualizarDetalhes();
         }
@@ -372,7 +371,7 @@ namespace BodeOfWar
             string retIniciar;
 
             //Iniciando partida
-            retIniciar = BodeOfWarServer.Jogo.IniciarPartida(jogador.Id, jogador.Senha);
+            retIniciar = BodeOfWarServer.Jogo.IniciarPartida(user.Id, user.Senha);
 
             //Gerenciamento de erros
             if (retIniciar.StartsWith("ERRO"))
@@ -389,7 +388,7 @@ namespace BodeOfWar
         /// <returns>true se está e false se não está</returns>
         private bool NaPartida()
         {
-            if(jogador.idPartida == PartidaAberta)
+            if(user.Partida.Id == PartidaAberta)
             {
                 return true;
             }
@@ -425,7 +424,7 @@ namespace BodeOfWar
         /// </summary>
         private void MostrarMaoManual()
         {
-            string StringMao = BodeOfWarServer.Jogo.VerificarMao(jogador.Id, jogador.Senha);
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(user.Id, user.Senha);
 
             //Parse no retorno e criação da array de ids das cartas da mão
             //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
@@ -444,7 +443,7 @@ namespace BodeOfWar
             //Criação da lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
-                for (int i = 0; i < TodasCartas.Length; i++)
+                for (int i = 0; i < TodasCartas.Count; i++)
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
@@ -453,10 +452,10 @@ namespace BodeOfWar
                 }
             }
 
-            jogador.Mao = MinhaMao;
+            user.Mao = MinhaMao;
 
             //Chamar a janela do jogo manual
-            MãoManual FormMao = new MãoManual(jogador);
+            MãoManual FormMao = new MãoManual(this.user, new Partida(this.PartidaAberta, this.TodasCartas));
             FormMao.ShowDialog();
         }
 
@@ -467,8 +466,8 @@ namespace BodeOfWar
         /// </summary>
         private void MostrarMaoAutomatica()
         {
-            int id = jogador.Id;
-            string senha = jogador.Senha;
+            int id = user.Id;
+            string senha = user.Senha;
 
             string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
 
@@ -489,7 +488,7 @@ namespace BodeOfWar
             //Criação da Lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
-                for (int i = 0; i < TodasCartas.Length; i++)
+                for (int i = 0; i < TodasCartas.Count; i++)
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
@@ -498,10 +497,10 @@ namespace BodeOfWar
                 }
             }
 
-            jogador.Mao = MinhaMao;
+            user.Mao = MinhaMao;
 
             //Chamar a janela do jogo automático
-            MaoAuto FormMaoAuto = new MaoAuto(jogador);
+            MaoAuto FormMaoAuto = new MaoAuto(user, new Partida(this.PartidaAberta, this.TodasCartas));
             FormMaoAuto.ShowDialog();
         }
 
@@ -512,8 +511,8 @@ namespace BodeOfWar
         /// </summary>
         private void MostrarMaoEstrategia()
         {
-            int id = jogador.Id;
-            string senha = jogador.Senha;
+            int id = user.Id;
+            string senha = user.Senha;
 
             string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
 
@@ -534,7 +533,7 @@ namespace BodeOfWar
             //Criação da Lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
-                for (int i = 0; i < TodasCartas.Length; i++)
+                for (int i = 0; i < TodasCartas.Count; i++)
                 {
                     if (TodasCartas[i].id == Mao[j])
                     {
@@ -543,10 +542,10 @@ namespace BodeOfWar
                 }
             }
 
-            jogador.Mao = MinhaMao;
+            user.Mao = MinhaMao;
 
             //Chamar a janela do jogo automático
-            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(jogador, this);
+            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, new Partida(this.PartidaAberta, this.TodasCartas));
             FormMaoEstrategia.ShowDialog();
         }
 
