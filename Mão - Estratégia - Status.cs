@@ -69,178 +69,171 @@ namespace BodeOfWar
 
         }
 
-        /// <summary>
-        /// 0 - Aguardando timer
-        /// 1 - Analisando
-        /// 2 - Jogando ilha
-        /// 3 - Jogando carta
-        /// 4 - Não é minha vez
-        /// 9 - Partida encerrada
-        /// </summary>
-        /// <param name="caso"></param>
-        public void UpdateStatusAuto(int caso)
+        public void UpdateStatus(int CasoGeral = 0, int Automacao = 0, int Mao = 0, int Mesa = 0, int Decisao = 0)
         {
-            switch (caso){
-                //Aguardando
+            switch (CasoGeral)
+            {
                 case 0:
+                    break;
+                case 1:
+                    lblStatusAuto.Text = "Aguardando timer";
+                    lblStatusAuto.ForeColor = Color.Green;
+
+                    lblStatusMao.Text = "Aguardando timer";
+                    lblStatusMao.ForeColor = Color.Green;
+
+                    lblStatusMesa.Text = "Aguardando timer";
+                    lblStatusMesa.ForeColor = Color.Green;
+
+                    lblStatusDecisao.Text = "Aguardando timer";
+                    lblStatusDecisao.ForeColor = Color.Green;
+                    break;
+                case 2:
+                    lblStatusAuto.Text = "Analisando";
+                    lblStatusAuto.ForeColor = Color.Orange;
+
+                    lblStatusMao.Text = "Analisando";
+                    lblStatusMao.ForeColor = Color.Orange;
+
+                    lblStatusMesa.Text = "Analisando";
+                    lblStatusMesa.ForeColor = Color.Orange;
+
+                    lblStatusDecisao.Text = "Analisando";
+                    lblStatusDecisao.ForeColor = Color.Orange;
+                    break;
+                case 3:
+                    lblStatusAuto.Text = "Partida encerrada";
+                    lblStatusAuto.ForeColor = Color.Cyan;
+
+                    lblStatusMao.Text = "Partida encerrada";
+                    lblStatusMao.ForeColor = Color.Cyan;
+
+                    lblStatusMesa.Text = "Partida encerrada";
+                    lblStatusMesa.ForeColor = Color.Cyan;
+
+                    lblStatusDecisao.Text = "Partida encerrada";
+                    lblStatusDecisao.ForeColor = Color.Cyan;
+                    break;
+            }
+
+            switch (Automacao)
+            {
+                case 0:
+                    break;
+                case 1:
+
                     lblStatusAuto.Text = "Aguardando timer...";
                     lblStatusAuto.ForeColor = Color.Green;
                     break;
-                //Analisando
-                case 1:
-                    lblStatusAuto.Text = "Analisando";
-                    lblStatusMao.Text = "Analisando";
-                    lblStatusMesa.Text = "Analisando";
-                    lblStatusDecisao.Text = "Analisando";
-                    lblStatusAuto.ForeColor = Color.Orange;
-                    lblStatusMao.ForeColor = Color.Orange;
-                    lblStatusMesa.ForeColor = Color.Orange;
-                    lblStatusDecisao.ForeColor = Color.Orange;
-                    break;
-                //Jogando ilha
                 case 2:
+                    lblStatusAuto.Text = "Analisando";
+                    lblStatusAuto.ForeColor = Color.Orange;
+                    break;
+                case 3:
                     lblStatusAuto.Text = "Jogando ilha";
                     lblStatusAuto.ForeColor = Color.Yellow;
                     break;
-                //Jogando carta
-                case 3:
+                case 4:
                     lblStatusAuto.Text = "Jogando Carta";
                     lblStatusAuto.ForeColor = Color.Yellow;
                     break;
-                case 4:
+                case 5:
                     lblStatusAuto.Text = "Não é minha vez";
                     lblStatusAuto.ForeColor = Color.Cyan;
                     break;
-                case 9:
-                    lblStatusAuto.Text = "Partida encerrada";
-                    lblStatusAuto.ForeColor = Color.Cyan;
-                    break;
             }
-        }
 
-        /// <summary>
-        /// 0 - Aguardando timer
-        /// 1 - Muito bode
-        /// 2 - Pouco bode
-        /// </summary>
-        /// <param name="caso"></param>
-        public void UpdateStatusMao(int caso)
-        {
-            switch (caso)
+            switch (Mao)
             {
                 case 0:
-                    lblStatusMao.Text = "Aguardando timer...";
-                    lblStatusMao.ForeColor = Color.Green;
                     break;
                 case 1:
+                    lblStatusMao.Text = "Aguardando timer";
+                    lblStatusMao.ForeColor = Color.Green;
+                    break;
+                case 2:
+                    lblStatusMao.Text = "Analisando";
+                    lblStatusMao.ForeColor = Color.Orange;
+                    break;
+                case 3:
                     lblStatusMao.Text = "Tenho muito bode";
                     lblStatusMao.ForeColor = Color.Red;
                     break;
-                case 2:
+                case 4:
                     lblStatusMao.Text = "Tenho pouco bode";
-                    lblStatusMao.ForeColor = Color.Green;
+                    lblStatusMao.ForeColor = Color.LightGreen;
                     break;
-                case 3:
-                    lblStatusMao.Text = "Aguardando timer...";
-                    lblStatusMao.ForeColor = Color.Green;
+                case 5:
+                    lblStatusMao.Text = "Bodes ideais";
+                    lblStatusMao.ForeColor = Color.LimeGreen;
                     break;
-                case 9:
-                    lblStatusMao.Text = "Partida encerrada";
-                    lblStatusMao.ForeColor = Color.Cyan;
+                case 6:
+                    lblStatusMao.Text = "Bodes acima";
+                    lblStatusMao.ForeColor = Color.LightPink;
                     break;
             }
-        }
 
-        /// <summary>
-        /// 0 - Tenho a maior carta
-        /// 1 - Não tenho a maior carta
-        /// 2 - Tenho a menor carta
-        /// 3 - Não tenho a menor carta
-        /// 4 - Aguardando timer
-        /// 5 - Escolhendo ilha
-        /// </summary>
-        /// <param name="caso"></param>
-        public void UpdateStatusMesa(int caso)
-        {
-            switch (caso)
+            switch (Mesa)
             {
                 case 0:
+                    break;
+                case 1:
                     lblStatusMesa.Text = "Tenho a maior carta";
                     lblStatusMesa.ForeColor = Color.Green;
                     break;
-                case 1:
+                case 2:
                     lblStatusMesa.Text = "Não tenho a maior carta";
                     lblStatusMesa.ForeColor = Color.Red;
                     break;
-                case 2:
+                case 3:
                     lblStatusMesa.Text = "Tenho a menor carta";
                     lblStatusMesa.ForeColor = Color.Green;
                     break;
-                case 3:
+                case 4:
                     lblStatusMesa.Text = "Não tenho a menor carta";
                     lblStatusMesa.ForeColor = Color.Red;
                     break;
-                case 4:
+                case 5:
                     lblStatusMesa.Text = "Aguardando timer...";
                     lblStatusMesa.ForeColor = Color.Green;
                     break;
-                case 5:
+                case 6:
                     lblStatusMesa.Text = "Escolhendo ilha";
-                    lblStatusMesa.ForeColor = Color.Cyan;
-                    break;
-                case 9:
-                    lblStatusMesa.Text = "Partida encerrada";
-                    lblStatusMesa.ForeColor = Color.Cyan;
+                    lblStatusMesa.ForeColor = Color.Yellow;
                     break;
             }
-        }
 
-        /// <summary>
-        /// 0 - Jogar carta alta
-        /// 1 - Jogar carta baixa
-        /// 2 - Descartar
-        /// 3 - Jogar bode alto
-        ///
-        /// 5 - Ilha maior
-        /// 6 - Ilha menor
-        /// 7 - Aguardando timer
-        /// </summary>
-        /// <param name="caso"></param>
-        public void UpdateDecisao(int caso)
-        {
-            switch (caso)
+            switch (Decisao)
             {
                 case 0:
+                    break;
+                case 1:
                     lblStatusDecisao.Text = "Jogar carta alta";
                     lblStatusDecisao.ForeColor = Color.Green;
                     break;
-                case 1:
+                case 2:
                     lblStatusDecisao.Text = "Jogar carta baixa";
                     lblStatusDecisao.ForeColor = Color.Red;
                     break;
-                case 2:
+                case 3:
                     lblStatusDecisao.Text = "Descartar";
                     lblStatusDecisao.ForeColor = Color.Orange;
                     break;
-                case 3:
+                case 4:
                     lblStatusDecisao.Text = "Jogar bode alto";
                     lblStatusDecisao.ForeColor = Color.Orange;
                     break;
                 case 5:
-                    lblStatusDecisao.Text = "Jogar Ilha maior";
+                    lblStatusDecisao.Text = "Jogar bode baixo";
                     lblStatusDecisao.ForeColor = Color.Orange;
                     break;
                 case 6:
-                    lblStatusDecisao.Text = "Jogar Ilha menor";
+                    lblStatusDecisao.Text = "Jogar Ilha maior";
                     lblStatusDecisao.ForeColor = Color.Orange;
                     break;
                 case 7:
-                    lblStatusDecisao.Text = "Aguardando timer...";
-                    lblStatusDecisao.ForeColor = Color.Green;
-                    break;
-                case 9:
-                    lblStatusDecisao.Text = "Partida encerrada";
-                    lblStatusDecisao.ForeColor = Color.Cyan;
+                    lblStatusDecisao.Text = "Jogar Ilha menor";
+                    lblStatusDecisao.ForeColor = Color.Orange;
                     break;
             }
         }

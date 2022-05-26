@@ -162,10 +162,6 @@ namespace BodeOfWar
             {
                 timer.Stop();
                 partida.EmJogo = false;
-                status.UpdateStatusAuto(9);
-                status.UpdateDecisao(9);
-                status.UpdateStatusMao(9);
-                status.UpdateStatusMesa(4);
             }
         }
 
@@ -378,8 +374,8 @@ namespace BodeOfWar
         //Dinâmica dos botões
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            status.UpdateStatus(CasoGeral: 1);
             timer.Start();
-            status.UpdateStatusAuto(0);
         }
 
         private void txtNarracao_DoubleClick(object sender, EventArgs e)
@@ -402,7 +398,8 @@ namespace BodeOfWar
         /// Preciso comentar ainda
         /// </summary>
         private void Analise()
-        { 
+        {
+            status.UpdateStatus(CasoGeral: 2);
             AtualizarDetalhes();
 
             //Verifica se é a vez deste jogador
@@ -419,9 +416,12 @@ namespace BodeOfWar
                 //Verifica se é hora de escolher ilha
                 if (ret[3].Contains("I"))
                 {
-                    int bodes = partida.Jogadores[User.IndiceJogador].Bodes;
-                    if (bodes > partida.TamanhoIlha())
+                    status.UpdateStatus(Automacao: 3, Mesa: 6);
+                    int bodes = jogador.BodesComprados();
+                    if (bodes > partida.TamanhoIlha(jogador.idPartida))
                     {
+                        status.UpdateStatus(Decisao: 6, Mao: 3);
+
                         VerIlhas();
 
                         //Escolher maior ilha
@@ -431,6 +431,8 @@ namespace BodeOfWar
                     }
                     else
                     {
+                        status.UpdateStatus(Decisao: 7, Mao: 4);
+
                         VerIlhas();
 
                         //Escolher menor ilha
@@ -443,7 +445,7 @@ namespace BodeOfWar
                 //Verifica se é hora de jogar uma carta
                 if (ret[3].Contains("B"))
                 {
-
+                    status.UpdateStatus(Automacao: 4);
                     //Se for a primeira rodada
                     if (partida.Rodada == 0)
                     {
@@ -527,7 +529,8 @@ namespace BodeOfWar
                         }
                         else if (fator > 100 && fator <= 150)
                         {
-                            if (partida.Rodada <= 4)
+                            status.UpdateStatus(Mao: 6);
+                            if (partida.rodada <= 4)
                             {
                                 if (User.TemMenorCarta(partida.CartasJogadas()))
                                 {
@@ -621,7 +624,8 @@ namespace BodeOfWar
                 }
             }
             else
-            { 
+            {
+                status.UpdateStatus(Automacao: 5);
                 return;
             }
         }
@@ -651,6 +655,7 @@ namespace BodeOfWar
 
         private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
+            status.UpdateStatus(CasoGeral: 1);
             AtualizarDetalhes();
             timer.Start();
         }
