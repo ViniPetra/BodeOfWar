@@ -17,6 +17,7 @@ namespace BodeOfWar
         public List<Cartas> MinhaMao = new List<Cartas>();
         public User user = new User();
 
+        //Variáeis de estado
         public int PartidaAberta;
 
         public Main()
