@@ -417,8 +417,8 @@ namespace BodeOfWar
                 if (ret[3].Contains("I"))
                 {
                     status.UpdateStatus(Automacao: 3, Mesa: 6);
-                    int bodes = jogador.BodesComprados();
-                    if (bodes > partida.TamanhoIlha(jogador.idPartida))
+                    int bodes = partida.Jogadores[User.IndiceJogador].Bodes;
+                    if (bodes > partida.TamanhoIlha())
                     {
                         status.UpdateStatus(Decisao: 6, Mao: 3);
 
@@ -530,7 +530,7 @@ namespace BodeOfWar
                         else if (fator > 100 && fator <= 150)
                         {
                             status.UpdateStatus(Mao: 6);
-                            if (partida.rodada <= 4)
+                            if (partida.Rodada <= 4)
                             {
                                 if (User.TemMenorCarta(partida.CartasJogadas()))
                                 {

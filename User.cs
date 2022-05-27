@@ -29,6 +29,7 @@ namespace BodeOfWar
         public User()
         {
             this.MaoId = new List<int>();
+            this.Partida = new Partida();
         }
 
         /// <summary>

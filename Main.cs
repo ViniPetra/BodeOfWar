@@ -16,7 +16,6 @@ namespace BodeOfWar
         public List<Cartas> TodasCartas = new List<Cartas>();
         public List<Cartas> MinhaMao = new List<Cartas>();
         public User user = new User();
-        public Partida partida = new Partida();
 
         public int PartidaAberta;
 
@@ -83,6 +82,7 @@ namespace BodeOfWar
             //
             for (i = 0; i <= 49; i++)
             {
+                /*
                 if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
                 {
                     TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1);
@@ -111,15 +111,41 @@ namespace BodeOfWar
                 {
                     throw new Exception("Algo deu ruim na instanciação das cartas");
                 }
+                */
+                if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
+                {
+                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1));
+                }
+                else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] <= 2)
+                {
+                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 2));
+                }
+                else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] <= 2)
+                {
+                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 3));
+                }
+                else if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] > 2)
+                {
+                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 4));
+                }
+                else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] > 2)
+                {
+                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 5));
+                }
+                else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] > 2)
+                {
+                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 6));
+                }
+                else
+                {
+                    throw new Exception("Algo deu ruim na instanciação das cartas");
+                }
             }
 
             foreach (Cartas cartas in TodasCartas)
             {
                 cartas.imagem = (Image)Properties.Resources.ResourceManager.GetObject("b" + cartas.imagemnum);
             }
-
-            //Atribuição de TodasCartas para atributo TodasCartas do objeto jogador
-            //partida.TodasCartas = TodasCartas;
         }
 
         /// <summary>
