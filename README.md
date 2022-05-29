@@ -11,7 +11,7 @@ Alguns prints das telas detro do jogo:
 ![image](https://user-images.githubusercontent.com/89108219/168503130-5aaa1a38-68bf-43f2-b7e0-ac2af3415a5d.png)
 ![image](https://user-images.githubusercontent.com/89108219/168503157-8547b517-6b3e-4312-9de0-e717de318649.png)
 ![image](https://user-images.githubusercontent.com/89108219/168503179-3dafa30c-2033-4ba1-a82a-6d5e4181285d.png)
-![image](https://user-images.githubusercontent.com/89108219/168503250-0ba77b7f-37cd-42c3-aea7-0f92a64e69a1.png)
+![image](https://user-images.githubusercontent.com/89108219/170893814-f1188d71-31ef-4fb2-b992-f6d65a1a2193.png)
 
 Agradecimento especial ao @Yuri-barbosa21, que foi quem fez todas as imagens do projeto
 
