@@ -30,6 +30,7 @@ namespace BodeOfWar
         {
             this.MaoId = new List<int>();
             this.Partida = new Partida();
+            this.Mao = new List<Cartas>();
         }
 
         /// <summary>

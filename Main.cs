@@ -457,6 +457,42 @@ namespace BodeOfWar
             FormMao.ShowDialog();
         }
 
+        private void VerificarMao()
+        {
+            int id = user.Id;
+            string senha = user.Senha;
+
+            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
+
+            //Parse no retorno e criação da array de ids das cartas da mão
+            //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
+            StringMao = StringMao.Replace("\r", "");
+            StringMao = StringMao.Substring(0, StringMao.Length - 1);
+            StringMao = StringMao.Replace("\n", ",");
+            string[] StringMao1 = StringMao.Split(',');
+
+            //Conversão da array de ids em int
+            int[] Mao = new int[StringMao1.Length];
+            for (int i = 0; i < StringMao1.Length; i++)
+            {
+                Mao[i] = Int32.Parse(StringMao1[i]);
+            }
+
+            //Criação da Lista de objetos apenas de cartas próprias
+            for (int j = 0; j < Mao.Length; j++)
+            {
+                for (int i = 0; i < TodasCartas.Count; i++)
+                {
+                    if (TodasCartas[i].id == Mao[j])
+                    {
+                        MinhaMao.Add(TodasCartas[i]);
+                    }
+                }
+            }
+
+            user.Mao = MinhaMao;
+        }
+
         /// <summary>
         /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
         /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
@@ -503,48 +539,21 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
-        /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
-        /// 3. Chama o formulário de Mão com a estratégia do grupo
+        /// Chama o formulário de Mão com a estratégia do grupo
         /// </summary>
         private void MostrarMaoEstrategia()
         {
-            int id = user.Id;
-            string senha = user.Senha;
-
-            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
-
-            //Parse no retorno e criação da array de ids das cartas da mão
-            //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
-            StringMao = StringMao.Replace("\r", "");
-            StringMao = StringMao.Substring(0, StringMao.Length - 1);
-            StringMao = StringMao.Replace("\n", ",");
-            string[] StringMao1 = StringMao.Split(',');
-
-            //Conversão da array de ids em int
-            int[] Mao = new int[StringMao1.Length];
-            for (int i = 0; i < StringMao1.Length; i++)
+            if (user.Mao.Any())
             {
-                Mao[i] = Int32.Parse(StringMao1[i]);
+                MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
+                FormMaoEstrategia.ShowDialog();
             }
-
-            //Criação da Lista de objetos apenas de cartas próprias
-            for (int j = 0; j < Mao.Length; j++)
+            else
             {
-                for (int i = 0; i < TodasCartas.Count; i++)
-                {
-                    if (TodasCartas[i].id == Mao[j])
-                    {
-                        MinhaMao.Add(TodasCartas[i]);
-                    }
-                }
+                VerificarMao();
+                MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
+                FormMaoEstrategia.ShowDialog();
             }
-
-            user.Mao = MinhaMao;
-
-            //Chamar a janela do jogo automático
-            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
-            FormMaoEstrategia.ShowDialog();
         }
 
         //Dinâmica UI

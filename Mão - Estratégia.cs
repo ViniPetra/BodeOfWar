@@ -82,6 +82,7 @@ namespace BodeOfWar
             bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8 };
             ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8 };
 
+            /*
             int count = 0;
             foreach (PictureBox p in imagens)
             {
@@ -104,6 +105,25 @@ namespace BodeOfWar
             {
                 l.Text = User.Mao[count].id.ToString();
                 count++;
+            }
+            */
+
+            for (int i = 0; i < User.Mao.Count(); i++)
+            {
+                /*
+                if (!(User.Mao[i] == null))
+                {
+                    imagens[i].Image = User.Mao[i].imagem;
+                    imagens[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                    bodes[i].Text = User.Mao[i].bode.ToString();
+                    ids[i].Text = User.Mao[i].id.ToString();
+                }
+                */
+
+                imagens[i].Image = User.Mao[i].imagem;
+                imagens[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                bodes[i].Text = User.Mao[i].bode.ToString();
+                ids[i].Text = User.Mao[i].id.ToString();
             }
 
             partida.PopularJogadores();
@@ -677,6 +697,16 @@ namespace BodeOfWar
                 status.UpdateStatus(CasoGeral: 1);
                 timer.Start();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Jogar(User.Mao[0].id);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Jogar(User.Mao[1].id);
         }
     }
 }
