@@ -10,9 +10,9 @@ namespace BodeOfWar
     {
         public int Id { get; set; }
         public string Senha { get; set; }
+        public string Nome { get; set; }
         public Partida Partida { get; set; }
         public List<Cartas> Mao { get; set; }
-        public string Nome { get; set; }
         public List<int> MaoId { get; set; }
         public int IndiceJogador { get; set; }
 
@@ -65,31 +65,6 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Descobre a carta com maior bode na mão do jogador
-        /// </summary>
-        /// <returns>Id da carta com maior bode</returns>
-        public int MaiorBode()
-        {
-            List<int> aux = new List<int>();
-            for (int i = 0; i < this.Mao.Count; i++)
-            {
-                aux.Add(this.Mao[i].bode);
-            }
-
-            int max = aux.Max();
-            int IdMax = 0;
-            foreach(Cartas carta in Mao)
-            {
-                if(carta.bode == max)
-                {
-                    IdMax = carta.id;
-                }
-            }
-
-            return IdMax;
-        }
-
-        /// <summary>
         /// Descobre a carta com menor bode na mão do jogador
         /// </summary>
         /// <returns>Id da carta com menor bode</returns>
@@ -110,8 +85,31 @@ namespace BodeOfWar
                     IdMin = carta.id;
                 }
             }
-
             return IdMin;
+        }
+
+        /// <summary>
+        /// Descobre a carta com maior bode na mão do jogador
+        /// </summary>
+        /// <returns>Id da carta com maior bode</returns>
+        public int MaiorBode()
+        {
+            List<int> aux = new List<int>();
+            for (int i = 0; i < this.Mao.Count; i++)
+            {
+                aux.Add(this.Mao[i].bode);
+            }
+
+            int max = aux.Max();
+            int IdMax = 0;
+            foreach(Cartas carta in Mao)
+            {
+                if(carta.bode == max)
+                {
+                    IdMax = carta.id;
+                }
+            }
+            return IdMax;
         }
 
         /// <summary>
@@ -248,7 +246,6 @@ namespace BodeOfWar
                 return true;
             }
 
-
             List<int> aux = new List<int>();
             for (int i = 0; i < this.Mao.Count; i++)
             {
@@ -305,17 +302,20 @@ namespace BodeOfWar
 
         public int CartaMaiorQueMesa(List<int> CartasJogadas)
         {
-            List<int> aux = new List<int>();
-            for (int i = 0; i < this.Mao.Count; i++)
+            if (CartasJogadas.Any())
             {
-                aux.Add(this.Mao[i].id);
-            }
-
-            foreach (int id in aux)
-            {
-                if (id > CartasJogadas.Max())
+                List<int> aux = new List<int>();
+                for (int i = 0; i < this.Mao.Count; i++)
                 {
-                    return id;
+                    aux.Add(this.Mao[i].id);
+                }
+
+                foreach (int id in aux)
+                {
+                    if (id > CartasJogadas.Max())
+                    {
+                        return id;
+                    }
                 }
             }
             return -1;
@@ -323,17 +323,20 @@ namespace BodeOfWar
 
         public int CartaMenorQueMesa(List<int> CartasJogadas)
         {
-            List<int> aux = new List<int>();
-            for (int i = 0; i < this.Mao.Count; i++)
+            if (CartasJogadas.Any())
             {
-                aux.Add(this.Mao[i].id);
-            }
-
-            foreach (int id in aux)
-            {
-                if (id < CartasJogadas.Max())
+                List<int> aux = new List<int>();
+                for (int i = 0; i < this.Mao.Count; i++)
                 {
-                    return id;
+                    aux.Add(this.Mao[i].id);
+                }
+
+                foreach (int id in aux)
+                {
+                    if (id < CartasJogadas.Max())
+                    {
+                        return id;
+                    }
                 }
             }
             return -1;
@@ -349,25 +352,29 @@ namespace BodeOfWar
         {
             int BodesNaMesa = 0;
 
-            foreach (int cartaJogada in CartasJogadas)
+            if (CartasJogadas.Any())
             {
-                foreach (Cartas carta in this.Partida.TodasCartas)
+                foreach (int cartaJogada in CartasJogadas)
                 {
-                    if (cartaJogada == carta.id)
+                    foreach (Cartas carta in this.Partida.TodasCartas)
                     {
-                        BodesNaMesa += carta.bode;
+                        if (cartaJogada == carta.id)
+                        {
+                            BodesNaMesa += carta.bode;
+                        }
                     }
                 }
-            }
 
-            if (BodesNaMesa > (TamIlha - this.Partida.Jogadores[IndiceJogador].Bodes))
-            {
-                return false;
+                if (BodesNaMesa > (TamIlha - this.Partida.Jogadores[IndiceJogador].Bodes))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
-            else
-            {
-                return true;
-            }
+            return false;
         }
 
         /// <summary>

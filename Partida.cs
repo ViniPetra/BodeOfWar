@@ -11,15 +11,15 @@ namespace BodeOfWar
         public int Id { get; set; }
         public bool EmJogo { get; set; }
         public int Rodada { get; set; }
-        public List<int> idJogadores { get; set; }
         public int QntJogadores { get; set; }
-        public List<int>[] CartasPorJogador { get; set; }
+        public List<int> idJogadores { get; set; }
         public List<string> Mesa { get; set; }
+        public List<int>[] CartasPorJogador { get; set; }
         public List<Cartas> TodasCartas { get; set; }
 
         public List<Jogador> Jogadores { get; set; }
 
-        public Partida(int idPartida, List<Cartas> TodasCartas)
+        public Partida()
         {
             this.EmJogo = true;
             this.Rodada = 0;
@@ -27,13 +27,6 @@ namespace BodeOfWar
             this.idJogadores = new List<int>();
             this.CartasPorJogador = new List<int>[4];
             this.Jogadores = new List<Jogador>();
-            this.Id = idPartida;
-            this.TodasCartas = TodasCartas;
-        }
-
-        public Partida()
-        {
-
         }
 
         /// <summary>
@@ -228,6 +221,7 @@ namespace BodeOfWar
                     {
                         string Vencedor = jogadoresAux[i+1].ToString();
                         System.Windows.Forms.MessageBox.Show("O vencedor é " + Vencedor.ToUpper());
+                        this.EmJogo = false;
                         return true;
                     }
                 }
@@ -247,7 +241,7 @@ namespace BodeOfWar
         {
             string[] aux;
 
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(this.Id, this.Rodada);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(this.Id);
 
             ret = ret.Replace("\r", "");
             aux = ret.Split('\n');
@@ -258,7 +252,7 @@ namespace BodeOfWar
 
             foreach (string a in aux)
             {
-                if (!(Mesa.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
+                if (!(retAux.Contains(a)) && !(a.StartsWith("I")) && !(a == "") && !(a == " "))
                 {
                     retAux.Add(a);
                 }
@@ -330,8 +324,6 @@ namespace BodeOfWar
             {
                 CartasRodadaAnterior.Add(adv.CartasJogadas[Rodada - 1]);
             }
-
-            List<Cartas> CartasJogadas = new List<Cartas>();
 
             int IndexMax = CartasRodadaAnterior.IndexOf(CartasRodadaAnterior.Max());
 

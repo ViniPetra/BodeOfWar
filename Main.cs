@@ -78,41 +78,8 @@ namespace BodeOfWar
                 Cartas2[(i / 3), 2] = IntCartas1[i];
             }
 
-            //Criação da array de objetos com todas as cartas
-            //TodasCartas {(id, bode, num),(id, bode num),(id, bode, num)}
-            //
             for (i = 0; i <= 49; i++)
             {
-                /*
-                if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1);
-                }
-                else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] <= 2)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 2);
-                }
-                else if (Cartas2[i, 0] > 32  && Cartas2[i, 1] <= 2)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 3);
-                }
-                else if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] > 2)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 4);
-                }
-                else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] > 2)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 5);
-                }
-                else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] > 2)
-                {
-                    TodasCartas[i] = new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 6);
-                }
-                else
-                {
-                    throw new Exception("Algo deu ruim na instanciação das cartas");
-                }
-                */
                 if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
                 {
                     TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1));
@@ -386,6 +353,10 @@ namespace BodeOfWar
             user.Senha = senhaPartida[1];
             user.Nome = nome;
 
+
+            user.Partida.Id = this.PartidaAberta;
+            user.Partida.TodasCartas = this.TodasCartas;
+
             AtualizarDetalhes();
         }
 
@@ -482,7 +453,7 @@ namespace BodeOfWar
             user.Mao = MinhaMao;
 
             //Chamar a janela do jogo manual
-            MãoManual FormMao = new MãoManual(this.user, new Partida(this.PartidaAberta, this.TodasCartas));
+            MãoManual FormMao = new MãoManual(this.user, this.user.Partida);
             FormMao.ShowDialog();
         }
 
@@ -527,7 +498,7 @@ namespace BodeOfWar
             user.Mao = MinhaMao;
 
             //Chamar a janela do jogo automático
-            MaoAuto FormMaoAuto = new MaoAuto(user, new Partida(this.PartidaAberta, this.TodasCartas));
+            MaoAuto FormMaoAuto = new MaoAuto(user, this.user.Partida);
             FormMaoAuto.ShowDialog();
         }
 
@@ -572,94 +543,9 @@ namespace BodeOfWar
             user.Mao = MinhaMao;
 
             //Chamar a janela do jogo automático
-            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, new Partida(this.PartidaAberta, this.TodasCartas));
+            MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
             FormMaoEstrategia.ShowDialog();
         }
-
-        //Duplo clique na partida
-        private void lstPartidas_DoubleClick(object sender, EventArgs e)
-        {
-            if (lstPartidas.SelectedItem == null)
-            {
-                MessageBox.Show("Nenhuma partida selecionada", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return;
-            }
-            else
-            {
-                AbrirPartida(lstPartidas.SelectedItem.ToString());
-            }
-        }
-
-        //Chamadas de listar partidas
-        private void btnTodas_Click(object sender, EventArgs e)
-        {
-            ListarPartidas("T");
-        }
-
-        private void btnAbertas_Click(object sender, EventArgs e)
-        {
-            ListarPartidas("A");
-        }
-
-        private void btnJogando_Click(object sender, EventArgs e)
-        {
-            ListarPartidas("J");
-        }
-
-        private void btnEncerradas_Click(object sender, EventArgs e)
-        {
-            ListarPartidas("E");
-        }
-
-        //Entrar na partida
-        private void btnEntrarPartida_Click(object sender, EventArgs e)
-        {
-            EntrarPartida();
-
-            //Limpa os campos
-            txtSenhaPartida.Text = "";
-        }
-
-        //Iniciar a partida
-        private void btnIniciarPartida_Click(object sender, EventArgs e)
-        {
-            IniciarPartida();
-        }
-
-        //Atualizar a caixa de narração
-        private void btnAtualizarNarracao_Click(object sender, EventArgs e)
-        {
-            AtualizarDetalhes();
-        }
-
-        //Criar partida
-        private void btnCriarPartida_Click(object sender, EventArgs e)
-        {
-            CriarPartida();
-
-            //Limpa os campos
-            txtNomeCriarPartida.Text = "";
-            txtSenhaCriarPartida.Text = "";
-        }
-
-        //Abrir uma nova janela para mostrar suas cartas de forma manual
-        private void btnMostrarMao_Click(object sender, EventArgs e)
-        {
-            MostrarMaoManual();
-        }
-
-        //Abrir uma nvoa janela para mostrar suas cartas de forma automatizada
-        private void btnAutomatico_Click(object sender, EventArgs e)
-        {
-            MostrarMaoAutomatica();
-        }
-
-        //Abrir uma nvoa janela para mostrar suas cartas com a estratégia do grupo
-        private void btnEstrategia_Click(object sender, EventArgs e)
-        {
-            MostrarMaoEstrategia();
-        }
-
 
         //Dinâmica UI
 
@@ -760,6 +646,90 @@ namespace BodeOfWar
         private void btnVerNovamente_Click(object sender, EventArgs e)
         {
             pnlTutorial1.BringToFront();
+        }
+
+        //Abrir uma nova janela para mostrar suas cartas de forma manual
+        private void btnMostrarMao_Click(object sender, EventArgs e)
+        {
+            MostrarMaoManual();
+        }
+
+        //Abrir uma nvoa janela para mostrar suas cartas de forma automatizada
+        private void btnAutomatico_Click(object sender, EventArgs e)
+        {
+            MostrarMaoAutomatica();
+        }
+
+        //Abrir uma nvoa janela para mostrar suas cartas com a estratégia do grupo
+        private void btnEstrategia_Click(object sender, EventArgs e)
+        {
+            MostrarMaoEstrategia();
+        }
+
+        //Duplo clique na partida
+        private void lstPartidas_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstPartidas.SelectedItem == null)
+            {
+                MessageBox.Show("Nenhuma partida selecionada", "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            else
+            {
+                AbrirPartida(lstPartidas.SelectedItem.ToString());
+            }
+        }
+
+        //Chamadas de listar partidas
+        private void btnTodas_Click(object sender, EventArgs e)
+        {
+            ListarPartidas("T");
+        }
+
+        private void btnAbertas_Click(object sender, EventArgs e)
+        {
+            ListarPartidas("A");
+        }
+
+        private void btnJogando_Click(object sender, EventArgs e)
+        {
+            ListarPartidas("J");
+        }
+
+        private void btnEncerradas_Click(object sender, EventArgs e)
+        {
+            ListarPartidas("E");
+        }
+
+        //Entrar na partida
+        private void btnEntrarPartida_Click(object sender, EventArgs e)
+        {
+            EntrarPartida();
+
+            //Limpa os campos
+            txtSenhaPartida.Text = "";
+        }
+
+        //Iniciar a partida
+        private void btnIniciarPartida_Click(object sender, EventArgs e)
+        {
+            IniciarPartida();
+        }
+
+        //Atualizar a caixa de narração
+        private void btnAtualizarNarracao_Click(object sender, EventArgs e)
+        {
+            AtualizarDetalhes();
+        }
+
+        //Criar partida
+        private void btnCriarPartida_Click(object sender, EventArgs e)
+        {
+            CriarPartida();
+
+            //Limpa os campos
+            txtNomeCriarPartida.Text = "";
+            txtSenhaCriarPartida.Text = "";
         }
 
         /// <summary>

@@ -12,14 +12,8 @@ namespace BodeOfWar
 {
     public partial class MãoEstratégiaStatus : Form
     {
-        User jogador;
-        Partida partida;
-        MaoEstrategia Mao;
-        public MãoEstratégiaStatus(User jogador, Partida partida, MaoEstrategia mao)
+        public MãoEstratégiaStatus()
         {
-            this.jogador = jogador;
-            this.partida = partida;
-            this.Mao = mao;
             InitializeComponent();
         }
 

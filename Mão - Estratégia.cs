@@ -39,8 +39,10 @@ namespace BodeOfWar
             this.User = user;
             this.partida = partida;
             //partida = new Partida(jogador.idPartida);
-            this.status = new MãoEstratégiaStatus(User, partida, this);
-            this.status.Owner = this;
+            this.status = new MãoEstratégiaStatus()
+            {
+                Owner = this
+            };
             this.pai = pai;
             InitializeComponent();
         }
@@ -139,11 +141,6 @@ namespace BodeOfWar
             if (partida.Rodada != 0)
             {
                 status.UpdateMetricas(partida.Jogadores, partida.Rodada, partida.TamanhoIlha());
-            }
-            if (partida.JaTemVencedor())
-            {
-                timer.Stop();
-                partida.EmJogo = false;
             }
         }
 
@@ -353,29 +350,6 @@ namespace BodeOfWar
             }
         }
 
-        //Dinâmica dos botões
-        private void btnIniciar_Click(object sender, EventArgs e)
-        {
-            status.UpdateStatus(CasoGeral: 1);
-            timer.Start();
-        }
-
-        private void txtNarracao_DoubleClick(object sender, EventArgs e)
-        {
-            AtualizarDetalhes();
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        { 
-            if (partida.EmJogo == true)
-            {
-                if (!backgroundWorker.IsBusy)
-                {
-                    backgroundWorker.RunWorkerAsync();
-                }
-            }
-        }
-
         /// <summary>
         /// Preciso comentar ainda
         /// </summary>
@@ -403,23 +377,15 @@ namespace BodeOfWar
                     if (bodes > partida.TamanhoIlha())
                     {
                         status.UpdateStatus(Decisao: 6, Mao: 3);
-
                         VerIlhas();
-
-                        //Escolher maior ilha
                         BodeOfWarServer.Jogo.DefinirIlha(User.Id, User.Senha, Math.Max(ilha1Global, ilha2Global));
-                        AtualizarDetalhes();
                         return;
                     }
                     else
                     {
                         status.UpdateStatus(Decisao: 7, Mao: 4);
-
                         VerIlhas();
-
-                        //Escolher menor ilha
                         BodeOfWarServer.Jogo.DefinirIlha(User.Id, User.Senha, Math.Min(ilha1Global, ilha2Global));
-                        AtualizarDetalhes();
                         return;
                     }
                 }
@@ -442,7 +408,7 @@ namespace BodeOfWar
 
                         int fator = ((bodes * 100) / tamanhoIlha);
 
-                        if (fator <= 50)
+                        if (fator <= 75)
                         {
                             if (User.TemMaiorCarta(partida.CartasJogadas()))
                             {
@@ -455,7 +421,7 @@ namespace BodeOfWar
                                 return;
                             }
                         }
-                        else if (fator > 50 && fator <= 100)
+                        else if (fator > 75 && fator <= 100)
                         {
                             if (User.TemMaiorCarta(partida.CartasJogadas()))
                             {
@@ -497,7 +463,7 @@ namespace BodeOfWar
                                 }
                                 else
                                 {
-                                    if(User.FazSentidoComprar(partida.CartasJogadas(), partida.TamanhoIlha()))
+                                    if (User.FazSentidoComprar(partida.CartasJogadas(), partida.TamanhoIlha()))
                                     {
                                         Jogar(User.CartaMaiorQueMesa(partida.CartasJogadas()));
                                     }
@@ -509,7 +475,7 @@ namespace BodeOfWar
 
                             }
                         }
-                        else if (fator > 100 && fator <= 150)
+                        else if (fator > 100 && fator <= 110)
                         {
                             status.UpdateStatus(Mao: 6);
                             if (partida.Rodada <= 4)
@@ -589,7 +555,7 @@ namespace BodeOfWar
                                 }
                             }
                         }
-                        if (fator > 150)
+                        if (fator > 110)
                         {
                             if (User.TemMenorCarta(partida.CartasJogadas()))
                             {
@@ -612,6 +578,29 @@ namespace BodeOfWar
             }
         }
 
+        //Dinâmica dos controles
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            status.UpdateStatus(CasoGeral: 1);
+            timer.Start();
+        }
+
+        private void txtNarracao_DoubleClick(object sender, EventArgs e)
+        {
+            AtualizarDetalhes();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        { 
+            if (partida.EmJogo == true)
+            {
+                if (!backgroundWorker.IsBusy)
+                {
+                    backgroundWorker.RunWorkerAsync();
+                }
+            }
+        }
+
         private void MaoEstrategia_LocationChanged(object sender, EventArgs e)
         {
             status.Left = this.Location.X + this.Size.Width -10;
@@ -630,7 +619,7 @@ namespace BodeOfWar
         }
 
         private void backgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
+        { 
             timer.Stop();
             Analise();
         }
@@ -639,7 +628,89 @@ namespace BodeOfWar
         {
             status.UpdateStatus(CasoGeral: 1);
             AtualizarDetalhes();
-            timer.Start();
+            if (partida.JaTemVencedor())
+            {
+                timer.Stop();
+            }
+            else
+            {
+                timer.Start();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int bodes = partida.Jogadores[User.IndiceJogador].Bodes;
+            if (bodes > partida.TamanhoIlha())
+            {
+                VerIlhas();
+                BodeOfWarServer.Jogo.DefinirIlha(User.Id, User.Senha, Math.Max(ilha1Global, ilha2Global));
+                AtualizarDetalhes();
+                return;
+            }
+            else
+            {
+                VerIlhas();
+                BodeOfWarServer.Jogo.DefinirIlha(User.Id, User.Senha, Math.Min(ilha1Global, ilha2Global));
+                AtualizarDetalhes();
+                return;
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.TemMaiorCarta(partida.CartasJogadas()).ToString());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int rand = new Random().Next(0, 7);
+            Jogar(User.Mao[rand].id);
+            return;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.TemMenorCarta(partida.CartasJogadas()).ToString());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(partida.AlguémVaiEstourar().ToString());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.FazSentidoComprar(partida.CartasJogadas(), partida.TamanhoIlha()).ToString());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.TemMenorCarta(partida.CartasJogadas()).ToString());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.TemMaiorCarta(partida.CartasJogadas()).ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.TemCartaMaiorQue(Int32.Parse(textBox2.Text)).ToString());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Jogar(User.CartaMaiorQueMesa(partida.CartasJogadas()));
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Jogar(User.CartaMenorQueMesa(partida.CartasJogadas()));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User.TemCartaMenorQue(Int32.Parse(textBox1.Text)).ToString());
         }
     }
 }
