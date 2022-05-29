@@ -27,7 +27,7 @@ namespace BodeOfWar
             this.IndexJogador = indexJogador;
         }
 
-        public void AdicionarCartasJogadas(int id)
+        public void AdicionarCartas(int id)
         {
             if (!(this.CartasJogadas.Contains(id)))
             {

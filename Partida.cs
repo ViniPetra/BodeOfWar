@@ -17,7 +17,6 @@ namespace BodeOfWar
         public List<string> Mesa { get; set; }
         public List<int>[] CartasPorJogador { get; set; }
         public List<Cartas> TodasCartas { get; set; }
-
         public List<Jogador> Jogadores { get; set; }
 
         public Partida()

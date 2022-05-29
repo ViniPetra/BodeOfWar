@@ -11,9 +11,9 @@ namespace BodeOfWar
     {
         User User;
 
-        Partida partida;
+        Partida Partida;
 
-        Main pai;
+        Main Pai;
 
         MãoEstratégiaStatus status;
 
@@ -30,20 +30,15 @@ namespace BodeOfWar
         List<List<Label>> MesaJogadoresIds;
         List<PictureBox> ImagensJogadores;
 
-        /// <summary>
-        /// Define o jogador e inicializa partida
-        /// </summary>
-        /// <param name="user"></param>
         public MaoEstrategia(User user, Main pai, Partida partida)
         {
             this.User = user;
-            this.partida = partida;
-            //partida = new Partida(jogador.idPartida);
+            this.Partida = partida;
             this.status = new MãoEstratégiaStatus()
             {
                 Owner = this
             };
-            this.pai = pai;
+            this.Pai = pai;
             InitializeComponent();
         }
         /// <summary>
@@ -59,7 +54,7 @@ namespace BodeOfWar
         /// </summary>
         private void Carregar()
         {
-            partida.PopularJogadores();
+            Partida.PopularJogadores();
 
             AtualizarDetalhes();
 
@@ -77,32 +72,7 @@ namespace BodeOfWar
             bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8 };
             ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8 };
 
-            /*
-            int count = 0;
-            foreach (PictureBox p in imagens)
-            {
-                p.Image = User.Mao[count].imagem;
-                p.SizeMode = PictureBoxSizeMode.StretchImage;
-                count++;
-            }
-
-            //Loop para troca do texto da label Bode para o atributo do objeto
-            count = 0;
-            foreach (Label label in bodes)
-            {
-                label.Text = User.Mao[count].bode.ToString();
-                count++;
-            }
-
-            //Loop para troca do texto da label Numero para o atributo do objeto
-            count = 0;
-            foreach (Label l in ids)
-            {
-                l.Text = User.Mao[count].id.ToString();
-                count++;
-            }
-            */
-
+            //Definição dos atributos do controle
             for (int i = 0; i < User.Mao.Count(); i++)
             {
                 imagens[i].Image = User.Mao[i].imagem;
@@ -115,14 +85,14 @@ namespace BodeOfWar
             ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };
 
             //Mostrando as imagens
-            for (int i = 0; i <= partida.QntJogadores - 1; i++)
+            for (int i = 0; i <= Partida.QntJogadores - 1; i++)
             {
                 ImagensJogadores[i].Visible = true;
             }
 
-            User.IndiceJogador = partida.idJogadores.IndexOf(User.Id);
+            User.IndiceJogador = Partida.idJogadores.IndexOf(User.Id);
 
-            status.Config_UpdateJogadores(partida.Jogadores);
+            status.Config_UpdateJogadores(Partida.Jogadores);
 
             status.Show();
 
@@ -135,16 +105,16 @@ namespace BodeOfWar
         /// </summary>
         private void AtualizarDetalhes()
         {
-            txtListarJogadores.Text = partida.ListarJogadores();
-            txtVez.Text = partida.VerificarVez();
-            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(partida.Id);
-            partida.PopularMesa();
+            txtListarJogadores.Text = Partida.ListarJogadores();
+            txtVez.Text = Partida.VerificarVez();
+            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(Partida.Id);
+            Partida.PopularMesa();
             VerMesa();
-            partida.AtualizarBodes();
-            status.UpdateJogadores(partida.Jogadores);
-            if (partida.Rodada != 0)
+            Partida.AtualizarBodes();
+            status.UpdateJogadores(Partida.Jogadores);
+            if (Partida.Rodada != 0)
             {
-                status.UpdateMetricas(partida.Jogadores, partida.Rodada, partida.TamanhoIlha());
+                status.UpdateMetricas(Partida.Jogadores, Partida.Rodada, Partida.TamanhoIlha());
             }
         }
 
@@ -176,7 +146,7 @@ namespace BodeOfWar
                 }
                 User.Mao.RemoveAt(indexCarta);
                 panels[User.MaoId.IndexOf(ID)].BringToFront();
-                partida.Rodada++;
+                Partida.Rodada++;
 
                 AtualizarDetalhes();
                 return true;
@@ -215,30 +185,30 @@ namespace BodeOfWar
             /// 1
             //Compara cada item na partida.Mesa com os Ids dos jogadores e adiciona a carta na lista na array CartasPorJogador que tem o mesmo índice do jogador em partida.idJogadores se a carta já não estiver adicionada
 
-            foreach (string a in partida.Mesa)
+            foreach (string a in Partida.Mesa)
             {
                 string[] b = a.Split(',');
 
                 int id = Int32.Parse(b[0]);
                 int carta = Int32.Parse(b[1]);
 
-                foreach (int index in partida.idJogadores)
+                foreach (int index in Partida.idJogadores)
                 {
                     if (index == id)
                     {
-                        if (!(partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Contains(carta)))
+                        if (!(Partida.CartasPorJogador[Partida.idJogadores.IndexOf(id)].Contains(carta)))
                         {
-                            partida.CartasPorJogador[partida.idJogadores.IndexOf(id)].Add(carta);
+                            Partida.CartasPorJogador[Partida.idJogadores.IndexOf(id)].Add(carta);
                         }
                     }
                 }
 
                 //comentar
-                foreach (Jogador adversário in partida.Jogadores)
+                foreach (Jogador adversário in Partida.Jogadores)
                 {
                     if (adversário.Id == id)
                     {
-                        adversário.AdicionarCartasJogadas(carta);
+                        adversário.AdicionarCartas(carta);
                     }
                 }
             }
@@ -283,11 +253,11 @@ namespace BodeOfWar
             {
                 foreach (PictureBox p in l)
                 {
-                    foreach (int cartas in partida.CartasPorJogador[count])
+                    foreach (int cartas in Partida.CartasPorJogador[count])
                     {
-                        if (l.IndexOf(p) == partida.CartasPorJogador[count].IndexOf(cartas))
+                        if (l.IndexOf(p) == Partida.CartasPorJogador[count].IndexOf(cartas))
                         {
-                            foreach (Cartas carta in partida.TodasCartas)
+                            foreach (Cartas carta in Partida.TodasCartas)
                             {
                                 if (carta.id == cartas)
                                 {
@@ -310,11 +280,11 @@ namespace BodeOfWar
             {
                 foreach (Label l in label)
                 {
-                    foreach (int cartas in partida.CartasPorJogador[count])
+                    foreach (int cartas in Partida.CartasPorJogador[count])
                     {
-                        if (label.IndexOf(l) == partida.CartasPorJogador[count].IndexOf(cartas))
+                        if (label.IndexOf(l) == Partida.CartasPorJogador[count].IndexOf(cartas))
                         {
-                            foreach (Cartas carta in partida.TodasCartas)
+                            foreach (Cartas carta in Partida.TodasCartas)
                             {
                                 if (carta.id == cartas)
                                 {
@@ -336,11 +306,11 @@ namespace BodeOfWar
             {
                 foreach (Label l in label)
                 {
-                    foreach (int cartas in partida.CartasPorJogador[count])
+                    foreach (int cartas in Partida.CartasPorJogador[count])
                     {
-                        if (label.IndexOf(l) == partida.CartasPorJogador[count].IndexOf(cartas))
+                        if (label.IndexOf(l) == Partida.CartasPorJogador[count].IndexOf(cartas))
                         {
-                            foreach (Cartas carta in partida.TodasCartas)
+                            foreach (Cartas carta in Partida.TodasCartas)
                             {
                                 if (carta.id == cartas)
                                 {
@@ -363,22 +333,22 @@ namespace BodeOfWar
             AtualizarDetalhes();
 
             //Verifica se é a vez deste jogador
-            if (partida.VerificarVez() == User.Nome)
+            if (Partida.VerificarVez() == User.Nome)
             {
-                if (partida.Rodada != 0)
+                if (Partida.Rodada != 0)
                 {
-                    status.UpdateUltimoPerdedor(partida.VerificarQuemPerdeuAnterior());
-                    status.UpdateUltimoVencedor(partida.VerificarQuemVenceuAnterior());
+                    status.UpdateUltimoPerdedor(Partida.VerificarQuemPerdeuAnterior());
+                    status.UpdateUltimoVencedor(Partida.VerificarQuemVenceuAnterior());
                 }
 
-                string[] ret = BodeOfWarServer.Jogo.VerificarVez(partida.Id).Split(',');
+                string[] ret = BodeOfWarServer.Jogo.VerificarVez(Partida.Id).Split(',');
 
                 //Verifica se é hora de escolher ilha
                 if (ret[3].Contains("I"))
                 {
                     status.UpdateStatus(Automacao: 3, Mesa: 6);
-                    int bodes = partida.Jogadores[User.IndiceJogador].Bodes;
-                    if (bodes > partida.TamanhoIlha())
+                    int bodes = Partida.Jogadores[User.IndiceJogador].Bodes;
+                    if (bodes > Partida.TamanhoIlha())
                     {
                         status.UpdateStatus(Mao: 3, Decisao: 6);
                         VerIlhas();
@@ -399,7 +369,7 @@ namespace BodeOfWar
                 {
                     status.UpdateStatus(Automacao: 4);
                     //Se for a primeira rodada
-                    if (partida.Rodada == 0)
+                    if (Partida.Rodada == 0)
                     {
                         status.UpdateStatus(Mesa: 7, Decisao: 8);
                         int rand = new Random().Next(0, 7);
@@ -408,15 +378,15 @@ namespace BodeOfWar
                     }
                     else
                     {
-                        int bodes = partida.Jogadores[User.IndiceJogador].Bodes;
-                        int tamanhoIlha = partida.TamanhoIlha();
+                        int bodes = Partida.Jogadores[User.IndiceJogador].Bodes;
+                        int tamanhoIlha = Partida.TamanhoIlha();
 
                         int fator = ((bodes * 100) / tamanhoIlha);
 
                         if (fator <= 75)
                         {
                             status.UpdateStatus(Mao: 4);
-                            if (User.TemMaiorCarta(partida.CartasJogadas()))
+                            if (User.TemMaiorCarta(Partida.CartasJogadas()))
                             {
                                 status.UpdateStatus(Mesa: 1, Decisao: 1);
                                 Jogar(User.MaiorCarta());
@@ -432,47 +402,47 @@ namespace BodeOfWar
                         else if (fator > 75 && fator <= 100)
                         {
                             status.UpdateStatus(Mao: 5);
-                            if (User.TemMaiorCarta(partida.CartasJogadas()))
+                            if (User.TemMaiorCarta(Partida.CartasJogadas()))
                             {
                                 status.UpdateStatus(Mesa: 1);
-                                if (partida.AlgmVaiEstourar())
+                                if (Partida.AlgmVaiEstourar())
                                 {
                                     status.UpdateStatus(Mesa: 8);
-                                    if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
+                                    if (User.TemMenorQue(Partida.CartasJogadas().Max()))
                                     {
-                                        if (User.TemCartaClasse(4))
+                                        if (User.TemClasse(4))
                                         {
                                             Jogar(User.CartaClasse(4));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(5))
+                                        else if (User.TemClasse(5))
                                         {
                                             Jogar(User.CartaClasse(5));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(6))
+                                        else if (User.TemClasse(6))
                                         {
                                             Jogar(User.CartaClasse(6));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(1))
+                                        else if (User.TemClasse(1))
                                         {
                                             Jogar(User.CartaClasse(1));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(2))
+                                        else if (User.TemClasse(2))
                                         {
                                             Jogar(User.CartaClasse(2));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(3))
+                                        else if (User.TemClasse(3))
                                         {
                                             Jogar(User.CartaClasse(3));
                                             return;
                                         }
                                         else
                                         {
-                                            Jogar(User.Descartar(partida.CartasJogadas()));
+                                            Jogar(User.Descartar(Partida.CartasJogadas()));
                                             return;
                                         }
                                     }
@@ -480,16 +450,16 @@ namespace BodeOfWar
                                 else
                                 {
                                     status.UpdateStatus(Mesa: 9);
-                                    if (User.FazSentidoComprar(partida.CartasJogadas(), partida.TamanhoIlha()))
+                                    if (User.FazSentidoComprar(Partida.CartasJogadas(), Partida.TamanhoIlha()))
                                     {
                                         status.UpdateStatus(Mesa: 9, Decisao: 9);
-                                        Jogar(User.CartaMaiorQueMesa(partida.CartasJogadas()));
+                                        Jogar(User.MaiorQueMesa(Partida.CartasJogadas()));
                                         return;
                                     }
                                     else
                                     {
                                         status.UpdateStatus(Mesa: 10, Decisao: 3);
-                                        Jogar(User.Descartar(partida.CartasJogadas()));
+                                        Jogar(User.Descartar(Partida.CartasJogadas()));
                                         return;
                                     }
                                 }
@@ -504,9 +474,9 @@ namespace BodeOfWar
                         else if (fator > 100 && fator <= 110)
                         {
                             status.UpdateStatus(Mao: 6);
-                            if (partida.Rodada <= 4)
+                            if (Partida.Rodada <= 4)
                             {
-                                if (User.TemMenorCarta(partida.CartasJogadas()))
+                                if (User.TemMenorCarta(Partida.CartasJogadas()))
                                 {
                                     status.UpdateStatus(Mesa: 3, Decisao: 2);
                                     Jogar(User.MenorCarta());
@@ -521,50 +491,50 @@ namespace BodeOfWar
                             }
                             else
                             {
-                                if (partida.AlgmVaiEstourar())
+                                if (Partida.AlgmVaiEstourar())
                                 {
                                     status.UpdateStatus(Mesa: 8);
-                                    if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
+                                    if (User.TemMenorQue(Partida.CartasJogadas().Max()))
                                     {
-                                        if (User.TemCartaClasse(4))
+                                        if (User.TemClasse(4))
                                         {
                                             Jogar(User.CartaClasse(4));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(5))
+                                        else if (User.TemClasse(5))
                                         {
                                             Jogar(User.CartaClasse(5));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(6))
+                                        else if (User.TemClasse(6))
                                         {
                                             Jogar(User.CartaClasse(6));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(1))
+                                        else if (User.TemClasse(1))
                                         {
                                             Jogar(User.CartaClasse(1));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(2))
+                                        else if (User.TemClasse(2))
                                         {
                                             Jogar(User.CartaClasse(2));
                                             return;
                                         }
-                                        else if (User.TemCartaClasse(3))
+                                        else if (User.TemClasse(3))
                                         {
                                             Jogar(User.CartaClasse(3));
                                             return;
                                         }
                                         else
                                         {
-                                            Jogar(User.Descartar(partida.CartasJogadas()));
+                                            Jogar(User.Descartar(Partida.CartasJogadas()));
                                             return;
                                         }
                                     }
                                     else
                                     {
-                                        if (User.TemMenorCarta(partida.CartasJogadas()))
+                                        if (User.TemMenorCarta(Partida.CartasJogadas()))
                                         {
                                             status.UpdateStatus(Mesa: 3, Decisao: 2);
                                             Jogar(User.MenorCarta());
@@ -581,7 +551,7 @@ namespace BodeOfWar
                                 else
                                 {
                                     status.UpdateStatus(Mesa: 9);
-                                    if (User.TemMenorCarta(partida.CartasJogadas()))
+                                    if (User.TemMenorCarta(Partida.CartasJogadas()))
                                     {
                                         status.UpdateStatus(Mesa: 3, Decisao: 2);
                                         Jogar(User.MenorCarta());
@@ -599,7 +569,7 @@ namespace BodeOfWar
                         if (fator > 110)
                         {
                             status.UpdateStatus(Mao: 3);
-                            if (User.TemMenorCarta(partida.CartasJogadas()))
+                            if (User.TemMenorCarta(Partida.CartasJogadas()))
                             {
                                 status.UpdateStatus(Mesa: 3, Decisao: 2);
                                 Jogar(User.MenorCarta());
@@ -636,7 +606,7 @@ namespace BodeOfWar
 
         private void timer_Tick(object sender, EventArgs e)
         { 
-            if (partida.EmJogo == true)
+            if (Partida.EmJogo == true)
             {
                 if (!backgroundWorker.IsBusy)
                 {
@@ -658,7 +628,7 @@ namespace BodeOfWar
 
         private void MaoEstrategia_FormClosed(object sender, FormClosedEventArgs e)
         {
-            pai.AtualizarDetalhes();
+            Pai.AtualizarDetalhes();
             timer.Stop();
         }
 
@@ -671,7 +641,7 @@ namespace BodeOfWar
         private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             AtualizarDetalhes();
-            if (partida.JaTemVencedor())
+            if (Partida.JaTemVencedor())
             {
                 status.UpdateStatus(3);
                 timer.Stop();
