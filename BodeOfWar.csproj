@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Jogador.cs" />
     <Compile Include="Mão - Auto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +86,7 @@
       <DependentUpon>Mão - Auto.cs</DependentUpon>
     </Compile>
     <Compile Include="Cartas.cs" />
-    <Compile Include="Jogador.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

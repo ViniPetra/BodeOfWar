@@ -25,7 +25,9 @@ namespace BodeOfWar
 
         List<int> CartasJogadas = new List<int>();
 
-        Jogador jogador = new Jogador();
+        User jogador = new User();
+
+        Partida partida { get; set; }
 
         List<PictureBox> imagens;
         List<Label> bodes;
@@ -59,10 +61,11 @@ namespace BodeOfWar
         /// Define o jogador
         /// </summary>
         /// <param name="user"></param>
-        public MaoAuto(Jogador user)
+        public MaoAuto(User user, Partida partida)
         {
+            this.jogador = user;
+            this.partida = partida;
             InitializeComponent();
-            jogador = user;
         }
 
         /// <summary>
@@ -129,7 +132,7 @@ namespace BodeOfWar
         /// </summary>
         private void ListarJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(partida.Id);
             if (Jogadores == "")
             {
                 Jogadores = "Partida vazia";
@@ -145,7 +148,7 @@ namespace BodeOfWar
         /// </summary>
         private void PopularJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(partida.Id);
             Jogadores = Jogadores.Replace("\r", "");
             string[] Players = Jogadores.Split('\n');
 
@@ -171,7 +174,7 @@ namespace BodeOfWar
         {
             ListarJogadores();
             txtVez.Text = VerificarVez();
-            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(jogador.idPartida);
+            txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(partida.Id);
             PopularMesa(rodada);
             if(txtNarracao.Text.Contains("é o grande BODE OF WAR!"))
             {
@@ -187,8 +190,8 @@ namespace BodeOfWar
         private string VerificarVez()
         {
             string nome = "";
-            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(jogador.idPartida);
-            string vez = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida);
+            string jogadores = BodeOfWarServer.Jogo.ListarJogadores(partida.Id);
+            string vez = BodeOfWarServer.Jogo.VerificarVez(partida.Id);
 
             //Gerenciamento de erros
             if (vez.Contains("ERRO:Partida não está em jogo"))
@@ -282,7 +285,7 @@ namespace BodeOfWar
         {
             string[] aux;
 
-            string ret = BodeOfWarServer.Jogo.VerificarMesa(jogador.idPartida, rodada);
+            string ret = BodeOfWarServer.Jogo.VerificarMesa(partida.Id, rodada);
 
             ret = ret.Replace("\r", "");
             aux = ret.Split('\n');
@@ -374,7 +377,7 @@ namespace BodeOfWar
                     {
                         if (l.IndexOf(p) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            foreach (Cartas carta in jogador.TodasCartas)
+                            foreach (Cartas carta in partida.TodasCartas)
                             {
                                 if (carta.id == cartas)
                                 {
@@ -401,7 +404,7 @@ namespace BodeOfWar
                     {
                         if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            foreach (Cartas carta in jogador.TodasCartas)
+                            foreach (Cartas carta in partida.TodasCartas)
                             {
                                 if (carta.id == cartas)
                                 {
@@ -427,7 +430,7 @@ namespace BodeOfWar
                     {
                         if (label.IndexOf(l) == CartasPorJogador[count].IndexOf(cartas))
                         {
-                            foreach (Cartas carta in jogador.TodasCartas)
+                            foreach (Cartas carta in partida.TodasCartas)
                             {
                                 if (carta.id == cartas)
                                 {
@@ -459,7 +462,7 @@ namespace BodeOfWar
             //Verifica se é a vez deste jogador
             if (VerificarVez() == jogador.Nome)
             {
-                string[] ret = BodeOfWarServer.Jogo.VerificarVez(jogador.idPartida).Split(',');
+                string[] ret = BodeOfWarServer.Jogo.VerificarVez(partida.Id).Split(',');
 
                 //Verifica se é hora de escolher ilha
                 if (ret[3].Contains("I"))
