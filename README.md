@@ -25,14 +25,35 @@ Foram usados conceitos de Orientação a Objetos na criação de classes como Ca
 
 Todas as funções estão comentadas dentro do código e podem ser acessadas caso tenha curiosidade.
 
-A arquitetura das classes está dividida como:
+A arquitetura das classes está estruturada como:
 
-![image](https://user-images.githubusercontent.com/89108219/169663012-9de8fa41-1fbc-4708-b513-29349d3972c4.png)
+![image](https://user-images.githubusercontent.com/89108219/170893487-d51c37fa-e10a-4784-aa1c-1f66c47f0ed6.png)
 
 A estratégia adotada para o sistema autônomo segue a seguinte lógica:
 
-![image](https://user-images.githubusercontent.com/89108219/168651744-78f48d95-1d82-4f62-a10f-ed5c52f1f259.png)
+![image](https://user-images.githubusercontent.com/89108219/170893509-69eef6f0-8e8b-4660-a70b-ac0928dcdbf8.png)
 
 Este foi um projeto bem longo e horas de dedicação que serviu grandiosamente para ganhos de conhecimento em programação e problem-solving skills.
 
 Infelizmente, após o desligamento do serviço que o professor Thiago Ribeiro Claro criou para este projeto, não será mais possível interagir com o programa.
+
+Funções da classe Main:
+
+![image](https://user-images.githubusercontent.com/89108219/170893541-d0103a4f-1ed5-44f9-a579-996ab5f5182d.png)
+
+Funções da classe Jogador:
+
+![image](https://user-images.githubusercontent.com/89108219/170893551-6bb4ca0e-f3b1-439d-ac3a-052f0cde4221.png)
+
+Funções da classe Partida:
+
+![image](https://user-images.githubusercontent.com/89108219/170893556-2a352f49-d2ab-44f5-b877-479f63ef860c.png)
+
+Funções da classe User:
+
+![image](https://user-images.githubusercontent.com/89108219/170893570-38375b42-faa5-423c-9967-59a60435cb45.png)
+
+Funções da classe Mão Estratégia:
+
+![image](https://user-images.githubusercontent.com/89108219/170893627-6d4bc92c-c5b6-42b1-91a6-a5b3246f33f4.png)
+
