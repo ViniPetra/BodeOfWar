@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BodeOfWar
 {
@@ -28,7 +29,7 @@ namespace BodeOfWar
             this.CartasPorJogador = new List<int>[4];
             this.Jogadores = new List<Jogador>();
             
-            //Isso aqui está horrível
+            //Isso aqui está horrível mas não stá funcionando de outra forma
             this.CartasPorJogador[0] = new List<int>();
             this.CartasPorJogador[1] = new List<int>();
             this.CartasPorJogador[2] = new List<int>();
@@ -36,7 +37,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Popula a lista idJogadores, Cria os adversários na lista Jogadores e define a quantidade de jogadores
+        /// Popula a lista idJogadores, Cria/instancia os jogadores na lista Jogadores e define a quantidade de jogadores
         /// </summary>
         public void PopularJogadores()
         {
@@ -89,7 +90,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
+        /// Trata o retorno de BOW.VerificarVez, bate com o retorno de BOW.ListarJogadores
         /// </summary>
         /// <returns>Nome do jogador que deve atuar</returns>
         public string VerificarVez()
@@ -106,13 +107,12 @@ namespace BodeOfWar
             }
             if (vez.Contains("ERRO"))
             {
-                System.Windows.Forms.MessageBox.Show(vez, "Jogo");
+                MessageBox.Show(vez, "Jogo");
                 return vez;
             }
-
             if (jogadores.Contains("ERRO"))
             {
-                System.Windows.Forms.MessageBox.Show(jogadores, "Jogo");
+                MessageBox.Show(jogadores, "Jogo");
                 return jogadores;
             }
 
@@ -139,7 +139,7 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Popula a lista partida.Mesa com o retorno tratado e BodeOfWar.VerificarMesa
+        /// Popula a lista Mesa com o retorno tratado e BOW.VerificarMesa
         /// </summary>
         public void PopularMesa()
         {
@@ -160,36 +160,9 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Analisar se o jogador no índice pasasado venceu a partida anterior à atual ([rodada-1])
-        /// </summary>
-        /// <param name="IndiceJogador"></param>
-        /// <returns>true se o jogador no índice pasasado venceu a partida</returns>
-        /// <returns>false se o jogador no índice pasasado não venceu a partida</returns>
-        public bool Venceu(int IndiceJogador)
-        {
-            List<int> CartasRodada = new List<int>();
-            for(int i = 0; i <= QntJogadores-1; i++)
-            {
-                CartasRodada.Add(CartasPorJogador[i][Rodada-1]);
-            }
-
-            int indexVencedor = CartasRodada.IndexOf(CartasRodada.Max());
-
-            if(indexVencedor == IndiceJogador)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        /// <summary>
         /// Verifica tamanho atual da ilha
         /// </summary>
-        /// <param name="idPartida"></param>
-        /// <returns>tamanho atual da ilha</returns>
+        /// <returns>Tamanho atual da ilha</returns>
         public int TamanhoIlha()
         {
             string ret = BodeOfWarServer.Jogo.VerificarMesa(this.Id);
@@ -226,15 +199,11 @@ namespace BodeOfWar
                     if (jogadoresAux[i] == VerificarVencedor[1])
                     {
                         string Vencedor = jogadoresAux[i+1].ToString();
-                        System.Windows.Forms.MessageBox.Show("O vencedor é " + Vencedor.ToUpper());
+                        MessageBox.Show("O vencedor é " + Vencedor.ToUpper());
                         this.EmJogo = false;
                         return true;
                     }
                 }
-            }
-            else
-            {
-                return false;
             }
             return false;
         }
@@ -276,7 +245,8 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Verifica quem perdeu a rodada anterior à que foi chamada e soma os bodes em quem perdeu
+        /// Verifica quem perdeu a rodada anterior à que foi chamada
+        /// Adiciona perdida
         /// </summary>
         /// <returns>índice do jogador que perdeu e número de bodes comprados</returns>
         public string VerificarQuemPerdeuAnterior()
@@ -290,7 +260,6 @@ namespace BodeOfWar
 
             List<Cartas> CartasJogadas = new List<Cartas>();
 
-            int bodesJogados = 0;
 
             int IndexMin = CartasRodadaAnterior.IndexOf(CartasRodadaAnterior.Min());
 
@@ -305,23 +274,14 @@ namespace BodeOfWar
                 }
             }
 
-            foreach(Cartas carta in CartasJogadas)
-            {
-                bodesJogados += carta.bode;
-            }
-
-            foreach(Jogador jogador in Jogadores)
-            {
-                if(jogador.IndexJogador == IndexMin)
-                {
-                    jogador.AdicionarBodes(bodesJogados);
-                }
-            }
-
             Jogadores[IndexMin].Perdidas++;
             return Jogadores[IndexMin].Nome;
         }
 
+        /// <summary>
+        /// Verifica quem venceu a rodada anterior à que foi chamada
+        /// </summary>
+        /// <returns></returns>
         public string VerificarQuemVenceuAnterior()
         {
             List<int> CartasRodadaAnterior = new List<int>();
@@ -337,7 +297,11 @@ namespace BodeOfWar
             return Jogadores[IndexMax].Nome;
         }
 
-        public bool AlguémVaiEstourar()
+        /// <summary>
+        /// Verifica se quem jogou a carta mais alta vai estourar se comprar
+        /// </summary>
+        /// <returns></returns>
+        public bool AlgmVaiEstourar()
         {
             string[] aux;
 
@@ -402,7 +366,7 @@ namespace BodeOfWar
         /// Contagem de bodes que o jogador já comprou na partida inteira
         /// </summary>
         /// <returns>Quantidade de bodes que o jogador já comprou na partida inteira</returns>
-        public void AtualizarBodesComprados()
+        public void AtualizarBodes()
         {
             string ret = BodeOfWarServer.Jogo.ExibirNarracao(this.Id);
 

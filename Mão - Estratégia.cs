@@ -140,6 +140,7 @@ namespace BodeOfWar
             txtNarracao.Text = BodeOfWarServer.Jogo.ExibirNarracao(partida.Id);
             partida.PopularMesa();
             VerMesa();
+            partida.AtualizarBodes();
             status.UpdateJogadores(partida.Jogadores);
             if (partida.Rodada != 0)
             {
@@ -434,7 +435,7 @@ namespace BodeOfWar
                             if (User.TemMaiorCarta(partida.CartasJogadas()))
                             {
                                 status.UpdateStatus(Mesa: 1);
-                                if (partida.AlguémVaiEstourar())
+                                if (partida.AlgmVaiEstourar())
                                 {
                                     status.UpdateStatus(Mesa: 8);
                                     if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
@@ -520,7 +521,7 @@ namespace BodeOfWar
                             }
                             else
                             {
-                                if (partida.AlguémVaiEstourar())
+                                if (partida.AlgmVaiEstourar())
                                 {
                                     status.UpdateStatus(Mesa: 8);
                                     if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
