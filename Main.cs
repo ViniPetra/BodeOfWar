@@ -190,7 +190,11 @@ namespace BodeOfWar
                 nome = "Partida não iniciada";
                 return nome;
             }
-
+            if (vez.Contains("ERRO"))
+            {
+                MessageBox.Show(vez, "Jogo");
+                return vez;
+            }
             if (jogadores.StartsWith("ERRO"))
             {
                 MessageBox.Show(jogadores, "Jogo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);

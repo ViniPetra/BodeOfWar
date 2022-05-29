@@ -16,16 +16,6 @@ namespace BodeOfWar
         public List<int> MaoId { get; set; }
         public int IndiceJogador { get; set; }
 
-        public User(int id, string senha, Partida partida, List<Cartas> mao, string nome)
-        {
-            Id = id;
-            Senha = senha;
-            Partida = partida;
-            Mao = mao;
-            Nome = nome;
-            this.MaoId = new List<int>();
-        }
-
         public User()
         {
             this.MaoId = new List<int>();
@@ -118,7 +108,7 @@ namespace BodeOfWar
         /// </summary>
         /// <param name="classe"></param>
         /// <returns></returns>
-        public bool TemCartaClasse(int classe)
+        public bool TemClasse(int classe)
         {
             List<int> aux = new List<int>();
             for (int i = 0; i < this.Mao.Count; i++)
@@ -157,12 +147,11 @@ namespace BodeOfWar
                     IndexClasse = carta.id;
                 }
             }
-
             return IndexClasse;
         }
 
         /// <summary>
-        /// Joga uma carta entre a maior e a menor carta jogada na rodada
+        /// Joga uma carta entre a maior e a menor carta jogada na rodada ou média
         /// </summary>
         /// <param name="CartasJogadas"></param>
         /// <returns>Id da carta</returns>
@@ -265,7 +254,12 @@ namespace BodeOfWar
             }
         }
 
-        public bool TemCartaMenorQue(int numero)
+        /// <summary>
+        /// Verifica se tem carta menor que o numero passado
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns>
+        public bool TemMenorQue(int numero)
         {
             List<int> aux = new List<int>();
             for (int i = 0; i < this.Mao.Count; i++)
@@ -283,7 +277,12 @@ namespace BodeOfWar
             return false;
         }
 
-        public bool TemCartaMaiorQue(int numero)
+        /// <summary>
+        /// Verifica se tem carta maior que o numero passado
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns>
+        public bool TemMaiorQue(int numero)
         {
             List<int> aux = new List<int>();
             for (int i = 0; i < this.Mao.Count; i++)
@@ -301,7 +300,12 @@ namespace BodeOfWar
             return false;
         }
 
-        public int CartaMaiorQueMesa(List<int> CartasJogadas)
+        /// <summary>
+        /// Verifica se tem carta maior que a mesa
+        /// </summary>
+        /// <param name="CartasJogadas"></param>
+        /// <returns>Id da carta</returns>
+        public int MaiorQueMesa(List<int> CartasJogadas)
         {
             if (CartasJogadas.Any())
             {
@@ -322,7 +326,12 @@ namespace BodeOfWar
             return -1;
         }
 
-        public int CartaMenorQueMesa(List<int> CartasJogadas)
+        /// <summary>
+        /// Verifica se tem carta menor que a mesa
+        /// </summary>
+        /// <param name="CartasJogadas"></param>
+        /// <returns>id da carta</returns>
+        public int MenorQueMesa(List<int> CartasJogadas)
         {
             if (CartasJogadas.Any())
             {
