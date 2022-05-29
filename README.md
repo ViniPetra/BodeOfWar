@@ -27,7 +27,7 @@ Todas as funções estão comentadas dentro do código e podem ser acessadas cas
 
 A arquitetura das classes está estruturada como:
 
-![image](https://user-images.githubusercontent.com/89108219/170893487-d51c37fa-e10a-4784-aa1c-1f66c47f0ed6.png)
+![image](https://user-images.githubusercontent.com/89108219/170894760-db29995e-1185-4216-9039-26f835f13d1d.png)
 
 A estratégia adotada para o sistema autônomo segue a seguinte lógica:
 
