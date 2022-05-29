@@ -63,6 +63,15 @@ namespace BodeOfWar
 
         }
 
+        /// <summary>
+        /// 1 parâmetro obrigatório e 4 opcionais.
+        /// Escolher número de qual mensagem cada status deve assumir.
+        /// </summary>
+        /// <param name="CasoGeral"></param>
+        /// <param name="Automacao"></param>
+        /// <param name="Mao"></param>
+        /// <param name="Mesa"></param>
+        /// <param name="Decisao"></param>
         public void UpdateStatus(int CasoGeral = 0, int Automacao = 0, int Mao = 0, int Mesa = 0, int Decisao = 0)
         {
             switch (CasoGeral)
@@ -195,6 +204,26 @@ namespace BodeOfWar
                     lblStatusMesa.Text = "Escolhendo ilha";
                     lblStatusMesa.ForeColor = Color.Yellow;
                     break;
+                case 7:
+                    lblStatusMesa.Text = "Primeira rodada";
+                    lblStatusMesa.ForeColor = Color.Yellow;
+                    break;
+                case 8:
+                    lblStatusMesa.Text = "Alguém vai estourar";
+                    lblStatusMesa.ForeColor = Color.OrangeRed;
+                    break;
+                case 9:
+                    lblStatusMesa.Text = "Ninguém vai estourar";
+                    lblStatusMesa.ForeColor = Color.OrangeRed;
+                    break;
+                case 10:
+                    lblStatusMesa.Text = "Posso comprar";
+                    lblStatusMesa.ForeColor = Color.Lime;
+                    break;
+                case 11:
+                    lblStatusMesa.Text = "Não posso comprar";
+                    lblStatusMesa.ForeColor = Color.Red;
+                    break;
             }
 
             switch (Decisao)
@@ -203,7 +232,7 @@ namespace BodeOfWar
                     break;
                 case 1:
                     lblStatusDecisao.Text = "Jogar carta alta";
-                    lblStatusDecisao.ForeColor = Color.Green;
+                    lblStatusDecisao.ForeColor = Color.Lime;
                     break;
                 case 2:
                     lblStatusDecisao.Text = "Jogar carta baixa";
@@ -211,7 +240,7 @@ namespace BodeOfWar
                     break;
                 case 3:
                     lblStatusDecisao.Text = "Descartar";
-                    lblStatusDecisao.ForeColor = Color.Orange;
+                    lblStatusDecisao.ForeColor = Color.OrangeRed;
                     break;
                 case 4:
                     lblStatusDecisao.Text = "Jogar bode alto";
@@ -228,6 +257,18 @@ namespace BodeOfWar
                 case 7:
                     lblStatusDecisao.Text = "Jogar Ilha menor";
                     lblStatusDecisao.ForeColor = Color.Orange;
+                    break;
+                case 8:
+                    lblStatusDecisao.Text = "Jogar aleatória";
+                    lblStatusDecisao.ForeColor = Color.Red;
+                    break;
+                case 9:
+                    lblStatusDecisao.Text = "Jogar maior que mesa";
+                    lblStatusDecisao.ForeColor = Color.Lime;
+                    break;
+                case 10:
+                    lblStatusDecisao.Text = "Jogar menor que mesa";
+                    lblStatusDecisao.ForeColor = Color.Lime;
                     break;
             }
         }

@@ -376,14 +376,14 @@ namespace BodeOfWar
                     int bodes = partida.Jogadores[User.IndiceJogador].Bodes;
                     if (bodes > partida.TamanhoIlha())
                     {
-                        status.UpdateStatus(Decisao: 6, Mao: 3);
+                        status.UpdateStatus(Mao: 3, Decisao: 6);
                         VerIlhas();
                         BodeOfWarServer.Jogo.DefinirIlha(User.Id, User.Senha, Math.Max(ilha1Global, ilha2Global));
                         return;
                     }
                     else
                     {
-                        status.UpdateStatus(Decisao: 7, Mao: 4);
+                        status.UpdateStatus(Mao: 4, Decisao: 7);
                         VerIlhas();
                         BodeOfWarServer.Jogo.DefinirIlha(User.Id, User.Senha, Math.Min(ilha1Global, ilha2Global));
                         return;
@@ -397,6 +397,7 @@ namespace BodeOfWar
                     //Se for a primeira rodada
                     if (partida.Rodada == 0)
                     {
+                        status.UpdateStatus(Mesa: 7, Decisao: 8);
                         int rand = new Random().Next(0, 7);
                         Jogar(User.Mao[rand].id);
                         return;
@@ -410,69 +411,90 @@ namespace BodeOfWar
 
                         if (fator <= 75)
                         {
+                            status.UpdateStatus(Mao: 4);
                             if (User.TemMaiorCarta(partida.CartasJogadas()))
                             {
+                                status.UpdateStatus(Mesa: 1, Decisao: 1);
                                 Jogar(User.MaiorCarta());
                                 return;
                             }
                             else
                             {
+                                status.UpdateStatus(Mesa: 4, Decisao: 4);
                                 Jogar(User.MaiorBode());
                                 return;
                             }
                         }
                         else if (fator > 75 && fator <= 100)
                         {
+                            status.UpdateStatus(Mao: 5);
                             if (User.TemMaiorCarta(partida.CartasJogadas()))
                             {
-                                Jogar(User.MaiorCarta());
-                                return;
-                            }
-                            else if (partida.AlguémVaiEstourar())
-                            {
-                                if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
+                                status.UpdateStatus(Mesa: 1);
+                                if (partida.AlguémVaiEstourar())
                                 {
-                                    if (User.TemCartaClasse(4))
+                                    status.UpdateStatus(Mesa: 8);
+                                    if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
                                     {
-                                        Jogar(User.CartaClasse(4));
-                                    }
-                                    else if (User.TemCartaClasse(5))
-                                    {
-                                        Jogar(User.CartaClasse(5));
-                                    }
-                                    else if (User.TemCartaClasse(6))
-                                    {
-                                        Jogar(User.CartaClasse(6));
-                                    }
-                                    else if (User.TemCartaClasse(1))
-                                    {
-                                        Jogar(User.CartaClasse(1));
-                                    }
-                                    else if (User.TemCartaClasse(2))
-                                    {
-                                        Jogar(User.CartaClasse(2));
-                                    }
-                                    else if (User.TemCartaClasse(3))
-                                    {
-                                        Jogar(User.CartaClasse(3));
-                                    }
-                                    else
-                                    {
-                                        Jogar(User.Descartar(partida.CartasJogadas()));
+                                        if (User.TemCartaClasse(4))
+                                        {
+                                            Jogar(User.CartaClasse(4));
+                                            return;
+                                        }
+                                        else if (User.TemCartaClasse(5))
+                                        {
+                                            Jogar(User.CartaClasse(5));
+                                            return;
+                                        }
+                                        else if (User.TemCartaClasse(6))
+                                        {
+                                            Jogar(User.CartaClasse(6));
+                                            return;
+                                        }
+                                        else if (User.TemCartaClasse(1))
+                                        {
+                                            Jogar(User.CartaClasse(1));
+                                            return;
+                                        }
+                                        else if (User.TemCartaClasse(2))
+                                        {
+                                            Jogar(User.CartaClasse(2));
+                                            return;
+                                        }
+                                        else if (User.TemCartaClasse(3))
+                                        {
+                                            Jogar(User.CartaClasse(3));
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            Jogar(User.Descartar(partida.CartasJogadas()));
+                                            return;
+                                        }
                                     }
                                 }
                                 else
                                 {
+                                    status.UpdateStatus(Mesa: 9);
                                     if (User.FazSentidoComprar(partida.CartasJogadas(), partida.TamanhoIlha()))
                                     {
+                                        status.UpdateStatus(Mesa: 9, Decisao: 9);
                                         Jogar(User.CartaMaiorQueMesa(partida.CartasJogadas()));
+                                        return;
                                     }
                                     else
                                     {
+                                        status.UpdateStatus(Mesa: 10, Decisao: 3);
                                         Jogar(User.Descartar(partida.CartasJogadas()));
+                                        return;
                                     }
                                 }
-
+                            }
+                            else
+                            {
+                                status.UpdateStatus(Mesa: 4, Decisao: 4);
+                                Jogar(User.MaiorBode());
+                                return;
                             }
                         }
                         else if (fator > 100 && fator <= 110)
@@ -482,11 +504,13 @@ namespace BodeOfWar
                             {
                                 if (User.TemMenorCarta(partida.CartasJogadas()))
                                 {
+                                    status.UpdateStatus(Mesa: 3, Decisao: 2);
                                     Jogar(User.MenorCarta());
                                     return;
                                 }
                                 else
                                 {
+                                    status.UpdateStatus(Mesa: 4, Decisao: 5);
                                     Jogar(User.MenorBode());
                                     return;
                                 }
@@ -495,46 +519,56 @@ namespace BodeOfWar
                             {
                                 if (partida.AlguémVaiEstourar())
                                 {
+                                    status.UpdateStatus(Mesa: 8);
                                     if (User.TemCartaMenorQue(partida.CartasJogadas().Max()))
                                     {
                                         if (User.TemCartaClasse(4))
                                         {
                                             Jogar(User.CartaClasse(4));
+                                            return;
                                         }
                                         else if (User.TemCartaClasse(5))
                                         {
                                             Jogar(User.CartaClasse(5));
+                                            return;
                                         }
                                         else if (User.TemCartaClasse(6))
                                         {
                                             Jogar(User.CartaClasse(6));
+                                            return;
                                         }
                                         else if (User.TemCartaClasse(1))
                                         {
                                             Jogar(User.CartaClasse(1));
+                                            return;
                                         }
                                         else if (User.TemCartaClasse(2))
                                         {
                                             Jogar(User.CartaClasse(2));
+                                            return;
                                         }
                                         else if (User.TemCartaClasse(3))
                                         {
                                             Jogar(User.CartaClasse(3));
+                                            return;
                                         }
                                         else
                                         {
                                             Jogar(User.Descartar(partida.CartasJogadas()));
+                                            return;
                                         }
                                     }
                                     else
                                     {
                                         if (User.TemMenorCarta(partida.CartasJogadas()))
                                         {
+                                            status.UpdateStatus(Mesa: 3, Decisao: 2);
                                             Jogar(User.MenorCarta());
                                             return;
                                         }
                                         else
                                         {
+                                            status.UpdateStatus(Mesa: 4, Decisao: 5);
                                             Jogar(User.MenorBode());
                                             return;
                                         }
@@ -542,13 +576,16 @@ namespace BodeOfWar
                                 }
                                 else
                                 {
+                                    status.UpdateStatus(Mesa: 9);
                                     if (User.TemMenorCarta(partida.CartasJogadas()))
                                     {
+                                        status.UpdateStatus(Mesa: 3, Decisao: 2);
                                         Jogar(User.MenorCarta());
                                         return;
                                     }
                                     else
                                     {
+                                        status.UpdateStatus(Mesa: 4, Decisao: 5);
                                         Jogar(User.MenorBode());
                                         return;
                                     }
@@ -557,13 +594,16 @@ namespace BodeOfWar
                         }
                         if (fator > 110)
                         {
+                            status.UpdateStatus(Mao: 3);
                             if (User.TemMenorCarta(partida.CartasJogadas()))
                             {
+                                status.UpdateStatus(Mesa: 3, Decisao: 2);
                                 Jogar(User.MenorCarta());
                                 return;
                             }
                             else
                             {
+                                status.UpdateStatus(Mesa: 4, Decisao: 5);
                                 Jogar(User.MenorBode());
                                 return;
                             }
@@ -626,14 +666,15 @@ namespace BodeOfWar
 
         private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            status.UpdateStatus(CasoGeral: 1);
             AtualizarDetalhes();
             if (partida.JaTemVencedor())
             {
+                status.UpdateStatus(3);
                 timer.Stop();
             }
             else
             {
+                status.UpdateStatus(CasoGeral: 1);
                 timer.Start();
             }
         }

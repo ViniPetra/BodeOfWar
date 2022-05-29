@@ -703,7 +703,7 @@
             this.lblBodeJogador1.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador1.Location = new System.Drawing.Point(204, 528);
+            this.lblBodeJogador1.Location = new System.Drawing.Point(207, 527);
             this.lblBodeJogador1.Name = "lblBodeJogador1";
             this.lblBodeJogador1.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador1.TabIndex = 99;
@@ -718,7 +718,7 @@
             this.lblBodeJogador2.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador2.Location = new System.Drawing.Point(256, 528);
+            this.lblBodeJogador2.Location = new System.Drawing.Point(259, 527);
             this.lblBodeJogador2.Name = "lblBodeJogador2";
             this.lblBodeJogador2.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador2.TabIndex = 100;
@@ -733,7 +733,7 @@
             this.lblBodeJogador3.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador3.Location = new System.Drawing.Point(309, 528);
+            this.lblBodeJogador3.Location = new System.Drawing.Point(312, 527);
             this.lblBodeJogador3.Name = "lblBodeJogador3";
             this.lblBodeJogador3.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador3.TabIndex = 101;
@@ -748,7 +748,7 @@
             this.lblBodeJogador4.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador4.Location = new System.Drawing.Point(362, 528);
+            this.lblBodeJogador4.Location = new System.Drawing.Point(365, 527);
             this.lblBodeJogador4.Name = "lblBodeJogador4";
             this.lblBodeJogador4.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador4.TabIndex = 102;
@@ -763,7 +763,7 @@
             this.lblBodeJogador5.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador5.Location = new System.Drawing.Point(415, 528);
+            this.lblBodeJogador5.Location = new System.Drawing.Point(418, 527);
             this.lblBodeJogador5.Name = "lblBodeJogador5";
             this.lblBodeJogador5.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador5.TabIndex = 103;
@@ -778,7 +778,7 @@
             this.lblBodeJogador6.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador6.Location = new System.Drawing.Point(468, 528);
+            this.lblBodeJogador6.Location = new System.Drawing.Point(471, 527);
             this.lblBodeJogador6.Name = "lblBodeJogador6";
             this.lblBodeJogador6.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador6.TabIndex = 104;
@@ -793,7 +793,7 @@
             this.lblBodeJogador7.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador7.Location = new System.Drawing.Point(521, 528);
+            this.lblBodeJogador7.Location = new System.Drawing.Point(524, 527);
             this.lblBodeJogador7.Name = "lblBodeJogador7";
             this.lblBodeJogador7.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador7.TabIndex = 105;
@@ -808,7 +808,7 @@
             this.lblBodeJogador8.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador8.Location = new System.Drawing.Point(574, 528);
+            this.lblBodeJogador8.Location = new System.Drawing.Point(577, 527);
             this.lblBodeJogador8.Name = "lblBodeJogador8";
             this.lblBodeJogador8.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador8.TabIndex = 106;
