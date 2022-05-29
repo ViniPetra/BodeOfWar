@@ -12,9 +12,7 @@ namespace BodeOfWar
 {
     public partial class Main : Form
     {
-        //Array de todas as cartas do jogo
         public List<Cartas> TodasCartas = new List<Cartas>();
-        public List<Cartas> MinhaMao = new List<Cartas>();
         public User user = new User();
 
         //Variáeis de estado
@@ -27,13 +25,12 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Cria os objetos de cada as carta do jogo
+        /// 1. Instancia um objeto para cada carta do jogo
         /// 2. Cria a lista com todos os objetos de carta 
         /// 3. Define o atributo de todas as cartas no jogador 
         /// </summary>
         public void Inicializar()
         {
-            //Traz o menu como primeiro caso esteja codando
             pnlMenu.BringToFront();
 
             //Mostra a versão do servidor
@@ -78,31 +75,32 @@ namespace BodeOfWar
                 Cartas2[(i / 3), 2] = IntCartas1[i];
             }
 
+            //Adição à lista com filtros
             for (i = 0; i <= 49; i++)
             {
                 if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] <= 2)
                 {
-                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1));
+                    this.TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 1));
                 }
                 else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] <= 2)
                 {
-                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 2));
+                    this.TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 2));
                 }
                 else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] <= 2)
                 {
-                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 3));
+                    this.TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 3));
                 }
                 else if (Cartas2[i, 0] <= 16 && Cartas2[i, 1] > 2)
                 {
-                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 4));
+                    this.TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 4));
                 }
                 else if (Cartas2[i, 0] > 16 && Cartas2[i, 0] <= 32 && Cartas2[i, 1] > 2)
                 {
-                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 5));
+                    this.TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 5));
                 }
                 else if (Cartas2[i, 0] > 32 && Cartas2[i, 1] > 2)
                 {
-                    TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 6));
+                    this.TodasCartas.Add(new Cartas(Cartas2[i, 0], Cartas2[i, 1], Cartas2[i, 2], 6));
                 }
                 else
                 {
@@ -110,14 +108,15 @@ namespace BodeOfWar
                 }
             }
 
-            foreach (Cartas cartas in TodasCartas)
+            //Definição da imagem da Carta
+            foreach (Cartas cartas in this.TodasCartas)
             {
                 cartas.imagem = (Image)Properties.Resources.ResourceManager.GetObject("b" + cartas.imagemnum);
             }
         }
 
         /// <summary>
-        /// Trata o retorno de "ListarPartidas" e adiciona cada partida como um item individual em uma lista.
+        /// Trata o retorno de BOW.ListarPartidas e adiciona cada partida como um item individual em uma lista.
         /// </summary>
         /// <param name="tipo"></param>
         private void ListarPartidas(string tipo)
@@ -153,7 +152,7 @@ namespace BodeOfWar
         /// </summary>
         private void ListarJogadores()
         {
-            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(PartidaAberta);
+            string Jogadores = BodeOfWarServer.Jogo.ListarJogadores(this.PartidaAberta);
             if (Jogadores == "")
             {
                 Jogadores = "Partida vazia";
@@ -166,7 +165,6 @@ namespace BodeOfWar
 
         /// <summary>
         /// Atualiza as informações em txtVez, txtNarracao, txtJogadores
-        /// Verifica se a partida foi iniciada e bloqueia o btnIniciarPartida caso tenha sido
         /// </summary>
         public void AtualizarDetalhes()
         { 
@@ -176,7 +174,8 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// Trata o retorno de BodeOfWarServer.VerificarVez, bate com o retorno de BodeOfWarServer.ListarJogadores
+        /// Trata o retorno de BOW.VerificarVez, bate com o retorno de BOW.ListarJogadores para trazer o nome do jogador da vez
+        /// Controla a disponibilidade dos botões baseado no status da partida
         /// </summary>
         /// <returns>Nome do jogador que é a vez de atuar</returns>
         private string VerificarVez()
@@ -207,8 +206,9 @@ namespace BodeOfWar
             //Vez[1] = nome
             string[] Vez = vez.Split(',');
 
-            string Status = StatusPartidaAberta();
+            string Status = StatusPartida();
 
+            //Controle dos botões
             if (Status == "E" || Status == "")
             {
                 pnlPartidaIndisponivel.BringToFront();
@@ -254,9 +254,10 @@ namespace BodeOfWar
             string[] Partidas = PartidaSelecionada.Split(',');
             int idPartida = Int32.Parse(Partidas[0]);
 
-            PartidaAberta = idPartida;
+            this.PartidaAberta = idPartida;
 
-            if(NaPartida() && StatusPartidaAberta() == "A")
+            //Controle dos botões
+            if (NaPartida() && StatusPartida() == "A")
             {
                 pnlDentroPartida.BringToFront();
                 btnAutomatico.Enabled = false;
@@ -264,7 +265,7 @@ namespace BodeOfWar
                 btnEstrategia.Enabled = false;
                 btnIniciarPartida.Enabled = true;
             }
-            else if(NaPartida() && StatusPartidaAberta() == "J")
+            else if(NaPartida() && StatusPartida() == "J")
             {
                 pnlDentroPartida.BringToFront();
                 btnAutomatico.Enabled = true;
@@ -277,7 +278,7 @@ namespace BodeOfWar
 
         /// <summary>
         /// 1. Cria uma partida usando as informações em txtNomeCriarPartida e txtSenhaCriarPartida
-        /// 2. Define o atributo idPartida em jogador para o id da partida criada 
+        /// 2. Define a PartidaAberta
         /// 3. Traz para frente os detalhes da partida criada instantâneamente
         /// </summary>
         public void CriarPartida()
@@ -295,8 +296,6 @@ namespace BodeOfWar
 
             lstPartidas.Items.Clear();
 
-            //Abrir detalhes da partida diretamente após criar
-
             string retPartidas = BodeOfWarServer.Jogo.ListarPartidas("T");
 
             //Parse da retPartidas para uma array
@@ -309,22 +308,20 @@ namespace BodeOfWar
             //Isolar a id da partida mais recente
             int idPartida = Int32.Parse(Partidas[((Partidas.Length) - 4)]);
 
-            //Recomentar
-            //Define o atributo idPartida em jogador para o id da partida criada 
-            //jogador.idPartida = idPartida;
             PartidaAberta = idPartida;
 
-            //Atualizar detalhes
             AtualizarDetalhes();
 
-            //Chamar o painel de detalhes
             pnlDetalhesPartida.BringToFront();
+
+            txtNomeCriarPartida.Text = "";
+            txtSenhaCriarPartida.Text = "";
         }
 
         /// <summary>
         /// 1. Entra na partida usando as informações em txtNome e txtSenhaPartida
         /// 2. Traz para frente detalhes da partida recém entrada
-        /// 3. Define atributos Id, Senha e Nome do objeto jogador 
+        /// 3. Define atributos Id, Senha, Nome, Partida.ID e Partida.TodasCartas do User;
         /// </summary>
         private void EntrarPartida()
         {
@@ -339,30 +336,25 @@ namespace BodeOfWar
             }
             else
             {
-                user.Partida.Id = PartidaAberta;
+                string[] senhaPartida = chamada.Split(',');
+
+                user.Id = Int32.Parse(senhaPartida[0]);
+                user.Senha = senhaPartida[1];
+                user.Nome = nome;
+
+                user.Partida.Id = this.PartidaAberta;
+                user.Partida.TodasCartas = this.TodasCartas;
+
                 pnlDentroPartida.BringToFront();
                 txtNome.Text = "";
                 txtSenhaPartida.Text = "";
+
+                AtualizarDetalhes();
             }
-
-            //Mandar senha e Id pro objeto
-            string[] senhaPartida = chamada.Split(',');
-
-            //Define atributos Id, Senha e Nome do objeto jogador 
-            user.Id = Int32.Parse(senhaPartida[0]);
-            user.Senha = senhaPartida[1];
-            user.Nome = nome;
-
-
-            user.Partida.Id = this.PartidaAberta;
-            user.Partida.TodasCartas = this.TodasCartas;
-
-            AtualizarDetalhes();
         }
 
         /// <summary>
         /// 1. Inicia a partida em que o jogador está registrado
-        /// 2. Define os botões de escolha de moto de jogo como habilitados (naturalmente desabilitados)
         /// </summary>
         private void IniciarPartida()
         {
@@ -400,7 +392,7 @@ namespace BodeOfWar
         /// Verifica o status da partida ("A", "J", "E")
         /// </summary>
         /// <returns>status da partida</returns>
-        private string StatusPartidaAberta()
+        private string StatusPartida()
         {
             string vez = BodeOfWarServer.Jogo.VerificarVez(PartidaAberta);
 
@@ -416,47 +408,8 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
-        /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
-        /// 3. Chama o formulário de Mão manual (sem automação)
+        /// Define o atributo Mao do User
         /// </summary>
-        private void MostrarMaoManual()
-        {
-            string StringMao = BodeOfWarServer.Jogo.VerificarMao(user.Id, user.Senha);
-
-            //Parse no retorno e criação da array de ids das cartas da mão
-            //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
-            StringMao = StringMao.Replace("\r", "");
-            StringMao = StringMao.Substring(0, StringMao.Length - 1);
-            StringMao = StringMao.Replace("\n", ",");
-            string[] StringMao1 = StringMao.Split(',');
-
-            //Conversão da array de ids em int
-            int[] Mao = new int[StringMao1.Length];
-            for (int i = 0; i < StringMao1.Length; i++)
-            {
-                Mao[i] = Int32.Parse(StringMao1[i]);
-            }
-
-            //Criação da lista de objetos apenas de cartas próprias
-            for (int j = 0; j < Mao.Length; j++)
-            {
-                for (int i = 0; i < TodasCartas.Count; i++)
-                {
-                    if (TodasCartas[i].id == Mao[j])
-                    {
-                        MinhaMao.Add(TodasCartas[i]);
-                    }
-                }
-            }
-
-            user.Mao = MinhaMao;
-
-            //Chamar a janela do jogo manual
-            MãoManual FormMao = new MãoManual(this.user, this.user.Partida);
-            FormMao.ShowDialog();
-        }
-
         private void VerificarMao()
         {
             int id = user.Id;
@@ -478,14 +431,16 @@ namespace BodeOfWar
                 Mao[i] = Int32.Parse(StringMao1[i]);
             }
 
+            List<Cartas> MinhaMao = new List<Cartas>();
+
             //Criação da Lista de objetos apenas de cartas próprias
             for (int j = 0; j < Mao.Length; j++)
             {
-                for (int i = 0; i < TodasCartas.Count; i++)
+                for (int i = 0; i < this.TodasCartas.Count; i++)
                 {
-                    if (TodasCartas[i].id == Mao[j])
+                    if (this.TodasCartas[i].id == Mao[j])
                     {
-                        MinhaMao.Add(TodasCartas[i]);
+                        MinhaMao.Add(this.TodasCartas[i]);
                     }
                 }
             }
@@ -494,65 +449,35 @@ namespace BodeOfWar
         }
 
         /// <summary>
-        /// 1. Cria uma array com os objetos de cartas baseado no retorno de BodeOfWarServer.VerificarMao
-        /// 2. Define o atributo Mao do jogador como a array de objetos da Mão
-        /// 3. Chama o formulário de Mão automatizada
+        /// 1. Manual;
+        /// 2. Aleatório;
+        /// 3. Estratégia;
         /// </summary>
-        private void MostrarMaoAutomatica()
-        {
-            int id = user.Id;
-            string senha = user.Senha;
-
-            string StringMao = BodeOfWarServer.Jogo.VerificarMao(id, senha);
-
-            //Parse no retorno e criação da array de ids das cartas da mão
-            //StringMao1 {1, 2, 3, 4, 5, 6, 7, 8}
-            StringMao = StringMao.Replace("\r", "");
-            StringMao = StringMao.Substring(0, StringMao.Length - 1);
-            StringMao = StringMao.Replace("\n", ",");
-            string[] StringMao1 = StringMao.Split(',');
-
-            //Conversão da array de ids em int
-            int[] Mao = new int[StringMao1.Length];
-            for (int i = 0; i < StringMao1.Length; i++)
-            {
-                Mao[i] = Int32.Parse(StringMao1[i]);
-            }
-
-            //Criação da Lista de objetos apenas de cartas próprias
-            for (int j = 0; j < Mao.Length; j++)
-            {
-                for (int i = 0; i < TodasCartas.Count; i++)
-                {
-                    if (TodasCartas[i].id == Mao[j])
-                    {
-                        MinhaMao.Add(TodasCartas[i]);
-                    }
-                }
-            }
-
-            user.Mao = MinhaMao;
-
-            //Chamar a janela do jogo automático
-            MaoAuto FormMaoAuto = new MaoAuto(user, this.user.Partida);
-            FormMaoAuto.ShowDialog();
-        }
-
-        /// <summary>
-        /// Chama o formulário de Mão com a estratégia do grupo
-        /// </summary>
-        private void MostrarMaoEstrategia()
+        /// <param name="tipo"></param>
+        private void MostrarMao(int tipo)
         {
             if (user.Mao.Any())
             {
-                MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
-                FormMaoEstrategia.ShowDialog();
+                switch (tipo)
+                {
+                    case 1:
+                        MãoManual FormMao = new MãoManual(this.user, this.user.Partida);
+                        FormMao.ShowDialog();
+                        break;
+                    case 2:
+                        MaoAuto FormMaoAuto = new MaoAuto(user, this.user.Partida);
+                        FormMaoAuto.ShowDialog();
+                        break;
+                    case 3:
+                        MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
+                        FormMaoEstrategia.ShowDialog();
+                        break;
+                }
             }
             else
             {
                 VerificarMao();
-                MaoEstrategia FormMaoEstrategia = new MaoEstrategia(user, this, this.user.Partida);
-                FormMaoEstrategia.ShowDialog();
+                MostrarMao(tipo);
             }
         }
 
@@ -589,7 +514,7 @@ namespace BodeOfWar
 
         private void btnVoltarListarPartidas2_Click(object sender, EventArgs e)
         {
-            if (StatusPartidaAberta() == "J" && NaPartida())
+            if (StatusPartida() == "J" && NaPartida())
             {
                 DialogResult dialogResult = MessageBox.Show("A partida está em jogo.\nVocê tem certeza que deseja sair?", "Partida em andamento", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -657,25 +582,21 @@ namespace BodeOfWar
             pnlTutorial1.BringToFront();
         }
 
-        //Abrir uma nova janela para mostrar suas cartas de forma manual
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
-            MostrarMaoManual();
+            MostrarMao(1);
         }
 
-        //Abrir uma nvoa janela para mostrar suas cartas de forma automatizada
         private void btnAutomatico_Click(object sender, EventArgs e)
         {
-            MostrarMaoAutomatica();
+            MostrarMao(2);
         }
 
-        //Abrir uma nvoa janela para mostrar suas cartas com a estratégia do grupo
         private void btnEstrategia_Click(object sender, EventArgs e)
         {
-            MostrarMaoEstrategia();
+            MostrarMao(3);
         }
 
-        //Duplo clique na partida
         private void lstPartidas_DoubleClick(object sender, EventArgs e)
         {
             if (lstPartidas.SelectedItem == null)
@@ -689,7 +610,6 @@ namespace BodeOfWar
             }
         }
 
-        //Chamadas de listar partidas
         private void btnTodas_Click(object sender, EventArgs e)
         {
             ListarPartidas("T");
@@ -710,40 +630,26 @@ namespace BodeOfWar
             ListarPartidas("E");
         }
 
-        //Entrar na partida
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
             EntrarPartida();
-
-            //Limpa os campos
-            txtSenhaPartida.Text = "";
         }
 
-        //Iniciar a partida
         private void btnIniciarPartida_Click(object sender, EventArgs e)
         {
             IniciarPartida();
         }
 
-        //Atualizar a caixa de narração
         private void btnAtualizarNarracao_Click(object sender, EventArgs e)
         {
             AtualizarDetalhes();
         }
 
-        //Criar partida
         private void btnCriarPartida_Click(object sender, EventArgs e)
         {
             CriarPartida();
-
-            //Limpa os campos
-            txtNomeCriarPartida.Text = "";
-            txtSenhaCriarPartida.Text = "";
         }
 
-        /// <summary>
-        /// Fecha o jogo
-        /// </summary>
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();

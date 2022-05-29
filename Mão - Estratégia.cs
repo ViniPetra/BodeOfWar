@@ -46,7 +46,6 @@ namespace BodeOfWar
             this.pai = pai;
             InitializeComponent();
         }
-
         /// <summary>
         /// 1. Inicializa as listas da array partida.CartasPorJogador
         /// 2. Define as listas imagens, bodes e ids
@@ -60,11 +59,7 @@ namespace BodeOfWar
         /// </summary>
         private void Carregar()
         {
-            //Inicializa as listas na array partida.CartasPorJogador
-            partida.CartasPorJogador[0] = new List<int>();
-            partida.CartasPorJogador[1] = new List<int>();
-            partida.CartasPorJogador[2] = new List<int>();
-            partida.CartasPorJogador[3] = new List<int>();
+            partida.PopularJogadores();
 
             AtualizarDetalhes();
 
@@ -110,23 +105,11 @@ namespace BodeOfWar
 
             for (int i = 0; i < User.Mao.Count(); i++)
             {
-                /*
-                if (!(User.Mao[i] == null))
-                {
-                    imagens[i].Image = User.Mao[i].imagem;
-                    imagens[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                    bodes[i].Text = User.Mao[i].bode.ToString();
-                    ids[i].Text = User.Mao[i].id.ToString();
-                }
-                */
-
                 imagens[i].Image = User.Mao[i].imagem;
                 imagens[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 bodes[i].Text = User.Mao[i].bode.ToString();
                 ids[i].Text = User.Mao[i].id.ToString();
             }
-
-            partida.PopularJogadores();
 
             //Lista de PictureBoxes dos jogadores
             ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };

@@ -27,6 +27,12 @@ namespace BodeOfWar
             this.idJogadores = new List<int>();
             this.CartasPorJogador = new List<int>[4];
             this.Jogadores = new List<Jogador>();
+            
+            //Isso aqui está horrível
+            this.CartasPorJogador[0] = new List<int>();
+            this.CartasPorJogador[1] = new List<int>();
+            this.CartasPorJogador[2] = new List<int>();
+            this.CartasPorJogador[3] = new List<int>();
         }
 
         /// <summary>
@@ -62,7 +68,7 @@ namespace BodeOfWar
                     this.Jogadores.Add(new Jogador(idJogador, nomeJogador, auxidJogadores.IndexOf(a[0])));
                 }
             }
-            QntJogadores = idJogadores.Count();
+            this.QntJogadores = idJogadores.Count();
         }
 
         /// <summary>
