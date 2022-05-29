@@ -46,7 +46,6 @@ namespace BodeOfWar
             this.pai = pai;
             InitializeComponent();
         }
-
         /// <summary>
         /// 1. Inicializa as listas da array partida.CartasPorJogador
         /// 2. Define as listas imagens, bodes e ids
@@ -60,11 +59,7 @@ namespace BodeOfWar
         /// </summary>
         private void Carregar()
         {
-            //Inicializa as listas na array partida.CartasPorJogador
-            partida.CartasPorJogador[0] = new List<int>();
-            partida.CartasPorJogador[1] = new List<int>();
-            partida.CartasPorJogador[2] = new List<int>();
-            partida.CartasPorJogador[3] = new List<int>();
+            partida.PopularJogadores();
 
             AtualizarDetalhes();
 
@@ -82,6 +77,7 @@ namespace BodeOfWar
             bodes = new List<Label>() { lblBode1, lblBode2, lblBode3, lblBode4, lblBode5, lblBode6, lblBode7, lblBode8 };
             ids = new List<Label>() { lblNum1, lblNum2, lblNum3, lblNum4, lblNum5, lblNum6, lblNum7, lblNum8 };
 
+            /*
             int count = 0;
             foreach (PictureBox p in imagens)
             {
@@ -105,8 +101,15 @@ namespace BodeOfWar
                 l.Text = User.Mao[count].id.ToString();
                 count++;
             }
+            */
 
-            partida.PopularJogadores();
+            for (int i = 0; i < User.Mao.Count(); i++)
+            {
+                imagens[i].Image = User.Mao[i].imagem;
+                imagens[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                bodes[i].Text = User.Mao[i].bode.ToString();
+                ids[i].Text = User.Mao[i].id.ToString();
+            }
 
             //Lista de PictureBoxes dos jogadores
             ImagensJogadores = new List<PictureBox> { pcbJogador1, pcbJogador2, pcbJogador3, pcbJogador4 };
@@ -677,6 +680,16 @@ namespace BodeOfWar
                 status.UpdateStatus(CasoGeral: 1);
                 timer.Start();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Jogar(User.Mao[0].id);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Jogar(User.Mao[1].id);
         }
     }
 }

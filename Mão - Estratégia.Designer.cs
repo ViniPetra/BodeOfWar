@@ -229,9 +229,9 @@
             this.lblBode1.ForeColor = System.Drawing.Color.Black;
             this.lblBode1.Location = new System.Drawing.Point(110, 229);
             this.lblBode1.Name = "lblBode1";
-            this.lblBode1.Size = new System.Drawing.Size(73, 18);
+            this.lblBode1.Size = new System.Drawing.Size(13, 18);
             this.lblBode1.TabIndex = 9;
-            this.lblBode1.Text = "lblBode1";
+            this.lblBode1.Text = " ";
             // 
             // lblNum1
             // 
@@ -244,9 +244,9 @@
             this.lblNum1.ForeColor = System.Drawing.Color.Black;
             this.lblNum1.Location = new System.Drawing.Point(110, 103);
             this.lblNum1.Name = "lblNum1";
-            this.lblNum1.Size = new System.Drawing.Size(69, 18);
+            this.lblNum1.Size = new System.Drawing.Size(13, 18);
             this.lblNum1.TabIndex = 10;
-            this.lblNum1.Text = "lblNum1";
+            this.lblNum1.Text = " ";
             // 
             // lblNum2
             // 
@@ -259,9 +259,9 @@
             this.lblNum2.ForeColor = System.Drawing.Color.Black;
             this.lblNum2.Location = new System.Drawing.Point(224, 103);
             this.lblNum2.Name = "lblNum2";
-            this.lblNum2.Size = new System.Drawing.Size(69, 18);
+            this.lblNum2.Size = new System.Drawing.Size(13, 18);
             this.lblNum2.TabIndex = 12;
-            this.lblNum2.Text = "lblNum2";
+            this.lblNum2.Text = " ";
             // 
             // lblBode2
             // 
@@ -274,9 +274,9 @@
             this.lblBode2.ForeColor = System.Drawing.Color.Black;
             this.lblBode2.Location = new System.Drawing.Point(224, 229);
             this.lblBode2.Name = "lblBode2";
-            this.lblBode2.Size = new System.Drawing.Size(73, 18);
+            this.lblBode2.Size = new System.Drawing.Size(13, 18);
             this.lblBode2.TabIndex = 11;
-            this.lblBode2.Text = "lblBode2";
+            this.lblBode2.Text = " ";
             // 
             // lblNum3
             // 
@@ -289,9 +289,9 @@
             this.lblNum3.ForeColor = System.Drawing.Color.Black;
             this.lblNum3.Location = new System.Drawing.Point(340, 103);
             this.lblNum3.Name = "lblNum3";
-            this.lblNum3.Size = new System.Drawing.Size(69, 18);
+            this.lblNum3.Size = new System.Drawing.Size(13, 18);
             this.lblNum3.TabIndex = 14;
-            this.lblNum3.Text = "lblNum3";
+            this.lblNum3.Text = " ";
             // 
             // lblBode3
             // 
@@ -304,9 +304,9 @@
             this.lblBode3.ForeColor = System.Drawing.Color.Black;
             this.lblBode3.Location = new System.Drawing.Point(340, 229);
             this.lblBode3.Name = "lblBode3";
-            this.lblBode3.Size = new System.Drawing.Size(73, 18);
+            this.lblBode3.Size = new System.Drawing.Size(13, 18);
             this.lblBode3.TabIndex = 13;
-            this.lblBode3.Text = "lblBode3";
+            this.lblBode3.Text = " ";
             // 
             // lblNum4
             // 
@@ -319,9 +319,9 @@
             this.lblNum4.ForeColor = System.Drawing.Color.Black;
             this.lblNum4.Location = new System.Drawing.Point(455, 103);
             this.lblNum4.Name = "lblNum4";
-            this.lblNum4.Size = new System.Drawing.Size(69, 18);
+            this.lblNum4.Size = new System.Drawing.Size(13, 18);
             this.lblNum4.TabIndex = 16;
-            this.lblNum4.Text = "lblNum4";
+            this.lblNum4.Text = " ";
             // 
             // lblBode4
             // 
@@ -334,9 +334,9 @@
             this.lblBode4.ForeColor = System.Drawing.Color.Black;
             this.lblBode4.Location = new System.Drawing.Point(455, 229);
             this.lblBode4.Name = "lblBode4";
-            this.lblBode4.Size = new System.Drawing.Size(73, 18);
+            this.lblBode4.Size = new System.Drawing.Size(13, 18);
             this.lblBode4.TabIndex = 15;
-            this.lblBode4.Text = "lblBode4";
+            this.lblBode4.Text = " ";
             // 
             // lblNum5
             // 
@@ -349,9 +349,9 @@
             this.lblNum5.ForeColor = System.Drawing.Color.Black;
             this.lblNum5.Location = new System.Drawing.Point(110, 271);
             this.lblNum5.Name = "lblNum5";
-            this.lblNum5.Size = new System.Drawing.Size(69, 18);
+            this.lblNum5.Size = new System.Drawing.Size(13, 18);
             this.lblNum5.TabIndex = 18;
-            this.lblNum5.Text = "lblNum5";
+            this.lblNum5.Text = " ";
             // 
             // lblBode5
             // 
@@ -364,9 +364,9 @@
             this.lblBode5.ForeColor = System.Drawing.Color.Black;
             this.lblBode5.Location = new System.Drawing.Point(110, 397);
             this.lblBode5.Name = "lblBode5";
-            this.lblBode5.Size = new System.Drawing.Size(73, 18);
+            this.lblBode5.Size = new System.Drawing.Size(13, 18);
             this.lblBode5.TabIndex = 17;
-            this.lblBode5.Text = "lblBode5";
+            this.lblBode5.Text = " ";
             // 
             // lblNum6
             // 
@@ -379,9 +379,9 @@
             this.lblNum6.ForeColor = System.Drawing.Color.Black;
             this.lblNum6.Location = new System.Drawing.Point(225, 271);
             this.lblNum6.Name = "lblNum6";
-            this.lblNum6.Size = new System.Drawing.Size(69, 18);
+            this.lblNum6.Size = new System.Drawing.Size(13, 18);
             this.lblNum6.TabIndex = 20;
-            this.lblNum6.Text = "lblNum6";
+            this.lblNum6.Text = " ";
             // 
             // lblBode6
             // 
@@ -394,9 +394,9 @@
             this.lblBode6.ForeColor = System.Drawing.Color.Black;
             this.lblBode6.Location = new System.Drawing.Point(225, 397);
             this.lblBode6.Name = "lblBode6";
-            this.lblBode6.Size = new System.Drawing.Size(73, 18);
+            this.lblBode6.Size = new System.Drawing.Size(13, 18);
             this.lblBode6.TabIndex = 19;
-            this.lblBode6.Text = "lblBode6";
+            this.lblBode6.Text = " ";
             // 
             // lblNum7
             // 
@@ -409,9 +409,9 @@
             this.lblNum7.ForeColor = System.Drawing.Color.Black;
             this.lblNum7.Location = new System.Drawing.Point(343, 270);
             this.lblNum7.Name = "lblNum7";
-            this.lblNum7.Size = new System.Drawing.Size(69, 18);
+            this.lblNum7.Size = new System.Drawing.Size(13, 18);
             this.lblNum7.TabIndex = 22;
-            this.lblNum7.Text = "lblNum7";
+            this.lblNum7.Text = " ";
             // 
             // lblBode7
             // 
@@ -424,9 +424,9 @@
             this.lblBode7.ForeColor = System.Drawing.Color.Black;
             this.lblBode7.Location = new System.Drawing.Point(342, 395);
             this.lblBode7.Name = "lblBode7";
-            this.lblBode7.Size = new System.Drawing.Size(73, 18);
+            this.lblBode7.Size = new System.Drawing.Size(13, 18);
             this.lblBode7.TabIndex = 21;
-            this.lblBode7.Text = "lblBode7";
+            this.lblBode7.Text = " ";
             // 
             // lblNum8
             // 
@@ -439,9 +439,9 @@
             this.lblNum8.ForeColor = System.Drawing.Color.Black;
             this.lblNum8.Location = new System.Drawing.Point(457, 270);
             this.lblNum8.Name = "lblNum8";
-            this.lblNum8.Size = new System.Drawing.Size(69, 18);
+            this.lblNum8.Size = new System.Drawing.Size(13, 18);
             this.lblNum8.TabIndex = 24;
-            this.lblNum8.Text = "lblNum8";
+            this.lblNum8.Text = " ";
             // 
             // lblBode8
             // 
@@ -454,9 +454,9 @@
             this.lblBode8.ForeColor = System.Drawing.Color.Black;
             this.lblBode8.Location = new System.Drawing.Point(457, 396);
             this.lblBode8.Name = "lblBode8";
-            this.lblBode8.Size = new System.Drawing.Size(73, 18);
+            this.lblBode8.Size = new System.Drawing.Size(13, 18);
             this.lblBode8.TabIndex = 23;
-            this.lblBode8.Text = "lblBode8";
+            this.lblBode8.Text = " ";
             // 
             // pnlCarta1
             // 
