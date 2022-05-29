@@ -304,5 +304,11 @@ namespace BodeOfWar
             txtRodada.Text = rodada.ToString();
             txtTamIlha.Text = tamIlha.ToString();
         }
+
+        private void MãoEstratégiaStatus_LocationChanged(object sender, EventArgs e)
+        {
+            this.Left = this.Owner.Location.X + this.Owner.Size.Width - 10;
+            this.Top = this.Owner.Location.Y;
+        }
     }
 }

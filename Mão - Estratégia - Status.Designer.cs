@@ -67,26 +67,26 @@
             this.lblStatusMao = new System.Windows.Forms.Label();
             this.gpbJogadores = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblStatusDecisao = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblStatusMesa = new System.Windows.Forms.Label();
             this.txtUltimoVencedor = new System.Windows.Forms.TextBox();
             this.lblUltimoVencedor = new System.Windows.Forms.Label();
             this.txtUltimoPerdedor = new System.Windows.Forms.TextBox();
             this.lblUltimoPerdedor = new System.Windows.Forms.Label();
             this.gpbPartidaAnterior = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblStatusMesa = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblStatusDecisao = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMaisPerdeu = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMaisVenceu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMenosBodes = new System.Windows.Forms.TextBox();
             this.txtMaisBodes = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtMaisVenceu = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtMaisPerdeu = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtRodada = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -98,9 +98,9 @@
             this.pnlStatus2.SuspendLayout();
             this.gpbJogadores.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.gpbPartidaAnterior.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.gpbPartidaAnterior.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -549,6 +549,70 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Automação";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.lblStatusDecisao);
+            this.panel2.Location = new System.Drawing.Point(141, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(125, 44);
+            this.panel2.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(3, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Decisão:";
+            // 
+            // lblStatusDecisao
+            // 
+            this.lblStatusDecisao.AutoSize = true;
+            this.lblStatusDecisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusDecisao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblStatusDecisao.Location = new System.Drawing.Point(3, 23);
+            this.lblStatusDecisao.Name = "lblStatusDecisao";
+            this.lblStatusDecisao.Size = new System.Drawing.Size(66, 13);
+            this.lblStatusDecisao.TabIndex = 5;
+            this.lblStatusDecisao.Text = "Não iniciado";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblStatusMesa);
+            this.panel1.Location = new System.Drawing.Point(10, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 44);
+            this.panel1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Status da mesa:";
+            // 
+            // lblStatusMesa
+            // 
+            this.lblStatusMesa.AutoSize = true;
+            this.lblStatusMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusMesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblStatusMesa.Location = new System.Drawing.Point(3, 23);
+            this.lblStatusMesa.Name = "lblStatusMesa";
+            this.lblStatusMesa.Size = new System.Drawing.Size(66, 13);
+            this.lblStatusMesa.TabIndex = 5;
+            this.lblStatusMesa.Text = "Não iniciado";
+            // 
             // txtUltimoVencedor
             // 
             this.txtUltimoVencedor.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -608,70 +672,6 @@
             this.gpbPartidaAnterior.TabStop = false;
             this.gpbPartidaAnterior.Text = "Partida anterior";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblStatusMesa);
-            this.panel1.Location = new System.Drawing.Point(10, 69);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(125, 44);
-            this.panel1.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Status da mesa:";
-            // 
-            // lblStatusMesa
-            // 
-            this.lblStatusMesa.AutoSize = true;
-            this.lblStatusMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusMesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblStatusMesa.Location = new System.Drawing.Point(3, 23);
-            this.lblStatusMesa.Name = "lblStatusMesa";
-            this.lblStatusMesa.Size = new System.Drawing.Size(66, 13);
-            this.lblStatusMesa.TabIndex = 5;
-            this.lblStatusMesa.Text = "Não iniciado";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblStatusDecisao);
-            this.panel2.Location = new System.Drawing.Point(141, 69);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(125, 44);
-            this.panel2.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Decisão:";
-            // 
-            // lblStatusDecisao
-            // 
-            this.lblStatusDecisao.AutoSize = true;
-            this.lblStatusDecisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusDecisao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblStatusDecisao.Location = new System.Drawing.Point(3, 23);
-            this.lblStatusDecisao.Name = "lblStatusDecisao";
-            this.lblStatusDecisao.Size = new System.Drawing.Size(66, 13);
-            this.lblStatusDecisao.TabIndex = 5;
-            this.lblStatusDecisao.Text = "Não iniciado";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label12);
@@ -690,6 +690,50 @@
             this.groupBox2.TabIndex = 178;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Métricas dos jogadores";
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(148, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 15);
+            this.label12.TabIndex = 179;
+            this.label12.Text = "Mais perdeu:";
+            // 
+            // txtMaisPerdeu
+            // 
+            this.txtMaisPerdeu.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMaisPerdeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaisPerdeu.Location = new System.Drawing.Point(148, 75);
+            this.txtMaisPerdeu.Name = "txtMaisPerdeu";
+            this.txtMaisPerdeu.ReadOnly = true;
+            this.txtMaisPerdeu.Size = new System.Drawing.Size(111, 20);
+            this.txtMaisPerdeu.TabIndex = 180;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(17, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(111, 15);
+            this.label11.TabIndex = 177;
+            this.label11.Text = "Mais venceu:";
+            // 
+            // txtMaisVenceu
+            // 
+            this.txtMaisVenceu.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMaisVenceu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaisVenceu.Location = new System.Drawing.Point(17, 75);
+            this.txtMaisVenceu.Name = "txtMaisVenceu";
+            this.txtMaisVenceu.ReadOnly = true;
+            this.txtMaisVenceu.Size = new System.Drawing.Size(111, 20);
+            this.txtMaisVenceu.TabIndex = 178;
             // 
             // label6
             // 
@@ -734,50 +778,6 @@
             this.label10.Size = new System.Drawing.Size(112, 15);
             this.label10.TabIndex = 175;
             this.label10.Text = "Menos bodes:";
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(17, 57);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 15);
-            this.label11.TabIndex = 177;
-            this.label11.Text = "Mais venceu:";
-            // 
-            // txtMaisVenceu
-            // 
-            this.txtMaisVenceu.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtMaisVenceu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaisVenceu.Location = new System.Drawing.Point(17, 75);
-            this.txtMaisVenceu.Name = "txtMaisVenceu";
-            this.txtMaisVenceu.ReadOnly = true;
-            this.txtMaisVenceu.Size = new System.Drawing.Size(111, 20);
-            this.txtMaisVenceu.TabIndex = 178;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(148, 57);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(111, 15);
-            this.label12.TabIndex = 179;
-            this.label12.Text = "Mais perdeu:";
-            // 
-            // txtMaisPerdeu
-            // 
-            this.txtMaisPerdeu.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtMaisPerdeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaisPerdeu.Location = new System.Drawing.Point(148, 75);
-            this.txtMaisPerdeu.Name = "txtMaisPerdeu";
-            this.txtMaisPerdeu.ReadOnly = true;
-            this.txtMaisPerdeu.Size = new System.Drawing.Size(111, 20);
-            this.txtMaisPerdeu.TabIndex = 180;
             // 
             // groupBox3
             // 
@@ -828,12 +828,14 @@
             this.Controls.Add(this.gpbPartidaAnterior);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbJogadores);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MãoEstratégiaStatus";
             this.ShowInTaskbar = false;
             this.Text = "Mão - Estratégia: Status";
+            this.LocationChanged += new System.EventHandler(this.MãoEstratégiaStatus_LocationChanged);
             this.pnlStatus1.ResumeLayout(false);
             this.pnlStatus1.PerformLayout();
             this.gpb1.ResumeLayout(false);
@@ -848,12 +850,12 @@
             this.pnlStatus2.PerformLayout();
             this.gpbJogadores.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.gpbPartidaAnterior.ResumeLayout(false);
-            this.gpbPartidaAnterior.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.gpbPartidaAnterior.ResumeLayout(false);
+            this.gpbPartidaAnterior.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
