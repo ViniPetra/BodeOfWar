@@ -346,10 +346,32 @@ namespace BodeOfWar
                 user.Senha = senhaPartida[1];
                 user.Nome = nome;
 
-                user.Partida.Id = this.PartidaAberta;
-                user.Partida.TodasCartas = this.TodasCartas;
+                user.Partida = new Partida
+                {
+                    Id = this.PartidaAberta,
+                    TodasCartas = this.TodasCartas
+                };
 
                 pnlDentroPartida.BringToFront();
+
+                //Controle dos botões
+                if (NaPartida() && StatusPartida() == "A")
+                {
+                    pnlDentroPartida.BringToFront();
+                    btnAutomatico.Enabled = false;
+                    btnManual.Enabled = false;
+                    btnEstrategia.Enabled = false;
+                    btnIniciarPartida.Enabled = true;
+                }
+                else if (NaPartida() && StatusPartida() == "J")
+                {
+                    pnlDentroPartida.BringToFront();
+                    btnAutomatico.Enabled = true;
+                    btnManual.Enabled = true;
+                    btnEstrategia.Enabled = true;
+                    btnIniciarPartida.Enabled = false;
+                }
+
                 txtNome.Text = "";
                 txtSenhaPartida.Text = "";
 

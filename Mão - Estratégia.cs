@@ -62,6 +62,8 @@ namespace BodeOfWar
             //Seu nome na tela!
             lblJogador.Text = "Você: " + User.Nome;
 
+            User.MaoId = new List<int>();
+
             //Popular a Jogador.MaoId
             for (int i = 0; i < User.Mao.Count; i++)
             {

@@ -93,9 +93,9 @@ namespace BodeOfWar
 
             int max = aux.Max();
             int IdMax = 0;
-            foreach(Cartas carta in Mao)
+            foreach (Cartas carta in Mao)
             {
-                if(carta.bode == max)
+                if (carta.bode == max)
                 {
                     IdMax = carta.id;
                 }
@@ -215,7 +215,7 @@ namespace BodeOfWar
                 return false;
             }
         }
-        
+
         /// <summary>
         /// Verifica se o jogador tem uma carta menor que as já jogadas na mesa
         /// </summary>
@@ -264,9 +264,9 @@ namespace BodeOfWar
                 aux.Add(this.Mao[i].id);
             }
 
-            foreach(int id in aux)
+            foreach (int id in aux)
             {
-                if(numero > id)
+                if (numero > id)
                 {
                     return true;
                 }
