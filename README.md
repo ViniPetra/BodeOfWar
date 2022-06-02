@@ -27,33 +27,33 @@ Todas as funções estão comentadas dentro do código e podem ser acessadas cas
 
 A arquitetura das classes está estruturada como:
 
-![image](https://user-images.githubusercontent.com/89108219/170894760-db29995e-1185-4216-9039-26f835f13d1d.png)
+![image](https://user-images.githubusercontent.com/89108219/170899119-f6144bed-b1cd-4a64-833a-a75c93c17044.png)
 
 A estratégia adotada para o sistema autônomo segue a seguinte lógica:
 
-![image](https://user-images.githubusercontent.com/89108219/170893509-69eef6f0-8e8b-4660-a70b-ac0928dcdbf8.png)
+![image](https://user-images.githubusercontent.com/89108219/170899125-b2e8defd-1a8f-489b-bab2-69dc92557c42.png)
 
 Este foi um projeto bem longo e horas de dedicação que serviu grandiosamente para ganhos de conhecimento em programação e problem-solving skills.
 
 Infelizmente, após o desligamento do serviço que o professor Thiago Ribeiro Claro criou para este projeto, não será mais possível interagir com o programa.
 
-Funções da classe Main:
+Abaixo deixo a tabela de dependências do Form Main. Uma função de uma fase depende de todas as das fases anteriores.
 
-![image](https://user-images.githubusercontent.com/89108219/170893541-d0103a4f-1ed5-44f9-a579-996ab5f5182d.png)
+![image](https://user-images.githubusercontent.com/89108219/170898725-a5bb4be9-90fc-4baa-9b64-875d3a451469.png)
 
 Funções da classe Jogador:
 
-![image](https://user-images.githubusercontent.com/89108219/170893551-6bb4ca0e-f3b1-439d-ac3a-052f0cde4221.png)
+![image](https://user-images.githubusercontent.com/89108219/170899435-37f72eaf-1b14-4d4b-a581-327bce8b4e8a.png)
 
 Funções da classe Partida:
 
-![image](https://user-images.githubusercontent.com/89108219/170893556-2a352f49-d2ab-44f5-b877-479f63ef860c.png)
+![image](https://user-images.githubusercontent.com/89108219/170899447-8bc6dd95-1f27-425d-85ef-dedd4b3845a9.png)
 
 Funções da classe User:
 
-![image](https://user-images.githubusercontent.com/89108219/170893570-38375b42-faa5-423c-9967-59a60435cb45.png)
+![image](https://user-images.githubusercontent.com/89108219/170899457-1a24b161-db87-457a-be26-f8fc2abc8b0f.png)
 
-Funções da classe Mão Estratégia:
+Abaixo deixo a tabela de dependências do Form Mão Estratégia. Uma função de uma fase depende de todas as das fases anteriores.
 
-![image](https://user-images.githubusercontent.com/89108219/170893627-6d4bc92c-c5b6-42b1-91a6-a5b3246f33f4.png)
+![image](https://user-images.githubusercontent.com/89108219/170899529-07cc23d3-4548-4fce-babb-b02756ed72b5.png)
 
