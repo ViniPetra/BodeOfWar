@@ -157,30 +157,27 @@ namespace BodeOfWar
         /// <returns>Id da carta</returns>
         public int Descartar(List<int> CartasJogadas)
         {
-            List<int> aux = new List<int>();
-            for (int i = 0; i < this.Mao.Count; i++)
+            if (CartasJogadas.Any())
             {
-                aux.Add(this.Mao[i].id);
-            }
+                int minCJ = CartasJogadas.Min();
+                int maxCJ = CartasJogadas.Max();
 
-            int minCJ = CartasJogadas.Min();
-            int maxCJ = CartasJogadas.Max();
-
-            if (minCJ == maxCJ)
-            {
-                return Mao[((Mao.Count())) / 2].id;
-            }
-            else
-            {
-                foreach (Cartas carta in this.Mao)
+                if (minCJ == maxCJ)
                 {
-                    if (carta.id > maxCJ && carta.id < minCJ)
+                    return Mao[(Mao.Count()) / 2].id;
+                }
+                else
+                {
+                    foreach (Cartas carta in this.Mao)
                     {
-                        return carta.id;
+                        if (carta.id < maxCJ && carta.id > minCJ)
+                        {
+                            return carta.id;
+                        }
                     }
                 }
             }
-            return Mao[((Mao.Count())) / 2].id;
+            return Mao[(Mao.Count()) / 2].id;
         }
 
         /// <summary>
