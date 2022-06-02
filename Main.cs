@@ -212,24 +212,7 @@ namespace BodeOfWar
 
             string Status = StatusPartida();
 
-            //Controle dos botões
-            if (Status == "E" || Status == "")
-            {
-                pnlPartidaIndisponivel.BringToFront();
-                btnVoltarListarPartidas2.Enabled = true;
-            }
-            else if (Status == "J" && NaPartida())
-            {
-                btnAutomatico.Enabled = true;
-                btnManual.Enabled = true;
-                btnEstrategia.Enabled = true;
-                btnIniciarPartida.Enabled = false;
-            }
-            else
-            {
-                pnlPartidaIndisponivel.BringToFront();
-                btnVoltarListarPartidas2.Enabled = true;
-            }
+            BotoesMao();
 
             string NomeJogador = Vez[1];
 
@@ -260,23 +243,8 @@ namespace BodeOfWar
 
             this.PartidaAberta = idPartida;
 
-            //Controle dos botões
-            if (NaPartida() && StatusPartida() == "A")
-            {
-                pnlDentroPartida.BringToFront();
-                btnAutomatico.Enabled = false;
-                btnManual.Enabled = false;
-                btnEstrategia.Enabled = false;
-                btnIniciarPartida.Enabled = true;
-            }
-            else if(NaPartida() && StatusPartida() == "J")
-            {
-                pnlDentroPartida.BringToFront();
-                btnAutomatico.Enabled = true;
-                btnManual.Enabled = true;
-                btnEstrategia.Enabled = true;
-                btnIniciarPartida.Enabled = false;
-            }
+            BotoesMao();
+
             AtualizarDetalhes();
         }
 
@@ -352,25 +320,7 @@ namespace BodeOfWar
                     TodasCartas = this.TodasCartas
                 };
 
-                pnlDentroPartida.BringToFront();
-
-                //Controle dos botões
-                if (NaPartida() && StatusPartida() == "A")
-                {
-                    pnlDentroPartida.BringToFront();
-                    btnAutomatico.Enabled = false;
-                    btnManual.Enabled = false;
-                    btnEstrategia.Enabled = false;
-                    btnIniciarPartida.Enabled = true;
-                }
-                else if (NaPartida() && StatusPartida() == "J")
-                {
-                    pnlDentroPartida.BringToFront();
-                    btnAutomatico.Enabled = true;
-                    btnManual.Enabled = true;
-                    btnEstrategia.Enabled = true;
-                    btnIniciarPartida.Enabled = false;
-                }
+                BotoesMao();
 
                 txtNome.Text = "";
                 txtSenhaPartida.Text = "";
@@ -512,6 +462,33 @@ namespace BodeOfWar
         /// <summary>
         /// Todas as funções abaixo são da dinâmica de telas
         /// </summary>
+
+        private void BotoesMao()
+        {
+            string status = StatusPartida();
+            bool napartida = NaPartida();
+            if (napartida && status == "A")
+            {
+                pnlDentroPartida.BringToFront();
+                btnAutomatico.Enabled = false;
+                btnManual.Enabled = false;
+                btnEstrategia.Enabled = false;
+                btnIniciarPartida.Enabled = true;
+            }
+            else if (napartida && status == "J")
+            {
+                pnlDentroPartida.BringToFront();
+                btnAutomatico.Enabled = true;
+                btnManual.Enabled = true;
+                btnEstrategia.Enabled = true;
+                btnIniciarPartida.Enabled = false;
+            }
+            else if (status == "J" || status == "" || status == "E")
+            {
+                pnlPartidaIndisponivel.BringToFront();
+                btnVoltarListarPartidas2.Enabled = true;
+            }
+        }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
