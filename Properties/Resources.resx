@@ -148,6 +148,9 @@
   <data name="b9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ImagensCartas\b9.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Card_flip_sound_effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Card-flip-sound-effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Deck2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\Menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -225,6 +228,9 @@
   </data>
   <data name="PartidaIndisponivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\OutrasImagens\PartidaIndisponivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screaming_Goat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screaming Goat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
