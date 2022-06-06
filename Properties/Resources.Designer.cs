@@ -161,6 +161,15 @@ namespace BodeOfWar.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Card_flip_sound_effect {
+            get {
+                return ResourceManager.GetStream("Card_flip_sound_effect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Deck2 {
@@ -417,6 +426,15 @@ namespace BodeOfWar.Properties {
             get {
                 object obj = ResourceManager.GetObject("PartidaIndisponivel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Screaming_Goat {
+            get {
+                return ResourceManager.GetStream("Screaming_Goat", resourceCulture);
             }
         }
         

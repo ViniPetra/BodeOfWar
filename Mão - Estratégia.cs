@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace BodeOfWar
 {
@@ -16,6 +17,8 @@ namespace BodeOfWar
         Main Pai;
 
         MãoEstratégiaStatus Status;
+
+        SoundPlayer SomCarta;
 
         int ilha1Global;
         int ilha2Global;
@@ -39,6 +42,7 @@ namespace BodeOfWar
                 Owner = this
             };
             this.Pai = pai;
+            this.SomCarta = new SoundPlayer(Properties.Resources.Card_flip_sound_effect);
             InitializeComponent();
         }
         /// <summary>
@@ -154,6 +158,7 @@ namespace BodeOfWar
                 }
                 User.Mao.RemoveAt(indexCarta);
                 panels[User.MaoId.IndexOf(ID)].BringToFront();
+                this.SomCarta.Play();
                 Partida.Rodada++;
                 AtualizarDetalhes();
                 return true;

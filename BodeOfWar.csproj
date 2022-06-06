@@ -165,6 +165,8 @@
     <Content Include="ImagensCartas\b8.PNG" />
     <Content Include="ImagensCartas\b9.PNG" />
     <Content Include="OutrasImagens\616714.ico" />
+    <None Include="Resources\Screaming Goat.wav" />
+    <None Include="Resources\Card-flip-sound-effect.wav" />
     <None Include="Resources\J4.gif" />
     <None Include="Resources\J3.gif" />
     <None Include="Resources\J2.gif" />
