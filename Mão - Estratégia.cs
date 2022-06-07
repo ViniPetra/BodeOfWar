@@ -128,6 +128,17 @@ namespace BodeOfWar
             {
                 Status.UpdateMetricas(Partida.Jogadores, Partida.Rodada, Partida.TamanhoIlha());
             }
+            if (User.Partida.EmJogo == true)
+            {
+                if (Partida.JaTemVencedor())
+                {
+                    Status.UpdateStatus(3);
+                }
+                else
+                {
+                    Status.UpdateStatus(CasoGeral: 1);
+                }
+            }
         }
 
         /// <summary>
@@ -652,14 +663,12 @@ namespace BodeOfWar
         private void backgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             AtualizarDetalhes();
-            if (Partida.JaTemVencedor())
+            if (Partida.EmJogo == false)
             {
-                Status.UpdateStatus(3);
                 timer.Stop();
             }
             else
             {
-                Status.UpdateStatus(CasoGeral: 1);
                 timer.Start();
             }
         }

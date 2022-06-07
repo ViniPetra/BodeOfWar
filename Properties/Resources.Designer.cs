@@ -441,6 +441,16 @@ namespace BodeOfWar.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap screaminggoatgif {
+            get {
+                object obj = ResourceManager.GetObject("screaminggoatgif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap texture {
             get {
                 object obj = ResourceManager.GetObject("texture", resourceCulture);

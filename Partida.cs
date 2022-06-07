@@ -199,9 +199,8 @@ namespace BodeOfWar
                     if (jogadoresAux[i] == VerificarVencedor[1])
                     {
                         string Vencedor = jogadoresAux[i+1].ToString();
-                        SoundPlayer SomVencedor = new SoundPlayer(Properties.Resources.Screaming_Goat);
-                        SomVencedor.Play();
-                        MessageBox.Show("O vencedor é " + Vencedor.ToUpper());
+                        Vencedor vencedor = new Vencedor("O vencedor é " + Vencedor.ToUpper());
+                        vencedor.ShowDialog();
                         this.EmJogo = false;
                         return true;
                     }

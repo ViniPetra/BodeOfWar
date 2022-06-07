@@ -172,7 +172,6 @@
             this.pcbCarta2 = new System.Windows.Forms.PictureBox();
             this.pcbCarta1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogador2)).BeginInit();
@@ -217,7 +216,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBode1
@@ -229,10 +227,9 @@
             this.lblBode1.BackColor = System.Drawing.Color.Transparent;
             this.lblBode1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode1.ForeColor = System.Drawing.Color.Black;
-            this.lblBode1.Location = new System.Drawing.Point(138, 286);
-            this.lblBode1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode1.Location = new System.Drawing.Point(110, 229);
             this.lblBode1.Name = "lblBode1";
-            this.lblBode1.Size = new System.Drawing.Size(16, 24);
+            this.lblBode1.Size = new System.Drawing.Size(13, 18);
             this.lblBode1.TabIndex = 9;
             this.lblBode1.Text = " ";
             // 
@@ -245,10 +242,9 @@
             this.lblNum1.BackColor = System.Drawing.Color.Transparent;
             this.lblNum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum1.ForeColor = System.Drawing.Color.Black;
-            this.lblNum1.Location = new System.Drawing.Point(138, 129);
-            this.lblNum1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum1.Location = new System.Drawing.Point(110, 103);
             this.lblNum1.Name = "lblNum1";
-            this.lblNum1.Size = new System.Drawing.Size(16, 24);
+            this.lblNum1.Size = new System.Drawing.Size(13, 18);
             this.lblNum1.TabIndex = 10;
             this.lblNum1.Text = " ";
             // 
@@ -261,10 +257,9 @@
             this.lblNum2.BackColor = System.Drawing.Color.Transparent;
             this.lblNum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum2.ForeColor = System.Drawing.Color.Black;
-            this.lblNum2.Location = new System.Drawing.Point(280, 129);
-            this.lblNum2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum2.Location = new System.Drawing.Point(224, 103);
             this.lblNum2.Name = "lblNum2";
-            this.lblNum2.Size = new System.Drawing.Size(16, 24);
+            this.lblNum2.Size = new System.Drawing.Size(13, 18);
             this.lblNum2.TabIndex = 12;
             this.lblNum2.Text = " ";
             // 
@@ -277,10 +272,9 @@
             this.lblBode2.BackColor = System.Drawing.Color.Transparent;
             this.lblBode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode2.ForeColor = System.Drawing.Color.Black;
-            this.lblBode2.Location = new System.Drawing.Point(280, 286);
-            this.lblBode2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode2.Location = new System.Drawing.Point(224, 229);
             this.lblBode2.Name = "lblBode2";
-            this.lblBode2.Size = new System.Drawing.Size(16, 24);
+            this.lblBode2.Size = new System.Drawing.Size(13, 18);
             this.lblBode2.TabIndex = 11;
             this.lblBode2.Text = " ";
             // 
@@ -293,10 +287,9 @@
             this.lblNum3.BackColor = System.Drawing.Color.Transparent;
             this.lblNum3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum3.ForeColor = System.Drawing.Color.Black;
-            this.lblNum3.Location = new System.Drawing.Point(425, 129);
-            this.lblNum3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum3.Location = new System.Drawing.Point(340, 103);
             this.lblNum3.Name = "lblNum3";
-            this.lblNum3.Size = new System.Drawing.Size(16, 24);
+            this.lblNum3.Size = new System.Drawing.Size(13, 18);
             this.lblNum3.TabIndex = 14;
             this.lblNum3.Text = " ";
             // 
@@ -309,10 +302,9 @@
             this.lblBode3.BackColor = System.Drawing.Color.Transparent;
             this.lblBode3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode3.ForeColor = System.Drawing.Color.Black;
-            this.lblBode3.Location = new System.Drawing.Point(425, 286);
-            this.lblBode3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode3.Location = new System.Drawing.Point(340, 229);
             this.lblBode3.Name = "lblBode3";
-            this.lblBode3.Size = new System.Drawing.Size(16, 24);
+            this.lblBode3.Size = new System.Drawing.Size(13, 18);
             this.lblBode3.TabIndex = 13;
             this.lblBode3.Text = " ";
             // 
@@ -325,10 +317,9 @@
             this.lblNum4.BackColor = System.Drawing.Color.Transparent;
             this.lblNum4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum4.ForeColor = System.Drawing.Color.Black;
-            this.lblNum4.Location = new System.Drawing.Point(569, 129);
-            this.lblNum4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum4.Location = new System.Drawing.Point(455, 103);
             this.lblNum4.Name = "lblNum4";
-            this.lblNum4.Size = new System.Drawing.Size(16, 24);
+            this.lblNum4.Size = new System.Drawing.Size(13, 18);
             this.lblNum4.TabIndex = 16;
             this.lblNum4.Text = " ";
             // 
@@ -341,10 +332,9 @@
             this.lblBode4.BackColor = System.Drawing.Color.Transparent;
             this.lblBode4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode4.ForeColor = System.Drawing.Color.Black;
-            this.lblBode4.Location = new System.Drawing.Point(569, 286);
-            this.lblBode4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode4.Location = new System.Drawing.Point(455, 229);
             this.lblBode4.Name = "lblBode4";
-            this.lblBode4.Size = new System.Drawing.Size(16, 24);
+            this.lblBode4.Size = new System.Drawing.Size(13, 18);
             this.lblBode4.TabIndex = 15;
             this.lblBode4.Text = " ";
             // 
@@ -357,10 +347,9 @@
             this.lblNum5.BackColor = System.Drawing.Color.Transparent;
             this.lblNum5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum5.ForeColor = System.Drawing.Color.Black;
-            this.lblNum5.Location = new System.Drawing.Point(138, 339);
-            this.lblNum5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum5.Location = new System.Drawing.Point(110, 271);
             this.lblNum5.Name = "lblNum5";
-            this.lblNum5.Size = new System.Drawing.Size(16, 24);
+            this.lblNum5.Size = new System.Drawing.Size(13, 18);
             this.lblNum5.TabIndex = 18;
             this.lblNum5.Text = " ";
             // 
@@ -373,10 +362,9 @@
             this.lblBode5.BackColor = System.Drawing.Color.Transparent;
             this.lblBode5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode5.ForeColor = System.Drawing.Color.Black;
-            this.lblBode5.Location = new System.Drawing.Point(138, 496);
-            this.lblBode5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode5.Location = new System.Drawing.Point(110, 397);
             this.lblBode5.Name = "lblBode5";
-            this.lblBode5.Size = new System.Drawing.Size(16, 24);
+            this.lblBode5.Size = new System.Drawing.Size(13, 18);
             this.lblBode5.TabIndex = 17;
             this.lblBode5.Text = " ";
             // 
@@ -389,10 +377,9 @@
             this.lblNum6.BackColor = System.Drawing.Color.Transparent;
             this.lblNum6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum6.ForeColor = System.Drawing.Color.Black;
-            this.lblNum6.Location = new System.Drawing.Point(281, 339);
-            this.lblNum6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum6.Location = new System.Drawing.Point(225, 271);
             this.lblNum6.Name = "lblNum6";
-            this.lblNum6.Size = new System.Drawing.Size(16, 24);
+            this.lblNum6.Size = new System.Drawing.Size(13, 18);
             this.lblNum6.TabIndex = 20;
             this.lblNum6.Text = " ";
             // 
@@ -405,10 +392,9 @@
             this.lblBode6.BackColor = System.Drawing.Color.Transparent;
             this.lblBode6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode6.ForeColor = System.Drawing.Color.Black;
-            this.lblBode6.Location = new System.Drawing.Point(281, 496);
-            this.lblBode6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode6.Location = new System.Drawing.Point(225, 397);
             this.lblBode6.Name = "lblBode6";
-            this.lblBode6.Size = new System.Drawing.Size(16, 24);
+            this.lblBode6.Size = new System.Drawing.Size(13, 18);
             this.lblBode6.TabIndex = 19;
             this.lblBode6.Text = " ";
             // 
@@ -421,10 +407,9 @@
             this.lblNum7.BackColor = System.Drawing.Color.Transparent;
             this.lblNum7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum7.ForeColor = System.Drawing.Color.Black;
-            this.lblNum7.Location = new System.Drawing.Point(429, 338);
-            this.lblNum7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum7.Location = new System.Drawing.Point(343, 270);
             this.lblNum7.Name = "lblNum7";
-            this.lblNum7.Size = new System.Drawing.Size(16, 24);
+            this.lblNum7.Size = new System.Drawing.Size(13, 18);
             this.lblNum7.TabIndex = 22;
             this.lblNum7.Text = " ";
             // 
@@ -437,10 +422,9 @@
             this.lblBode7.BackColor = System.Drawing.Color.Transparent;
             this.lblBode7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode7.ForeColor = System.Drawing.Color.Black;
-            this.lblBode7.Location = new System.Drawing.Point(428, 494);
-            this.lblBode7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode7.Location = new System.Drawing.Point(342, 395);
             this.lblBode7.Name = "lblBode7";
-            this.lblBode7.Size = new System.Drawing.Size(16, 24);
+            this.lblBode7.Size = new System.Drawing.Size(13, 18);
             this.lblBode7.TabIndex = 21;
             this.lblBode7.Text = " ";
             // 
@@ -453,10 +437,9 @@
             this.lblNum8.BackColor = System.Drawing.Color.Transparent;
             this.lblNum8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum8.ForeColor = System.Drawing.Color.Black;
-            this.lblNum8.Location = new System.Drawing.Point(571, 338);
-            this.lblNum8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNum8.Location = new System.Drawing.Point(457, 270);
             this.lblNum8.Name = "lblNum8";
-            this.lblNum8.Size = new System.Drawing.Size(16, 24);
+            this.lblNum8.Size = new System.Drawing.Size(13, 18);
             this.lblNum8.TabIndex = 24;
             this.lblNum8.Text = " ";
             // 
@@ -469,10 +452,9 @@
             this.lblBode8.BackColor = System.Drawing.Color.Transparent;
             this.lblBode8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBode8.ForeColor = System.Drawing.Color.Black;
-            this.lblBode8.Location = new System.Drawing.Point(571, 495);
-            this.lblBode8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBode8.Location = new System.Drawing.Point(457, 396);
             this.lblBode8.Name = "lblBode8";
-            this.lblBode8.Size = new System.Drawing.Size(16, 24);
+            this.lblBode8.Size = new System.Drawing.Size(13, 18);
             this.lblBode8.TabIndex = 23;
             this.lblBode8.Text = " ";
             // 
@@ -484,10 +466,9 @@
             this.pnlCarta1.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta1.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo1;
             this.pnlCarta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta1.Location = new System.Drawing.Point(134, 125);
-            this.pnlCarta1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta1.Location = new System.Drawing.Point(107, 100);
             this.pnlCarta1.Name = "pnlCarta1";
-            this.pnlCarta1.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta1.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta1.TabIndex = 25;
             // 
             // pnlCarta2
@@ -498,10 +479,9 @@
             this.pnlCarta2.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta2.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo2;
             this.pnlCarta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta2.Location = new System.Drawing.Point(276, 125);
-            this.pnlCarta2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta2.Location = new System.Drawing.Point(221, 100);
             this.pnlCarta2.Name = "pnlCarta2";
-            this.pnlCarta2.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta2.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta2.TabIndex = 26;
             // 
             // pnlCarta3
@@ -512,10 +492,9 @@
             this.pnlCarta3.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta3.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo3;
             this.pnlCarta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta3.Location = new System.Drawing.Point(421, 125);
-            this.pnlCarta3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta3.Location = new System.Drawing.Point(337, 100);
             this.pnlCarta3.Name = "pnlCarta3";
-            this.pnlCarta3.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta3.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta3.TabIndex = 27;
             // 
             // pnlCarta4
@@ -526,10 +505,9 @@
             this.pnlCarta4.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta4.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo4;
             this.pnlCarta4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta4.Location = new System.Drawing.Point(565, 125);
-            this.pnlCarta4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta4.Location = new System.Drawing.Point(452, 100);
             this.pnlCarta4.Name = "pnlCarta4";
-            this.pnlCarta4.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta4.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta4.TabIndex = 28;
             // 
             // pnlCarta5
@@ -540,10 +518,9 @@
             this.pnlCarta5.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta5.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo5;
             this.pnlCarta5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta5.Location = new System.Drawing.Point(134, 335);
-            this.pnlCarta5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta5.Location = new System.Drawing.Point(107, 268);
             this.pnlCarta5.Name = "pnlCarta5";
-            this.pnlCarta5.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta5.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta5.TabIndex = 29;
             // 
             // pnlCarta6
@@ -554,10 +531,9 @@
             this.pnlCarta6.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta6.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo6;
             this.pnlCarta6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta6.Location = new System.Drawing.Point(278, 335);
-            this.pnlCarta6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta6.Location = new System.Drawing.Point(222, 268);
             this.pnlCarta6.Name = "pnlCarta6";
-            this.pnlCarta6.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta6.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta6.TabIndex = 30;
             // 
             // pnlCarta7
@@ -568,10 +544,9 @@
             this.pnlCarta7.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta7.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo7;
             this.pnlCarta7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta7.Location = new System.Drawing.Point(424, 334);
-            this.pnlCarta7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta7.Location = new System.Drawing.Point(339, 267);
             this.pnlCarta7.Name = "pnlCarta7";
-            this.pnlCarta7.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta7.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta7.TabIndex = 26;
             // 
             // pnlCarta8
@@ -582,10 +557,9 @@
             this.pnlCarta8.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarta8.BackgroundImage = global::BodeOfWar.Properties.Resources.fundo8;
             this.pnlCarta8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCarta8.Location = new System.Drawing.Point(568, 334);
-            this.pnlCarta8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCarta8.Location = new System.Drawing.Point(454, 267);
             this.pnlCarta8.Name = "pnlCarta8";
-            this.pnlCarta8.Size = new System.Drawing.Size(125, 188);
+            this.pnlCarta8.Size = new System.Drawing.Size(100, 150);
             this.pnlCarta8.TabIndex = 26;
             // 
             // lblVez
@@ -597,10 +571,9 @@
             this.lblVez.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVez.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVez.Location = new System.Drawing.Point(814, 119);
-            this.lblVez.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVez.Location = new System.Drawing.Point(651, 95);
             this.lblVez.Name = "lblVez";
-            this.lblVez.Size = new System.Drawing.Size(138, 20);
+            this.lblVez.Size = new System.Drawing.Size(111, 16);
             this.lblVez.TabIndex = 46;
             this.lblVez.Text = "Vez de:";
             // 
@@ -610,11 +583,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVez.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtVez.Location = new System.Drawing.Point(814, 145);
-            this.txtVez.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVez.Location = new System.Drawing.Point(651, 116);
             this.txtVez.Name = "txtVez";
             this.txtVez.ReadOnly = true;
-            this.txtVez.Size = new System.Drawing.Size(138, 22);
+            this.txtVez.Size = new System.Drawing.Size(111, 20);
             this.txtVez.TabIndex = 47;
             // 
             // txtNarracao
@@ -623,12 +595,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNarracao.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNarracao.Location = new System.Drawing.Point(814, 298);
-            this.txtNarracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNarracao.Location = new System.Drawing.Point(651, 238);
             this.txtNarracao.Multiline = true;
             this.txtNarracao.Name = "txtNarracao";
             this.txtNarracao.ReadOnly = true;
-            this.txtNarracao.Size = new System.Drawing.Size(138, 183);
+            this.txtNarracao.Size = new System.Drawing.Size(111, 147);
             this.txtNarracao.TabIndex = 48;
             this.txtNarracao.DoubleClick += new System.EventHandler(this.txtNarracao_DoubleClick);
             // 
@@ -640,10 +611,9 @@
             this.lblJogadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblJogadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJogadores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJogadores.Location = new System.Drawing.Point(814, 174);
-            this.lblJogadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJogadores.Location = new System.Drawing.Point(651, 139);
             this.lblJogadores.Name = "lblJogadores";
-            this.lblJogadores.Size = new System.Drawing.Size(139, 20);
+            this.lblJogadores.Size = new System.Drawing.Size(111, 16);
             this.lblJogadores.TabIndex = 45;
             this.lblJogadores.Text = "Jogadores:";
             // 
@@ -653,12 +623,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtListarJogadores.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtListarJogadores.Location = new System.Drawing.Point(814, 196);
-            this.txtListarJogadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtListarJogadores.Location = new System.Drawing.Point(651, 157);
             this.txtListarJogadores.Multiline = true;
             this.txtListarJogadores.Name = "txtListarJogadores";
             this.txtListarJogadores.ReadOnly = true;
-            this.txtListarJogadores.Size = new System.Drawing.Size(138, 73);
+            this.txtListarJogadores.Size = new System.Drawing.Size(111, 59);
             this.txtListarJogadores.TabIndex = 44;
             // 
             // lblNarracao
@@ -670,10 +639,9 @@
             this.lblNarracao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNarracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNarracao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNarracao.Location = new System.Drawing.Point(814, 274);
-            this.lblNarracao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNarracao.Location = new System.Drawing.Point(651, 219);
             this.lblNarracao.Name = "lblNarracao";
-            this.lblNarracao.Size = new System.Drawing.Size(138, 17);
+            this.lblNarracao.Size = new System.Drawing.Size(111, 14);
             this.lblNarracao.TabIndex = 49;
             this.lblNarracao.Text = "Narração";
             // 
@@ -687,10 +655,9 @@
             this.lblJogador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJogador.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJogador.Location = new System.Drawing.Point(814, 89);
-            this.lblJogador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJogador.Location = new System.Drawing.Point(651, 71);
             this.lblJogador.Name = "lblJogador";
-            this.lblJogador.Size = new System.Drawing.Size(51, 19);
+            this.lblJogador.Size = new System.Drawing.Size(42, 15);
             this.lblJogador.TabIndex = 96;
             this.lblJogador.Text = "Você:";
             // 
@@ -705,10 +672,9 @@
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIniciar.Location = new System.Drawing.Point(830, 489);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciar.Location = new System.Drawing.Point(664, 391);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(100, 28);
+            this.btnIniciar.Size = new System.Drawing.Size(80, 22);
             this.btnIniciar.TabIndex = 98;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
@@ -723,10 +689,9 @@
             this.lblBodeJogador1.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador1.Location = new System.Drawing.Point(255, 660);
-            this.lblBodeJogador1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador1.Location = new System.Drawing.Point(204, 528);
             this.lblBodeJogador1.Name = "lblBodeJogador1";
-            this.lblBodeJogador1.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador1.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador1.TabIndex = 99;
             this.lblBodeJogador1.Text = " ";
             // 
@@ -739,10 +704,9 @@
             this.lblBodeJogador2.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador2.Location = new System.Drawing.Point(320, 660);
-            this.lblBodeJogador2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador2.Location = new System.Drawing.Point(256, 528);
             this.lblBodeJogador2.Name = "lblBodeJogador2";
-            this.lblBodeJogador2.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador2.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador2.TabIndex = 100;
             this.lblBodeJogador2.Text = " ";
             // 
@@ -755,10 +719,9 @@
             this.lblBodeJogador3.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador3.Location = new System.Drawing.Point(386, 660);
-            this.lblBodeJogador3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador3.Location = new System.Drawing.Point(309, 528);
             this.lblBodeJogador3.Name = "lblBodeJogador3";
-            this.lblBodeJogador3.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador3.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador3.TabIndex = 101;
             this.lblBodeJogador3.Text = " ";
             // 
@@ -771,10 +734,9 @@
             this.lblBodeJogador4.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador4.Location = new System.Drawing.Point(452, 660);
-            this.lblBodeJogador4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador4.Location = new System.Drawing.Point(362, 528);
             this.lblBodeJogador4.Name = "lblBodeJogador4";
-            this.lblBodeJogador4.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador4.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador4.TabIndex = 102;
             this.lblBodeJogador4.Text = " ";
             // 
@@ -787,10 +749,9 @@
             this.lblBodeJogador5.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador5.Location = new System.Drawing.Point(519, 660);
-            this.lblBodeJogador5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador5.Location = new System.Drawing.Point(415, 528);
             this.lblBodeJogador5.Name = "lblBodeJogador5";
-            this.lblBodeJogador5.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador5.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador5.TabIndex = 103;
             this.lblBodeJogador5.Text = " ";
             // 
@@ -803,10 +764,9 @@
             this.lblBodeJogador6.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador6.Location = new System.Drawing.Point(585, 660);
-            this.lblBodeJogador6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador6.Location = new System.Drawing.Point(468, 528);
             this.lblBodeJogador6.Name = "lblBodeJogador6";
-            this.lblBodeJogador6.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador6.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador6.TabIndex = 104;
             this.lblBodeJogador6.Text = " ";
             // 
@@ -819,10 +779,9 @@
             this.lblBodeJogador7.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador7.Location = new System.Drawing.Point(651, 660);
-            this.lblBodeJogador7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador7.Location = new System.Drawing.Point(521, 528);
             this.lblBodeJogador7.Name = "lblBodeJogador7";
-            this.lblBodeJogador7.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador7.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador7.TabIndex = 105;
             this.lblBodeJogador7.Text = " ";
             // 
@@ -835,10 +794,9 @@
             this.lblBodeJogador8.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador8.Location = new System.Drawing.Point(718, 660);
-            this.lblBodeJogador8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador8.Location = new System.Drawing.Point(574, 528);
             this.lblBodeJogador8.Name = "lblBodeJogador8";
-            this.lblBodeJogador8.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador8.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador8.TabIndex = 106;
             this.lblBodeJogador8.Text = " ";
             // 
@@ -851,10 +809,9 @@
             this.lblBodeJogador9.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador9.Location = new System.Drawing.Point(255, 738);
-            this.lblBodeJogador9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador9.Location = new System.Drawing.Point(204, 590);
             this.lblBodeJogador9.Name = "lblBodeJogador9";
-            this.lblBodeJogador9.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador9.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador9.TabIndex = 114;
             this.lblBodeJogador9.Text = " ";
             // 
@@ -867,10 +824,9 @@
             this.lblBodeJogador10.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador10.Location = new System.Drawing.Point(320, 738);
-            this.lblBodeJogador10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador10.Location = new System.Drawing.Point(256, 590);
             this.lblBodeJogador10.Name = "lblBodeJogador10";
-            this.lblBodeJogador10.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador10.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador10.TabIndex = 113;
             this.lblBodeJogador10.Text = " ";
             // 
@@ -883,10 +839,9 @@
             this.lblBodeJogador11.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador11.Location = new System.Drawing.Point(390, 738);
-            this.lblBodeJogador11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador11.Location = new System.Drawing.Point(312, 590);
             this.lblBodeJogador11.Name = "lblBodeJogador11";
-            this.lblBodeJogador11.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador11.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador11.TabIndex = 112;
             this.lblBodeJogador11.Text = " ";
             // 
@@ -899,10 +854,9 @@
             this.lblBodeJogador12.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador12.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador12.Location = new System.Drawing.Point(452, 738);
-            this.lblBodeJogador12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador12.Location = new System.Drawing.Point(362, 590);
             this.lblBodeJogador12.Name = "lblBodeJogador12";
-            this.lblBodeJogador12.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador12.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador12.TabIndex = 111;
             this.lblBodeJogador12.Text = " ";
             // 
@@ -915,10 +869,9 @@
             this.lblBodeJogador13.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador13.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador13.Location = new System.Drawing.Point(518, 738);
-            this.lblBodeJogador13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador13.Location = new System.Drawing.Point(414, 590);
             this.lblBodeJogador13.Name = "lblBodeJogador13";
-            this.lblBodeJogador13.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador13.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador13.TabIndex = 110;
             this.lblBodeJogador13.Text = " ";
             // 
@@ -931,10 +884,9 @@
             this.lblBodeJogador14.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador14.Location = new System.Drawing.Point(585, 738);
-            this.lblBodeJogador14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador14.Location = new System.Drawing.Point(468, 590);
             this.lblBodeJogador14.Name = "lblBodeJogador14";
-            this.lblBodeJogador14.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador14.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador14.TabIndex = 109;
             this.lblBodeJogador14.Text = " ";
             // 
@@ -947,10 +899,9 @@
             this.lblBodeJogador15.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador15.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador15.Location = new System.Drawing.Point(655, 738);
-            this.lblBodeJogador15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador15.Location = new System.Drawing.Point(524, 590);
             this.lblBodeJogador15.Name = "lblBodeJogador15";
-            this.lblBodeJogador15.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador15.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador15.TabIndex = 108;
             this.lblBodeJogador15.Text = " ";
             // 
@@ -963,10 +914,9 @@
             this.lblBodeJogador16.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador16.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador16.Location = new System.Drawing.Point(718, 738);
-            this.lblBodeJogador16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador16.Location = new System.Drawing.Point(574, 590);
             this.lblBodeJogador16.Name = "lblBodeJogador16";
-            this.lblBodeJogador16.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador16.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador16.TabIndex = 107;
             this.lblBodeJogador16.Text = " ";
             // 
@@ -979,10 +929,9 @@
             this.lblBodeJogador17.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador17.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador17.Location = new System.Drawing.Point(255, 822);
-            this.lblBodeJogador17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador17.Location = new System.Drawing.Point(204, 658);
             this.lblBodeJogador17.Name = "lblBodeJogador17";
-            this.lblBodeJogador17.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador17.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador17.TabIndex = 122;
             this.lblBodeJogador17.Text = " ";
             // 
@@ -995,10 +944,9 @@
             this.lblBodeJogador18.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador18.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador18.Location = new System.Drawing.Point(320, 822);
-            this.lblBodeJogador18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador18.Location = new System.Drawing.Point(256, 658);
             this.lblBodeJogador18.Name = "lblBodeJogador18";
-            this.lblBodeJogador18.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador18.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador18.TabIndex = 121;
             this.lblBodeJogador18.Text = " ";
             // 
@@ -1011,10 +959,9 @@
             this.lblBodeJogador19.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador19.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador19.Location = new System.Drawing.Point(390, 822);
-            this.lblBodeJogador19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador19.Location = new System.Drawing.Point(312, 658);
             this.lblBodeJogador19.Name = "lblBodeJogador19";
-            this.lblBodeJogador19.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador19.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador19.TabIndex = 120;
             this.lblBodeJogador19.Text = " ";
             // 
@@ -1027,10 +974,9 @@
             this.lblBodeJogador20.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador20.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador20.Location = new System.Drawing.Point(452, 822);
-            this.lblBodeJogador20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador20.Location = new System.Drawing.Point(362, 658);
             this.lblBodeJogador20.Name = "lblBodeJogador20";
-            this.lblBodeJogador20.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador20.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador20.TabIndex = 119;
             this.lblBodeJogador20.Text = " ";
             // 
@@ -1043,10 +989,9 @@
             this.lblBodeJogador21.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador21.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador21.Location = new System.Drawing.Point(519, 822);
-            this.lblBodeJogador21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador21.Location = new System.Drawing.Point(415, 658);
             this.lblBodeJogador21.Name = "lblBodeJogador21";
-            this.lblBodeJogador21.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador21.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador21.TabIndex = 118;
             this.lblBodeJogador21.Text = " ";
             // 
@@ -1059,10 +1004,9 @@
             this.lblBodeJogador22.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador22.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador22.Location = new System.Drawing.Point(585, 822);
-            this.lblBodeJogador22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador22.Location = new System.Drawing.Point(468, 658);
             this.lblBodeJogador22.Name = "lblBodeJogador22";
-            this.lblBodeJogador22.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador22.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador22.TabIndex = 117;
             this.lblBodeJogador22.Text = " ";
             // 
@@ -1075,10 +1019,9 @@
             this.lblBodeJogador23.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador23.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador23.Location = new System.Drawing.Point(655, 822);
-            this.lblBodeJogador23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador23.Location = new System.Drawing.Point(524, 658);
             this.lblBodeJogador23.Name = "lblBodeJogador23";
-            this.lblBodeJogador23.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador23.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador23.TabIndex = 116;
             this.lblBodeJogador23.Text = " ";
             // 
@@ -1091,10 +1034,9 @@
             this.lblBodeJogador24.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador24.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador24.Location = new System.Drawing.Point(718, 822);
-            this.lblBodeJogador24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador24.Location = new System.Drawing.Point(574, 658);
             this.lblBodeJogador24.Name = "lblBodeJogador24";
-            this.lblBodeJogador24.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador24.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador24.TabIndex = 115;
             this.lblBodeJogador24.Text = " ";
             // 
@@ -1107,10 +1049,9 @@
             this.lblBodeJogador25.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador25.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador25.Location = new System.Drawing.Point(255, 902);
-            this.lblBodeJogador25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador25.Location = new System.Drawing.Point(204, 722);
             this.lblBodeJogador25.Name = "lblBodeJogador25";
-            this.lblBodeJogador25.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador25.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador25.TabIndex = 130;
             this.lblBodeJogador25.Text = " ";
             // 
@@ -1123,10 +1064,9 @@
             this.lblBodeJogador26.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador26.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador26.Location = new System.Drawing.Point(320, 901);
-            this.lblBodeJogador26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador26.Location = new System.Drawing.Point(256, 721);
             this.lblBodeJogador26.Name = "lblBodeJogador26";
-            this.lblBodeJogador26.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador26.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador26.TabIndex = 129;
             this.lblBodeJogador26.Text = " ";
             // 
@@ -1139,10 +1079,9 @@
             this.lblBodeJogador27.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador27.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador27.Location = new System.Drawing.Point(390, 902);
-            this.lblBodeJogador27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador27.Location = new System.Drawing.Point(312, 722);
             this.lblBodeJogador27.Name = "lblBodeJogador27";
-            this.lblBodeJogador27.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador27.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador27.TabIndex = 128;
             this.lblBodeJogador27.Text = " ";
             // 
@@ -1155,10 +1094,9 @@
             this.lblBodeJogador28.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador28.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador28.Location = new System.Drawing.Point(452, 902);
-            this.lblBodeJogador28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador28.Location = new System.Drawing.Point(362, 722);
             this.lblBodeJogador28.Name = "lblBodeJogador28";
-            this.lblBodeJogador28.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador28.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador28.TabIndex = 127;
             this.lblBodeJogador28.Text = " ";
             // 
@@ -1171,10 +1109,9 @@
             this.lblBodeJogador29.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador29.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador29.Location = new System.Drawing.Point(519, 902);
-            this.lblBodeJogador29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador29.Location = new System.Drawing.Point(415, 722);
             this.lblBodeJogador29.Name = "lblBodeJogador29";
-            this.lblBodeJogador29.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador29.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador29.TabIndex = 126;
             this.lblBodeJogador29.Text = " ";
             // 
@@ -1187,10 +1124,9 @@
             this.lblBodeJogador30.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador30.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador30.Location = new System.Drawing.Point(585, 902);
-            this.lblBodeJogador30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador30.Location = new System.Drawing.Point(468, 722);
             this.lblBodeJogador30.Name = "lblBodeJogador30";
-            this.lblBodeJogador30.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador30.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador30.TabIndex = 125;
             this.lblBodeJogador30.Text = " ";
             // 
@@ -1203,10 +1139,9 @@
             this.lblBodeJogador31.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador31.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador31.Location = new System.Drawing.Point(655, 902);
-            this.lblBodeJogador31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador31.Location = new System.Drawing.Point(524, 722);
             this.lblBodeJogador31.Name = "lblBodeJogador31";
-            this.lblBodeJogador31.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador31.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador31.TabIndex = 124;
             this.lblBodeJogador31.Text = " ";
             // 
@@ -1219,10 +1154,9 @@
             this.lblBodeJogador32.BackColor = System.Drawing.Color.Transparent;
             this.lblBodeJogador32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodeJogador32.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblBodeJogador32.Location = new System.Drawing.Point(718, 902);
-            this.lblBodeJogador32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBodeJogador32.Location = new System.Drawing.Point(574, 722);
             this.lblBodeJogador32.Name = "lblBodeJogador32";
-            this.lblBodeJogador32.Size = new System.Drawing.Size(13, 17);
+            this.lblBodeJogador32.Size = new System.Drawing.Size(11, 13);
             this.lblBodeJogador32.TabIndex = 123;
             this.lblBodeJogador32.Text = " ";
             // 
@@ -1235,10 +1169,9 @@
             this.lblIdJogador1.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador1.Location = new System.Drawing.Point(255, 615);
-            this.lblIdJogador1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador1.Location = new System.Drawing.Point(204, 492);
             this.lblIdJogador1.Name = "lblIdJogador1";
-            this.lblIdJogador1.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador1.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador1.TabIndex = 131;
             this.lblIdJogador1.Text = " ";
             // 
@@ -1251,10 +1184,9 @@
             this.lblIdJogador2.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador2.Location = new System.Drawing.Point(320, 615);
-            this.lblIdJogador2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador2.Location = new System.Drawing.Point(256, 492);
             this.lblIdJogador2.Name = "lblIdJogador2";
-            this.lblIdJogador2.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador2.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador2.TabIndex = 132;
             this.lblIdJogador2.Text = " ";
             // 
@@ -1267,10 +1199,9 @@
             this.lblIdJogador3.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador3.Location = new System.Drawing.Point(386, 615);
-            this.lblIdJogador3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador3.Location = new System.Drawing.Point(309, 492);
             this.lblIdJogador3.Name = "lblIdJogador3";
-            this.lblIdJogador3.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador3.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador3.TabIndex = 133;
             this.lblIdJogador3.Text = " ";
             // 
@@ -1283,10 +1214,9 @@
             this.lblIdJogador4.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador4.Location = new System.Drawing.Point(452, 615);
-            this.lblIdJogador4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador4.Location = new System.Drawing.Point(362, 492);
             this.lblIdJogador4.Name = "lblIdJogador4";
-            this.lblIdJogador4.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador4.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador4.TabIndex = 134;
             this.lblIdJogador4.Text = " ";
             // 
@@ -1299,10 +1229,9 @@
             this.lblIdJogador5.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador5.Location = new System.Drawing.Point(519, 615);
-            this.lblIdJogador5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador5.Location = new System.Drawing.Point(415, 492);
             this.lblIdJogador5.Name = "lblIdJogador5";
-            this.lblIdJogador5.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador5.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador5.TabIndex = 135;
             this.lblIdJogador5.Text = " ";
             // 
@@ -1315,10 +1244,9 @@
             this.lblIdJogador6.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador6.Location = new System.Drawing.Point(585, 615);
-            this.lblIdJogador6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador6.Location = new System.Drawing.Point(468, 492);
             this.lblIdJogador6.Name = "lblIdJogador6";
-            this.lblIdJogador6.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador6.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador6.TabIndex = 136;
             this.lblIdJogador6.Text = " ";
             // 
@@ -1331,10 +1259,9 @@
             this.lblIdJogador7.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador7.Location = new System.Drawing.Point(651, 615);
-            this.lblIdJogador7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador7.Location = new System.Drawing.Point(521, 492);
             this.lblIdJogador7.Name = "lblIdJogador7";
-            this.lblIdJogador7.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador7.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador7.TabIndex = 137;
             this.lblIdJogador7.Text = " ";
             // 
@@ -1347,10 +1274,9 @@
             this.lblIdJogador8.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador8.Location = new System.Drawing.Point(718, 615);
-            this.lblIdJogador8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador8.Location = new System.Drawing.Point(574, 492);
             this.lblIdJogador8.Name = "lblIdJogador8";
-            this.lblIdJogador8.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador8.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador8.TabIndex = 138;
             this.lblIdJogador8.Text = " ";
             // 
@@ -1363,10 +1289,9 @@
             this.lblIdJogador9.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador9.Location = new System.Drawing.Point(255, 692);
-            this.lblIdJogador9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador9.Location = new System.Drawing.Point(204, 554);
             this.lblIdJogador9.Name = "lblIdJogador9";
-            this.lblIdJogador9.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador9.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador9.TabIndex = 146;
             this.lblIdJogador9.Text = " ";
             // 
@@ -1379,10 +1304,9 @@
             this.lblIdJogador10.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador10.Location = new System.Drawing.Point(320, 692);
-            this.lblIdJogador10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador10.Location = new System.Drawing.Point(256, 554);
             this.lblIdJogador10.Name = "lblIdJogador10";
-            this.lblIdJogador10.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador10.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador10.TabIndex = 145;
             this.lblIdJogador10.Text = " ";
             // 
@@ -1395,10 +1319,9 @@
             this.lblIdJogador11.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador11.Location = new System.Drawing.Point(390, 692);
-            this.lblIdJogador11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador11.Location = new System.Drawing.Point(312, 554);
             this.lblIdJogador11.Name = "lblIdJogador11";
-            this.lblIdJogador11.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador11.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador11.TabIndex = 144;
             this.lblIdJogador11.Text = " ";
             // 
@@ -1411,10 +1334,9 @@
             this.lblIdJogador12.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador12.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador12.Location = new System.Drawing.Point(452, 692);
-            this.lblIdJogador12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador12.Location = new System.Drawing.Point(362, 554);
             this.lblIdJogador12.Name = "lblIdJogador12";
-            this.lblIdJogador12.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador12.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador12.TabIndex = 143;
             this.lblIdJogador12.Text = " ";
             // 
@@ -1427,10 +1349,9 @@
             this.lblIdJogador13.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador13.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador13.Location = new System.Drawing.Point(518, 692);
-            this.lblIdJogador13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador13.Location = new System.Drawing.Point(414, 554);
             this.lblIdJogador13.Name = "lblIdJogador13";
-            this.lblIdJogador13.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador13.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador13.TabIndex = 142;
             this.lblIdJogador13.Text = " ";
             // 
@@ -1443,10 +1364,9 @@
             this.lblIdJogador14.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador14.Location = new System.Drawing.Point(585, 692);
-            this.lblIdJogador14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador14.Location = new System.Drawing.Point(468, 554);
             this.lblIdJogador14.Name = "lblIdJogador14";
-            this.lblIdJogador14.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador14.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador14.TabIndex = 141;
             this.lblIdJogador14.Text = " ";
             // 
@@ -1459,10 +1379,9 @@
             this.lblIdJogador15.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador15.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador15.Location = new System.Drawing.Point(655, 692);
-            this.lblIdJogador15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador15.Location = new System.Drawing.Point(524, 554);
             this.lblIdJogador15.Name = "lblIdJogador15";
-            this.lblIdJogador15.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador15.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador15.TabIndex = 140;
             this.lblIdJogador15.Text = " ";
             // 
@@ -1475,10 +1394,9 @@
             this.lblIdJogador16.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador16.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador16.Location = new System.Drawing.Point(718, 692);
-            this.lblIdJogador16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador16.Location = new System.Drawing.Point(574, 554);
             this.lblIdJogador16.Name = "lblIdJogador16";
-            this.lblIdJogador16.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador16.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador16.TabIndex = 139;
             this.lblIdJogador16.Text = " ";
             // 
@@ -1491,10 +1409,9 @@
             this.lblIdJogador17.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador17.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador17.Location = new System.Drawing.Point(255, 778);
-            this.lblIdJogador17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador17.Location = new System.Drawing.Point(204, 622);
             this.lblIdJogador17.Name = "lblIdJogador17";
-            this.lblIdJogador17.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador17.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador17.TabIndex = 154;
             this.lblIdJogador17.Text = " ";
             // 
@@ -1507,10 +1424,9 @@
             this.lblIdJogador18.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador18.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador18.Location = new System.Drawing.Point(320, 778);
-            this.lblIdJogador18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador18.Location = new System.Drawing.Point(256, 622);
             this.lblIdJogador18.Name = "lblIdJogador18";
-            this.lblIdJogador18.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador18.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador18.TabIndex = 153;
             this.lblIdJogador18.Text = " ";
             // 
@@ -1523,10 +1439,9 @@
             this.lblIdJogador19.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador19.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador19.Location = new System.Drawing.Point(390, 778);
-            this.lblIdJogador19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador19.Location = new System.Drawing.Point(312, 622);
             this.lblIdJogador19.Name = "lblIdJogador19";
-            this.lblIdJogador19.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador19.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador19.TabIndex = 152;
             this.lblIdJogador19.Text = " ";
             // 
@@ -1539,10 +1454,9 @@
             this.lblIdJogador20.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador20.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador20.Location = new System.Drawing.Point(452, 778);
-            this.lblIdJogador20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador20.Location = new System.Drawing.Point(362, 622);
             this.lblIdJogador20.Name = "lblIdJogador20";
-            this.lblIdJogador20.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador20.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador20.TabIndex = 151;
             this.lblIdJogador20.Text = " ";
             // 
@@ -1555,10 +1469,9 @@
             this.lblIdJogador21.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador21.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador21.Location = new System.Drawing.Point(519, 778);
-            this.lblIdJogador21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador21.Location = new System.Drawing.Point(415, 622);
             this.lblIdJogador21.Name = "lblIdJogador21";
-            this.lblIdJogador21.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador21.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador21.TabIndex = 150;
             this.lblIdJogador21.Text = " ";
             // 
@@ -1571,10 +1484,9 @@
             this.lblIdJogador22.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador22.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador22.Location = new System.Drawing.Point(585, 778);
-            this.lblIdJogador22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador22.Location = new System.Drawing.Point(468, 622);
             this.lblIdJogador22.Name = "lblIdJogador22";
-            this.lblIdJogador22.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador22.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador22.TabIndex = 149;
             this.lblIdJogador22.Text = " ";
             // 
@@ -1587,10 +1499,9 @@
             this.lblIdJogador23.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador23.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador23.Location = new System.Drawing.Point(655, 778);
-            this.lblIdJogador23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador23.Location = new System.Drawing.Point(524, 622);
             this.lblIdJogador23.Name = "lblIdJogador23";
-            this.lblIdJogador23.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador23.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador23.TabIndex = 148;
             this.lblIdJogador23.Text = " ";
             // 
@@ -1603,10 +1514,9 @@
             this.lblIdJogador24.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador24.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador24.Location = new System.Drawing.Point(718, 778);
-            this.lblIdJogador24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador24.Location = new System.Drawing.Point(574, 622);
             this.lblIdJogador24.Name = "lblIdJogador24";
-            this.lblIdJogador24.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador24.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador24.TabIndex = 147;
             this.lblIdJogador24.Text = " ";
             // 
@@ -1619,10 +1529,9 @@
             this.lblIdJogador25.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador25.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador25.Location = new System.Drawing.Point(255, 858);
-            this.lblIdJogador25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador25.Location = new System.Drawing.Point(204, 686);
             this.lblIdJogador25.Name = "lblIdJogador25";
-            this.lblIdJogador25.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador25.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador25.TabIndex = 162;
             this.lblIdJogador25.Text = " ";
             // 
@@ -1635,10 +1544,9 @@
             this.lblIdJogador26.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador26.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador26.Location = new System.Drawing.Point(320, 856);
-            this.lblIdJogador26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador26.Location = new System.Drawing.Point(256, 685);
             this.lblIdJogador26.Name = "lblIdJogador26";
-            this.lblIdJogador26.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador26.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador26.TabIndex = 161;
             this.lblIdJogador26.Text = " ";
             // 
@@ -1651,10 +1559,9 @@
             this.lblIdJogador27.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador27.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador27.Location = new System.Drawing.Point(390, 858);
-            this.lblIdJogador27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador27.Location = new System.Drawing.Point(312, 686);
             this.lblIdJogador27.Name = "lblIdJogador27";
-            this.lblIdJogador27.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador27.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador27.TabIndex = 160;
             this.lblIdJogador27.Text = " ";
             // 
@@ -1667,10 +1574,9 @@
             this.lblIdJogador28.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador28.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador28.Location = new System.Drawing.Point(452, 858);
-            this.lblIdJogador28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador28.Location = new System.Drawing.Point(362, 686);
             this.lblIdJogador28.Name = "lblIdJogador28";
-            this.lblIdJogador28.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador28.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador28.TabIndex = 159;
             this.lblIdJogador28.Text = " ";
             // 
@@ -1683,10 +1589,9 @@
             this.lblIdJogador29.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador29.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador29.Location = new System.Drawing.Point(519, 858);
-            this.lblIdJogador29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador29.Location = new System.Drawing.Point(415, 686);
             this.lblIdJogador29.Name = "lblIdJogador29";
-            this.lblIdJogador29.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador29.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador29.TabIndex = 158;
             this.lblIdJogador29.Text = " ";
             // 
@@ -1699,10 +1604,9 @@
             this.lblIdJogador30.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador30.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador30.Location = new System.Drawing.Point(585, 858);
-            this.lblIdJogador30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador30.Location = new System.Drawing.Point(468, 686);
             this.lblIdJogador30.Name = "lblIdJogador30";
-            this.lblIdJogador30.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador30.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador30.TabIndex = 157;
             this.lblIdJogador30.Text = " ";
             // 
@@ -1715,10 +1619,9 @@
             this.lblIdJogador31.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador31.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador31.Location = new System.Drawing.Point(655, 858);
-            this.lblIdJogador31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador31.Location = new System.Drawing.Point(524, 686);
             this.lblIdJogador31.Name = "lblIdJogador31";
-            this.lblIdJogador31.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador31.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador31.TabIndex = 156;
             this.lblIdJogador31.Text = " ";
             // 
@@ -1731,10 +1634,9 @@
             this.lblIdJogador32.BackColor = System.Drawing.Color.Transparent;
             this.lblIdJogador32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdJogador32.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblIdJogador32.Location = new System.Drawing.Point(718, 858);
-            this.lblIdJogador32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdJogador32.Location = new System.Drawing.Point(574, 686);
             this.lblIdJogador32.Name = "lblIdJogador32";
-            this.lblIdJogador32.Size = new System.Drawing.Size(13, 17);
+            this.lblIdJogador32.Size = new System.Drawing.Size(11, 13);
             this.lblIdJogador32.TabIndex = 155;
             this.lblIdJogador32.Text = " ";
             // 
@@ -1751,10 +1653,9 @@
             this.pcbJogador4.BackColor = System.Drawing.Color.Transparent;
             this.pcbJogador4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador4.Image = global::BodeOfWar.Properties.Resources.J4_v3;
-            this.pcbJogador4.Location = new System.Drawing.Point(21, 846);
-            this.pcbJogador4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbJogador4.Location = new System.Drawing.Point(17, 677);
             this.pcbJogador4.Name = "pcbJogador4";
-            this.pcbJogador4.Size = new System.Drawing.Size(75, 75);
+            this.pcbJogador4.Size = new System.Drawing.Size(60, 60);
             this.pcbJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbJogador4.TabIndex = 166;
             this.pcbJogador4.TabStop = false;
@@ -1768,10 +1669,9 @@
             this.pcbJogador3.BackColor = System.Drawing.Color.Transparent;
             this.pcbJogador3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador3.Image = global::BodeOfWar.Properties.Resources.J3_v3;
-            this.pcbJogador3.Location = new System.Drawing.Point(21, 766);
-            this.pcbJogador3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbJogador3.Location = new System.Drawing.Point(17, 613);
             this.pcbJogador3.Name = "pcbJogador3";
-            this.pcbJogador3.Size = new System.Drawing.Size(75, 75);
+            this.pcbJogador3.Size = new System.Drawing.Size(60, 60);
             this.pcbJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbJogador3.TabIndex = 165;
             this.pcbJogador3.TabStop = false;
@@ -1785,10 +1685,9 @@
             this.pcbJogador2.BackColor = System.Drawing.Color.Transparent;
             this.pcbJogador2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador2.Image = global::BodeOfWar.Properties.Resources.J2_v3;
-            this.pcbJogador2.Location = new System.Drawing.Point(21, 684);
-            this.pcbJogador2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbJogador2.Location = new System.Drawing.Point(17, 547);
             this.pcbJogador2.Name = "pcbJogador2";
-            this.pcbJogador2.Size = new System.Drawing.Size(75, 75);
+            this.pcbJogador2.Size = new System.Drawing.Size(60, 60);
             this.pcbJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbJogador2.TabIndex = 164;
             this.pcbJogador2.TabStop = false;
@@ -1802,10 +1701,9 @@
             this.pcbJogador1.BackColor = System.Drawing.Color.Transparent;
             this.pcbJogador1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbJogador1.Image = global::BodeOfWar.Properties.Resources.J1_v3;
-            this.pcbJogador1.Location = new System.Drawing.Point(21, 604);
-            this.pcbJogador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbJogador1.Location = new System.Drawing.Point(17, 483);
             this.pcbJogador1.Name = "pcbJogador1";
-            this.pcbJogador1.Size = new System.Drawing.Size(75, 75);
+            this.pcbJogador1.Size = new System.Drawing.Size(60, 60);
             this.pcbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbJogador1.TabIndex = 163;
             this.pcbJogador1.TabStop = false;
@@ -1818,8 +1716,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox32.Location = new System.Drawing.Point(718, 858);
-            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox32.Location = new System.Drawing.Point(574, 686);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(37, 51);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1833,8 +1730,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox31.Location = new System.Drawing.Point(655, 858);
-            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox31.Location = new System.Drawing.Point(524, 686);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(37, 51);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1848,8 +1744,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox30.Location = new System.Drawing.Point(585, 858);
-            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox30.Location = new System.Drawing.Point(468, 686);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(37, 51);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1863,8 +1758,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox29.Location = new System.Drawing.Point(519, 858);
-            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox29.Location = new System.Drawing.Point(415, 686);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(37, 51);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1878,8 +1772,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox28.Location = new System.Drawing.Point(452, 858);
-            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox28.Location = new System.Drawing.Point(362, 686);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(37, 51);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1893,8 +1786,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox27.Location = new System.Drawing.Point(390, 858);
-            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox27.Location = new System.Drawing.Point(312, 686);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(37, 51);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1908,8 +1800,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox26.Location = new System.Drawing.Point(320, 856);
-            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox26.Location = new System.Drawing.Point(256, 685);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(37, 51);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1923,8 +1814,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox25.Location = new System.Drawing.Point(255, 858);
-            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox25.Location = new System.Drawing.Point(204, 686);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(37, 51);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1938,8 +1828,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox24.Location = new System.Drawing.Point(718, 778);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox24.Location = new System.Drawing.Point(574, 622);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(37, 51);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1953,8 +1842,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox23.Location = new System.Drawing.Point(655, 778);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox23.Location = new System.Drawing.Point(524, 622);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(37, 51);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1968,8 +1856,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox22.Location = new System.Drawing.Point(585, 778);
-            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox22.Location = new System.Drawing.Point(468, 622);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(37, 51);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1983,8 +1870,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox21.Location = new System.Drawing.Point(519, 778);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox21.Location = new System.Drawing.Point(415, 622);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(37, 51);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1998,8 +1884,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox20.Location = new System.Drawing.Point(452, 778);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox20.Location = new System.Drawing.Point(362, 622);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(37, 51);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2013,8 +1898,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox19.Location = new System.Drawing.Point(390, 778);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox19.Location = new System.Drawing.Point(312, 622);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(37, 51);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2028,8 +1912,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox18.Location = new System.Drawing.Point(320, 778);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox18.Location = new System.Drawing.Point(256, 622);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(37, 51);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2043,8 +1926,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox17.Location = new System.Drawing.Point(255, 778);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox17.Location = new System.Drawing.Point(204, 622);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(37, 51);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2058,8 +1940,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox16.Location = new System.Drawing.Point(718, 692);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox16.Location = new System.Drawing.Point(574, 554);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(37, 51);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2073,8 +1954,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox15.Location = new System.Drawing.Point(655, 692);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Location = new System.Drawing.Point(524, 554);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(37, 51);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2088,8 +1968,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(585, 692);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Location = new System.Drawing.Point(468, 554);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(37, 51);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2103,8 +1982,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(518, 692);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Location = new System.Drawing.Point(414, 554);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(37, 51);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2118,8 +1996,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(452, 692);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Location = new System.Drawing.Point(362, 554);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(37, 51);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2133,8 +2010,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(390, 692);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Location = new System.Drawing.Point(312, 554);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(37, 51);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2148,8 +2024,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(320, 692);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Location = new System.Drawing.Point(256, 554);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(37, 51);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2163,8 +2038,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(255, 692);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(204, 554);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(37, 51);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2178,8 +2052,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(718, 615);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(574, 492);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(37, 51);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2193,8 +2066,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(651, 615);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(521, 492);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(37, 51);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2208,8 +2080,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(585, 615);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(468, 492);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(37, 51);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2223,8 +2094,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(519, 615);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(415, 492);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(37, 51);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2238,8 +2108,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(452, 615);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(362, 492);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(37, 51);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2253,8 +2122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(386, 615);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(309, 492);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2268,8 +2136,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(320, 615);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(256, 492);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2283,8 +2150,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(255, 615);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 492);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2298,10 +2164,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta8.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta8.Location = new System.Drawing.Point(568, 334);
-            this.pcbCarta8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta8.Location = new System.Drawing.Point(454, 267);
             this.pcbCarta8.Name = "pcbCarta8";
-            this.pcbCarta8.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta8.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta8.TabIndex = 8;
             this.pcbCarta8.TabStop = false;
             // 
@@ -2312,10 +2177,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta7.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta7.Location = new System.Drawing.Point(424, 334);
-            this.pcbCarta7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta7.Location = new System.Drawing.Point(339, 267);
             this.pcbCarta7.Name = "pcbCarta7";
-            this.pcbCarta7.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta7.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta7.TabIndex = 7;
             this.pcbCarta7.TabStop = false;
             // 
@@ -2326,10 +2190,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta6.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta6.Location = new System.Drawing.Point(278, 335);
-            this.pcbCarta6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta6.Location = new System.Drawing.Point(222, 268);
             this.pcbCarta6.Name = "pcbCarta6";
-            this.pcbCarta6.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta6.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta6.TabIndex = 6;
             this.pcbCarta6.TabStop = false;
             // 
@@ -2340,10 +2203,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta5.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta5.Location = new System.Drawing.Point(134, 335);
-            this.pcbCarta5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta5.Location = new System.Drawing.Point(107, 268);
             this.pcbCarta5.Name = "pcbCarta5";
-            this.pcbCarta5.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta5.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta5.TabIndex = 5;
             this.pcbCarta5.TabStop = false;
             // 
@@ -2354,10 +2216,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta4.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta4.Location = new System.Drawing.Point(565, 125);
-            this.pcbCarta4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta4.Location = new System.Drawing.Point(452, 100);
             this.pcbCarta4.Name = "pcbCarta4";
-            this.pcbCarta4.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta4.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta4.TabIndex = 4;
             this.pcbCarta4.TabStop = false;
             // 
@@ -2368,10 +2229,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta3.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta3.Location = new System.Drawing.Point(421, 125);
-            this.pcbCarta3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta3.Location = new System.Drawing.Point(337, 100);
             this.pcbCarta3.Name = "pcbCarta3";
-            this.pcbCarta3.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta3.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta3.TabIndex = 3;
             this.pcbCarta3.TabStop = false;
             // 
@@ -2382,10 +2242,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta2.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta2.Location = new System.Drawing.Point(276, 125);
-            this.pcbCarta2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta2.Location = new System.Drawing.Point(221, 100);
             this.pcbCarta2.Name = "pcbCarta2";
-            this.pcbCarta2.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta2.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta2.TabIndex = 2;
             this.pcbCarta2.TabStop = false;
             // 
@@ -2396,10 +2255,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbCarta1.BackColor = System.Drawing.Color.Transparent;
             this.pcbCarta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbCarta1.Location = new System.Drawing.Point(134, 125);
-            this.pcbCarta1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbCarta1.Location = new System.Drawing.Point(107, 100);
             this.pcbCarta1.Name = "pcbCarta1";
-            this.pcbCarta1.Size = new System.Drawing.Size(125, 188);
+            this.pcbCarta1.Size = new System.Drawing.Size(100, 150);
             this.pcbCarta1.TabIndex = 1;
             this.pcbCarta1.TabStop = false;
             // 
@@ -2408,23 +2266,14 @@
             this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(830, 524);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 56);
-            this.trackBar1.TabIndex = 167;
-            // 
             // MaoEstrategia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::BodeOfWar.Properties.Resources.Deck2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1014, 955);
-            this.Controls.Add(this.trackBar1);
+            this.ClientSize = new System.Drawing.Size(811, 764);
             this.Controls.Add(this.pcbJogador4);
             this.Controls.Add(this.pcbJogador3);
             this.Controls.Add(this.pcbJogador2);
@@ -2569,7 +2418,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MaoEstrategia";
@@ -2621,7 +2469,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarta1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2770,6 +2617,5 @@
         private System.Windows.Forms.PictureBox pcbJogador3;
         private System.Windows.Forms.PictureBox pcbJogador4;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
-        private System.Windows.Forms.TrackBar trackBar1;
     }
 }

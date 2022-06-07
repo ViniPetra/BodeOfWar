@@ -114,6 +114,12 @@
     <Compile Include="Partida.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vencedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vencedor.Designer.cs">
+      <DependentUpon>Vencedor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Mão - Auto.resx">
       <DependentUpon>Mão - Auto.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +139,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vencedor.resx">
+      <DependentUpon>Vencedor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -165,6 +174,7 @@
     <Content Include="ImagensCartas\b8.PNG" />
     <Content Include="ImagensCartas\b9.PNG" />
     <Content Include="OutrasImagens\616714.ico" />
+    <None Include="Resources\screaminggoatgif.gif" />
     <None Include="Resources\Screaming Goat.wav" />
     <None Include="Resources\Card-flip-sound-effect.wav" />
     <None Include="Resources\J4.gif" />
